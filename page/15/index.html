@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Lavine Hu</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Lavine Hu"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Lavine Hu"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Lavine Hu"><meta property="og:url" content="https://github.com/hlw95?tab=following"><meta property="og:site_name" content="Lavine Hu"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="Lavine Hu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Lavine Hu","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Lavine Hu"},"description":""}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Lavine Hu</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/message">留言</a></div><div class="navbar-end"><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-27  <a class="commentCountImg" href="/2022/02/27/sparksql-vs-hql/#comment-container"><span class="display-none-class">48497643558afb4045d49766938887cf</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="48497643558afb4045d49766938887cf">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>fast  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/27/sparksql-vs-hql/">sparksql对比hive sql</a></h1><div class="content"><p>Hive和Spark 均是“分布式SQL计算引擎”，mysql等不是，mysql跑单机上</p>
+<p>均是构建大规模结构化数据计算的绝佳利器，同时SparkSQL拥有更好的性能。目前，企业中使用Hive仍旧居多，但SparkSQL将会在很近的未来替代Hive成为分布式SQL计算市场的顶级</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E5%8E%9F%E7%90%86/">原理</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/sparksql%E5%AF%B9%E6%AF%94hive-sql/">sparksql对比hive sql</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-27  <a class="commentCountImg" href="/2022/02/27/sql-common-operation/#comment-container"><span class="display-none-class">5b7ffb8d2d555a620529d768bd7e1167</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5b7ffb8d2d555a620529d768bd7e1167">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 m  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/27/sql-common-operation/">sql常见操作</a></h1><div class="content"><h2 id="1-拼接"><a href="#1-拼接" class="headerlink" title="1 拼接"></a>1 拼接</h2><p>1 union ，union all</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_union.asp">https://www.w3school.com.cn/sql/sql_union.asp</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select &#x27;mobile&#x27; as platform union</span><br><span class="line">select &#x27;desktop&#x27; as platform union</span><br><span class="line">select &#x27;both&#x27; as platform </span><br></pre></td></tr></table></figure>
+<p>2 join</p>
+<p>left join 、right join、 inner join，FULL OUTER JOIN，默认join 为 inner join</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ingstyle/p/4368064.html">https://www.cnblogs.com/ingstyle/p/4368064.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#多个left join</span><br><span class="line">select a.*,b.*,c.* </span><br><span class="line">from a left join b on a.id=b.id </span><br><span class="line">left join c on b.id=c.id</span><br><span class="line"></span><br><span class="line">select *</span><br><span class="line">from Trips T left join  Users  U1 on T.client_id =U1.users_id  </span><br><span class="line">left join  Users U2 on T.driver_id  =U2.users_id  </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from Trips T1</span><br><span class="line">left join Users U1 on (T1.client_id =U1.users_id  and U1.banned =&quot;Yes&quot; )    不可</span><br><span class="line"></span><br><span class="line">from Trips T1</span><br><span class="line">join Users U1 on (T1.client_id =U1.users_id  and U1.banned =&quot;Yes&quot; ) 可</span><br></pre></td></tr></table></figure>
+<p>3.from student A,student B,student C</p>
+<p>将三个 student 表相互连接成一个</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangyj_315/article/details/2249209">https://blog.csdn.net/zhangyj_315/article/details/2249209</a></p>
+<h2 id="2-分组"><a href="#2-分组" class="headerlink" title="2 分组"></a>2 分组</h2><p>1 group by</p>
+<p>分组, 分完每组就一行，取每组第一行数据</p>
+<p>group by columns1,columns2</p>
+<h6 id><a href="#" class="headerlink" title="#"></a>#</h6><p>有时候不能取第一行，怎么解决？<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/product-sales-analysis-iii/">1070. 产品销售分析 III</a></p>
+<p>a 可以先排序，把目标行变成第一行 可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/shiyong1949/article/details/78482737">https://blog.csdn.net/shiyong1949/article/details/78482737</a>  好像不行</p>
+<p>b 使用开窗函数解决，可以</p>
+<h6 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h6><p>分组+条件判断</p>
+<p>Having</p>
+<p>having 子句的作用是筛选满足条件的组，不是在组内选行</p>
+<p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。</p>
+<h6 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h6><h2 id="4-子查询"><a href="#4-子查询" class="headerlink" title="4 子查询"></a>4 子查询</h2><p>嵌套</p>
+<p><a target="_blank" rel="noopener" href="http://c.biancheng.net/sql/sub-query.html">http://c.biancheng.net/sql/sub-query.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select a.Score as Score,</span><br><span class="line">        (select count(DISTINCT b.Score) from Scores  b where b.Score &gt;= a.Score) as &#x27;Rank&#x27;</span><br><span class="line">from Scores a</span><br><span class="line">order by a.Score DESC</span><br></pre></td></tr></table></figure>
+<h2 id="5-别名"><a href="#5-别名" class="headerlink" title="5 别名"></a>5 别名</h2><p>as后加别名，也可不要as</p>
+<h2 id="6-匹配"><a href="#6-匹配" class="headerlink" title="6 匹配"></a>6 匹配</h2><p>分为完整匹配和模糊匹配</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Leophen/p/11397621.html">https://www.cnblogs.com/Leophen/p/11397621.html</a></p>
+<p>关键字like</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table where name like &quot;%三%&quot;</span><br></pre></td></tr></table></figure>
+<p>通配符：%，_，[<em>charlist</em>] ，[!<em>charlist</em>]</p>
+<h2 id="7-条件"><a href="#7-条件" class="headerlink" title="7 条件"></a>7 条件</h2><p>1.IF</p>
+<p>表达式：IF( expr1 , expr2 , expr3 )</p>
+<p>expr1条件，条件为true，则值是expr2 ，false，值就是expr3</p>
+<p>2 case</p>
+<p>input几行output几行</p>
+<p>一行一行来</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/240717732">https://zhuanlan.zhihu.com/p/240717732</a></p>
+<p>两种形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">--type1</span><br><span class="line">CASE  &lt;表达式&gt;</span><br><span class="line">   WHEN &lt;值1&gt; THEN &lt;操作&gt;</span><br><span class="line">   WHEN &lt;值2&gt; THEN &lt;操作&gt;</span><br><span class="line">   ...</span><br><span class="line">   ELSE &lt;操作&gt;</span><br><span class="line">END</span><br><span class="line">--type2</span><br><span class="line">CASE</span><br><span class="line">    WHEN &lt;条件1&gt; THEN &lt;命令&gt;</span><br><span class="line">    WHEN &lt;条件2&gt; THEN &lt;命令&gt;</span><br><span class="line">    ...</span><br><span class="line">    ELSE commands</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+<p>then后面多个值</p>
+<p>then 1 可</p>
+<p>then (1,1) 不可</p>
+<p>where xx in （1,1）可</p>
+<p>3 where</p>
+<h4 id="1126-查询活跃业务"><a href="#1126-查询活跃业务" class="headerlink" title="1126. 查询活跃业务"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/active-businesses/">1126. 查询活跃业务</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line">select t.business_id </span><br><span class="line">from </span><br><span class="line">(select *, avg(E1.occurences  ) over(partition by E1.event_type ) as ave_occu</span><br><span class="line">from Events E1 ) t</span><br><span class="line">where t.occurences &gt; t.ave_occu</span><br><span class="line">group by t.business_id</span><br><span class="line">having    count(t.business_id)&gt;=2</span><br></pre></td></tr></table></figure>
+<p>4  条件判断</p>
+<p>(E1.id , E1.month) in ((1,8))</p>
+<p> BETWEEN ‘2019-06-28’ AND ‘2019-07-27’</p>
+<p>EXISTS ：用于判断查询子句是否有记录，如果有一条或多条记录存在返回 True，否则返回 False。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE EXISTS</span><br><span class="line">(SELECT column_name FROM table_name WHERE condition);</span><br></pre></td></tr></table></figure>
+<h2 id="8-NULL"><a href="#8-NULL" class="headerlink" title="8 NULL"></a>8 NULL</h2><p>1.空字符和null的区别</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42214393/article/details/80463912">https://blog.csdn.net/weixin_42214393/article/details/80463912</a></p>
+<p>2.判断NULL</p>
+<p>is not NULL</p>
+<p>!=NULL 有问题</p>
+<p>ifnull(sum(quantity), 0)</p>
+<p>3  in、not in</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_22592457/article/details/108024521">https://blog.csdn.net/qq_22592457/article/details/108024521</a></p>
+<ol>
+<li>使用in时，in后面的括号中忽略null值</li>
+<li>使用not in时，如果 not in后面的括号中没有null，正常判断，会查询条件列中符合要求的数据</li>
+<li>使用not in时，如果 not in后面的括号中有null，直接返回false，查询结果为空。</li>
+</ol>
+<h2 id="9-日期"><a href="#9-日期" class="headerlink" title="9 日期"></a>9 日期</h2><p>1 大小判断</p>
+<p>available_from &lt; ‘2019-05-23’</p>
+<p>datediff(date1,date2)</p>
+<p>2 格式转化</p>
+<p>DATE_FORMAT()</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/func_date_format.asp">https://www.w3school.com.cn/sql/func_date_format.asp</a></p>
+<h2 id="10-去重"><a href="#10-去重" class="headerlink" title="10 去重"></a>10 去重</h2><p>1 distinct</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangzehai2234/article/details/88361586">https://blog.csdn.net/zhangzehai2234/article/details/88361586</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct expression[,expression...] from tables [where conditions];</span><br></pre></td></tr></table></figure>
+<p>在使用distinct的过程中主要注意一下几点：</p>
+<ul>
+<li>在对字段进行去重的时候，要保证distinct在所有字段的最前面</li>
+<li>如果distinct关键字后面有多个字段时，则会对多个字段进行组合去重，只有多个字段组合起来的值是相等的才会被去重</li>
+</ul>
+<p>distinct , count 一起用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">##建表</span><br><span class="line">Create table If Not Exists Spending (user_id int, spend_date date, platform ENUM(&#x27;desktop&#x27;, &#x27;mobile&#x27;), amount int);</span><br><span class="line">Truncate table Spending;</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;1&#x27;, &#x27;2019-07-01&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;1&#x27;, &#x27;2019-07-01&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;2&#x27;, &#x27;2019-07-01&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;2&#x27;, &#x27;2019-07-02&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;3&#x27;, &#x27;2019-07-01&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;3&#x27;, &#x27;2019-07-02&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line"></span><br><span class="line">###查询</span><br><span class="line">select distinct spend_date ,count(user_id ) </span><br><span class="line">from Spending</span><br><span class="line"></span><br><span class="line">##result</span><br><span class="line">##返回结果就一行，distinct后多行，count一行，多行一行还是一行；count结果还是distinct前的数量</span><br><span class="line">spend_date	count(user_id )</span><br><span class="line">2019-07-01	6</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="11-show-status"><a href="#11-show-status" class="headerlink" title="11 show status"></a>11 show status</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29168493/article/details/79149132">https://blog.csdn.net/qq_29168493/article/details/79149132</a></p>
+<p>查看当前数据库状态，可以统计当前数据库不同语句的执行频次</p>
+<h2 id="12-explain"><a href="#12-explain" class="headerlink" title="12 explain"></a>12 explain</h2><p>获取sql执行计划，结果明细参考</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1093229">https://cloud.tencent.com/developer/article/1093229</a></p>
+<h2 id="14-事务"><a href="#14-事务" class="headerlink" title="14 事务"></a>14 事务</h2><p><a target="_blank" rel="noopener" href="http://m.biancheng.net/sql/transaction.html">http://m.biancheng.net/sql/transaction.html</a></p>
+<h2 id="15-递归查询"><a href="#15-递归查询" class="headerlink" title="15 递归查询"></a>15 递归查询</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/372330656">https://zhuanlan.zhihu.com/p/372330656</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/swlh/recursion-in-sql-explained-graphically-679f6a0f143b">https://medium.com/swlh/recursion-in-sql-explained-graphically-679f6a0f143b</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-recursive-cte/">https://www.sqlservertutorial.net/sql-server-basics/sql-server-recursive-cte/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">WITH expression_name (column_list)</span><br><span class="line">AS</span><br><span class="line">(</span><br><span class="line">    -- Anchor member</span><br><span class="line">    initial_query  </span><br><span class="line">    UNION ALL</span><br><span class="line">    -- Recursive member that references expression_name.</span><br><span class="line">    recursive_query  </span><br><span class="line">)</span><br><span class="line">-- references expression name</span><br><span class="line">SELECT *</span><br><span class="line">FROM   expression_name</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/02/27/sql-common-operation/1.png" alt></p>
+<p>分析  <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/372330656">https://zhuanlan.zhihu.com/p/372330656</a></p>
+<p>R0 ：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> UserID,ManagerID,Name,Name <span class="keyword">AS</span> ManagerName</span><br><span class="line"> <span class="keyword">FROM</span> dbo.Employee</span><br><span class="line"> <span class="keyword">WHERE</span> ManagerID<span class="operator">=</span><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>R1：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.UserID,c.ManagerID,c.Name,p.Name <span class="keyword">AS</span> ManagerName</span><br><span class="line"><span class="keyword">FROM</span> CTE P</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> dbo.Employee c <span class="keyword">ON</span> p.UserID<span class="operator">=</span>c.ManagerID</span><br></pre></td></tr></table></figure>
+<p>此时Employee为完整的，cte为</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>得到结果为</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>c.userid</th>
+<th>c.managerid</th>
+<th>c.name</th>
+<th>c.managername</th>
+<th>p.userid</th>
+<th>p.managerid</th>
+<th>p.name</th>
+<th>p.managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>A1</td>
+<td>A1</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>A2</td>
+<td>A2</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1</td>
+<td>A3</td>
+<td>A3</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.UserID,c.ManagerID,c.Name,p.Name <span class="keyword">AS</span> ManagerName</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>A1</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>A2</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1</td>
+<td>A3</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>R2,R3…</p>
+<p>最后union all R0，R1，R2，。。。</p>
+<h2 id="16-select-常数"><a href="#16-select-常数" class="headerlink" title="16 select 常数"></a>16 select 常数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SELECT 1,-1,N&#x27;Boss&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 11,1,N&#x27;A1&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 12,1,N&#x27;A2&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 13,1,N&#x27;A3&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 111,11,N&#x27;B1&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 112,11,N&#x27;B2&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 121,12,N&#x27;C1&#x27;</span><br></pre></td></tr></table></figure>
+<p>1    -1    Boss  —字段</p>
+<p>1    -1    Boss<br>11    1    A1<br>12    1    A2<br>13    1    A3<br>111    11    B1<br>112    11    B2<br>121    12    C1</p>
+<h2 id="17-CTE"><a href="#17-CTE" class="headerlink" title="17 CTE"></a>17 CTE</h2><p>Common Table Expression</p>
+<p>with …as… </p>
+<h2 id="18-触发器"><a href="#18-触发器" class="headerlink" title="18 触发器"></a>18 触发器</h2><p>就是做了某些操作，自动触发的行为</p>
+<p>触发器是自动执行的，当用户对表中数据作了某些操作之后立即被触发。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48033173/article/details/111713117">https://blog.csdn.net/weixin_48033173/article/details/111713117</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/sql/">sql</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/sql%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">sql常见操作</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-27  <a class="commentCountImg" href="/2022/02/27/sql-optimization/#comment-container"><span class="display-none-class">a3713f3c94fdc394299f0871fbe59af8</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="a3713f3c94fdc394299f0871fbe59af8">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>4 m  <i class="fas fa-pencil-alt"> </i>0.7 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/27/sql-optimization/">sql优化</a></h1><div class="content"><h2 id="1-汇总"><a href="#1-汇总" class="headerlink" title="1 汇总"></a>1 汇总</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hguisu/article/details/5731629">https://blog.csdn.net/hguisu/article/details/5731629</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2021/10/a-detailed-guide-on-sql-query-optimization/">https://www.analyticsvidhya.com/blog/2021/10/a-detailed-guide-on-sql-query-optimization/</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.devart.com/how-to-optimize-sql-query.html#sql-query-optimization-basics">https://blog.devart.com/how-to-optimize-sql-query.html#sql-query-optimization-basics</a></p>
+<h2 id="2-减少全表扫描"><a href="#2-减少全表扫描" class="headerlink" title="2 减少全表扫描"></a>2 减少全表扫描</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/feiling/p/3393356.html">https://www.cnblogs.com/feiling/p/3393356.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/03968ac9d8ad">https://www.jianshu.com/p/03968ac9d8ad</a></p>
+<h2 id="3-创建索引"><a href="#3-创建索引" class="headerlink" title="3 创建索引"></a>3 创建索引</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/happyheng/article/details/53143345">https://blog.csdn.net/happyheng/article/details/53143345</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/mysql/mysql-index.html">https://www.runoob.com/mysql/mysql-index.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangfeijiu/article/details/113409719">https://blog.csdn.net/wangfeijiu/article/details/113409719</a></p>
+<h4 id="0-作用"><a href="#0-作用" class="headerlink" title="0 作用"></a>0 作用</h4><p>可以提高查询效率</p>
+<p>和主键的区别，主键是特殊的索引，索引不一定是主键</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/krismile__qh/article/details/98477484">https://blog.csdn.net/krismile__qh/article/details/98477484</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33375360/article/details/113371197">https://blog.csdn.net/weixin_33375360/article/details/113371197</a></p>
+<p>既然有主键为啥还要索引，关键在于这是两个东西，一个是为了唯一表示，一个是为了提高查询效率，底层也不同</p>
+<p><a target="_blank" rel="noopener" href="https://cache.one/read/17347789">https://cache.one/read/17347789</a></p>
+<h4 id="1-索引分类"><a href="#1-索引分类" class="headerlink" title="1 索引分类"></a>1 索引分类</h4><p>聚集索引与非聚集索引</p>
+<h4 id="2-常见操作"><a href="#2-常见操作" class="headerlink" title="2 常见操作"></a>2 常见操作</h4><p>1、创建索引</p>
+<p>创建表时指定索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">drop TABLE if EXISTS s1;</span><br><span class="line">create table s1(</span><br><span class="line">    id int ,</span><br><span class="line"></span><br><span class="line">    age int,</span><br><span class="line">    email varchar(30),</span><br><span class="line">index(id)</span><br><span class="line"></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+<p>创建表后</p>
+<p>CREATE INDEX 索引名 ON 表名(列的列表);/ALTER TABLE 表名 ADD INDEX 索引名 (列名1，列名2,…);</p>
+<p>2、删除索引</p>
+<p>DROP INDEX index_name ON talbe_name<br>ALTER TABLE table_name DROP INDEX index_name</p>
+<p>3、查看索引</p>
+<p> SHOW INDEX FROM table_name;</p>
+<p>4、使用索引</p>
+<p>建立了索引，底层查询效率变高了</p>
+<p>查询语句编写上和原来一样，没有区别</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lenux2017/article/details/80086265">https://blog.csdn.net/lenux2017/article/details/80086265</a></p>
+<h4 id="3-索引失效"><a href="#3-索引失效" class="headerlink" title="3 索引失效"></a>3 索引失效</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/technologykai/articles/14172224.html">https://www.cnblogs.com/technologykai/articles/14172224.html</a></p>
+<h4 id="4-索引设计"><a href="#4-索引设计" class="headerlink" title="4 索引设计"></a>4 索引设计</h4><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/7366.html">http://c.biancheng.net/view/7366.html</a></p>
+<h2 id="4-视图"><a href="#4-视图" class="headerlink" title="4 视图"></a>4 视图</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/talentluke/article/details/6420197">https://blog.csdn.net/talentluke/article/details/6420197</a></p>
+<p><a target="_blank" rel="noopener" href="http://m.biancheng.net/sql/create-view.html">http://m.biancheng.net/sql/create-view.html</a></p>
+<p>视图为虚拟的表，包含的不是数据而是sql查询</p>
+<p>视图和表的主要区别在于：</p>
+<ul>
+<li>表占用物理存储空间，也包含真正的数据；</li>
+<li>视图不需要物理存储空间（除非您为视图添加索引），也不包含真正的数据，它只是从表中引用数据。</li>
+</ul>
+<p>作用</p>
+<ul>
+<li>简化数据访问，让复杂的 SQL 语句简单化。用户只需要对视图写简单的代码就能返回需要的数据，一些复杂的逻辑放在视图中完成。</li>
+<li>防止敏感的字段被选中，同时仍然提供对其它重要数据的访问。</li>
+<li>可以对视图添加一些额外的索引，来提高查询的效率。</li>
+</ul>
+<p>使用视图的时候跟表一样 </p>
+<p><strong>和cte的区别</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/happyboy53/article/details/2731420">https://blog.csdn.net/happyboy53/article/details/2731420</a></p>
+<p>子查询包含的是数据，将数据存在内存，而视图包含的不是数据而是sql查询</p>
+<h2 id="5-存储过程"><a href="#5-存储过程" class="headerlink" title="5 存储过程"></a>5 存储过程</h2><p> SQL 语言层面的代码封装与重用</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/mysql-stored-procedure.html">https://www.runoob.com/w3cnote/mysql-stored-procedure.html</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/sql/">sql</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/sql%E4%BC%98%E5%8C%96/">sql优化</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-27  <a class="commentCountImg" href="/2022/02/27/sql-func/#comment-container"><span class="display-none-class">d411510034cd06bb671d1ca960d831e5</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="d411510034cd06bb671d1ca960d831e5">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>4 m  <i class="fas fa-pencil-alt"> </i>0.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/27/sql-func/">sql函数</a></h1><div class="content"><h2 id="1-单行函数和多行函数"><a href="#1-单行函数和多行函数" class="headerlink" title="1 单行函数和多行函数"></a>1 单行函数和多行函数</h2><p>单行函数：单入单出</p>
+<p>多行函数：多入单出，最常见的就是聚合函数</p>
+<p>应该不存在单入多出，多入多出可以简化为单入单出的多次</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lailai186/article/details/12570899">https://blog.csdn.net/lailai186/article/details/12570899</a></p>
+<p>注意：</p>
+<p>多行，单行结果组合返回一行</p>
+<p>例子：select column1 ,count(column2) ，只返回一行</p>
+<p>问题来了，多多不一样呢，比如3和2，应该不存在</p>
+<h2 id="2-用户自定义函数"><a href="#2-用户自定义函数" class="headerlink" title="2 用户自定义函数"></a>2 用户自定义函数</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23833037/article/details/53170789">https://blog.csdn.net/qq_23833037/article/details/53170789</a></p>
+<h2 id="3-聚合函数"><a href="#3-聚合函数" class="headerlink" title="3 聚合函数"></a>3 聚合函数</h2><p>顾名思义，将数据聚集返回单一的值</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40456829/article/details/83657396">https://blog.csdn.net/qq_40456829/article/details/83657396</a></p>
+<h2 id="4-开窗函数（Window-Function）"><a href="#4-开窗函数（Window-Function）" class="headerlink" title="4 开窗函数（Window Function）"></a>4 开窗函数（Window Function）</h2><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040088969">https://segmentfault.com/a/1190000040088969</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.51cto.com/article/639541.html">https://www.51cto.com/article/639541.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43412569/article/details/107992998">https://blog.csdn.net/weixin_43412569/article/details/107992998</a></p>
+<p><strong>作用</strong></p>
+<p>行数保持不变</p>
+<p>输入多行（一个窗口）、返回一个值</p>
+<p><strong>计算过程</strong></p>
+<p><img src="/2022/02/27/sql-func/1.png" alt></p>
+<p>当前行-》分区-》排序-》范围-》计算-》结果填入当前行</p>
+<p><strong>语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">window_function ([expression]) OVER (</span><br><span class="line">   [ PARTITION BY part_list ]</span><br><span class="line">   [ ORDER BY order_list ]</span><br><span class="line">   [ &#123; ROWS | RANGE &#125; BETWEEN frame_start AND frame_end ] )</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>expression</p>
+</li>
+<li><p>PARTITION BY  </p>
+<p>表示将数据按 part_list 进行分区， 不加partition by 默认用全部（一个分区）</p>
+<p>partition by  columns1,columns2</p>
+</li>
+<li><p>ORDER BY </p>
+<p>表示将各个分区内的数据按 order_list进行排序</p>
+</li>
+<li><p>ROWS / RANGE 决定数据范围</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42374697/article/details/115109386">https://blog.csdn.net/qq_42374697/article/details/115109386</a></p>
+</li>
+</ul>
+<p><strong>分类</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/52xf/p/4209211.html">https://www.cnblogs.com/52xf/p/4209211.html</a></p>
+<p>可以分为以下 3 类：</p>
+<ul>
+<li>聚合（Aggregate）：<code>AVG()</code>, <code>COUNT()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>SUM()</code>…    </li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sum(frequency) over(partiton by   num )  --分组累加</span><br><span class="line">sum(frequency) over()         			--total_frequency  全部累加</span><br><span class="line">sum(frequency) over(order by num desc)  --desc_frequency, 逆序累加</span><br><span class="line">sum(frequency) over(order by num asc)   --asc_frequency,正序累加</span><br><span class="line">SUM(Salary) OVER (PARTITION BY Id ORDER BY Month asc range 2 PRECEDING) --range 2 PRECEDING 当前以及前面2行</span><br><span class="line"></span><br><span class="line">avg(frequency) over()  					--total_frequency ，全部平均</span><br><span class="line">avg(frequency) over(order by num desc)  --desc_frequency, 逆序平均</span><br><span class="line">avg(frequency) over(order by num asc)   --asc_frequency,  正序平均</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_54494937/article/details/119537881">https://blog.csdn.net/qq_54494937/article/details/119537881</a></p>
+<p>​    <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-median-given-frequency-of-numbers/">https://leetcode-cn.com/problems/find-median-given-frequency-of-numbers/</a></p>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_54494937/article/details/119537881">https://blog.csdn.net/qq_54494937/article/details/119537881</a></p>
+<ul>
+<li><p>取值（Value）：<code>FIRST_VALUE()</code>, <code>LAST_VALUE()</code>, <code>LEAD()</code>, <code>LAG()</code>…</p>
+</li>
+<li><p>排序（Ranking）：<code>RANK()</code>, <code>DENSE_RANK()</code>, <code>ROW_NUMBER()</code>, <code>NTILE()</code>…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rank() OVER (PARTITION BY Id ORDER BY Month DESC) </span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-cumulative-salary-of-an-employee/">https://leetcode-cn.com/problems/find-cumulative-salary-of-an-employee/</a></p>
+</li>
+</ul>
+<h2 id="5-数学运算函数"><a href="#5-数学运算函数" class="headerlink" title="5 数学运算函数"></a>5 数学运算函数</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a_lllll/article/details/87880389">https://blog.csdn.net/a_lllll/article/details/87880389</a></p>
+<h4 id="abs"><a href="#abs" class="headerlink" title="abs"></a>abs</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select  distinct C1.seat_id as seat_id</span><br><span class="line">from Cinema C1 join Cinema C2</span><br><span class="line">on C1.free=1 and C2.free=1 and abs(C1.seat_id-C2.seat_id)=1</span><br><span class="line">order by seat_id</span><br></pre></td></tr></table></figure>
+<h4 id="power"><a href="#power" class="headerlink" title="power"></a>power</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line">select  round(min(Power(Power(P1.x-P2.x,2)+Power(P1.y-P2.y,2),0.5)),2) as shortest </span><br><span class="line">from Point2D   P1 join Point2D  P2 </span><br><span class="line">on P1.x!=P2.x or P1.y!=P2.y</span><br></pre></td></tr></table></figure>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/sql/">sql</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/sql%E5%87%BD%E6%95%B0/">sql函数</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-26  <a class="commentCountImg" href="/2022/02/26/spark-job_partition/#comment-container"><span class="display-none-class">978c74f34f306a0fb603280a13e9affc</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="978c74f34f306a0fb603280a13e9affc">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 m  <i class="fas fa-pencil-alt"> </i>0.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/26/spark-job_partition/">数据划分,rdd分区</a></h1><div class="content"><h2 id="1-application，job，stage，task"><a href="#1-application，job，stage，task" class="headerlink" title="1 application，job，stage，task"></a>1 application，job，stage，task</h2><p><img src="/2022/02/26/spark-job_partition/1.JPG" alt></p>
+<p>0 application</p>
+<p>任务</p>
+<p>1 Job</p>
+<p>一个action 一个job</p>
+<p>2 Stage</p>
+<p>一个job包含一个或者多个stage，根据rdd的依赖关系构建dag，根据dag划分stage</p>
+<p><img src="/2022/02/26/spark-job_partition/3.png" alt></p>
+<p>3 Task</p>
+<p>1个stage包含1个或者多个task</p>
+<p>Task的类型分为2种：ShuffleMapTask和ResultTask</p>
+<p>ShuffleMapTask要进行Shuffle，ResultTask负责返回计算结果，一个Job中只有最后的Stage采用ResultTask，其他的均为ShuffleMapTask。如果要按照map端和reduce端来分析的话，ShuffleMapTask可以即是map端任务，又是reduce端任务，因为Spark中的Shuffle是可以串行的；ResultTask则只能充当reduce端任务的角色。</p>
+<h2 id="2-rdd分区"><a href="#2-rdd分区" class="headerlink" title="2 rdd分区"></a>2 rdd分区</h2><p><img src="/2022/02/26/spark-job_partition/1.webp" alt></p>
+<p>record就是记录</p>
+<p>2 为什么分区？</p>
+<p>分区的主要作用是用来实现并行计算，提高效率</p>
+<p>3 分区方式</p>
+<p>Spark包含两种数据分区方式：HashPartitioner（哈希分区）和RangePartitioner（范围分区）。</p>
+<p>4 分区数设置</p>
+<p><a target="_blank" rel="noopener" href="https://justdodt.github.io/2018/04/23/Spark-RDD-%E7%9A%84%E5%88%86%E5%8C%BA%E6%95%B0%E9%87%8F%E7%A1%AE%E5%AE%9A/">https://justdodt.github.io/2018/04/23/Spark-RDD-%E7%9A%84%E5%88%86%E5%8C%BA%E6%95%B0%E9%87%8F%E7%A1%AE%E5%AE%9A/</a></p>
+<h2 id="3-关系"><a href="#3-关系" class="headerlink" title="3 关系"></a>3 关系</h2><p><img src="/2022/02/26/spark-job_partition/2.png" alt></p>
+<p>task数量和Partition数量一样</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3aa52ee3a802">https://www.jianshu.com/p/3aa52ee3a802</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hjw199089/article/details/77938688">https://blog.csdn.net/hjw199089/article/details/77938688</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/mys_35088/article/details/80864092">https://blog.csdn.net/mys_35088/article/details/80864092</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dmy1115143060/article/details/82620715">https://blog.csdn.net/dmy1115143060/article/details/82620715</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xxd1992/article/details/85254666">https://blog.csdn.net/xxd1992/article/details/85254666</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46657040/article/details/108737350">https://blog.csdn.net/m0_46657040/article/details/108737350</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/heiren_a/article/details/111954523">https://blog.csdn.net/heiren_a/article/details/111954523</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011564172/article/details/53611109">https://blog.csdn.net/u011564172/article/details/53611109</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_22473611/article/details/107822168">https://blog.csdn.net/qq_22473611/article/details/107822168</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3aa52ee3a802">https://www.jianshu.com/p/3aa52ee3a802</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E5%8E%9F%E7%90%86/">原理</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%92%E5%88%86-rdd%E5%88%86%E5%8C%BA/">数据划分,rdd分区</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-26  <a class="commentCountImg" href="/2022/02/26/spark-module/#comment-container"><span class="display-none-class">c0009efc9f92163ffa162adcff7500c6</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="c0009efc9f92163ffa162adcff7500c6">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 m  <i class="fas fa-pencil-alt"> </i>0.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/26/spark-module/">spark模块</a></h1><div class="content"><p><img src="/2022/02/26/spark-module/1.png" alt></p>
+<p>整个Spark 框架模块包含：Spark Core、Spark SQL、Spark Streaming、Spark GraphX、Spark MLlib，而后四项的能力都是建立在核心引擎之上</p>
+<p><strong>Spark Core</strong>：Spark的核心，Spark核心功能均由Spark Core模块提供，是Spark运行的基础。Spark Core以RDD为数据抽象，提供Python、Java、Scala、R语言的API，可以编程进行海量离线数据批处理计算。<br><strong>SparkSQL</strong>：基于SparkCore之上，提供结构化数据的处理模块。SparkSQL支持以SQL语言对数据进行处理，SparkSQL本身针对离线计算场景。同时基于SparkSQL，Spark提供了StructuredStreaming模块，可以以SparkSQL为基础，进行数据的流式计算。</p>
+<p>数据抽象:dataset(Java、Scala)   dataframe(Java、Scala、Python、R)<br><strong>SparkStreaming</strong>：以SparkCore为基础，提供数据的流式计算功能。<br><strong>MLlib</strong>：以SparkCore为基础，进行机器学习计算，内置了大量的机器学习库和API算法等。方便用户以分布式计算的模式进行机器学习计算。<br><strong>GraphX</strong>：以SparkCore为基础，进行图计算，提供了大量的图计算API，方便用于以分布式计算模式进行图计算。</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E4%BD%BF%E7%94%A8/">使用</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/spark%E6%A8%A1%E5%9D%97/">spark模块</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-25  <a class="commentCountImg" href="/2022/02/25/mapreduce-spark/#comment-container"><span class="display-none-class">b70775067803e1bb71f0085f48c72f1c</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b70775067803e1bb71f0085f48c72f1c">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>4 m  <i class="fas fa-pencil-alt"> </i>0.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/25/mapreduce-spark/">Spark vs MapReduce</a></h1><div class="content"><h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p><a target="_blank" rel="noopener" href="https://www.educba.com/mapreduce-vs-spark/">https://www.educba.com/mapreduce-vs-spark/</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MapReduce</th>
+<th>Spark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product’s Category</strong></td>
+<td>From the introduction, we understood that MapReduce enables the processing of data and hence is majorly a data processing engine.</td>
+<td>Spark, on the other hand, is a framework that drives complete analytical solutions or applications and hence making it an obvious choice for data scientists to use this as a data analytics engine.</td>
+</tr>
+<tr>
+<td><strong>Framework’s Performance and Data Processing</strong></td>
+<td>In the case of MapReduce, reading and writing operations are performed from and to a disk thus leading to slowness in the processing speed.</td>
+<td>In Spark, the number of read/write cycles is minimized along with storing data in memory allowing it to be 10 times faster. But spark may suffer a major degradation if data doesn’t fit in memory.</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>As a result of lesser performance than Spark, MapReduce has a higher latency in computing.</td>
+<td>Since Spark is faster, it enables developers with low latency computing.</td>
+</tr>
+<tr>
+<td><strong>Manageability of framework</strong></td>
+<td>MapReduce being only a batch engine, other components must be handled separately yet synchronously thus making it difficult to manage.</td>
+<td>Spark is a complete data analytics engine, has the capability to perform batch, interactive streaming, and similar component all under the same cluster umbrella and thus easier to manage!</td>
+</tr>
+<tr>
+<td><strong>Real-time Analysis</strong></td>
+<td>MapReduce was built mainly for batch processing and hence fails when used for real-time analytics use cases.</td>
+<td>Data coming from real-time live streams like Facebook, Twitter, etc. can be efficiently managed and processed in Spark.</td>
+</tr>
+<tr>
+<td><strong>Interactive Mode</strong></td>
+<td>MapReduce doesn’t provide the gamut of having interactive mode.</td>
+<td>In spark it is possible to process the data interactively</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>MapReduce has accessibility to all features of Hadoop security and as a result of this, it is can be easily integrated with other projects of Hadoop Security. MapReduce also supports ASLs.</td>
+<td>In Spark, the security is by default set to OFF which might lead to a major security fallback. In the case of authentication, only the shared secret password method is possible in Spark.</td>
+</tr>
+<tr>
+<td><strong>Tolerance to Failure</strong></td>
+<td>In case of crash of MapReduce process, the process is capable of starting from the place where it was left off earlier as it relies on Hard Drives rather than RAMs</td>
+<td>In case of crash of Spark process, the processing should start from the beginning and hence becomes less fault-tolerant than MapReduce as it relies of RAM usage.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="/2022/02/25/mapreduce-spark/2.png" alt></p>
+<h2 id="spark为什么比MapReduce快"><a href="#spark为什么比MapReduce快" class="headerlink" title="spark为什么比MapReduce快"></a>spark为什么比MapReduce快</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/JENREY/article/details/84873874">https://blog.csdn.net/JENREY/article/details/84873874</a></p>
+<p>1 spark基于内存 ，mapreduce基于磁盘</p>
+<p>指的是中间结果</p>
+<p>MapReduce：通常需要将计算的中间结果写入磁盘，然后还要读取磁盘，从而导致了频繁的磁盘IO</p>
+<p>Spark：不需要每次将计算的中间结果写入磁盘</p>
+<p>2 spark粗粒度资源申请，MapReduce细粒度资源申请</p>
+<p>spark 执行task不需要自己申请资源，提交任务的时候统一申请了</p>
+<p>MapReduce 执行task任务的时候，task自己申请</p>
+<p>3 spark基于多线程，mapreduce基于多进程</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E5%8E%9F%E7%90%86/">原理</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Spark-vs-MapReduce/">Spark vs MapReduce</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-23  <a class="commentCountImg" href="/2022/02/23/context/#comment-container"><span class="display-none-class">3d903d51594ab0c554d36d74a0e1c037</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="3d903d51594ab0c554d36d74a0e1c037">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>fast  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/23/context/">SparkSession、SparkContext、HiveContext、SQLContext</a></h1><div class="content"><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43648241/article/details/108917865">https://blog.csdn.net/weixin_43648241/article/details/108917865</a></p>
+<p>SparkSession包含SparkContext</p>
+<p>SparkContext包含HiveContext</p>
+<p>HiveContext包含SQLContext</p>
+<p>SparkSession &gt;  SparkContext &gt;  HiveContext &gt; SQLContext</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">SparkSession.builder.\</span><br><span class="line">config(&quot;hive.metastore.uris&quot;, &quot;thrift://xxx.xx.x.xx:xxxx&quot;).\</span><br><span class="line">config(&quot;spark.pyspark.python&quot;, &quot;/opt/dm_python3/bin/python&quot;).\</span><br><span class="line">config(&#x27;spark.default.parallelism &#x27;, 10 ).\</span><br><span class="line">config(&#x27;spark.sql.shuffle.partitions&#x27;, 200 ).\</span><br><span class="line">config(&quot;spark.driver.maxResultSize&quot;, &quot;16g&quot;).\</span><br><span class="line">config(&quot;spark.port.maxRetries&quot;, &quot;100&quot;).\</span><br><span class="line">config(&quot;spark.driver.memory&quot;,&quot;16g&quot;).\</span><br><span class="line">config(&quot;spark.yarn.queue&quot;, &quot;dcp&quot; ).\</span><br><span class="line">config(&quot;spark.executor.memory&quot;, &quot;16g&quot; ).\</span><br><span class="line">config( &quot;spark.executor.cores&quot;, 20).\</span><br><span class="line">config(&quot;spark.files&quot;, addfile).\</span><br><span class="line">config( &quot;spark.executor.instances&quot;, 6 ).\</span><br><span class="line">config(&quot;spark.speculation&quot;, False).\</span><br><span class="line">config( &quot;spark.submit.pyFiles&quot;, zipfile).\</span><br><span class="line">appName(&quot;testing&quot;).\</span><br><span class="line">master(&quot;yarn&quot;).\</span><br><span class="line">enableHiveSupport().\</span><br><span class="line">getOrCreate()</span><br></pre></td></tr></table></figure>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E4%BD%BF%E7%94%A8/">使用</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/SparkSession%E3%80%81SparkContext%E3%80%81HiveContext%E3%80%81SQLContext/">SparkSession、SparkContext、HiveContext、SQLContext</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-21  <a class="commentCountImg" href="/2022/02/21/spark-store/#comment-container"><span class="display-none-class">5e0c36d399fdb6a232137aafc697a637</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5e0c36d399fdb6a232137aafc697a637">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>fast  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/21/spark-store/">Spark支持的存储介质</a></h1><div class="content"><p>Spark 支持多种的存储介质，在存储层 Spark 支持从 HDFS、HBase、Hive、ES、MongoDB、MySQL、PostgreSQL、AWS、Ali Cloud 等不同的存储系统、大数据库、关系型数据库中读入和写出数据，在实时流计算中可以从 Flume、Kafka 等多种数据源获取数据并执行流式计算。</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1942980">https://cloud.tencent.com/developer/article/1942980</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E4%BD%BF%E7%94%A8/">使用</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Spark%E6%94%AF%E6%8C%81%E7%9A%84%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8/">Spark支持的存储介质</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-17  <a class="commentCountImg" href="/2022/02/17/spark-task/#comment-container"><span class="display-none-class">e1d6e8ab5d773f5bd2fadd4520a69999</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="e1d6e8ab5d773f5bd2fadd4520a69999">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 m  <i class="fas fa-pencil-alt"> </i>0.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/17/spark-task/">提交Spark任务</a></h1><div class="content"><h2 id="1-spark-submit"><a href="#1-spark-submit" class="headerlink" title="1.spark-submit"></a>1.spark-submit</h2><p><a target="_blank" rel="noopener" href="https://spark.apache.org/docs/latest/submitting-applications.html">https://spark.apache.org/docs/latest/submitting-applications.html</a></p>
+<p>The <code>spark-submit</code> script in Spark’s <code>bin</code> directory is used to launch applications on a cluster. It can use all of Spark’s supported <a target="_blank" rel="noopener" href="https://spark.apache.org/docs/latest/cluster-overview.html#cluster-manager-types">cluster managers</a> through a uniform interface so you don’t have to configure your application especially for each one.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">./bin/spark-submit \</span><br><span class="line">  --class &lt;main-class&gt; \</span><br><span class="line">  --master &lt;master-url&gt; \</span><br><span class="line">  --deploy-mode &lt;deploy-mode&gt; \</span><br><span class="line">  --conf &lt;key&gt;=&lt;value&gt; \</span><br><span class="line">  ... <span class="comment"># other options</span></span><br><span class="line">  &lt;application-jar&gt; \</span><br><span class="line">  [application-arguments]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>--class</code>: The entry point for your application (e.g. <code>org.apache.spark.examples.SparkPi</code>)</li>
+<li><code>--master</code>: The <a target="_blank" rel="noopener" href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">master URL</a> for the cluster (e.g. <code>spark://23.195.26.187:7077</code>)</li>
+<li><code>--deploy-mode</code>: Whether to deploy your driver on the worker nodes (<code>cluster</code>) or locally as an external client (<code>client</code>) (default: <code>client</code>) <strong>†</strong></li>
+<li><code>--conf</code>: Arbitrary Spark configuration property in key=value format. For values that contain spaces wrap “key=value” in quotes (as shown). Multiple configurations should be passed as separate arguments. (e.g. <code>--conf = --conf =</code>)</li>
+<li><code>application-jar</code>: Path to a bundled jar including your application and all dependencies. The URL must be globally visible inside of your cluster, for instance, an <code>hdfs://</code> path or a <code>file://</code> path that is present on all nodes.</li>
+<li><code>application-arguments</code>: Arguments passed to the main method of your main class, if any</li>
+</ul>
+<p>当前为客户端，driver在哪取决于deploy mode</p>
+<h2 id="2-run-file-py"><a href="#2-run-file-py" class="headerlink" title="2.run file.py"></a>2.run file.py</h2><p>当前为客户机，而且这种方式默认driver在客户机，也就是client模式</p>
+<p>此时若是代码指定cluster会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config(&quot;spark.submit.deployMode&quot;, &quot;cluster&quot;)</span><br></pre></td></tr></table></figure>
+<p>Exception in thread “main” org.apache.spark.SparkException: Cluster deploy mode is not applicable to Spark shells.</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/">基础组件</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/">spark</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/spark/%E4%BD%BF%E7%94%A8/">使用</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%8F%90%E4%BA%A4Spark%E4%BB%BB%E5%8A%A1/">提交Spark任务</a></div><hr></div></article></div><!--!--><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/14/">Previous</a></div><div class="pagination-next"><a href="/page/16/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/14/">14</a></li><li><a class="pagination-link is-current" href="/page/15/">15</a></li><li><a class="pagination-link" href="/page/16/">16</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/38/">38</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/50144751?v=4" alt="Lavine Hu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Lavine Hu</p><p class="is-size-6 is-block">我能卖你生瓜蛋子？</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">375</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">138</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">358</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hlw95" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hlw95"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="/null"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/18829272646@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="/null"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-26T15:40:11.000Z">2022-07-26</time></p><p class="title"><a href="/2022/07/26/ml-iteration-analyze/">迭代分析</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a> / <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%BF%AD%E4%BB%A3%E5%88%86%E6%9E%90/">迭代分析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T15:01:42.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/indexing/">倒排索引</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/">召回</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">倒排索引</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T14:54:57.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/pre-ranking/">粗排</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/">排序</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/%E7%B2%97%E6%8E%92/">粗排</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-01T15:10:52.000Z">2022-07-01</time></p><p class="title"><a href="/2022/07/01/bert-serving/">bert_serving</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/%E5%B0%8F%E5%B8%AE%E6%89%8B/">小帮手</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-30T11:45:19.000Z">2022-06-30</time></p><p class="title"><a href="/2022/06/30/micro-Grained/">细粒度NLP任务</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/PTM/">PTM</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CTR/"><span class="level-start"><span class="level-item">CTR</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/GNN/GCN/"><span class="level-start"><span class="level-item">GCN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/%E5%B0%8F%E5%B8%AE%E6%89%8B/"><span class="level-start"><span class="level-item">小帮手</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">68</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/NLP/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/PTM/"><span class="level-start"><span class="level-item">PTM</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Prompt/"><span class="level-start"><span class="level-item">Prompt</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Tokenization/"><span class="level-start"><span class="level-item">Tokenization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">June 2022</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">33</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/PTM/"><span class="tag">PTM</span><span class="tag is-grey-lightest">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">文本表示</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/"><span class="tag">文本匹配</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AC%E5%9B%9E/"><span class="tag">召回</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"><span class="tag">文本分类</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E6%94%B9%E5%86%99/"><span class="tag">文本改写</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Atlas/"><span class="tag">Atlas</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AutoTokenizer/"><span class="tag">AutoTokenizer</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Azkaban/"><span class="tag">Azkaban</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BertGCN/"><span class="tag">BertGCN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bert%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">Bert文本表示</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CDC%EF%BC%88Change-Data-Capture%EF%BC%89%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/"><span class="tag">CDC（Change Data Capture）工具对比</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CRF%E5%92%8CHMM/"><span class="tag">CRF和HMM</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CTR%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"><span class="tag">CTR一些问题</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChineseBERT-Chinese-Pretraining-Enhanced-by-Glyph-and-Pinyin-Information/"><span class="tag">ChineseBERT Chinese Pretraining Enhanced by Glyph and Pinyin Information</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DAG/"><span class="tag">DAG</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL/"><span class="tag">DGL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL-notice/"><span class="tag">DGL notice</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIEN/"><span class="tag">DIEN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIN/"><span class="tag">DIN</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Lavine Hu</a><p class="size-small"><span>&copy; 2022 Lavine Hu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2021/07/17 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);})</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"display":null,"superSample":2,"width":250,"height":500,"position":"right","hOffset":0,"vOffset":-20,"jsonPath":"/live2dw/assets/hijiki.model.json"},"mobile":{"show":true,"scale":0.5,"react":null,"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

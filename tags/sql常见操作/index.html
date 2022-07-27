@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Tag: sql常见操作 - Lavine Hu</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Lavine Hu"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Lavine Hu"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Lavine Hu"><meta property="og:url" content="https://github.com/hlw95?tab=following"><meta property="og:site_name" content="Lavine Hu"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="Lavine Hu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Lavine Hu","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Lavine Hu"},"description":""}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Lavine Hu</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/message">留言</a></div><div class="navbar-end"><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">sql常见操作</a></li></ul></nav></div></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-27  <a class="commentCountImg" href="/2022/02/27/sql-common-operation/#comment-container"><span class="display-none-class">5b7ffb8d2d555a620529d768bd7e1167</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5b7ffb8d2d555a620529d768bd7e1167">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 m  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/27/sql-common-operation/">sql常见操作</a></h1><div class="content"><h2 id="1-拼接"><a href="#1-拼接" class="headerlink" title="1 拼接"></a>1 拼接</h2><p>1 union ，union all</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_union.asp">https://www.w3school.com.cn/sql/sql_union.asp</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select &#x27;mobile&#x27; as platform union</span><br><span class="line">select &#x27;desktop&#x27; as platform union</span><br><span class="line">select &#x27;both&#x27; as platform </span><br></pre></td></tr></table></figure>
+<p>2 join</p>
+<p>left join 、right join、 inner join，FULL OUTER JOIN，默认join 为 inner join</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ingstyle/p/4368064.html">https://www.cnblogs.com/ingstyle/p/4368064.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#多个left join</span><br><span class="line">select a.*,b.*,c.* </span><br><span class="line">from a left join b on a.id=b.id </span><br><span class="line">left join c on b.id=c.id</span><br><span class="line"></span><br><span class="line">select *</span><br><span class="line">from Trips T left join  Users  U1 on T.client_id =U1.users_id  </span><br><span class="line">left join  Users U2 on T.driver_id  =U2.users_id  </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from Trips T1</span><br><span class="line">left join Users U1 on (T1.client_id =U1.users_id  and U1.banned =&quot;Yes&quot; )    不可</span><br><span class="line"></span><br><span class="line">from Trips T1</span><br><span class="line">join Users U1 on (T1.client_id =U1.users_id  and U1.banned =&quot;Yes&quot; ) 可</span><br></pre></td></tr></table></figure>
+<p>3.from student A,student B,student C</p>
+<p>将三个 student 表相互连接成一个</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangyj_315/article/details/2249209">https://blog.csdn.net/zhangyj_315/article/details/2249209</a></p>
+<h2 id="2-分组"><a href="#2-分组" class="headerlink" title="2 分组"></a>2 分组</h2><p>1 group by</p>
+<p>分组, 分完每组就一行，取每组第一行数据</p>
+<p>group by columns1,columns2</p>
+<h6 id><a href="#" class="headerlink" title="#"></a>#</h6><p>有时候不能取第一行，怎么解决？<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/product-sales-analysis-iii/">1070. 产品销售分析 III</a></p>
+<p>a 可以先排序，把目标行变成第一行 可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/shiyong1949/article/details/78482737">https://blog.csdn.net/shiyong1949/article/details/78482737</a>  好像不行</p>
+<p>b 使用开窗函数解决，可以</p>
+<h6 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h6><p>分组+条件判断</p>
+<p>Having</p>
+<p>having 子句的作用是筛选满足条件的组，不是在组内选行</p>
+<p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。</p>
+<h6 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h6><h2 id="4-子查询"><a href="#4-子查询" class="headerlink" title="4 子查询"></a>4 子查询</h2><p>嵌套</p>
+<p><a target="_blank" rel="noopener" href="http://c.biancheng.net/sql/sub-query.html">http://c.biancheng.net/sql/sub-query.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select a.Score as Score,</span><br><span class="line">        (select count(DISTINCT b.Score) from Scores  b where b.Score &gt;= a.Score) as &#x27;Rank&#x27;</span><br><span class="line">from Scores a</span><br><span class="line">order by a.Score DESC</span><br></pre></td></tr></table></figure>
+<h2 id="5-别名"><a href="#5-别名" class="headerlink" title="5 别名"></a>5 别名</h2><p>as后加别名，也可不要as</p>
+<h2 id="6-匹配"><a href="#6-匹配" class="headerlink" title="6 匹配"></a>6 匹配</h2><p>分为完整匹配和模糊匹配</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Leophen/p/11397621.html">https://www.cnblogs.com/Leophen/p/11397621.html</a></p>
+<p>关键字like</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table where name like &quot;%三%&quot;</span><br></pre></td></tr></table></figure>
+<p>通配符：%，_，[<em>charlist</em>] ，[!<em>charlist</em>]</p>
+<h2 id="7-条件"><a href="#7-条件" class="headerlink" title="7 条件"></a>7 条件</h2><p>1.IF</p>
+<p>表达式：IF( expr1 , expr2 , expr3 )</p>
+<p>expr1条件，条件为true，则值是expr2 ，false，值就是expr3</p>
+<p>2 case</p>
+<p>input几行output几行</p>
+<p>一行一行来</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/240717732">https://zhuanlan.zhihu.com/p/240717732</a></p>
+<p>两种形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">--type1</span><br><span class="line">CASE  &lt;表达式&gt;</span><br><span class="line">   WHEN &lt;值1&gt; THEN &lt;操作&gt;</span><br><span class="line">   WHEN &lt;值2&gt; THEN &lt;操作&gt;</span><br><span class="line">   ...</span><br><span class="line">   ELSE &lt;操作&gt;</span><br><span class="line">END</span><br><span class="line">--type2</span><br><span class="line">CASE</span><br><span class="line">    WHEN &lt;条件1&gt; THEN &lt;命令&gt;</span><br><span class="line">    WHEN &lt;条件2&gt; THEN &lt;命令&gt;</span><br><span class="line">    ...</span><br><span class="line">    ELSE commands</span><br><span class="line">END</span><br></pre></td></tr></table></figure>
+<p>then后面多个值</p>
+<p>then 1 可</p>
+<p>then (1,1) 不可</p>
+<p>where xx in （1,1）可</p>
+<p>3 where</p>
+<h4 id="1126-查询活跃业务"><a href="#1126-查询活跃业务" class="headerlink" title="1126. 查询活跃业务"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/active-businesses/">1126. 查询活跃业务</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line">select t.business_id </span><br><span class="line">from </span><br><span class="line">(select *, avg(E1.occurences  ) over(partition by E1.event_type ) as ave_occu</span><br><span class="line">from Events E1 ) t</span><br><span class="line">where t.occurences &gt; t.ave_occu</span><br><span class="line">group by t.business_id</span><br><span class="line">having    count(t.business_id)&gt;=2</span><br></pre></td></tr></table></figure>
+<p>4  条件判断</p>
+<p>(E1.id , E1.month) in ((1,8))</p>
+<p> BETWEEN ‘2019-06-28’ AND ‘2019-07-27’</p>
+<p>EXISTS ：用于判断查询子句是否有记录，如果有一条或多条记录存在返回 True，否则返回 False。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE EXISTS</span><br><span class="line">(SELECT column_name FROM table_name WHERE condition);</span><br></pre></td></tr></table></figure>
+<h2 id="8-NULL"><a href="#8-NULL" class="headerlink" title="8 NULL"></a>8 NULL</h2><p>1.空字符和null的区别</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42214393/article/details/80463912">https://blog.csdn.net/weixin_42214393/article/details/80463912</a></p>
+<p>2.判断NULL</p>
+<p>is not NULL</p>
+<p>!=NULL 有问题</p>
+<p>ifnull(sum(quantity), 0)</p>
+<p>3  in、not in</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_22592457/article/details/108024521">https://blog.csdn.net/qq_22592457/article/details/108024521</a></p>
+<ol>
+<li>使用in时，in后面的括号中忽略null值</li>
+<li>使用not in时，如果 not in后面的括号中没有null，正常判断，会查询条件列中符合要求的数据</li>
+<li>使用not in时，如果 not in后面的括号中有null，直接返回false，查询结果为空。</li>
+</ol>
+<h2 id="9-日期"><a href="#9-日期" class="headerlink" title="9 日期"></a>9 日期</h2><p>1 大小判断</p>
+<p>available_from &lt; ‘2019-05-23’</p>
+<p>datediff(date1,date2)</p>
+<p>2 格式转化</p>
+<p>DATE_FORMAT()</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/func_date_format.asp">https://www.w3school.com.cn/sql/func_date_format.asp</a></p>
+<h2 id="10-去重"><a href="#10-去重" class="headerlink" title="10 去重"></a>10 去重</h2><p>1 distinct</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangzehai2234/article/details/88361586">https://blog.csdn.net/zhangzehai2234/article/details/88361586</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct expression[,expression...] from tables [where conditions];</span><br></pre></td></tr></table></figure>
+<p>在使用distinct的过程中主要注意一下几点：</p>
+<ul>
+<li>在对字段进行去重的时候，要保证distinct在所有字段的最前面</li>
+<li>如果distinct关键字后面有多个字段时，则会对多个字段进行组合去重，只有多个字段组合起来的值是相等的才会被去重</li>
+</ul>
+<p>distinct , count 一起用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">##建表</span><br><span class="line">Create table If Not Exists Spending (user_id int, spend_date date, platform ENUM(&#x27;desktop&#x27;, &#x27;mobile&#x27;), amount int);</span><br><span class="line">Truncate table Spending;</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;1&#x27;, &#x27;2019-07-01&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;1&#x27;, &#x27;2019-07-01&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;2&#x27;, &#x27;2019-07-01&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;2&#x27;, &#x27;2019-07-02&#x27;, &#x27;mobile&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;3&#x27;, &#x27;2019-07-01&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line">insert into Spending (user_id, spend_date, platform, amount) values (&#x27;3&#x27;, &#x27;2019-07-02&#x27;, &#x27;desktop&#x27;, &#x27;100&#x27;);</span><br><span class="line"></span><br><span class="line">###查询</span><br><span class="line">select distinct spend_date ,count(user_id ) </span><br><span class="line">from Spending</span><br><span class="line"></span><br><span class="line">##result</span><br><span class="line">##返回结果就一行，distinct后多行，count一行，多行一行还是一行；count结果还是distinct前的数量</span><br><span class="line">spend_date	count(user_id )</span><br><span class="line">2019-07-01	6</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="11-show-status"><a href="#11-show-status" class="headerlink" title="11 show status"></a>11 show status</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29168493/article/details/79149132">https://blog.csdn.net/qq_29168493/article/details/79149132</a></p>
+<p>查看当前数据库状态，可以统计当前数据库不同语句的执行频次</p>
+<h2 id="12-explain"><a href="#12-explain" class="headerlink" title="12 explain"></a>12 explain</h2><p>获取sql执行计划，结果明细参考</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1093229">https://cloud.tencent.com/developer/article/1093229</a></p>
+<h2 id="14-事务"><a href="#14-事务" class="headerlink" title="14 事务"></a>14 事务</h2><p><a target="_blank" rel="noopener" href="http://m.biancheng.net/sql/transaction.html">http://m.biancheng.net/sql/transaction.html</a></p>
+<h2 id="15-递归查询"><a href="#15-递归查询" class="headerlink" title="15 递归查询"></a>15 递归查询</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/372330656">https://zhuanlan.zhihu.com/p/372330656</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/swlh/recursion-in-sql-explained-graphically-679f6a0f143b">https://medium.com/swlh/recursion-in-sql-explained-graphically-679f6a0f143b</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-recursive-cte/">https://www.sqlservertutorial.net/sql-server-basics/sql-server-recursive-cte/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">WITH expression_name (column_list)</span><br><span class="line">AS</span><br><span class="line">(</span><br><span class="line">    -- Anchor member</span><br><span class="line">    initial_query  </span><br><span class="line">    UNION ALL</span><br><span class="line">    -- Recursive member that references expression_name.</span><br><span class="line">    recursive_query  </span><br><span class="line">)</span><br><span class="line">-- references expression name</span><br><span class="line">SELECT *</span><br><span class="line">FROM   expression_name</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/02/27/sql-common-operation/1.png" alt></p>
+<p>分析  <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/372330656">https://zhuanlan.zhihu.com/p/372330656</a></p>
+<p>R0 ：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> UserID,ManagerID,Name,Name <span class="keyword">AS</span> ManagerName</span><br><span class="line"> <span class="keyword">FROM</span> dbo.Employee</span><br><span class="line"> <span class="keyword">WHERE</span> ManagerID<span class="operator">=</span><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>R1：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.UserID,c.ManagerID,c.Name,p.Name <span class="keyword">AS</span> ManagerName</span><br><span class="line"><span class="keyword">FROM</span> CTE P</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> dbo.Employee c <span class="keyword">ON</span> p.UserID<span class="operator">=</span>c.ManagerID</span><br></pre></td></tr></table></figure>
+<p>此时Employee为完整的，cte为</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>得到结果为</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>c.userid</th>
+<th>c.managerid</th>
+<th>c.name</th>
+<th>c.managername</th>
+<th>p.userid</th>
+<th>p.managerid</th>
+<th>p.name</th>
+<th>p.managername</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>A1</td>
+<td>A1</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>A2</td>
+<td>A2</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1</td>
+<td>A3</td>
+<td>A3</td>
+<td>1</td>
+<td>-1</td>
+<td>boss</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c.UserID,c.ManagerID,c.Name,p.Name <span class="keyword">AS</span> ManagerName</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>managerid</th>
+<th>name</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>A1</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>A2</td>
+<td>boss</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1</td>
+<td>A3</td>
+<td>boss</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>R2,R3…</p>
+<p>最后union all R0，R1，R2，。。。</p>
+<h2 id="16-select-常数"><a href="#16-select-常数" class="headerlink" title="16 select 常数"></a>16 select 常数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SELECT 1,-1,N&#x27;Boss&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 11,1,N&#x27;A1&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 12,1,N&#x27;A2&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 13,1,N&#x27;A3&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 111,11,N&#x27;B1&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 112,11,N&#x27;B2&#x27;</span><br><span class="line">UNION  ALL</span><br><span class="line">SELECT 121,12,N&#x27;C1&#x27;</span><br></pre></td></tr></table></figure>
+<p>1    -1    Boss  —字段</p>
+<p>1    -1    Boss<br>11    1    A1<br>12    1    A2<br>13    1    A3<br>111    11    B1<br>112    11    B2<br>121    12    C1</p>
+<h2 id="17-CTE"><a href="#17-CTE" class="headerlink" title="17 CTE"></a>17 CTE</h2><p>Common Table Expression</p>
+<p>with …as… </p>
+<h2 id="18-触发器"><a href="#18-触发器" class="headerlink" title="18 触发器"></a>18 触发器</h2><p>就是做了某些操作，自动触发的行为</p>
+<p>触发器是自动执行的，当用户对表中数据作了某些操作之后立即被触发。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48033173/article/details/111713117">https://blog.csdn.net/weixin_48033173/article/details/111713117</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%BA%93/sql/">sql</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/sql%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">sql常见操作</a></div><hr></div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/50144751?v=4" alt="Lavine Hu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Lavine Hu</p><p class="is-size-6 is-block">我能卖你生瓜蛋子？</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">375</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">138</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">358</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hlw95" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hlw95"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="/null"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/18829272646@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="/null"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-26T15:40:11.000Z">2022-07-26</time></p><p class="title"><a href="/2022/07/26/ml-iteration-analyze/">迭代分析</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a> / <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%BF%AD%E4%BB%A3%E5%88%86%E6%9E%90/">迭代分析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T15:01:42.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/indexing/">倒排索引</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/">召回</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">倒排索引</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T14:54:57.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/pre-ranking/">粗排</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/">排序</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/%E7%B2%97%E6%8E%92/">粗排</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-01T15:10:52.000Z">2022-07-01</time></p><p class="title"><a href="/2022/07/01/bert-serving/">bert_serving</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/%E5%B0%8F%E5%B8%AE%E6%89%8B/">小帮手</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-30T11:45:19.000Z">2022-06-30</time></p><p class="title"><a href="/2022/06/30/micro-Grained/">细粒度NLP任务</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/PTM/">PTM</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CTR/"><span class="level-start"><span class="level-item">CTR</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/GNN/GCN/"><span class="level-start"><span class="level-item">GCN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/%E5%B0%8F%E5%B8%AE%E6%89%8B/"><span class="level-start"><span class="level-item">小帮手</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">68</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/NLP/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/PTM/"><span class="level-start"><span class="level-item">PTM</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Prompt/"><span class="level-start"><span class="level-item">Prompt</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Tokenization/"><span class="level-start"><span class="level-item">Tokenization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">June 2022</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">33</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/PTM/"><span class="tag">PTM</span><span class="tag is-grey-lightest">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">文本表示</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/"><span class="tag">文本匹配</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AC%E5%9B%9E/"><span class="tag">召回</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"><span class="tag">文本分类</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E6%94%B9%E5%86%99/"><span class="tag">文本改写</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Atlas/"><span class="tag">Atlas</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AutoTokenizer/"><span class="tag">AutoTokenizer</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Azkaban/"><span class="tag">Azkaban</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BertGCN/"><span class="tag">BertGCN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bert%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">Bert文本表示</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CDC%EF%BC%88Change-Data-Capture%EF%BC%89%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/"><span class="tag">CDC（Change Data Capture）工具对比</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CRF%E5%92%8CHMM/"><span class="tag">CRF和HMM</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CTR%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"><span class="tag">CTR一些问题</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChineseBERT-Chinese-Pretraining-Enhanced-by-Glyph-and-Pinyin-Information/"><span class="tag">ChineseBERT Chinese Pretraining Enhanced by Glyph and Pinyin Information</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DAG/"><span class="tag">DAG</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL/"><span class="tag">DGL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL-notice/"><span class="tag">DGL notice</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIEN/"><span class="tag">DIEN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIN/"><span class="tag">DIN</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Lavine Hu</a><p class="size-small"><span>&copy; 2022 Lavine Hu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2021/07/17 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);})</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"display":null,"superSample":2,"width":250,"height":500,"position":"right","hOffset":0,"vOffset":-20,"jsonPath":"/live2dw/assets/hijiki.model.json"},"mobile":{"show":true,"scale":0.5,"react":null,"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

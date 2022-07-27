@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Lavine Hu</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Lavine Hu"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Lavine Hu"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Lavine Hu"><meta property="og:url" content="https://github.com/hlw95?tab=following"><meta property="og:site_name" content="Lavine Hu"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="Lavine Hu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Lavine Hu","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Lavine Hu"},"description":""}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Lavine Hu</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/message">留言</a></div><div class="navbar-end"><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-07  <a class="commentCountImg" href="/2021/09/07/regulize/#comment-container"><span class="display-none-class">a163153037c01b910d58c60152e6ada9</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="a163153037c01b910d58c60152e6ada9">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 m  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/07/regulize/">正则化</a></h1><div class="content"><p>是机器学习中对原始损失函数引入额外信息，以便防止<strong>过拟合</strong>和提高模型泛化性能的一类方法的统称。</p>
+<h2 id="1-L1正则（Lasso回归）"><a href="#1-L1正则（Lasso回归）" class="headerlink" title="1.L1正则（Lasso回归）"></a>1.L1正则（<strong>Lasso回归</strong>）</h2><p>L1正则化可以使得参数稀疏化，即得到的参数是一个稀疏矩阵，可以用于特征选择。</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+L_{L1}(w)&=L(w)+\lambda\Vert w \Vert_1=L(w)+\lambda\sum_{i=1}^{N}|w_i|
+\\ \frac{\partial L_{L1}}{\partial w_i}&=\frac{\partial L}{\partial w_i}+\lambda \ sgn(w_i)
+\\w_i &\rightarrow w_i-\eta(\frac{\partial L}{\partial w_i}+\lambda \ sgn(w_i))
+\rightarrow w_i-\eta\lambda \ sgn(w_i)-\eta\frac{\partial L}{\partial w_i}
+\end{align*}</script><p>L1是每次减去一个常数的收敛，所以L1更容易收敛到0。</p>
+<h2 id="2-L2正则（Ridge回归）"><a href="#2-L2正则（Ridge回归）" class="headerlink" title="2.L2正则（Ridge回归）"></a>2.L2正则（<strong>Ridge回归</strong>）</h2><p>L2正则化使得参数平滑。</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+L_{L2}(w)&=L(w)+\lambda\Vert w \Vert_2^2=L(w)+\lambda\sum_{i=1}^{N}w_i^2
+\\ \frac{\partial L_{L2}}{\partial w_i}&=\frac{\partial L}{\partial w_i}+2\lambda w_i
+\\w_i& \rightarrow w_i-\eta(\frac{\partial L}{\partial w_i}+2\lambda w_i)
+\rightarrow(1-2\eta\lambda)w_i-\eta \frac{\partial L}{\partial w_i}
+\end{align*}</script><p>L2是每次乘上一个小于1的倍数进行收敛，所以L2使得参数平滑。</p>
+<h2 id="3-dropout"><a href="#3-dropout" class="headerlink" title="3.dropout"></a>3.dropout</h2><p><img src="/2021/09/07/regulize/1.png" alt></p>
+<p><strong>使用</strong>：在训练时，每个神经单元以概率$p$被保留(Dropout丢弃率为$1−p$)；在预测阶段，每个神经单元都是存在的。</p>
+<p><strong>原理</strong>：神经网络通过Dropout层以一定比例随即的丢弃神经元，使得每次训练的网络模型都不相同，多个Epoch下来相当于训练了多个模型，同时每一个模型都参与了对最终结果的投票，从而提高了模型的泛化能力，类似<strong>bagging</strong>。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zingp/p/11631913.html">https://www.cnblogs.com/zingp/p/11631913.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/b876144622/article/details/81276818">https://blog.csdn.net/b876144622/article/details/81276818</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/37096933/answer/70494622">https://www.zhihu.com/question/37096933/answer/70494622</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%AE%AD%E7%BB%83%E6%8A%80%E5%B7%A7/">训练技巧</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%AD%A3%E5%88%99%E5%8C%96/">正则化</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-07  <a class="commentCountImg" href="/2021/09/07/loss-func/#comment-container"><span class="display-none-class">a1181f0da285c1067e9bf5d83c659fb8</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="a1181f0da285c1067e9bf5d83c659fb8">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/07/loss-func/">损失函数</a></h1><div class="content"><p>损失函数一般都要用可导函数，因为常用的优化算法，比如梯度下降，牛顿法，都需要导数。</p>
+<h2 id="1-回归损失"><a href="#1-回归损失" class="headerlink" title="1.回归损失"></a>1.回归损失</h2><h3 id="1-1-Mean-Squared-Error"><a href="#1-1-Mean-Squared-Error" class="headerlink" title="1.1 Mean Squared Error"></a>1.1 Mean Squared Error</h3><script type="math/tex; mode=display">
+L=\frac{1}{N}\sum_{i=1}^{N}(y_i-\hat{y}_i)^2</script><h3 id="1-2-Mean-Absolute-Error"><a href="#1-2-Mean-Absolute-Error" class="headerlink" title="1.2 Mean Absolute Error"></a>1.2 Mean Absolute Error</h3><script type="math/tex; mode=display">
+L=\frac{1}{N}\sum_{i=1}^{N}|y_i-\hat{y}_i|</script><h3 id="1-3-Huber-Loss-Smooth-Mean-Absolute-Error-Loss"><a href="#1-3-Huber-Loss-Smooth-Mean-Absolute-Error-Loss" class="headerlink" title="1.3 Huber Loss ( Smooth Mean Absolute Error Loss )"></a>1.3 Huber Loss ( Smooth Mean Absolute Error Loss )</h3><script type="math/tex; mode=display">
+L=\frac{1}{N}\sum_{i=1}^{N}[\mathbb{1}_{|y_i-\hat{y_i}|\le \delta}\frac{(y_i-\hat{y_i})^2}{2}+\mathbb{1}_{|y_i-\hat{y_i}|> \delta} \ (\delta \cdot |y_i-\hat{y_i}|-\frac{1}{2}\delta^{2})]</script><h2 id="2-分类损失"><a href="#2-分类损失" class="headerlink" title="2.分类损失"></a>2.分类损失</h2><h3 id="2-1-Cross-entropy-loss"><a href="#2-1-Cross-entropy-loss" class="headerlink" title="2.1 Cross-entropy loss"></a>2.1 Cross-entropy loss</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/100921909">https://zhuanlan.zhihu.com/p/100921909</a></p>
+<p><img src="/2021/09/07/loss-func/1.JPG" style="zoom:25%;"></p>
+<ul>
+<li>K是种类数量</li>
+<li>y是标签</li>
+<li>p是神经网络的输出，也就是指类别是i的概率</li>
+</ul>
+<h3 id="2-2-Hinge-loss"><a href="#2-2-Hinge-loss" class="headerlink" title="2.2 Hinge loss"></a>2.2 Hinge loss</h3><script type="math/tex; mode=display">
+L=max(0,1-y\cdot \hat{y})</script><p>SVM模型的损失函数本质上就是 Hinge Loss + L2 正则化</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_38007695/article/details/114983574">https://blog.csdn.net/m0_38007695/article/details/114983574</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/loss/">loss</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">损失函数</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-06  <a class="commentCountImg" href="/2021/09/06/ensemble/#comment-container"><span class="display-none-class">64d7930bfb2e268ead146758905948c7</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="64d7930bfb2e268ead146758905948c7">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/06/ensemble/">集成学习</a></h1><div class="content"><p>目前常见的集成学习可以分类为：<strong>1.Bagging 2.Boosting 3.Stacking 4.Blending</strong></p>
+<h2 id="1-Bagging"><a href="#1-Bagging" class="headerlink" title="1.Bagging"></a>1.Bagging</h2><p><strong>bagging是解决variance问题。</strong></p>
+<p><img src="/2021/09/06/ensemble/2.jpg" alt></p>
+<h2 id="2-Boosting"><a href="#2-Boosting" class="headerlink" title="2.Boosting"></a>2.Boosting</h2><p><strong>boosting是解决bias问题。</strong></p>
+<p>Bagging，Boosting二者之间的区别</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/81340270">https://zhuanlan.zhihu.com/p/81340270</a></p>
+<p><img src="/2021/09/06/ensemble/4.jpg" alt></p>
+<h2 id="3-Stacking"><a href="#3-Stacking" class="headerlink" title="3.Stacking"></a>3.Stacking</h2><p>stacking和boosting的最大区别在于：boosting的基学习器是一个，stacking的基学习器是多个</p>
+<p><img src="/2021/09/06/ensemble/6.jpg" alt></p>
+<h2 id="4-Blending"><a href="#4-Blending" class="headerlink" title="4.Blending"></a>4.Blending</h2><p>和stacking区别： <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4380cd1def76">https://www.jianshu.com/p/4380cd1def76</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105038453">https://zhuanlan.zhihu.com/p/105038453</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/126968534">https://zhuanlan.zhihu.com/p/126968534</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/starter_____/article/details/79328749">https://blog.csdn.net/starter_____/article/details/79328749</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-06  <a class="commentCountImg" href="/2021/09/06/activate-func/#comment-container"><span class="display-none-class">f6ec69d796f91514753f8400f57d4439</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f6ec69d796f91514753f8400f57d4439">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>4 m  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/06/activate-func/">常见激活函数</a></h1><div class="content"><p><strong>作用：激活函数是来向神经网络中引入非线性因素的，通过激活函数，神经网络就可以拟合各种曲线</strong></p>
+<h3 id="1-sigmoid"><a href="#1-sigmoid" class="headerlink" title="1.sigmoid"></a>1.sigmoid</h3><p><img src="/2021/09/06/activate-func/1.jpg" alt></p>
+<p><img src="/2021/09/06/activate-func/2.jpg" alt></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+y&=\frac{1}{1+e^{-x}}
+\\y^{'}&=\frac{1}{1+e^{-x}}(1-\frac{1}{1+e^{-x}})=y(1-y)
+\end{align*}</script><p>一般应用在二分类的输出层</p>
+<p><strong>缺点</strong>：</p>
+<p>​    1.sigmoid 极容易导致梯度消失问题，可以从导数曲线可以看出，绝大多数的导数值为0</p>
+<p>​    2.Sigmoid 函数的输出不是以零为中心的（non-zero-centered），这会导致神经网络收敛较慢，详细原因请参考 <a target="_blank" rel="noopener" href="https://liam.page/2018/04/17/zero-centered-active-function/">https://liam.page/2018/04/17/zero-centered-active-function/</a></p>
+<h3 id="2-softmax"><a href="#2-softmax" class="headerlink" title="2.softmax"></a>2.softmax</h3><script type="math/tex; mode=display">
+S_i=\frac{e^i}{\sum_je^j}</script><p>和sigmoid关系：Softmax函数是二分类函数Sigmoid在多分类上的推广</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/356976844">https://zhuanlan.zhihu.com/p/356976844</a></p>
+<h3 id="3-tanh"><a href="#3-tanh" class="headerlink" title="3.tanh"></a>3.tanh</h3><p><img src="/2021/09/06/activate-func/3.jpg" alt></p>
+<p><img src="/2021/09/06/activate-func/4.jpg" alt></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+y&=tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+\\y^{'}&=1-(tanh(x))^{2}
+\end{align*}</script><p><strong>优点</strong>:</p>
+<p>​    1.tanh解决了sigmoid中的 zero-centered 问题</p>
+<p><strong>缺点</strong>： </p>
+<p>​    2.对于梯度消失问题依旧无能为力。</p>
+<h3 id="4-Relu系列"><a href="#4-Relu系列" class="headerlink" title="4.Relu系列"></a>4.Relu系列</h3><h3 id="4-1-Relu"><a href="#4-1-Relu" class="headerlink" title="4.1 Relu"></a>4.1 Relu</h3><p><img src="/2021/09/06/activate-func/5.jpg" alt></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+y&=max(0,x)
+\\
+y^{'}&=\left\{
+\begin{array}{cl}
+1 &  \ x \ge 0 \\
+
+0 &  \ x < 0 \\
+\end{array} \right.
+
+\end{align*}</script><p><strong>优点</strong>:</p>
+<p>​    1.可以缓解梯度消失，因为导数在正数部分是恒等于1的</p>
+<p><strong>缺点</strong>：</p>
+<p>​    1.Relu的输出不是zero-centered</p>
+<p>​    2.由于负数部分导数恒为0，会导致一些神经元无法激活，叫做Dead ReLU Problem</p>
+<h3 id="4-2-leaky-Relu"><a href="#4-2-leaky-Relu" class="headerlink" title="4.2 leaky Relu"></a>4.2 leaky Relu</h3><p>leaky Relu就是为了解决Relu的0区间带来的影响，其数学表达为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+y&=\left\{
+\begin{array}{cl}
+x &  \ x \ge 0 \\
+
+kx &  \ x < 0 \\
+\end{array} \right.
+
+\\
+y^{'}&=\left\{
+\begin{array}{cl}
+1 &  \ x \ge 0 \\
+
+k &  \ x < 0 \\
+\end{array} \right.
+
+\end{align*}</script><p>其中$k$是为超参数，一般数值较小，比如0.01</p>
+<h3 id="4-3-Elu"><a href="#4-3-Elu" class="headerlink" title="4.3 Elu"></a>4.3 Elu</h3><p><img src="/2021/09/06/activate-func/6.png" alt></p>
+<p>Elu激活函数也是为了解决Relu的0区间带来的影响，其数学表达为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+y&=\left\{
+\begin{array}{cl}
+x &  \ x \ge 0 \\
+
+\alpha(e^{x}-1) &  \ x < 0 \\
+\end{array} \right.
+
+\\
+y^{'}&=\left\{
+\begin{array}{cl}
+1 &  \ x \ge 0 \\
+
+\alpha e^{x} &  \ x < 0 \\
+\end{array} \right.
+
+\end{align*}</script><p>Elu相对于leaky Relu来说，计算要更耗时间一些</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/44398148">https://zhuanlan.zhihu.com/p/44398148</a></p>
+<p><a target="_blank" rel="noopener" href="https://liam.page/2018/04/17/zero-centered-active-function/">https://liam.page/2018/04/17/zero-centered-active-function/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tornadomeet/p/3428843.html">https://www.cnblogs.com/tornadomeet/p/3428843.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chamie/p/8665251.html">https://www.cnblogs.com/chamie/p/8665251.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33006526?from_voters_page=true">https://zhuanlan.zhihu.com/p/33006526?from_voters_page=true</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84/">模型结构</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0/">激活函数</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-04  <a class="commentCountImg" href="/2021/09/04/overfit-underfit/#comment-container"><span class="display-none-class">1f189f8e824cf01149d323b5bd5e3584</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1f189f8e824cf01149d323b5bd5e3584">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 m  <i class="fas fa-pencil-alt"> </i>0.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/04/overfit-underfit/">过拟合，欠拟合以及解决办法</a></h1><div class="content"><h2 id="1-偏差和方差"><a href="#1-偏差和方差" class="headerlink" title="1.偏差和方差"></a>1.偏差和方差</h2><p><img src="/2021/09/04/overfit-underfit/1.jpg" alt></p>
+<script type="math/tex; mode=display">
+\overline{f}(\textbf{x})=\mathbb{E}_D[f(\textbf{x};D)]</script><p><strong>a.偏差</strong></p>
+<p>期望输出与真实标记的差别称为偏差（bias），即</p>
+<script type="math/tex; mode=display">
+bias^{2}(\textbf{x})=(\overline{f}(\textbf{x})-y)^{2}</script><p><strong>b.方差</strong></p>
+<script type="math/tex; mode=display">
+var(\textbf{x})=\mathbb{E}_D[(f(\textbf{x};D)-\overline{f}(x))^2]</script><p><strong>c.噪声</strong></p>
+<script type="math/tex; mode=display">
+\xi^{2}=\mathbb{E}_D[(y_D-y)^2]</script><p><strong>d.泛化误差（error）</strong></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+error&=\mathbb{E}_D[(f(\textbf{x};D)-y_D)^2]
+\\&=...
+\\&=(\overline{f}(\textbf{x})-y)^{2}+\mathbb{E}_D[(f(\textbf{x};D)-\overline{f}(x))^2]+\mathbb{E}_D[(y_D-y)^2]
+\\&=bias^{2}(\textbf{x})+var(\textbf{x})+\xi^{2}
+
+\end{align*}</script><h2 id="2-过拟合、欠拟合与偏差、方差的关系"><a href="#2-过拟合、欠拟合与偏差、方差的关系" class="headerlink" title="2.过拟合、欠拟合与偏差、方差的关系"></a>2.过拟合、欠拟合与偏差、方差的关系</h2><p><img src="/2021/09/04/overfit-underfit/2.jpg" alt></p>
+<p><img src="/2021/09/04/overfit-underfit/3.jfif" alt></p>
+<p><strong>欠拟合：模型不能适配训练样本，有一个很大的偏差。</strong></p>
+<p><strong>过拟合：模型很好的适配训练样本，但在测试集上表现很糟，有一个很大的方差。</strong></p>
+<h2 id="3-如何解决过拟合和欠拟合"><a href="#3-如何解决过拟合和欠拟合" class="headerlink" title="3.如何解决过拟合和欠拟合"></a>3.如何解决过拟合和欠拟合</h2><p><strong>a.模型能力（一个模型参数数量不同，不同模型）</strong></p>
+<p><img src="/2021/09/04/overfit-underfit/4.jpg" alt></p>
+<p><strong>b.正则化</strong></p>
+<p>正则化参数出现的目的其实是防止过拟合情形的出现；如果我们的模型已经出现了欠拟合的情形，就可以通过减少正则化参数来消除欠拟合</p>
+<p><strong>c.特征数量</strong></p>
+<p>欠拟合：增加特征项</p>
+<p>过拟合：减少特征项</p>
+<p><strong>d、训练的数据量</strong></p>
+<p>欠拟合：减少数据量</p>
+<p>过拟合：增加数据量</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38853908">https://zhuanlan.zhihu.com/p/38853908</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hurry0808/article/details/78148756">https://blog.csdn.net/hurry0808/article/details/78148756</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cltcj/article/details/119155683">https://blog.csdn.net/cltcj/article/details/119155683</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%AE%AD%E7%BB%83%E6%8A%80%E5%B7%A7/">训练技巧</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E8%BF%87%E6%8B%9F%E5%90%88%E3%80%81%E6%AC%A0%E6%8B%9F%E5%90%88/">过拟合、欠拟合</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-04  <a class="commentCountImg" href="/2021/09/04/data-imbalance/#comment-container"><span class="display-none-class">5a6e62f83c4052377fc6d3f509682b43</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5a6e62f83c4052377fc6d3f509682b43">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/04/data-imbalance/">数据不平衡如何解决</a></h1><div class="content"><h2 id="1-基于数据"><a href="#1-基于数据" class="headerlink" title="1.基于数据"></a>1.基于数据</h2><p><strong>a.过采样和欠采样</strong></p>
+<p>对少数数据进行有放回的过采样，使原本的数据变的均衡，这样就是对少数数据进行了复制，容易造成过拟合。</p>
+<p>对多数数据进行有放回/无放回的欠采样，这样会丢失一些样本，损失信息，模型只学会整体模式的一部分，容易欠拟合。</p>
+<p><strong>b.SMOTE算法</strong></p>
+<p><strong>c.数据增强</strong></p>
+<p>通过人为或算法增加少数数据的数量</p>
+<h2 id="2-基于loss"><a href="#2-基于loss" class="headerlink" title="2.基于loss"></a>2.基于loss</h2><p>使用代价函数时，可以增加小类样本的权值，降低大类样本的权值</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62877337">https://zhuanlan.zhihu.com/p/62877337</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/asialee_bird/article/details/83714612">https://blog.csdn.net/asialee_bird/article/details/83714612</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0/">数据构造</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%B9%B3%E8%A1%A1/">数据不平衡</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-02  <a class="commentCountImg" href="/2021/09/02/gradient/#comment-container"><span class="display-none-class">77676acf8cf2b5dd00ba3fb30e35ef79</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="77676acf8cf2b5dd00ba3fb30e35ef79">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 m  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/02/gradient/">梯度爆炸、梯度消失和解决方法</a></h1><div class="content"><h2 id="1-梯度"><a href="#1-梯度" class="headerlink" title="1.梯度"></a>1.梯度</h2><p>设二元函数$z=f(x,y)$ 在平面区域$D$上具有一阶连续偏导数，则对于每一个点$P(x，y)$的梯度为</p>
+<script type="math/tex; mode=display">
+grad \ f(x,y)=\nabla f(x,y)=f_x(x,y)\vec{j}+ f_y(x,y)\vec{j}</script><h2 id="2-BP算法图示"><a href="#2-BP算法图示" class="headerlink" title="2.BP算法图示"></a>2.BP算法图示</h2><p><img src="/2021/09/02/gradient/11.JPG" alt></p>
+<h2 id="3-梯度消失和梯度爆炸"><a href="#3-梯度消失和梯度爆炸" class="headerlink" title="3.梯度消失和梯度爆炸"></a>3.梯度消失和梯度爆炸</h2><p>梯度爆炸和梯度消失问题都是因为<strong>网络太深</strong>，<strong>网络权值更新不稳定</strong>造成的，本质上是因为梯度反向传播中的连乘效应。</p>
+<p><img src="/2021/09/02/gradient/22.jpg" alt></p>
+<p>举个例子，现有如上链式连接的网络$(x\rightarrow z \rightarrow y)$</p>
+<script type="math/tex; mode=display">
+\frac{\partial C }{\partial b_1}=\frac{\partial C }{\partial y_4}\frac{\partial y_4 }{\partial z_4}\frac{\partial z_4 }{\partial x_4}\frac{\partial x_4 }{\partial z_3}\frac{\partial z_3 }{\partial x_3}\frac{\partial x_3 }{\partial z_2}\frac{\partial z_2 }{\partial x_2}\frac{\partial x_2 }{\partial z_1}\frac{\partial z_1 }{\partial b_1}=\frac{\partial C }{\partial y_4}g^{'}(z_4)w_4g^{'}(z_3)w_3g^{'}(z_2)w_2g^{'}(z_1)w_1</script><p>假设$g$为sigmoid，那么$g^{‘}(z)$最大值为$\frac{1}{4}$，而我们初始化的网络权值通常都小于1，所以$g^{‘}(z)w \le \frac{1}{4}$，因此对于上面的链式求导，层数越多，求导结果$\frac{\partial C }{\partial b_1}$越小，因而导致梯度消失的情况出现。</p>
+<p>这样，梯度爆炸问题的出现原因就显而易见了，当$w$比较大的时候或者激活函数的梯度较大，即$g^{‘}(z)w &gt; 1$，层数越多，求导结果$\frac{\partial C }{\partial b_1}$越大，直到爆炸。</p>
+<h2 id="4-梯度消失和梯度爆炸解决方法"><a href="#4-梯度消失和梯度爆炸解决方法" class="headerlink" title="4.梯度消失和梯度爆炸解决方法"></a>4.梯度消失和梯度爆炸解决方法</h2><h3 id="4-1-解决梯度消失"><a href="#4-1-解决梯度消失" class="headerlink" title="4.1 解决梯度消失"></a>4.1 解决梯度消失</h3><p>1.用ReLU、Leaky-ReLU、P-ReLU、R-ReLU、Maxout等替代sigmoid函数。</p>
+<p>2.用Batch Normalization。</p>
+<p>3.LSTM的结构设计也可以改善RNN中的梯度消失问题。</p>
+<p>4.残差网络</p>
+<p>5.合适的初始化权重</p>
+<h3 id="4-2解决梯度爆炸"><a href="#4-2解决梯度爆炸" class="headerlink" title="4.2解决梯度爆炸"></a>4.2解决梯度爆炸</h3><p>1.梯度剪切：对梯度设定阈值</p>
+<p>2.权重正则化(L1 和 L2 )</p>
+<p>3.合适的初始化权重</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2021/06/the-challenge-of-vanishing-exploding-gradients-in-deep-neural-networks/">https://www.analyticsvidhya.com/blog/2021/06/the-challenge-of-vanishing-exploding-gradients-in-deep-neural-networks/</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25631496">https://zhuanlan.zhihu.com/p/25631496</a></p>
+<p><a target="_blank" rel="noopener" href="https://aijishu.com/a/1060000000100195">https://aijishu.com/a/1060000000100195</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%AE%AD%E7%BB%83%E6%8A%80%E5%B7%A7/">训练技巧</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8%E3%80%81%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1/">梯度爆炸、梯度消失</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-30  <a class="commentCountImg" href="/2021/08/30/recommmend-sys/#comment-container"><span class="display-none-class">6b02f1b1456ae7ce2121e0e53fa94aa5</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="6b02f1b1456ae7ce2121e0e53fa94aa5">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/30/recommmend-sys/">推荐系统</a></h1><div class="content"><p>一般推荐系统的结构拆分为：召回-》粗排-》精排-》重排</p>
+<p>大佬总结的干货：    <a target="_blank" rel="noopener" href="https://xieyangyi.blog.csdn.net/article/details/123095982">https://xieyangyi.blog.csdn.net/article/details/123095982</a></p>
+<h2 id="0-召回"><a href="#0-召回" class="headerlink" title="0 召回"></a>0 召回</h2><p>缩小规模，减小候选集，不需要十分准确，但不可遗漏</p>
+<p>必须轻量快速低延迟</p>
+<h2 id="1-粗排"><a href="#1-粗排" class="headerlink" title="1 粗排"></a>1 粗排</h2><p>兼顾精准性和低延迟</p>
+<p>一般模型也不能过于复杂</p>
+<h2 id="2-精排"><a href="#2-精排" class="headerlink" title="2 精排"></a>2 精排</h2><p>要求准</p>
+<p>多特征，复杂模型</p>
+<h2 id="3-重排"><a href="#3-重排" class="headerlink" title="3 重排"></a>3 重排</h2><p>业务相关</p>
+<p>规则比较多</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://xieyangyi.blog.csdn.net/article/details/123095982">https://xieyangyi.blog.csdn.net/article/details/123095982</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gczr/p/12564617.html">https://www.cnblogs.com/gczr/p/12564617.html</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-29  <a class="commentCountImg" href="/2021/08/29/MLE/#comment-container"><span class="display-none-class">8d601e9afadaa797f4cb9fc88b0cad31</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8d601e9afadaa797f4cb9fc88b0cad31">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 m  <i class="fas fa-pencil-alt"> </i>0.7 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/29/MLE/">极大似然估计</a></h1><div class="content"><h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><p>就是利用已知的样本结果信息，反推最具有可能导致这些样本结果出现的模型参数值。换句话说，即：“<strong>模型已定，结果已知，反推参数</strong>”。</p>
+<h2 id="2-极大似然构造损失函数"><a href="#2-极大似然构造损失函数" class="headerlink" title="2.极大似然构造损失函数"></a>2.极大似然构造损失函数</h2><p><strong>大多数常见的损失函数就是基于极大似然推导的。</strong>例子参考 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/hello-ai/p/11000899.html">https://www.cnblogs.com/hello-ai/p/11000899.html</a></p>
+<p><strong>判别模型下的极大似然估计</strong></p>
+<p>最大似然估计很容易扩展到估计条件概率$P\left (y|x;\theta \right)$，从而给定$x$预测$y$。实际上这是最常见的情况，因为这构成了大多数监督学习的基础。如果$X$表示所有的输入，$Y$表示我们观测到的目标，那么条件最大似然估计是：</p>
+<script type="math/tex; mode=display">
+\theta_{ML} = \mathop\arg\max_{\theta}P\left(Y|X;\theta \right)</script><p>如果假设样本是独立同分布的，那么这可以分解成</p>
+<script type="math/tex; mode=display">
+\theta_{ML} = \mathop\arg\max_{\theta}\sum_{i=1}^m logP\left(y^{(i)}|x^{(i)};\theta \right)</script><p><strong>生成模型下的极大似然估计</strong></p>
+<p>考虑一组含有m个样本的数据集$X = \left \{ x^{(1)}, …, x^{(m)} \right \}$，由$p_{data}(x)$生成，独立同分布</p>
+<p>对独立同分布的样本，生成样本集$X$的概率如下:</p>
+<script type="math/tex; mode=display">
+p_{model}(X; \theta)= \prod _{i=1}^m p_{model}\left (x^{(i)}; \theta \right )</script><p>对$\theta$的最大似然估计被定义为：</p>
+<script type="math/tex; mode=display">
+\theta_{ML} = \mathop{\arg\max}_{\theta}p_{model}\left (X;\theta \right ) = \mathop{\arg\max}_{\theta}\prod _{i=1}^m p_{model}\left (x^{(i)}; \theta \right )</script><p>多个概率的乘积公式会因很多原因不便于计算。例如，计算中很可能会因为多个过小的数值相乘而出现数值下溢。为了得到一个便于计算的等价优化问题，两边取对数：</p>
+<script type="math/tex; mode=display">
+\theta_{ML} = \mathop{\arg\max}_{\theta}\sum_{i=1}^{m}logp_{model}\left (x^{(i)};\theta\right )</script><p><img src="/2021/08/29/MLE/11.png" alt></p>
+<p>可以发现，使用极大似然估计时，每个样本$x^{(i)}$都希望拉高它所对应的模型概率值$p_{model}(x^{(i)};\theta)$，如上图所示，但是由于所有样本的密度函数$p_{model}(x^{(i)};\theta)$的总和必须是1，所以不可能将所有样本点都拉高到最大的概率，一个样本点的概率密度函数值被拉高将不可避免的使其他点的函数值被拉低，最终的达到一个平衡态。我们也可以将上式除以$m$，便可以看到极大似然法最大化的目标是在经验分布$\widehat{p}_{data}$下样本概率对数的期望值，即</p>
+<script type="math/tex; mode=display">
+\theta_{ML} = \mathop{\arg\max}_{\theta}E_{x\sim \widehat{p}_{data}}logp_{model}\left (x^{(i)};\theta \right )</script><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26614750">https://zhuanlan.zhihu.com/p/26614750</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hello-ai/p/11000899.html">https://www.cnblogs.com/hello-ai/p/11000899.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hustqb/article/details/77168436">https://blog.csdn.net/hustqb/article/details/77168436</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/273246971">https://zhuanlan.zhihu.com/p/273246971</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/">极大似然估计</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-29  <a class="commentCountImg" href="/2021/08/29/prior-Posterior/#comment-container"><span class="display-none-class">3dd0c522f612523fd1463e04899e1be2</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="3dd0c522f612523fd1463e04899e1be2">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>fast  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/29/prior-Posterior/">先验概率与后验概率</a></h1><div class="content"><p>$P(X=玩 lol)=0.6；P(X=不玩lol)=0.4$，这个概率是统计得到的,或者你自身依据经验给出的一个概率值，我们称其为<strong>先验概率(prior probability)</strong>；</p>
+<p>$P(X=玩lol|Y=男性)$称之为$X$的<strong>后验概率</strong>，即它获得是在观察到事件$Y=男性$发生后得到的</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26464206">https://zhuanlan.zhihu.com/p/26464206</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/">概率统计</a></div><hr></div></article></div><!--!--><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/33/">Previous</a></div><div class="pagination-next"><a href="/page/35/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/33/">33</a></li><li><a class="pagination-link is-current" href="/page/34/">34</a></li><li><a class="pagination-link" href="/page/35/">35</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/38/">38</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/50144751?v=4" alt="Lavine Hu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Lavine Hu</p><p class="is-size-6 is-block">我能卖你生瓜蛋子？</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">375</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">138</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">358</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hlw95" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hlw95"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="/null"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/18829272646@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="/null"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-26T15:40:11.000Z">2022-07-26</time></p><p class="title"><a href="/2022/07/26/ml-iteration-analyze/">迭代分析</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a> / <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%BF%AD%E4%BB%A3%E5%88%86%E6%9E%90/">迭代分析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T15:01:42.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/indexing/">倒排索引</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/">召回</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">倒排索引</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T14:54:57.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/pre-ranking/">粗排</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/">排序</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/%E7%B2%97%E6%8E%92/">粗排</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-01T15:10:52.000Z">2022-07-01</time></p><p class="title"><a href="/2022/07/01/bert-serving/">bert_serving</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/%E5%B0%8F%E5%B8%AE%E6%89%8B/">小帮手</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-30T11:45:19.000Z">2022-06-30</time></p><p class="title"><a href="/2022/06/30/micro-Grained/">细粒度NLP任务</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/PTM/">PTM</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CTR/"><span class="level-start"><span class="level-item">CTR</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/GNN/GCN/"><span class="level-start"><span class="level-item">GCN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/%E5%B0%8F%E5%B8%AE%E6%89%8B/"><span class="level-start"><span class="level-item">小帮手</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">68</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/NLP/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/PTM/"><span class="level-start"><span class="level-item">PTM</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Prompt/"><span class="level-start"><span class="level-item">Prompt</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Tokenization/"><span class="level-start"><span class="level-item">Tokenization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">June 2022</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">33</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/PTM/"><span class="tag">PTM</span><span class="tag is-grey-lightest">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">文本表示</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/"><span class="tag">文本匹配</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AC%E5%9B%9E/"><span class="tag">召回</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"><span class="tag">文本分类</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E6%94%B9%E5%86%99/"><span class="tag">文本改写</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Atlas/"><span class="tag">Atlas</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AutoTokenizer/"><span class="tag">AutoTokenizer</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Azkaban/"><span class="tag">Azkaban</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BertGCN/"><span class="tag">BertGCN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bert%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">Bert文本表示</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CDC%EF%BC%88Change-Data-Capture%EF%BC%89%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/"><span class="tag">CDC（Change Data Capture）工具对比</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CRF%E5%92%8CHMM/"><span class="tag">CRF和HMM</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CTR%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"><span class="tag">CTR一些问题</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChineseBERT-Chinese-Pretraining-Enhanced-by-Glyph-and-Pinyin-Information/"><span class="tag">ChineseBERT Chinese Pretraining Enhanced by Glyph and Pinyin Information</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DAG/"><span class="tag">DAG</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL/"><span class="tag">DGL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL-notice/"><span class="tag">DGL notice</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIEN/"><span class="tag">DIEN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIN/"><span class="tag">DIN</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Lavine Hu</a><p class="size-small"><span>&copy; 2022 Lavine Hu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2021/07/17 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);})</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"display":null,"superSample":2,"width":250,"height":500,"position":"right","hOffset":0,"vOffset":-20,"jsonPath":"/live2dw/assets/hijiki.model.json"},"mobile":{"show":true,"scale":0.5,"react":null,"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

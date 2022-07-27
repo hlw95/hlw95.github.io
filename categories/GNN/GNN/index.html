@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Category: GNN - Lavine Hu</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Lavine Hu"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Lavine Hu"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Lavine Hu"><meta property="og:url" content="https://github.com/hlw95?tab=following"><meta property="og:site_name" content="Lavine Hu"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="Lavine Hu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Lavine Hu","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Lavine Hu"},"description":""}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Lavine Hu</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/message">留言</a></div><div class="navbar-end"><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">Categories</a></li><li><a href="/categories/GNN/">GNN</a></li><li class="is-active"><a href="#" aria-current="page">GNN</a></li></ul></nav></div></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-01-17  <a class="commentCountImg" href="/2022/01/17/GNN-component/#comment-container"><span class="display-none-class">d063cfbc39841e305ecd9403e93c103a</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="d063cfbc39841e305ecd9403e93c103a">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/17/GNN-component/">GNN核心构成</a></h1><div class="content"><p><strong>GNN种类很多，包括GCN，GAEs，RecGNNs等，他们的差异在于图结构，消息传递</strong></p>
+<h3 id="1-图结构"><a href="#1-图结构" class="headerlink" title="1.图结构"></a>1.图结构</h3><p>同构图，异构图，结点和边的设计等</p>
+<p>同构图：只有一种类型的节点和边</p>
+<p>异构图：可以有不同类型的节点和边</p>
+<h3 id="2-消息传递"><a href="#2-消息传递" class="headerlink" title="2.消息传递"></a>2.消息传递</h3><p>消息传递是实现GNN的一种通用框架和编程范式。包含以下两个过程：</p>
+<p>1 Message Propagation</p>
+<p>聚合邻居节点的特征，形成一个消息向量</p>
+<p>2 Representation Updating</p>
+<p>更新当前时刻的节点表示</p>
+<p><img src="/2022/01/17/GNN-component/1.JPG" alt></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://docs.dgl.ai/guide/message.html#">https://docs.dgl.ai/guide/message.html#</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/352510643">https://zhuanlan.zhihu.com/p/352510643</a></p>
+<p><a target="_blank" rel="noopener" href="https://aclanthology.org/2020.acl-main.547.pdf">https://aclanthology.org/2020.acl-main.547.pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350900048">https://zhuanlan.zhihu.com/p/350900048</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.dgl.ai/guide_cn/graph-heterogeneous.html#guide-cn-graph-heterogeneous">https://docs.dgl.ai/guide_cn/graph-heterogeneous.html#guide-cn-graph-heterogeneous</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/376062090">https://zhuanlan.zhihu.com/p/376062090</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/">GNN</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/GNN/">GNN</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/GNN%E6%A0%B8%E5%BF%83%E6%9E%84%E6%88%90/">GNN核心构成</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-10  <a class="commentCountImg" href="/2021/08/10/graph-nn-survey/#comment-container"><span class="display-none-class">8f57e6bc9da60e4c16e6e1af2c61d167</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8f57e6bc9da60e4c16e6e1af2c61d167">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>12 m  <i class="fas fa-pencil-alt"> </i>1.7 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/10/graph-nn-survey/">A Comprehensive Survey on Graph Neural Networks</a></h1><div class="content"><p> there is an increasing number of applications where data are generated from non-Euclidean domains and are represented as graphs with complex relationships and interdependency between objects. The complexity of graph data has imposed significant challenges on existing machine learning algorithms.</p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h2><p>虽然深度学习技术可以捕获欧式空间数据的隐藏模式，但是目前很多应用是基于图的，这是非欧空间的数据。图数据的复杂性给现有的技术带来了很大的挑战。这是因为图数据可以是不规则的，一个图可能有不同数量的无序结点，一个结点可能有不同数量的邻接结点。这会使得一些基本操作，比如卷积，在图领域无法很好的捕获特征。除此之外，目前机器学习算法有一个重要的假设，就是假设各个结点是相互独立的，然而，图中存在很多复杂的连接信息，主要用来表征结点间的互相关性。为了解决以上问题，衍生了很多图神经网络技术。举个例子，比如，图卷积。下图对比了传统的2D卷积和图卷积。二者最大的区别在于邻接结点，一个有序一个无序，一个尺寸固定一个尺寸可变。</p>
+<p><img src="/2021/08/10/graph-nn-survey/gra1.JPG" alt></p>
+<h2 id="2-背景和定义"><a href="#2-背景和定义" class="headerlink" title="2.背景和定义"></a>2.背景和定义</h2><h3 id="A-背景"><a href="#A-背景" class="headerlink" title="A. 背景"></a>A. 背景</h3><p><strong>Graph neural networks vs network embedding</strong></p>
+<p>The main distinction between GNNs and network embedding is that GNNs are a group of neural network models which are designed for various tasks while network embedding covers various kinds of methods targeting the same task.</p>
+<p><strong>Graph neural networks vs graph kernel methods</strong></p>
+<p>The difference is that this mapping function of graph kernel methods is deterministic rather than learnable. </p>
+<p>GNNs are much more efficient than graph kernel methods.</p>
+<h3 id="B-定义"><a href="#B-定义" class="headerlink" title="B. 定义"></a>B. 定义</h3><p><img src="/2021/08/10/graph-nn-survey/gra2.JPG" alt></p>
+<p>上表为本文的notation。</p>
+<p>1.图</p>
+<p>$ {G}=(V,E) $表示一个图。$N(v)=\{u\in V|(v,u)\in E\}$表示结点$v$的邻接结点。$\textbf{A}$是邻接矩阵，如果$A_{ij}=1$,那么表示$e_{ij}\in E$；如果$A_{ij}=0$,那么表示$e_{ij} \notin E$。$\textbf{X} \in \mathbb{R}^{n \times d} $是结点特征矩阵，$\textbf{X}^{e} \in \mathbb{R}^{m \times c}$是边特征矩阵。</p>
+<p>2.有向图</p>
+<p>A graph is undirected if and only if the adjacency matrix is symmetric.</p>
+<p>3.时空图</p>
+<p>A spatial-temporal graph is an attributed graph where the node attributes change dynamically over time.</p>
+<p>$G^{(t)}=(V,E,\textbf{X}^{(t)})，\textbf{X}^{(t)} \in \mathbb{R}^{n \times d}$</p>
+<h2 id="3-分类和框架"><a href="#3-分类和框架" class="headerlink" title="3.分类和框架"></a>3.分类和框架</h2><h3 id="3-1-GNN分类"><a href="#3-1-GNN分类" class="headerlink" title="3.1 GNN分类"></a>3.1 GNN分类</h3><p>作者把GNN分成以下4类，分别为RecGNNs，ConvGNNs , GAEs, STGNNs。</p>
+<p><strong>RecGNNs（Recurrent graph neural networks）</strong></p>
+<p>RecGNNs aim to learn node representations with recurrent neural architectures. They assume a node in a graph constantly exchanges information message with its neighbors until a stable equilibrium is reached.</p>
+<p><strong>ConvGNNs（Convolutional graph neural networks ）</strong> </p>
+<p>The main idea is to generate a node $v$’s representation by aggregating its own features $\textbf{x}_v$ and neighbors’ features $\textbf{x}_u,u\in N(v)$。Different from RecGNNs, ConvGNNs stack multiple graph convolutional layers to extract high-level node representations.</p>
+<p><strong>GAEs（Graph autoencoders）</strong></p>
+<p>are unsupervised learning frameworks which encode nodes/graphs into a latent vector space and reconstruct graph data from the encoded information. GAEs are used to learn network embeddings and<br>graph generative distributions.</p>
+<p><strong>STGNNs（Spatial-temporal graph neural networks）</strong></p>
+<p>aim to learn hidden patterns from spatial-temporal graphs. The key idea of STGNNs is to consider spatial dependency and temporal dependency at the same time.</p>
+<p><img src="/2021/08/10/graph-nn-survey/gra3.JPG" alt></p>
+<p><img src="/2021/08/10/graph-nn-survey/gra4.JPG" alt></p>
+<h3 id="3-2-框架"><a href="#3-2-框架" class="headerlink" title="3.2 框架"></a>3.2 框架</h3><p>With the graph structure and node content information as inputs, the outputs of GNNs can focus on different graph analytics tasks with one of the following mechanisms:</p>
+<p>Node-level outputs relate to node regression and node classification tasks.</p>
+<p>Edge-level outputs relate to the edge classification and link prediction tasks.</p>
+<p>Graph-level outputs relate to the graph classification task. </p>
+<p><strong>Training Frameworks：</strong></p>
+<p>1.Semi-supervised learning for node-level classification</p>
+<p>2.Supervised learning for graph-level classification</p>
+<p>3.Unsupervised learning for graph embedding</p>
+<h2 id="4-RecGNNs"><a href="#4-RecGNNs" class="headerlink" title="4.RecGNNs"></a>4.RecGNNs</h2><p>RecGNNs apply the <strong>same set of parameters</strong> recurrently over nodes in a graph to extract high-level node representations. 接下来介绍几种RecGNNs 结构。</p>
+<p><strong>GNN*</strong></p>
+<p>Based on an information diffusion mechanism,  GNN* updates nodes’ states by exchanging neighborhood information recurrently until a stable equilibrium is reached.</p>
+<p>结点的hidden state is recurrently updated by</p>
+<script type="math/tex; mode=display">
+\textbf{h}_v^{(t)}=\sum_{u\in N(v)}f(\textbf{x}_v,\textbf{x}^e_{(v,u)},\textbf{x}_{u},\textbf{h}_{u}^{(t-1)})</script><p>$\textbf{h}_v^0$随机初始化。$f(\cdot)$是 parametric function，must be a contraction mapping, which shrinks the distance between two points after projecting them into a latent space.</p>
+<p>训练过程分为两步，更新结点表示和更新参数，交替进行使得loss收敛。When a convergence criterion is satisfied, the last step node hidden states are forwarded to a readout layer.</p>
+<p><strong>GraphESN</strong></p>
+<p>GraphESN使用ESN提高GNN*的训练效率。GraphESN包含encoder和output output。encoder随机初始化并且不需要训练。It implements a contractive state transition function to recurrently update node states until the global graph state reaches convergence. Afterward, the output layer is trained by taking the fixed node states as inputs.</p>
+<p><strong>Gated Graph Neural Networks (GGNNs)</strong></p>
+<script type="math/tex; mode=display">
+\textbf{h}_{v}^t=GRU(\textbf{h}_{v}^{t-1},\sum_{u\in N(v)}\textbf{W}h_{u}^t)</script><p>The adavantage is that it no longer needs to constrain parameters to ensure convergence. However, the downside of training by BPTT is that it sacrifices efficiency both in time and memory.</p>
+<p><strong>GGNN</strong></p>
+<p>RecGNNs 利用GRU作为循环函数</p>
+<script type="math/tex; mode=display">
+\textbf{h}_v^{(t)}=GRU(\textbf{h}_v^{(t-1)},\sum_{u\in N(v)}\textbf{W}\textbf{h}_u^{(t-1)})</script><p>其中$\textbf{h}_v^{(0)}=\textbf{x}_v$。</p>
+<p>GGNN uses the back-propagation through time (BPTT) algorithm to learn the model parameters.</p>
+<p>对于大的图不适用。</p>
+<p><strong>SSE</strong></p>
+<p>proposes a learning algorithm that is more scalable to large graphs</p>
+<script type="math/tex; mode=display">
+\textbf{h}_{v}^{(t)}=(1-\alpha)\textbf{h}_{v}^{（t-1）}+\alpha \textbf{W}_1 \sigma(\textbf{W}_2[\textbf{x}_v,\sum_{u\in N(v)}[\textbf{h}_u^{t-1},\textbf{x}_u]])</script><p>其中$\alpha$为超参数，$\sigma(\cdot)$为sigmoid函数。</p>
+<h2 id="5-ConvGNNs"><a href="#5-ConvGNNs" class="headerlink" title="5.ConvGNNs"></a>5.ConvGNNs</h2><p><img src="/2021/08/10/graph-nn-survey/gra6.JPG" alt></p>
+<p><img src="/2021/08/10/graph-nn-survey/1.JPG" alt></p>
+<p>ConvGNNs与RecGNNs 主要区别在于上图。</p>
+<p>ConvGNNs fall into two categories, <strong>spectral-based</strong> and <strong>spatial-based</strong>. Spectral based approaches <strong>define graph convolutions by introducing filters</strong> from the perspective of graph signal processing [82] where the graph convolutional operation is interpreted as removing noises from graph signals. Spatial-based approaches inherit ideas from RecGNNs to <strong>define graph convolutions by information propagation</strong>.  spatial-based methods have developed rapidly recently due to its attractive efficiency, flexibility, and generality.</p>
+<h3 id="5-1-Spectral-based-ConvGNNs"><a href="#5-1-Spectral-based-ConvGNNs" class="headerlink" title="5.1 Spectral-based ConvGNNs"></a>5.1 Spectral-based ConvGNNs</h3><h3 id="5-2-Spatial-based-ConvGNNs"><a href="#5-2-Spatial-based-ConvGNNs" class="headerlink" title="5.2 Spatial-based ConvGNNs"></a>5.2 Spatial-based ConvGNNs</h3><p>罗列几个基本的结构。</p>
+<p><strong>NN4G</strong></p>
+<script type="math/tex; mode=display">
+\textbf{h}_{v}^{(k)}=f(\textbf{W}^{(k)^T}\textbf{x}_v+\sum_{i=1}^{k-1}\sum_{u\in N(v) }\Theta^{(k)^{T}}\textbf{h}_{u}^{(k-1)})</script><p>其中$f(\cdot)$是激活函数，$\textbf{h}_{v}^{(0)}=0$，可以使用矩阵形式表达为：</p>
+<script type="math/tex; mode=display">
+\textbf{H}^{(k)}=f(\textbf{X}\textbf{W}^{(k)}+\sum_{i=1}^{k-1}\textbf{A}\textbf{H}^{k-1}\Theta^{(k)})</script><p><strong>DCNN</strong></p>
+<p>regards graph convolutions as a diffusion process.</p>
+<script type="math/tex; mode=display">
+\textbf{H}^{(k)}=f(\textbf{W}^{(k)}\odot\textbf{P}^k\textbf{X}    )</script><p>其中$f(\cdot)$是激活函数。probability transition matrix $\textbf{P}\in\mathbb{R}^{n\times n},\textbf{P} = \textbf{D}^{-1}\textbf{A}$。</p>
+<p>DCNN concatenates $\textbf{H}^{(1)},\textbf{H}^{(2)},…,\textbf{H}^{(K)}$together as the final model outputs.</p>
+<p><strong>PGC-DGCNN</strong></p>
+<p><strong>MPNN</strong></p>
+<h3 id="5-3-Graph-Pooling-Modules"><a href="#5-3-Graph-Pooling-Modules" class="headerlink" title="5.3 Graph Pooling Modules"></a>5.3 Graph Pooling Modules</h3><p>After a GNN generates node features, we can use them for the final task. But using all these features directly can be computationally challenging, thus, a <strong>down-sampling strategy</strong> is needed. Depending on the objective and the role it plays in the network, different names are given to this strategy: (1) <strong>the pooling operation</strong> aims to reduce the size of parameters by down-sampling the nodes to generate smaller representations and thus avoid overfitting, permutation invariance, and computational complexity issues; (2) <strong>the readout operation</strong> is mainly used to generate graph-level representation based on node representations. <strong>Their mechanism is very similar. In this chapter, we use pooling to refer to all kinds of down-sampling strategies applied to GNNs.</strong></p>
+<p>mean/max/sum pooling is the most <strong>primitive and effective way</strong> ：</p>
+<script type="math/tex; mode=display">
+\textbf{h}_G=mean/max/sum(\textbf{h}_1^{(K)},\textbf{h}_2^{(K)},...,\textbf{h}_n^{(K)})</script><p>$K$ is the index of the last graph convolutional layer.</p>
+<p> some works [17], [27], [46] also use <strong>attention</strong> mechanisms to enhance the mean/sum pooling.</p>
+<p>[101] propose the <strong>Set2Set</strong> method to generate a memory that increases with the size of the input.</p>
+<p>还有<strong>SortPooling，DiffPool</strong>等</p>
+<h2 id="6-GAEs"><a href="#6-GAEs" class="headerlink" title="6.GAEs"></a>6.GAEs</h2><h2 id="7-STGNNs"><a href="#7-STGNNs" class="headerlink" title="7.STGNNs"></a>7.STGNNs</h2><h2 id="8-APPLICATIONS"><a href="#8-APPLICATIONS" class="headerlink" title="8.APPLICATIONS"></a>8.APPLICATIONS</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1901.00596v4">https://arxiv.org/abs/1901.00596v4</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/">GNN</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/GNN/">GNN</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/GNN%E7%BB%BC%E8%BF%B0/">GNN综述</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-04  <a class="commentCountImg" href="/2021/08/04/short-chinese-text-match/#comment-container"><span class="display-none-class">e42e73069e4b8f9b20abc430afce93b1</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="e42e73069e4b8f9b20abc430afce93b1">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>8 m  <i class="fas fa-pencil-alt"> </i>1.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/04/short-chinese-text-match/">Neural Graph Matching Networks for Chinese Short Text Matching</a></h1><div class="content"><p><a target="_blank" rel="noopener" href="https://aclanthology.org/2020.acl-main.547.pdf">https://aclanthology.org/2020.acl-main.547.pdf</a></p>
+<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1.摘要"></a>1.摘要</h2><p>对于中文短文本匹配，通常基于词粒度而不是字粒度。但是分词结果可能是错误的、模糊的或不一致的，从而损害最终的匹配性能。比如下图：字符序列“南京市长江大桥”经过不同的分词可能表达为不同的意思。</p>
+<p><img src="/2021/08/04/short-chinese-text-match/lattice.JPG" alt></p>
+<p>为了解决这个问题，作者提出了一种基于图神经网络的中文短文本匹配方法。不是将句子分割成一个单词序列，而是保留所有可能的分割路径，形成一个Lattice（segment1，segment2，segment3），如上图所示。</p>
+<h2 id="2-问题定义"><a href="#2-问题定义" class="headerlink" title="2.问题定义"></a>2.问题定义</h2><p>将两个待匹配中文短文本分别定义为$S_a=\left \{ C_1^a,C_2^a,…,C_{t_a}^a \right \}$，$S_b=\left \{ C_1^b,C_2^b,…,C_{t_b}^b \right \}$，其中$C_i^a$表示句子$a$第$i$个字，$C_j^b$表示句子$b$第$j$个字，$t_a$，$t_b$分别表示两个句子的长度。$f(S_a,S_b)$是目标函数，输出为两个文本的匹配度。词格图用$G=(\nu,\xi)$表示，其中$\nu$是节点集，包括所有字符序列。$\xi$表示边集，如果$\nu$中两个顶点$v_i$和$v_j$相邻，那么就存在一个边为$e_{ij}$。$N_{fw}(v_i)$表示节点$v_i$ 正向的所有可达节点的集合,$N_{bw}(v_i)$表示节点$v_i$ 反向的所有可达节点的集合。句子$a$的词格图为$G^a(\nu_a,\xi_a)$，句子$b$的词格图为$G^b(\nu_b,\xi_b)$。</p>
+<h2 id="3-模型结构"><a href="#3-模型结构" class="headerlink" title="3.模型结构"></a>3.模型结构</h2><p><img src="/2021/08/04/short-chinese-text-match/entire1.JPG" alt></p>
+<p>模型分成3个部分，1.语言节点表示 2.图神经匹配 3.相关性分类器</p>
+<h3 id="3-1-语言节点表示"><a href="#3-1-语言节点表示" class="headerlink" title="3.1 语言节点表示"></a>3.1 语言节点表示</h3><p>这一部分基于BERT的结构。BERT的token表示基于字粒度，可以得到$\left \{ [CLS],C_1^a,C_2^a,…,C_{ta}^a,[SEP],C_1^b,C_2^b,…,C_{t_b}^b,[SEP] \right \}$,如上图所示。BERT的输出为各个字的Embedding，$ \left \{\textbf{C}^{CLS},\textbf{C}_1^a,\textbf{C}_2^a,…,\textbf{C}_{t_a}^a,\textbf{C}^{SEP},\textbf{C}_1^b,\textbf{C}_2^b,…,\textbf{C}_{t_b},\textbf{C}^{SEP} \right \}$。</p>
+<h3 id="3-2-图神经匹配"><a href="#3-2-图神经匹配" class="headerlink" title="3.2 图神经匹配"></a>3.2 图神经匹配</h3><p><strong>初始化</strong>：假设节点$v_i$包含$n_i$个连续字符，起始字符位置为$s_i$，即$ \left \{C_{s_i},C_{s_{i+1}},…,C_{s_{i}+n_i-1} \right \}$，这里$v_i$表示句子$a$或者$b$的结点。$V_i=\sum_{k=0}^{n_i-1}\textbf{U}_{s_i+k}\odot\textbf{C}_{s_i+k}$，其中$\odot$表示两个向量对应各个元素相乘。特征识别分数向量$\textbf{U}_{s_i+k}=softmax(FFN(\textbf{C}_{s_i+k}))$，$FFN$为两层。$h$为结点的向量表示，将$h_i^0$等于$V_i$</p>
+<p><strong>Message Propagation</strong> : 对于第$l$次迭代，$G_a$中某个结点$v_i$由如下四个部分组成</p>
+<script type="math/tex; mode=display">
+m_i^{fw}=\sum_{v_j \in N_{fw}(v_i)}\alpha_{ij}(W^{fw}h_j^{l-1}),
+\\m_i^{bw}=\sum_{v_k \in N_{bw}(v_i)}\alpha_{ik}(W^{bw}h_k^{l-1}),
+\\m_i^{b1}=\sum_{v_m \in V^b}\alpha_{im}(W^{fw}h_m^{l-1}),
+\\m_i^{b2}=\sum_{v_q \in V^b}\alpha_{iq}(W^{bw}h_q^{l-1})，</script><p>其中$\alpha_{ij},\alpha_{ik},\alpha_{im},\alpha_{iq}$是注意力系数，$W^{fw},W^{bw}$是注意力系数参数</p>
+<p>然后定义两种信息为$m_i^{self}\triangleq[m_i^{fw},m_i^{bw}]，m_i^{cross}\triangleq[m_i^{b1},m_i^{b2}]$</p>
+<p><strong>Representation Updating</strong>：得到两种信息后，需要更新结点$ v_i$的向量表示</p>
+<script type="math/tex; mode=display">
+d_k=cosine(w_k^{cos}\odot m_i^{self},w_k^{cos}\odot m_i^{cross})</script><p>其中$w_k^{cos}$为参数，$d_k$为multi-perspective cosine distance，可以衡量两种信息的距离，$k \in \left \{ 1,2,3,…P\right\}$，$P$是视角的数量。</p>
+<script type="math/tex; mode=display">
+h_i^l=FFN([m_i^{self},\textbf{d}_i])</script><p>其中$\textbf{d}_i\triangleq[d_1,d_2,…,d_P]$,$FFN$两层。</p>
+<p><strong>句子的图级别表示</strong>：</p>
+<p>总共经历了$L$次迭代（layer），得到$h_i^L$为结点$v_i$最终的向量表示（$h_i^L$includes not only the information from its reachable nodes but also information of pairwise comparison with all nodes in another graph)</p>
+<p>最终，两个句子的图级别表示分别为</p>
+<script type="math/tex; mode=display">
+g^a=attentive pooling(\left \{ h_{1a}^L,h_{2a}^L,...,h_{node-num_a a}^L \right \}),
+\\g^b=attentive pooling(\left \{ h_{1b}^L,h_{2b}^L,...,h_{node-num_b b}^L \right \})</script><h3 id="3-3-分类器"><a href="#3-3-分类器" class="headerlink" title="3.3 分类器"></a>3.3 分类器</h3><p>得到$g^a,g^b$后，两句子的相似度可以用分类器衡量：</p>
+<script type="math/tex; mode=display">
+P=FFN([g^a,g^b,g^a \odot g^b,|g^a-g^b|])</script><p>其中$P \in [0,1]$。</p>
+<h2 id="4-实验结果"><a href="#4-实验结果" class="headerlink" title="4.实验结果"></a>4.实验结果</h2><p><img src="/2021/08/04/short-chinese-text-match/22.GIF" alt></p>
+<p><img src="/2021/08/04/short-chinese-text-match/33.GIF" alt></p>
+<p>lattice和JIEBA+PKU的区别？</p>
+<p>JIEBA+PKU is a small lattice graph generated by merging two word segmentation results</p>
+<p>lattice：overall lattice，应该是全部的组合</p>
+<p>两者效果差不多是因为Compared with the tiny graph, the overall lattice has more noisy nodes (i.e. invalid words in the corresponding sentence).</p>
+<p><img src="/2021/08/04/short-chinese-text-match/11.GIF" alt></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43390809/article/details/114077216">https://blog.csdn.net/qq_43390809/article/details/114077216</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/">GNN</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/NLP/">NLP</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/GNN/GNN/">GNN</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/NLP/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/">文本匹配</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/">文本匹配</a></div><hr></div></article></div><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/50144751?v=4" alt="Lavine Hu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Lavine Hu</p><p class="is-size-6 is-block">我能卖你生瓜蛋子？</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">375</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">138</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">358</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hlw95" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hlw95"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="/null"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/18829272646@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="/null"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-26T15:40:11.000Z">2022-07-26</time></p><p class="title"><a href="/2022/07/26/ml-iteration-analyze/">迭代分析</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a> / <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%BF%AD%E4%BB%A3%E5%88%86%E6%9E%90/">迭代分析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T15:01:42.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/indexing/">倒排索引</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/">召回</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E5%8F%AC%E5%9B%9E/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">倒排索引</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-15T14:54:57.000Z">2022-07-15</time></p><p class="title"><a href="/2022/07/15/pre-ranking/">粗排</a></p><p class="categories"><a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/">搜索系统</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/">排序</a> / <a href="/categories/%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F/%E6%8E%92%E5%BA%8F/%E7%B2%97%E6%8E%92/">粗排</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-01T15:10:52.000Z">2022-07-01</time></p><p class="title"><a href="/2022/07/01/bert-serving/">bert_serving</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/%E5%B0%8F%E5%B8%AE%E6%89%8B/">小帮手</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-30T11:45:19.000Z">2022-06-30</time></p><p class="title"><a href="/2022/06/30/micro-Grained/">细粒度NLP任务</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/PTM/">PTM</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CTR/"><span class="level-start"><span class="level-item">CTR</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/GNN/GCN/"><span class="level-start"><span class="level-item">GCN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/GNN/"><span class="level-start"><span class="level-item">GNN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/GNN/%E5%B0%8F%E5%B8%AE%E6%89%8B/"><span class="level-start"><span class="level-item">小帮手</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">68</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/NLP/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/PTM/"><span class="level-start"><span class="level-item">PTM</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Prompt/"><span class="level-start"><span class="level-item">Prompt</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/NLP/Tokenization/"><span class="level-start"><span class="level-item">Tokenization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">June 2022</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">33</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/PTM/"><span class="tag">PTM</span><span class="tag is-grey-lightest">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">文本表示</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D/"><span class="tag">文本匹配</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AC%E5%9B%9E/"><span class="tag">召回</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"><span class="tag">文本分类</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E6%94%B9%E5%86%99/"><span class="tag">文本改写</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Atlas/"><span class="tag">Atlas</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AutoTokenizer/"><span class="tag">AutoTokenizer</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Azkaban/"><span class="tag">Azkaban</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BertGCN/"><span class="tag">BertGCN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bert%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA/"><span class="tag">Bert文本表示</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CDC%EF%BC%88Change-Data-Capture%EF%BC%89%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/"><span class="tag">CDC（Change Data Capture）工具对比</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CRF%E5%92%8CHMM/"><span class="tag">CRF和HMM</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CTR%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"><span class="tag">CTR一些问题</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChineseBERT-Chinese-Pretraining-Enhanced-by-Glyph-and-Pinyin-Information/"><span class="tag">ChineseBERT Chinese Pretraining Enhanced by Glyph and Pinyin Information</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DAG/"><span class="tag">DAG</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL/"><span class="tag">DGL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DGL-notice/"><span class="tag">DGL notice</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIEN/"><span class="tag">DIEN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DIN/"><span class="tag">DIN</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Lavine Hu</a><p class="size-small"><span>&copy; 2022 Lavine Hu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2021/07/17 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);})</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('a0eb7de1c4dc4908943b','b466946cbbe843a4a6ef249eb54ae5956d2f91c3','hlw95','hlw95.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"display":null,"superSample":2,"width":250,"height":500,"position":"right","hOffset":0,"vOffset":-20,"jsonPath":"/live2dw/assets/hijiki.model.json"},"mobile":{"show":true,"scale":0.5,"react":null,"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
