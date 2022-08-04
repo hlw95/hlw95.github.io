@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>feature scale</title>
+      <link href="/2022/08/04/feature-scale/"/>
+      <url>/2022/08/04/feature-scale/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 特征工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> feature scale </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>迭代分析</title>
       <link href="/2022/07/26/ml-iteration-analyze/"/>
       <url>/2022/07/26/ml-iteration-analyze/</url>
@@ -9083,7 +9110,7 @@
           
           <category> 排序 </category>
           
-          <category> 排序 </category>
+          <category> listwise </category>
           
       </categories>
       
