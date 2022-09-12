@@ -4,6 +4,306 @@
   
     
     <entry>
+      <title>星号(*,**)的作用</title>
+      <link href="/2022/09/12/python-star/"/>
+      <url>/2022/09/12/python-star/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-形参"><a href="#1-形参" class="headerlink" title="1.形参"></a>1.形参</h2><p>*args的时候表示这是一个可变的位置参数</p><p>**kwarg表示是可变的关键字参数</p><h2 id="2-传参"><a href="#2-传参" class="headerlink" title="2.传参"></a>2.传参</h2><p>就是去掉括号</p><p>*把序列/集合解包（unpack）成位置参数</p><p>**把字典解包成关键字参数</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/liuxingen/article/details/50113923">https://blog.csdn.net/liuxingen/article/details/50113923</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 星号(*,**)的作用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>运算符</title>
+      <link href="/2022/09/12/python-cal-symbol/"/>
+      <url>/2022/09/12/python-cal-symbol/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-逻辑运算"><a href="#1-逻辑运算" class="headerlink" title="1. 逻辑运算"></a>1. 逻辑运算</h2><div class="table-container"><table><thead><tr><th>operation</th><th>result</th></tr></thead><tbody><tr><td>x or y</td><td>if x is false，then y ,else x</td></tr><tr><td>x and y</td><td>if x is false，then x ,else y</td></tr><tr><td>not x</td><td>if x is false，then True , else False</td></tr></tbody></table></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 运算符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正则</title>
+      <link href="/2022/09/12/python-pattern/"/>
+      <url>/2022/09/12/python-pattern/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-re-match"><a href="#1-re-match" class="headerlink" title="1 re.match"></a>1 re.match</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matchObj/None = re.match(pattern, string, flags=0)</span><br></pre></td></tr></table></figure><h2 id="2-re-search"><a href="#2-re-search" class="headerlink" title="2 re.search"></a>2 re.search</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matchObj/None = re.search(pattern, string, flags=0)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 正则 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lambda</title>
+      <link href="/2022/09/12/lamdba/"/>
+      <url>/2022/09/12/lamdba/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def test01(a,b,c,d):</span><br><span class="line">    return a*b*c*d</span><br><span class="line">print(test01(1,2,3,4))</span><br><span class="line"></span><br><span class="line">#相当于下面这个函数</span><br><span class="line"></span><br><span class="line">f=lambda a,b,c,d:a*b*c*d</span><br><span class="line">print(f(1,2,3,4))  </span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">f=[lambda x: i*x for i in range(1,5)]</span><br><span class="line">print(f)</span><br><span class="line">print(f[0](2))</span><br><span class="line">print([m(2) for m in f])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[&lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x0000028503A613A0&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x0000028503A61430&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x0000028503A614C0&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x0000028503A61550&gt;]</span><br><span class="line">4</span><br><span class="line">[4, 4, 4, 4]</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">f=[lambda x,i=i: i*x for i in range(1,5)]</span><br><span class="line">print(f)</span><br><span class="line">print(f[0](2))</span><br><span class="line">print([m(2) for m in f])</span><br><span class="line"></span><br><span class="line">[&lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x000001B4039813A0&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x000001B403981430&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x000001B4039814C0&gt;, &lt;function &lt;listcomp&gt;.&lt;lambda&gt; at 0x000001B403981550&gt;]</span><br><span class="line">2</span><br><span class="line">[2, 4, 6, 8]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lambda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字符串</title>
+      <link href="/2022/09/12/python-string/"/>
+      <url>/2022/09/12/python-string/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-格式化"><a href="#1-格式化" class="headerlink" title="1 格式化"></a>1 格式化</h2><p><a href="https://blog.csdn.net/zjbyough/article/details/96466658">https://blog.csdn.net/zjbyough/article/details/96466658</a></p><h3 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h3><p><a href="https://blog.csdn.net/sunxb10/article/details/81036693">https://blog.csdn.net/sunxb10/article/details/81036693</a></p><h3 id><a href="#" class="headerlink" title="%"></a>%</h3><h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类变量</title>
+      <link href="/2022/09/12/python-class-variable/"/>
+      <url>/2022/09/12/python-class-variable/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class tetsing:</span><br><span class="line">###hh是类变量</span><br><span class="line">    hh=1</span><br><span class="line">    def __init__(self) -&gt; None:</span><br><span class="line">        # ff是成员变量</span><br><span class="line">        self.ff=1</span><br><span class="line">    @staticmethod</span><br><span class="line">    def fun(va1,va2=[]):</span><br><span class="line">        print(va2)</span><br><span class="line">        va2.append(va1)</span><br><span class="line">        return  va2</span><br><span class="line">        </span><br><span class="line">类变量可以用类直接调用</span><br></pre></td></tr></table></figure><p>类变量不是静态的</p><p>a.对象改动</p><p>类和对象不变</p><p>b.类改动</p><p>（1）类变化</p><p>（2）对象有自己的，不变化；没有自己的，就变化</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 类变量 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>可迭代对象、迭代器与生成器</title>
+      <link href="/2022/09/12/python-iterator/"/>
+      <url>/2022/09/12/python-iterator/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2022/09/12/python-iterator/1.png" alt></p><h2 id="可迭代对象"><a href="#可迭代对象" class="headerlink" title="可迭代对象"></a>可迭代对象</h2><p>对象+<strong> iter </strong>()</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class IsIterable:</span><br><span class="line">        def __iter__(self):</span><br><span class="line">            pass</span><br></pre></td></tr></table></figure><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>对象+<strong> iter </strong>()+next()</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class MyIterator:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        迭代器类</span><br><span class="line">        Author：可乐python说</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        def __init__(self):</span><br><span class="line">            self.num = 0</span><br><span class="line">        def __iter__(self):</span><br><span class="line">            return self</span><br><span class="line">        def __next__(self):</span><br><span class="line">            return_num = self.num</span><br><span class="line">            # 只要值大于等于6，就停止迭代</span><br><span class="line">            if return_num &gt;= 6:</span><br><span class="line">                raise StopIteration</span><br><span class="line">            self.num += 2</span><br><span class="line">            return return_num</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; my_iterator = MyIterator()</span><br><span class="line">&gt;&gt;&gt; next(my_iterator)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(my_iterator)</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; next(my_iterator)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(my_iterator)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">StopIteration</span><br></pre></td></tr></table></figure><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><h3 id="生成器函数"><a href="#生成器函数" class="headerlink" title="生成器函数"></a>生成器函数</h3><p>定义与常规函数相同，区别在于，它使用 <code>yield 语句</code> 而不是 <code>return 语句</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def my_generator():</span><br><span class="line">        my_num = 0</span><br><span class="line">        while my_num &lt; 5:</span><br><span class="line">            yield my_num</span><br><span class="line">            my_num += 1</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;generator_ = my_generator()</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(generator_)</span><br><span class="line"># 终止迭代则会抛出 StopIteration 异常</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">StopIteration</span><br></pre></td></tr></table></figure><h3 id="生成器表达式"><a href="#生成器表达式" class="headerlink" title="生成器表达式"></a>生成器表达式</h3><p>使用小括号 - <code>()</code> 包裹，而不是中括号</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"></span><br><span class="line">my_list = [i for i in range(1000000)]</span><br><span class="line">print(&quot;列表消耗的内存：&#123;&#125;&quot;.format(sys.getsizeof(my_list)))</span><br><span class="line"></span><br><span class="line">my_generator = (i for i in range(1000000))</span><br><span class="line">print(&quot;生成器消耗的内存：&#123;&#125;&quot;.format(sys.getsizeof(my_generator)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">列表消耗的内存：8448728</span><br><span class="line">生成器消耗的内存：112</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.runoob.com/python3/python3-iterator-generator.html">https://www.runoob.com/python3/python3-iterator-generator.html</a></p><p><a href="https://kelepython.readthedocs.io/zh/latest/c01/c01_11.html">https://kelepython.readthedocs.io/zh/latest/c01/c01_11.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可迭代对象、迭代器与生成器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python不可变对象和可变对象</title>
+      <link href="/2022/09/12/python-changed_obj/"/>
+      <url>/2022/09/12/python-changed_obj/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/34395671">https://zhuanlan.zhihu.com/p/34395671</a></p><ul><li>可变对象：list dict set</li><li>不可变对象：tuple string int float bool</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python不可变对象和可变对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>编程规范</title>
+      <link href="/2022/09/12/python-program-std/"/>
+      <url>/2022/09/12/python-program-std/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-命名规范"><a href="#1-命名规范" class="headerlink" title="1 命名规范"></a>1 命名规范</h2><h3 id="1-小写"><a href="#1-小写" class="headerlink" title="1.小写+_"></a>1.小写+_</h3><p>lower_with_fun</p><p>包，模块，函数，方法，函数参数，变量</p><h3 id="2-首字母大写"><a href="#2-首字母大写" class="headerlink" title="2.首字母大写"></a>2.首字母大写</h3><p>CapWords</p><p>异常处理</p><h3 id="3-全大写"><a href="#3-全大写" class="headerlink" title="3.全大写+_"></a>3.全大写+_</h3><p>CAPS_WITH_UNDER</p><p>常量</p><h3 id="4-开头"><a href="#4-开头" class="headerlink" title="4._开头"></a>4._开头</h3><p>类私有成员，外部仍可访问</p><p>a._</p><p>_fun</p><p>b.__</p><p>__fun</p><p>会被编译器自动改名，使用新名字外部也可以访问</p><h2 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h2><h3 id="None"><a href="#None" class="headerlink" title="None"></a>None</h3><p>is</p><p>is not</p><h3 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h3><p>不要==，is</p><p>直接 if XX</p><h2 id="3-字典"><a href="#3-字典" class="headerlink" title="3.字典"></a>3.字典</h2><p>取值用a.get(key)，而不是a[key]</p><h2 id="4-类型判断"><a href="#4-类型判断" class="headerlink" title="4.类型判断"></a>4.类型判断</h2><p>用isinstance(variable,type)</p><p>不用type（variable）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程规范 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python-public，private和protected访问修饰符</title>
+      <link href="/2022/09/12/python-private/"/>
+      <url>/2022/09/12/python-private/</url>
+      
+        <content type="html"><![CDATA[<p>python没有public，private和protected</p><p><a href="https://www.jianshu.com/p/b94f1ab373b6">https://www.jianshu.com/p/b94f1ab373b6</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python-public，private和protected访问修饰符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>闭包</title>
+      <link href="/2022/09/12/closure/"/>
+      <url>/2022/09/12/closure/</url>
+      
+        <content type="html"><![CDATA[<p>调用函数A，返回函数B给你，函数B就是闭包，A的参数就是自由变量</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闭包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>装饰器</title>
+      <link href="/2022/09/12/decorator/"/>
+      <url>/2022/09/12/decorator/</url>
+      
+        <content type="html"><![CDATA[<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>@</p><p>本质是闭包</p><p><a href="https://www.runoob.com/w3cnote/python-func-decorators.html">https://www.runoob.com/w3cnote/python-func-decorators.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">1.本质</span><br><span class="line">###装饰的函数，本质是闭包</span><br><span class="line">def a_new_decorator(a_func):</span><br><span class="line"> </span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        print(&quot;I am doing some boring work before executing a_func()&quot;)</span><br><span class="line"> </span><br><span class="line">        a_func()</span><br><span class="line"> </span><br><span class="line">        print(&quot;I am doing some boring work after executing a_func()&quot;)</span><br><span class="line"> </span><br><span class="line">    return wrapTheFunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">####被装饰的函数</span><br><span class="line">def a_function_requiring_decoration():</span><br><span class="line">    print(&quot;I am the function which needs some decoration to remove my foul smell&quot;)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">####使用</span><br><span class="line">a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)</span><br><span class="line">#now a_function_requiring_decoration is wrapped by wrapTheFunction()</span><br><span class="line"> </span><br><span class="line">a_function_requiring_decoration()</span><br><span class="line">#outputs:I am doing some boring work before executing a_func()</span><br><span class="line">#        I am the function which needs some decoration to remove my foul smell</span><br><span class="line">#        I am doing some boring work after executing a_func()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2.@</span><br><span class="line">@a_new_decorator ###a_new_decorator装饰的函数，本质是闭包  </span><br><span class="line">def a_function_requiring_decoration():      ####被装饰的函数</span><br><span class="line">    &quot;&quot;&quot;Hey you! Decorate me!&quot;&quot;&quot;</span><br><span class="line">    print(&quot;I am the function which needs some decoration to &quot;</span><br><span class="line">          &quot;remove my foul smell&quot;)</span><br><span class="line"></span><br><span class="line">####使用</span><br><span class="line">a_function_requiring_decoration()     </span><br><span class="line">#outputs: I am doing some boring work before executing a_func()</span><br><span class="line">#         I am the function which needs some decoration to remove my foul smell</span><br><span class="line">#         I am doing some boring work after executing a_func()</span><br><span class="line"> </span><br></pre></td></tr></table></figure><p>一次修饰两个装饰器，顺序为从下至上</p><h2 id="常见装饰器"><a href="#常见装饰器" class="headerlink" title="常见装饰器"></a>常见装饰器</h2><h3 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h3><p>将<strong>方法</strong>转换为相同名称的<strong>只读属性</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class dataset(object):</span><br><span class="line">    @property</span><br><span class="line">    def fun1(self):</span><br><span class="line">        return 13</span><br><span class="line">    def fun2(self):</span><br><span class="line">        return 13</span><br><span class="line"></span><br><span class="line">a=dataset()</span><br><span class="line">print(a.fun1)</span><br><span class="line">print(a.fun2())</span><br></pre></td></tr></table></figure><h3 id="staticmethod"><a href="#staticmethod" class="headerlink" title="@staticmethod"></a>@staticmethod</h3><h3 id="classmthod"><a href="#classmthod" class="headerlink" title="@classmthod"></a>@classmthod</h3><p><a href="https://zhuanlan.zhihu.com/p/35643573">https://zhuanlan.zhihu.com/p/35643573</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 装饰器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前馈神经网络</title>
       <link href="/2022/08/20/ffn/"/>
       <url>/2022/08/20/ffn/</url>
@@ -309,7 +609,7 @@
       <link href="/2022/06/22/jupyter-notebook/"/>
       <url>/2022/06/22/jupyter-notebook/</url>
       
-        <content type="html"><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p><h2 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h2><p>和.py唯一区别</p><p>jupyter：args=parser.pars_args(argew=[传入参数])</p><p>py：args=parser.pars_args()</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p>]]></content>
       
       
       <categories>
@@ -361,7 +661,7 @@
       <link href="/2022/06/16/hashtable/"/>
       <url>/2022/06/16/hashtable/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-哈希函数"><a href="#1-哈希函数" class="headerlink" title="1 哈希函数"></a>1 哈希函数</h2><p><img src="/2022/06/16/hashtable/1.jpg" alt></p><h2 id="2-哈希冲突"><a href="#2-哈希冲突" class="headerlink" title="2 哈希冲突"></a>2 哈希冲突</h2><p>解决办法：开放地址法和链表法</p><h2 id="3-效率"><a href="#3-效率" class="headerlink" title="3 效率"></a>3 效率</h2><p>插入和查找的时间复杂度都是为O(1)</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/144296454">https://zhuanlan.zhihu.com/p/144296454</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-哈希函数"><a href="#1-哈希函数" class="headerlink" title="1 哈希函数"></a>1 哈希函数</h2><p><img src="/2022/06/16/hashtable/1.jpg" alt></p><h2 id="2-哈希冲突"><a href="#2-哈希冲突" class="headerlink" title="2 哈希冲突"></a>2 哈希冲突</h2><p><a href="https://blog.51cto.com/u_15077556/3984082">https://blog.51cto.com/u_15077556/3984082</a></p><p><a href="https://www.jianshu.com/p/585f8882bbfb">https://www.jianshu.com/p/585f8882bbfb</a></p><h2 id="3-效率"><a href="#3-效率" class="headerlink" title="3 效率"></a>3 效率</h2><p>插入和查找的时间复杂度都是为O(1)</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/144296454">https://zhuanlan.zhihu.com/p/144296454</a></p>]]></content>
       
       
       <categories>
@@ -3210,7 +3510,7 @@
       <link href="/2022/03/18/python-pdb/"/>
       <url>/2022/03/18/python-pdb/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/lemonaha/article/details/71305344">https://blog.csdn.net/lemonaha/article/details/71305344</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/lemonaha/article/details/71305344">https://blog.csdn.net/lemonaha/article/details/71305344</a></p><p>两种方式：</p><p>1.侵入式</p><p>不改代码</p><p>python -m pdb XX.py</p><p>2.非倾入式</p><p>加代码</p><p>import pdb</p><p>pdb.set_trace()</p>]]></content>
       
       
       <categories>
@@ -6309,10 +6609,10 @@
     
     <entry>
       <title>魔法方法</title>
-      <link href="/2022/01/13/python_getitem/"/>
-      <url>/2022/01/13/python_getitem/</url>
+      <link href="/2022/01/13/python_magic/"/>
+      <url>/2022/01/13/python_magic/</url>
       
-        <content type="html"><![CDATA[<p>1 getitem</p><p><a href="https://zhuanlan.zhihu.com/p/27661382">https://zhuanlan.zhihu.com/p/27661382</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="getitem"><a href="#getitem" class="headerlink" title="getitem"></a>getitem</h2><p><a href="https://zhuanlan.zhihu.com/p/27661382">https://zhuanlan.zhihu.com/p/27661382</a></p><h2 id="all"><a href="#all" class="headerlink" title="all"></a>all</h2>]]></content>
       
       
       <categories>
@@ -6905,11 +7205,11 @@
     
     
     <entry>
-      <title>python3函数的传参，形参</title>
+      <title>参数</title>
       <link href="/2021/12/15/python-paramerter/"/>
       <url>/2021/12/15/python-paramerter/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-函数的参数"><a href="#1-函数的参数" class="headerlink" title="1 函数的参数"></a>1 函数的参数</h2><p>传参，形参</p><p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p><p>注意：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun(va1,va2=[]):</span><br><span class="line">    print(va2)</span><br><span class="line">    va2.append(va1)</span><br><span class="line">    return va2</span><br><span class="line">te1=fun(10)</span><br><span class="line">te1=fun(20)</span><br></pre></td></tr></table></figure><p>va2如果没有传参，采用默认的，默认的会变化，不是一直是[]</p><p>va2如果是外部的传参，以传参为主，会覆盖</p>]]></content>
       
       
       <categories>
@@ -6921,7 +7221,7 @@
       
         <tags>
             
-            <tag> python3函数的传参，形参 </tag>
+            <tag> 参数 </tag>
             
         </tags>
       
@@ -7846,11 +8146,11 @@
     
     
     <entry>
-      <title>python用类名直接调用方法</title>
+      <title>python类直接调用</title>
       <link href="/2021/11/08/python_class-method/"/>
       <url>/2021/11/08/python_class-method/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39990250/article/details/110287556">https://blog.csdn.net/weixin_39990250/article/details/110287556</a></p><p><a href="https://zhuanlan.zhihu.com/p/35643573">https://zhuanlan.zhihu.com/p/35643573</a></p><p><a href="https://www.cnblogs.com/double12gzh/p/10166173.html#">https://www.cnblogs.com/double12gzh/p/10166173.html#</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.静态方法</p><p>@staticmethod</p><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>1.类变量</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class tetsing:</span><br><span class="line">###hh是类变量</span><br><span class="line">    hh=1</span><br><span class="line">    def __init__(self) -&gt; None:</span><br><span class="line">        # ff是成员变量</span><br><span class="line">        self.ff=1</span><br><span class="line">    @staticmethod</span><br><span class="line">    def fun(va1,va2=[]):</span><br><span class="line">        print(va2)</span><br><span class="line">        va2.append(va1)</span><br><span class="line">        return  va2</span><br><span class="line">        </span><br><span class="line">类变量可以用类直接调用</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -7862,7 +8162,7 @@
       
         <tags>
             
-            <tag> python用类名直接调用方法 </tag>
+            <tag> python类直接调用 </tag>
             
         </tags>
       
@@ -9406,7 +9706,7 @@
       <link href="/2021/09/10/python-env/"/>
       <url>/2021/09/10/python-env/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-环境管理工具"><a href="#1-环境管理工具" class="headerlink" title="1.环境管理工具"></a>1.环境管理工具</h2><p>python版本主要为2,3两个大版本</p><p>anaconda管理python和包的版本</p><h2 id="2-包"><a href="#2-包" class="headerlink" title="2.包"></a>2.包</h2><h4 id="2-1-下载包"><a href="#2-1-下载包" class="headerlink" title="2.1 下载包"></a>2.1 下载包</h4><p>下载源有官方源，阿里源，豆瓣源，清华源等</p><h5 id="1-离线下载"><a href="#1-离线下载" class="headerlink" title="1 离线下载"></a>1 离线下载</h5><h5 id="2-在线下载"><a href="#2-在线下载" class="headerlink" title="2 在线下载"></a>2 在线下载</h5><p>下载工具有pip，conda</p><p><strong>更换pip源</strong></p><p>修改文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.pip/pip.conf  # 没有就创建一个，在 ~/.pip/下</span><br></pre></td></tr></table></figure><p>增加内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url=https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># index-url=http://pypi.douban.com/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure><p><strong>查看路径</strong></p><p>which python, which pip ,which conda （~用户主目录， /根目录）</p><h4 id="2-2-使用包"><a href="#2-2-使用包" class="headerlink" title="2.2 使用包"></a>2.2 使用包</h4><p>import </p><p>绝对路径：从工程的最外层开始</p><p>相对路径：利用.（同级）和..（上级）</p><p>怎么添加包的搜路径</p><p><a href="https://blog.csdn.net/weixin_40449300/article/details/79327201">https://blog.csdn.net/weixin_40449300/article/details/79327201</a></p><h2 id="3-ubuntu修改python环境变量"><a href="#3-ubuntu修改python环境变量" class="headerlink" title="3 ubuntu修改python环境变量"></a>3 ubuntu修改python环境变量</h2><p>1.vim ~/.bashrc</p><p>2.添加如下内容</p><p>export PYTHON_HOME=/usr/local/anaconda3/bin</p><p>export PATH=$PYTHON_HOME/bin:$PATH</p><p>export PATH=/home/user_name/anaconda3/bin:$PATH # 指定python路径</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-环境管理工具"><a href="#1-环境管理工具" class="headerlink" title="1.环境管理工具"></a>1.环境管理工具</h2><p>python版本主要为2,3两个大版本</p><p>anaconda管理python和包的版本</p><h2 id="2-包"><a href="#2-包" class="headerlink" title="2.包"></a>2.包</h2><h4 id="2-1-下载包"><a href="#2-1-下载包" class="headerlink" title="2.1 下载包"></a>2.1 下载包</h4><p>下载源有官方源，阿里源，豆瓣源，清华源等</p><h5 id="1-离线下载"><a href="#1-离线下载" class="headerlink" title="1 离线下载"></a>1 离线下载</h5><h5 id="2-在线下载"><a href="#2-在线下载" class="headerlink" title="2 在线下载"></a>2 在线下载</h5><p>下载工具有pip，conda</p><p><strong>更换pip源</strong></p><p>修改文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.pip/pip.conf  # 没有就创建一个，在 ~/.pip/下</span><br></pre></td></tr></table></figure><p>增加内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url=https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># index-url=http://pypi.douban.com/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure><p><strong>查看路径</strong></p><p>which python, which pip ,which conda （~用户主目录， /根目录）</p><h4 id="2-2-使用包"><a href="#2-2-使用包" class="headerlink" title="2.2 使用包"></a>2.2 使用包</h4><p>import </p><p>绝对路径：从工程的最外层开始</p><p>相对路径：利用.（同级）和..（上级）</p><p>怎么添加包的搜路径</p><p><a href="https://blog.csdn.net/weixin_40449300/article/details/79327201">https://blog.csdn.net/weixin_40449300/article/details/79327201</a></p><h2 id="3-ubuntu修改python环境变量"><a href="#3-ubuntu修改python环境变量" class="headerlink" title="3 ubuntu修改python环境变量"></a>3 ubuntu修改python环境变量</h2><p>1.vim ~/.bashrc</p><p>2.添加如下内容</p><p>export PYTHON_HOME=/usr/local/anaconda3/bin</p><p>export PATH=$PYTHON_HOME/bin:$PATH</p><p>export PATH=/home/user_name/anaconda3/bin:$PATH # 指定python路径</p><h2 id="4-ubuntu修改pyton默认版本"><a href="#4-ubuntu修改pyton默认版本" class="headerlink" title="4.ubuntu修改pyton默认版本"></a>4.ubuntu修改pyton默认版本</h2><p><a href="https://blog.csdn.net/White_Idiot/article/details/78240298">https://blog.csdn.net/White_Idiot/article/details/78240298</a></p>]]></content>
       
       
       <categories>
@@ -10328,11 +10628,11 @@
     
     
     <entry>
-      <title>常见问题</title>
-      <link href="/2021/07/25/python_error/"/>
-      <url>/2021/07/25/python_error/</url>
+      <title>ide</title>
+      <link href="/2021/07/25/python_ide/"/>
+      <url>/2021/07/25/python_ide/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-pycharm连接远程，本地无法查看源码，但是可以正常运行"><a href="#1-pycharm连接远程，本地无法查看源码，但是可以正常运行" class="headerlink" title="1 pycharm连接远程，本地无法查看源码，但是可以正常运行"></a>1 pycharm连接远程，本地无法查看源码，但是可以正常运行</h2><p>1 原因</p><p>由于远程的包没有同步到本地，导致无法在本地查看，但是代码运行在远程，服务器上有包，所以可以运行</p><p>2.解决</p><p>将包从远程同步到本地，一般情况重启pycharm会自动同步，或者重新安装</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h2><h3 id="1-pycharm连接远程，本地无法查看源码，但是可以正常运行"><a href="#1-pycharm连接远程，本地无法查看源码，但是可以正常运行" class="headerlink" title="1 pycharm连接远程，本地无法查看源码，但是可以正常运行"></a>1 pycharm连接远程，本地无法查看源码，但是可以正常运行</h3><p>1 原因</p><p>由于远程的包没有同步到本地，导致无法在本地查看，但是代码运行在远程，服务器上有包，所以可以运行</p><p>2.解决</p><p>将包从远程同步到本地，一般情况重启pycharm会自动同步，或者重新安装</p>]]></content>
       
       
       <categories>
@@ -10344,7 +10644,7 @@
       
         <tags>
             
-            <tag> python常见问题 </tag>
+            <tag> python ide </tag>
             
         </tags>
       
