@@ -4,32 +4,7 @@
   
     
     <entry>
-      <title>星号(*,**)的作用</title>
-      <link href="/2022/09/12/python-star/"/>
-      <url>/2022/09/12/python-star/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-形参"><a href="#1-形参" class="headerlink" title="1.形参"></a>1.形参</h2><p>*args的时候表示这是一个可变的位置参数</p><p>**kwarg表示是可变的关键字参数</p><h2 id="2-传参"><a href="#2-传参" class="headerlink" title="2.传参"></a>2.传参</h2><p>就是去掉括号</p><p>*把序列/集合解包（unpack）成位置参数</p><p>**把字典解包成关键字参数</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/liuxingen/article/details/50113923">https://blog.csdn.net/liuxingen/article/details/50113923</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 星号(*,**)的作用 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>运算符</title>
+      <title>运算</title>
       <link href="/2022/09/12/python-cal-symbol/"/>
       <url>/2022/09/12/python-cal-symbol/</url>
       
@@ -45,7 +20,7 @@
       
         <tags>
             
-            <tag> 运算符 </tag>
+            <tag> 运算 </tag>
             
         </tags>
       
@@ -129,31 +104,6 @@
     
     
     <entry>
-      <title>类变量</title>
-      <link href="/2022/09/12/python-class-variable/"/>
-      <url>/2022/09/12/python-class-variable/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class tetsing:</span><br><span class="line">###hh是类变量</span><br><span class="line">    hh=1</span><br><span class="line">    def __init__(self) -&gt; None:</span><br><span class="line">        # ff是成员变量</span><br><span class="line">        self.ff=1</span><br><span class="line">    @staticmethod</span><br><span class="line">    def fun(va1,va2=[]):</span><br><span class="line">        print(va2)</span><br><span class="line">        va2.append(va1)</span><br><span class="line">        return  va2</span><br><span class="line">        </span><br><span class="line">类变量可以用类直接调用</span><br></pre></td></tr></table></figure><p>类变量不是静态的</p><p>a.对象改动</p><p>类和对象不变</p><p>b.类改动</p><p>（1）类变化</p><p>（2）对象有自己的，不变化；没有自己的，就变化</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 类变量 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>可迭代对象、迭代器与生成器</title>
       <link href="/2022/09/12/python-iterator/"/>
       <url>/2022/09/12/python-iterator/</url>
@@ -221,31 +171,6 @@
         <tags>
             
             <tag> 编程规范 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Python-public，private和protected访问修饰符</title>
-      <link href="/2022/09/12/python-private/"/>
-      <url>/2022/09/12/python-private/</url>
-      
-        <content type="html"><![CDATA[<p>python没有public，private和protected</p><p><a href="https://www.jianshu.com/p/b94f1ab373b6">https://www.jianshu.com/p/b94f1ab373b6</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python-public，private和protected访问修饰符 </tag>
             
         </tags>
       
@@ -7205,11 +7130,11 @@
     
     
     <entry>
-      <title>参数</title>
+      <title>函数参数</title>
       <link href="/2021/12/15/python-paramerter/"/>
       <url>/2021/12/15/python-paramerter/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-函数的参数"><a href="#1-函数的参数" class="headerlink" title="1 函数的参数"></a>1 函数的参数</h2><p>传参，形参</p><p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p><p>注意：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun(va1,va2=[]):</span><br><span class="line">    print(va2)</span><br><span class="line">    va2.append(va1)</span><br><span class="line">    return va2</span><br><span class="line">te1=fun(10)</span><br><span class="line">te1=fun(20)</span><br></pre></td></tr></table></figure><p>va2如果没有传参，采用默认的，默认的会变化，不是一直是[]</p><p>va2如果是外部的传参，以传参为主，会覆盖</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-默认参数"><a href="#1-默认参数" class="headerlink" title="1 默认参数"></a>1 默认参数</h2><p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun(va1,va2=[]):</span><br><span class="line">    print(va2)</span><br><span class="line">    va2.append(va1)</span><br><span class="line">    return va2</span><br><span class="line">te1=fun(10)</span><br><span class="line">te1=fun(20)</span><br></pre></td></tr></table></figure><p>va2如果没有传参，采用默认的，默认的会变化，不是一直是[]</p><p>va2如果是外部的传参，以传参为主，会覆盖</p>]]></content>
       
       
       <categories>
@@ -7221,7 +7146,7 @@
       
         <tags>
             
-            <tag> 参数 </tag>
+            <tag> 函数参数 </tag>
             
         </tags>
       
@@ -7363,11 +7288,11 @@
     
     
     <entry>
-      <title>super(Net, self).__init__()</title>
-      <link href="/2021/12/09/python_super-init/"/>
-      <url>/2021/12/09/python_super-init/</url>
+      <title>继承</title>
+      <link href="/2021/12/09/python_succed/"/>
+      <url>/2021/12/09/python_succed/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class test1:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.a=1</span><br><span class="line"></span><br><span class="line">class test2(test1):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        super(test2, self).__init__()</span><br><span class="line">        self.b=2</span><br><span class="line"></span><br><span class="line">tt=test2()</span><br><span class="line"># print(tt.a)</span><br><span class="line">print(tt.b)</span><br><span class="line">print(tt.a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">############################</span><br><span class="line">class test1:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.a=1</span><br><span class="line"></span><br><span class="line">class test2(test1):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # super(test2, self).__init__()</span><br><span class="line">        self.b=2</span><br><span class="line"></span><br><span class="line">tt=test2()</span><br><span class="line"># print(tt.a)</span><br><span class="line">print(tt.b)</span><br><span class="line">print(tt.a)</span><br><span class="line"></span><br><span class="line">2</span><br><span class="line">AttributeError: &#x27;test2&#x27; object has no attribute &#x27;a&#x27;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class pointwise_hybird_contrasive(hybird):</span><br><span class="line">    def __init__(self,config_roberta, path,num):</span><br><span class="line">        super(pointwise_hybird_contrasive, self).__init__(config_roberta, path,num)</span><br></pre></td></tr></table></figure><p>super(pointwise_hybird_contrasive, self).__init__(config_roberta, path,num)就是对父类hybird的属性进行初始化</p><p>子类把父类的 __init__()放到自己的 __init__() 当中  , 这样子类就有了父类的 __init__() 的那些东西</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/zyh19980527/article/details/107206483">https://blog.csdn.net/zyh19980527/article/details/107206483</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-super"><a href="#1-super" class="headerlink" title="1 super"></a>1 super</h2><p>子类把父类的 __init__()放到自己的 __init__() 当中  , 这样子类就有了父类的 __init__() 的那些东西</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class test1:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.a=1</span><br><span class="line"></span><br><span class="line">class test2(test1):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        super(test2, self).__init__()</span><br><span class="line">        self.b=2</span><br><span class="line"></span><br><span class="line">tt=test2()</span><br><span class="line"># print(tt.a)</span><br><span class="line">print(tt.b)</span><br><span class="line">print(tt.a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">############################</span><br><span class="line">class test1:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.a=1</span><br><span class="line"></span><br><span class="line">class test2(test1):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # super(test2, self).__init__()</span><br><span class="line">        self.b=2</span><br><span class="line"></span><br><span class="line">tt=test2()</span><br><span class="line"># print(tt.a)</span><br><span class="line">print(tt.b)</span><br><span class="line">print(tt.a)</span><br><span class="line"></span><br><span class="line">2</span><br><span class="line">AttributeError: &#x27;test2&#x27; object has no attribute &#x27;a&#x27;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class pointwise_hybird_contrasive(hybird):</span><br><span class="line">    def __init__(self,config_roberta, path,num):</span><br><span class="line">        super(pointwise_hybird_contrasive, self).__init__(config_roberta, path,num)</span><br><span class="line">super(pointwise_hybird_contrasive, self).\__init\__(config_roberta, path,num)就是对父类hybird的属性进行初始化</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/zyh19980527/article/details/107206483">https://blog.csdn.net/zyh19980527/article/details/107206483</a></p>]]></content>
       
       
       <categories>
@@ -7379,7 +7304,7 @@
       
         <tags>
             
-            <tag> super(Net, self).__init__() </tag>
+            <tag> 继承 </tag>
             
         </tags>
       
@@ -7644,7 +7569,7 @@
       
       <categories>
           
-          <category> chatbot </category>
+          <category> 对话系统 </category>
           
       </categories>
       
@@ -7696,7 +7621,7 @@
       
       <categories>
           
-          <category> chatbot </category>
+          <category> 对话系统 </category>
           
       </categories>
       
@@ -8146,31 +8071,6 @@
     
     
     <entry>
-      <title>python类直接调用</title>
-      <link href="/2021/11/08/python_class-method/"/>
-      <url>/2021/11/08/python_class-method/</url>
-      
-        <content type="html"><![CDATA[<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.静态方法</p><p>@staticmethod</p><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>1.类变量</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class tetsing:</span><br><span class="line">###hh是类变量</span><br><span class="line">    hh=1</span><br><span class="line">    def __init__(self) -&gt; None:</span><br><span class="line">        # ff是成员变量</span><br><span class="line">        self.ff=1</span><br><span class="line">    @staticmethod</span><br><span class="line">    def fun(va1,va2=[]):</span><br><span class="line">        print(va2)</span><br><span class="line">        va2.append(va1)</span><br><span class="line">        return  va2</span><br><span class="line">        </span><br><span class="line">类变量可以用类直接调用</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> python类直接调用 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>text edit</title>
       <link href="/2021/11/08/text-edit/"/>
       <url>/2021/11/08/text-edit/</url>
@@ -8199,15 +8099,15 @@
     
     <entry>
       <title>Wide&amp;Deep和DeepFM</title>
-      <link href="/2021/11/05/ctr1/"/>
-      <url>/2021/11/05/ctr1/</url>
+      <link href="/2021/11/05/DeepFM/"/>
+      <url>/2021/11/05/DeepFM/</url>
       
         <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/66928413">https://zhuanlan.zhihu.com/p/66928413</a></p><p><a href="https://blog.csdn.net/sinat_29819401/article/details/91359217">https://blog.csdn.net/sinat_29819401/article/details/91359217</a></p>]]></content>
       
       
       <categories>
           
-          <category> CTR </category>
+          <category> 广告系统 </category>
           
       </categories>
       
@@ -8874,7 +8774,7 @@
       
       <categories>
           
-          <category> CTR </category>
+          <category> 广告系统 </category>
           
       </categories>
       
@@ -8944,7 +8844,7 @@
     
     
     <entry>
-      <title>CTR一些问题</title>
+      <title>常见问题</title>
       <link href="/2021/10/14/ctr/"/>
       <url>/2021/10/14/ctr/</url>
       
@@ -8953,14 +8853,14 @@
       
       <categories>
           
-          <category> CTR </category>
+          <category> 广告系统 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CTR一些问题 </tag>
+            <tag> 常见问题 </tag>
             
         </tags>
       
@@ -8978,7 +8878,7 @@
       
       <categories>
           
-          <category> CTR </category>
+          <category> 广告系统 </category>
           
       </categories>
       
@@ -9030,7 +8930,7 @@
       
       <categories>
           
-          <category> CTR </category>
+          <category> 广告系统 </category>
           
       </categories>
       
@@ -9246,7 +9146,7 @@
       
       <categories>
           
-          <category> chatbot </category>
+          <category> 对话系统 </category>
           
       </categories>
       
