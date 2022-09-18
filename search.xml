@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>异常处理</title>
+      <link href="/2022/09/18/python-exception/"/>
+      <url>/2022/09/18/python-exception/</url>
+      
+        <content type="html"><![CDATA[<h2 id="try-exception-finally"><a href="#try-exception-finally" class="headerlink" title="try-exception-finally"></a>try-exception-finally</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">   XXX</span><br><span class="line">exception XXX:</span><br><span class="line">   XXXXX</span><br><span class="line">finally:</span><br><span class="line">XXXX</span><br></pre></td></tr></table></figure><h2 id="raise"><a href="#raise" class="headerlink" title="raise"></a>raise</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    a = input(&quot;输入一个数：&quot;)</span><br><span class="line">    if(not a.isdigit()):</span><br><span class="line">        raise ValueError(&quot;a 必须是数字&quot;)</span><br><span class="line">except ValueError as e:</span><br><span class="line">    print(&quot;引发异常：&quot;,repr(e))</span><br><span class="line">    raise</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 异常处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>变量</title>
+      <link href="/2022/09/18/python-variable/"/>
+      <url>/2022/09/18/python-variable/</url>
+      
+        <content type="html"><![CDATA[<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>LEGB</p><ul><li>locals 包括局部变量和形参</li><li>enclosing 嵌套函数的名字空间（闭包中常见）</li><li>globals 全局变量</li><li>builtins 内置模块的名字空间</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 变量 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>运算</title>
       <link href="/2022/09/12/python-cal-symbol/"/>
       <url>/2022/09/12/python-cal-symbol/</url>
@@ -158,7 +208,7 @@
       <link href="/2022/09/12/python-program-std/"/>
       <url>/2022/09/12/python-program-std/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-命名规范"><a href="#1-命名规范" class="headerlink" title="1 命名规范"></a>1 命名规范</h2><h3 id="1-小写"><a href="#1-小写" class="headerlink" title="1.小写+_"></a>1.小写+_</h3><p>lower_with_fun</p><p>包，模块，函数，方法，函数参数，变量</p><h3 id="2-首字母大写"><a href="#2-首字母大写" class="headerlink" title="2.首字母大写"></a>2.首字母大写</h3><p>CapWords</p><p>异常处理</p><h3 id="3-全大写"><a href="#3-全大写" class="headerlink" title="3.全大写+_"></a>3.全大写+_</h3><p>CAPS_WITH_UNDER</p><p>常量</p><h3 id="4-开头"><a href="#4-开头" class="headerlink" title="4._开头"></a>4._开头</h3><p>类私有成员，外部仍可访问</p><p>a._</p><p>_fun</p><p>b.__</p><p>__fun</p><p>会被编译器自动改名，使用新名字外部也可以访问</p><h2 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h2><h3 id="None"><a href="#None" class="headerlink" title="None"></a>None</h3><p>is</p><p>is not</p><h3 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h3><p>不要==，is</p><p>直接 if XX</p><h2 id="3-字典"><a href="#3-字典" class="headerlink" title="3.字典"></a>3.字典</h2><p>取值用a.get(key)，而不是a[key]</p><h2 id="4-类型判断"><a href="#4-类型判断" class="headerlink" title="4.类型判断"></a>4.类型判断</h2><p>用isinstance(variable,type)</p><p>不用type（variable）</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-命名规范"><a href="#1-命名规范" class="headerlink" title="1 命名规范"></a>1 命名规范</h2><h3 id="1-小写"><a href="#1-小写" class="headerlink" title="1.小写+_"></a>1.小写+_</h3><p>lower_with_fun</p><p>包，模块，函数，方法，函数参数，变量</p><h3 id="2-首字母大写"><a href="#2-首字母大写" class="headerlink" title="2.首字母大写"></a>2.首字母大写</h3><p>CapWords</p><p>异常处理</p><h3 id="3-全大写"><a href="#3-全大写" class="headerlink" title="3.全大写+_"></a>3.全大写+_</h3><p>CAPS_WITH_UNDER</p><p>常量</p><h3 id="4-开头"><a href="#4-开头" class="headerlink" title="4._开头"></a>4._开头</h3><p>类私有成员，外部仍可访问</p><p>a._</p><p>_fun</p><p>b.__</p><p>__fun</p><p>会被编译器自动改名，使用新名字外部也可以访问</p><h2 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h2><h3 id="None"><a href="#None" class="headerlink" title="None"></a>None</h3><p>is</p><p>is not</p><h3 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h3><p>不要==，is</p><p>直接 if XX</p><h2 id="3-字典"><a href="#3-字典" class="headerlink" title="3.字典"></a>3.字典</h2><p>1 取值用a.get(key)，而不是a[key]，因为可能没有key</p><h2 id="4-类型判断"><a href="#4-类型判断" class="headerlink" title="4.类型判断"></a>4.类型判断</h2><p>用isinstance(variable,type)</p><p>不用type（variable）</p><h2 id="5-精确的数值计算"><a href="#5-精确的数值计算" class="headerlink" title="5.精确的数值计算"></a>5.精确的数值计算</h2><p>使用decimal模块</p><h2 id="6-代码中不应该修改系统配置"><a href="#6-代码中不应该修改系统配置" class="headerlink" title="6 代码中不应该修改系统配置"></a>6 代码中不应该修改系统配置</h2><p>sys.path</p><h2 id="7-异常处理"><a href="#7-异常处理" class="headerlink" title="7 异常处理"></a>7 异常处理</h2><p>不要使用except：处理所有异常</p><p>记得finally不要忘记，可以释放操作对象</p><h2 id="8-注释代码删除"><a href="#8-注释代码删除" class="headerlink" title="8 注释代码删除"></a>8 注释代码删除</h2><p>不要留下安全隐患</p><h2 id="9-使用subprocess代替os-system"><a href="#9-使用subprocess代替os-system" class="headerlink" title="9 使用subprocess代替os.system"></a>9 使用subprocess代替os.system</h2><p><a href="https://www.cnblogs.com/klb561/p/11960349.html">https://www.cnblogs.com/klb561/p/11960349.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">retcode = subprocess.call([&quot;ls&quot;, &quot;-l&quot;])</span><br><span class="line">#和shell中命令ls -a显示结果一样</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1238,11 +1288,11 @@
     
     
     <entry>
-      <title>list，dict，set的时间复杂度</title>
-      <link href="/2022/05/24/dic-set-list/"/>
-      <url>/2022/05/24/dic-set-list/</url>
+      <title>优化</title>
+      <link href="/2022/05/24/python_optimization/"/>
+      <url>/2022/05/24/python_optimization/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-x-in-s"><a href="#1-x-in-s" class="headerlink" title="1 x in s"></a>1 x in s</h2><p>list：O(n)</p><p>dict：O(1)</p><p>set：O(1)</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/jmh1996/article/details/78481365">https://blog.csdn.net/jmh1996/article/details/78481365</a></p><p><a href="https://www.cnblogs.com/tintinsoft/articles/9743765.html">https://www.cnblogs.com/tintinsoft/articles/9743765.html</a></p><p><a href="https://blog.csdn.net/weixin_48629601/article/details/107532754">https://blog.csdn.net/weixin_48629601/article/details/107532754</a></p><p><a href="https://blog.csdn.net/ACBattle/article/details/97012800">https://blog.csdn.net/ACBattle/article/details/97012800</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-list，dict，set的时间复杂度"><a href="#1-list，dict，set的时间复杂度" class="headerlink" title="1 list，dict，set的时间复杂度"></a>1 list，dict，set的时间复杂度</h2><h3 id="x-in-s"><a href="#x-in-s" class="headerlink" title="x in s"></a>x in s</h3><p>list：O(n)</p><p>dict：O(1)</p><p>set：O(1)</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/jmh1996/article/details/78481365">https://blog.csdn.net/jmh1996/article/details/78481365</a></p><p><a href="https://www.cnblogs.com/tintinsoft/articles/9743765.html">https://www.cnblogs.com/tintinsoft/articles/9743765.html</a></p><p><a href="https://blog.csdn.net/weixin_48629601/article/details/107532754">https://blog.csdn.net/weixin_48629601/article/details/107532754</a></p><p><a href="https://blog.csdn.net/ACBattle/article/details/97012800">https://blog.csdn.net/ACBattle/article/details/97012800</a></p>]]></content>
       
       
       <categories>
@@ -1254,7 +1304,7 @@
       
         <tags>
             
-            <tag> list，dict，set的时间复杂度 </tag>
+            <tag> 优化 </tag>
             
         </tags>
       
