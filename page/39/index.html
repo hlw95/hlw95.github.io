@@ -40,7 +40,7 @@
 <p>​    b. 但有时候需要遍历全部分割点，比如单词拆分，$dp[i]=dp[j] \ \&amp; \&amp; \ check(s[j..i−1])$，</p>
 <p>​    c. 有时候动态选择分隔点，比如丑数，$ dp[i]=min(dp[p2]<em>2,dp[p3]</em>3,dp[p5]*5) $,其中$p2,p3,p5$动态变化</p>
 <p>3.注意+， -</p>
-<p>+，-决定计算次序 一定是用已有的递推没有的</p>
+<p>一定是用已有的递推没有的</p>
 <p>举例比如<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths/">62. 不同路径</a>，$dp[i][j] = dp[i-1][j] + dp[i][j-1]$；</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def uniquePaths(self, m: int, n: int) -&gt; int:</span><br><span class="line">        dp = [[1]*n] + [[1]+[0] * (n-1) for _ in range(m-1)]</span><br><span class="line">        #print(dp)</span><br><span class="line">        for i in range(1, m):</span><br><span class="line">            for j in range(1, n):</span><br><span class="line">                dp[i][j] = dp[i-1][j] + dp[i][j-1]</span><br><span class="line">        return dp[-1][-1]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>比如<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindromic-substring/">5. 最长回文子串</a>，$dp[i][j]=dp[i+1][j-1] \ and \ s[i]==s[j]$</p>
@@ -70,14 +70,14 @@
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/112926891">https://zhuanlan.zhihu.com/p/112926891</a></p>
 <p><strong>优化策略：</strong></p>
 <p>剪枝  <a target="_blank" rel="noopener" href="https://blog.csdn.net/arabic1666/article/details/80147606">https://blog.csdn.net/arabic1666/article/details/80147606</a></p>
-<h2 id="六-分支限界"><a href="#六-分支限界" class="headerlink" title="六.分支限界"></a>六.分支限界</h2><p><strong>代价函数</strong></p>
-<p>极大值问题，以当前结点为根的子树所有可行解的值的上界，每个结点都有自己的</p>
+<h2 id="六-分支限界"><a href="#六-分支限界" class="headerlink" title="六.分支限界"></a>六.分支限界</h2><p>类似回溯，区别如下</p>
+<p><img src="/2021/07/24/normal-algrithm/算法.JPG" alt></p>
+<p><strong>代价函数</strong></p>
+<p>以极大值问题为例，以当前结点为根的子树得到的可行解的值的最大值，每个结点都有自己的</p>
 <p><strong>界</strong></p>
 <p>极大值问题，当前得到的可行解的值的最大值，就1个</p>
 <p><img src="/2021/07/24/normal-algrithm/1.JPG" alt></p>
 <p>代价函数和界可以用于减枝，对于极大值问题，界大于某结点代价函数，该结点就不需要继续搜索了</p>
-<p>类似回溯，区别如下</p>
-<p><img src="/2021/07/24/normal-algrithm/算法.JPG" alt></p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zm1_1zm/article/details/69224626">https://blog.csdn.net/zm1_1zm/article/details/69224626</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wxgaws/article/details/114693162">https://blog.csdn.net/wxgaws/article/details/114693162</a></p>
 <p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038223084">https://segmentfault.com/a/1190000038223084</a></p>
