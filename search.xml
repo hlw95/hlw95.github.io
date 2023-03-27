@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>clean</title>
-      <link href="/2022/11/13/clean/"/>
-      <url>/2022/11/13/clean/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>python多版本兼容</title>
       <link href="/2022/10/05/python-multi-version/"/>
       <url>/2022/10/05/python-multi-version/</url>
@@ -84,31 +71,6 @@
         <tags>
             
             <tag> 设计模式 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网络</title>
-      <link href="/2022/10/04/python-net/"/>
-      <url>/2022/10/04/python-net/</url>
-      
-        <content type="html"><![CDATA[<h2 id="ssrf校验"><a href="#ssrf校验" class="headerlink" title="ssrf校验"></a>ssrf校验</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网络 </tag>
             
         </tags>
       
@@ -309,31 +271,6 @@
         <tags>
             
             <tag> python不可变对象和可变对象 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>编程规范</title>
-      <link href="/2022/09/12/python-program-std/"/>
-      <url>/2022/09/12/python-program-std/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-命名规范"><a href="#1-命名规范" class="headerlink" title="1 命名规范"></a>1 命名规范</h2><h3 id="1-小写"><a href="#1-小写" class="headerlink" title="1.小写+_"></a>1.小写+_</h3><p>lower_with_fun</p><p>包，模块，函数，函数参数，变量</p><h3 id="2-首字母大写"><a href="#2-首字母大写" class="headerlink" title="2.首字母大写"></a>2.首字母大写</h3><p>CapWords</p><p>异常处理</p><h3 id="3-全大写"><a href="#3-全大写" class="headerlink" title="3.全大写+_"></a>3.全大写+_</h3><p>CAPS_WITH_UNDER</p><p>常量</p><h3 id="4-开头"><a href="#4-开头" class="headerlink" title="4._开头"></a>4._开头</h3><p>类私有成员和函数，外部仍可访问</p><p>a._</p><p>_fun </p><p>b.__</p><p>__fun</p><p>会被编译器自动改名，使用新名字外部也可以访问</p><h2 id="2-判断"><a href="#2-判断" class="headerlink" title="2.判断"></a>2.判断</h2><h3 id="None"><a href="#None" class="headerlink" title="None"></a>None</h3><p>is、is not</p><h3 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h3><p> if bool  代替==，is</p><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>foo.startwith(“bar”)   代替 foo[:3]==”bar”</p><p>endwith</p><h3 id="判空"><a href="#判空" class="headerlink" title="判空"></a>判空</h3><p>if list 代替  if len（list）</p><h3 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h3><p>用isinstance(variable,type)</p><p>不用type（variable）</p><h2 id="3-字典"><a href="#3-字典" class="headerlink" title="3.字典"></a>3.字典</h2><p>1 取值用a.get(key)，而不是a[key]，因为可能没有key</p><h2 id="7-异常处理"><a href="#7-异常处理" class="headerlink" title="7 异常处理"></a>7 异常处理</h2><p>不要使用except：处理所有异常</p><p>记得finally不要忘记，可以释放操作对象</p><h2 id="9-subprocess"><a href="#9-subprocess" class="headerlink" title="9 subprocess"></a>9 subprocess</h2><h3 id="使用subprocess代替os-system"><a href="#使用subprocess代替os-system" class="headerlink" title="使用subprocess代替os.system"></a>使用subprocess代替os.system</h3><p><a href="https://www.cnblogs.com/klb561/p/11960349.html">https://www.cnblogs.com/klb561/p/11960349.html</a></p><p><a href="https://blog.csdn.net/xiaoyaozizai017/article/details/72794469">https://blog.csdn.net/xiaoyaozizai017/article/details/72794469</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">retcode = subprocess.call(&quot;ls&quot;,shell=False)</span><br></pre></td></tr></table></figure><h2 id="10-import"><a href="#10-import" class="headerlink" title="10 import"></a>10 import</h2><p>位于注释（Docstring也是注释）和全局变量之间</p><h2 id="11-list"><a href="#11-list" class="headerlink" title="11 list"></a>11 list</h2><h3 id="1-切片不要负步走值"><a href="#1-切片不要负步走值" class="headerlink" title="1. 切片不要负步走值"></a>1. 切片不要负步走值</h3><h3 id="2-在list成员个数预知的情况下，提前创建所需空间"><a href="#2-在list成员个数预知的情况下，提前创建所需空间" class="headerlink" title="2.在list成员个数预知的情况下，提前创建所需空间"></a>2.在list成员个数预知的情况下，提前创建所需空间</h3><p>lst=[None]*1000</p><h2 id="12-随机数"><a href="#12-随机数" class="headerlink" title="12 随机数"></a>12 随机数</h2><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><p>安全: secrets模块 , /dev/random</p><p>不安全: os.urandom</p><h3 id="win"><a href="#win" class="headerlink" title="win"></a>win</h3><p>安全: os.urandom</p><p>不安全</p><h2 id="13-路径拼接"><a href="#13-路径拼接" class="headerlink" title="13 路径拼接"></a>13 路径拼接</h2><p>使用os.path.join代替+，因为linux为/ , win为\</p><h2 id="14-文件"><a href="#14-文件" class="headerlink" title="14 文件"></a>14 文件</h2><h3 id="使用with处理文件"><a href="#使用with处理文件" class="headerlink" title="使用with处理文件"></a>使用with处理文件</h3><p>文件 打开 关闭</p><p>with 自动关闭</p><h3 id="临时文件"><a href="#临时文件" class="headerlink" title="临时文件"></a>临时文件</h3><p>创建</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import tempfile</span><br><span class="line"></span><br><span class="line">使用NamedTemporaryFile mkstemp   mkdtemp  代替  mktemp </span><br></pre></td></tr></table></figure><p>注意访问许可</p><p>使用完及时删除</p><h2 id="16-字符串"><a href="#16-字符串" class="headerlink" title="16 字符串"></a>16 字符串</h2><h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>对于不受信任的输入禁止使用.format</p><p>因为string作为输入，{}内的字符会被解析成类，进而通过globals获取系统信息</p><h2 id="18-pickle-模块和-shelve模块"><a href="#18-pickle-模块和-shelve模块" class="headerlink" title="18 pickle 模块和 shelve模块"></a>18 pickle 模块和 shelve模块</h2><p>pickle 序列化</p><p>Shelve是对象持久化保存方法</p><h2 id="20-yaml模块"><a href="#20-yaml模块" class="headerlink" title="20 yaml模块"></a>20 yaml模块</h2><p>yaml是一个专门用来写配置文件的语言</p><p>使用yaml.safe_load代替yaml.load</p><h2 id="21-网络"><a href="#21-网络" class="headerlink" title="21 网络"></a>21 网络</h2><h3 id="数据交互"><a href="#数据交互" class="headerlink" title="数据交互"></a>数据交互</h3><p>使用ssl.SSLSocket 代替 socket.Socket</p><h2 id="22-注释"><a href="#22-注释" class="headerlink" title="22 注释"></a>22 注释</h2><h4 id="被注释的代码删除"><a href="#被注释的代码删除" class="headerlink" title="被注释的代码删除"></a>被注释的代码删除</h4><p>不要留下安全隐患</p><h4 id="docstring"><a href="#docstring" class="headerlink" title="docstring"></a>docstring</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">函数</span><br><span class="line">def fun():</span><br><span class="line">‘’‘</span><br><span class="line">首行简述函数功能</span><br><span class="line">第二行空</span><br><span class="line">第三行函数的具体描述</span><br><span class="line">’‘’</span><br><span class="line">return </span><br><span class="line"></span><br></pre></td></tr></table></figure><p>代码注释</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># XXXXXXX</span><br><span class="line">x = x + 1</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 编程规范 </tag>
             
         </tags>
       
@@ -1462,9 +1399,9 @@
       
       <categories>
           
-          <category> 部署 </category>
+          <category> 机器学习 </category>
           
-          <category> 深度学习 </category>
+          <category> 部署 </category>
           
       </categories>
       
@@ -10369,7 +10306,7 @@
       <link href="/2021/08/10/leetcode_algorith-tech/"/>
       <url>/2021/08/10/leetcode_algorith-tech/</url>
       
-        <content type="html"><![CDATA[<h2 id="一-常见算法"><a href="#一-常见算法" class="headerlink" title="一.常见算法"></a>一.常见算法</h2><p>分治策略，动态规划，回溯，分支限界，贪心策略</p><h2 id="二-巧用数据结构"><a href="#二-巧用数据结构" class="headerlink" title="二.巧用数据结构"></a>二.巧用数据结构</h2><p>普通栈、单调栈</p><p>队列</p><p>堆</p><p>字典树</p><h2 id="三-技巧"><a href="#三-技巧" class="headerlink" title="三.技巧"></a>三.技巧</h2><p>双指针/滑窗，二分查找，排序，快慢指针，取余，位运算，倍增（<a href="https://leetcode.cn/problems/divide-two-integers/">29. 两数相除</a>）、递归</p><p>时空转化（hashtable）</p><h2 id="四-套路选择"><a href="#四-套路选择" class="headerlink" title="四 套路选择"></a>四 套路选择</h2><p><a href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p><p><a href="https://zhuanlan.zhihu.com/p/341176507">https://zhuanlan.zhihu.com/p/341176507</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p><p><a href="https://zhuanlan.zhihu.com/p/341176507">https://zhuanlan.zhihu.com/p/341176507</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="一-常见算法"><a href="#一-常见算法" class="headerlink" title="一.常见算法"></a>一.常见算法</h2><p>分治策略，动态规划，回溯，分支限界，贪心策略</p><h2 id="二-巧用数据结构"><a href="#二-巧用数据结构" class="headerlink" title="二.巧用数据结构"></a>二.巧用数据结构</h2><p>普通栈、单调栈</p><p>队列</p><p>堆</p><p>字典树</p><h2 id="三-技巧"><a href="#三-技巧" class="headerlink" title="三.技巧"></a>三.技巧</h2><p>双指针/滑窗，二分查找，排序，快慢指针，取余，位运算，倍增（<a href="https://leetcode.cn/problems/divide-two-integers/">29. 两数相除</a>），递归，时空转化（hashtable），dfs/bfs</p><h2 id="四-套路选择"><a href="#四-套路选择" class="headerlink" title="四 套路选择"></a>四 套路选择</h2><p><a href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p><p><a href="https://zhuanlan.zhihu.com/p/341176507">https://zhuanlan.zhihu.com/p/341176507</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p><p><a href="https://zhuanlan.zhihu.com/p/341176507">https://zhuanlan.zhihu.com/p/341176507</a></p>]]></content>
       
       
       <categories>
