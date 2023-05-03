@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>c++语法</title>
+      <link href="/2023/05/03/cpp-lang/"/>
+      <url>/2023/05/03/cpp-lang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1 头文件"></a>1 头文件</h2><p><a href="https://www.runoob.com/w3cnote/cpp-header.html">https://www.runoob.com/w3cnote/cpp-header.html</a></p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>方便代码复用</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* math.h */</span><br><span class="line">double f1();</span><br><span class="line">double f2(double);</span><br><span class="line">/* end of math.h */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* math.cpp */</span><br><span class="line">double f1()</span><br><span class="line">&#123;</span><br><span class="line">    //do something here....</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line">double f2(double a)</span><br><span class="line">&#123;</span><br><span class="line">    //do something here...</span><br><span class="line">    return a * a;</span><br><span class="line">&#125;</span><br><span class="line">/* end of math.cpp */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* main.cpp */</span><br><span class="line">#include &quot;math.h&quot;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    int number1 = f1();</span><br><span class="line">    int number2 = f2(number1);</span><br><span class="line">&#125;</span><br><span class="line">/* end of main.cpp */</span><br></pre></td></tr></table></figure><ol><li><p>声明：是指出存储类型，并给存储单元指定名称。</p></li><li><p>定义：是分配内存空间，还可为变量指定初始值。</p></li></ol><p>include</p><p>它的作用就是把每一个它出现的地方，替换成它后面所写的那个文件的内容。简单的文本替换，别无其他。（预编译）</p><p>1 预编译</p><p>main.cpp首先include “math.h”，就是把math.h的东西全部替换过来</p><p>2 编译 </p><p>main.cpp有f1，f2的声明-》符号表</p><p>3 链接</p><p>根据符号表就可以在 math.cpp找到f1，f2的定义</p><h3 id="头文件中应该写什么"><a href="#头文件中应该写什么" class="headerlink" title="头文件中应该写什么"></a>头文件中应该写什么</h3><p>.h文件中能包含：</p><ul><li>类成员数据的声明，但不能赋值</li><li>类静态数据成员的定义和赋值，但不建议，只是个声明就好。</li><li>类的成员函数的声明</li><li>非类成员函数的声明</li><li>常数的定义：如：constint a=5;</li><li>静态函数的定义</li><li>类的内联函数的定义</li></ul><p>不能包含：</p><ul><li>1． 所有非静态变量（不是类的数据成员）的声明</li><li>2。 默认命名空间声明不要放在头文件，using namespace std;等应放在.cpp中，在 .h 文件中使用 std::string</li></ul><h2 id="2-内联函数"><a href="#2-内联函数" class="headerlink" title="2 内联函数"></a>2 内联函数</h2><p><a href="https://www.runoob.com/cplusplus/cpp-inline-functions.html">https://www.runoob.com/cplusplus/cpp-inline-functions.html</a></p><p>inline</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">inline int Max(int x, int y)</span><br><span class="line">&#123;</span><br><span class="line">   return (x &gt; y)? x : y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>引入内联函数的目的是为了解决程序中函数调用的效率问题，这么说吧，程序在编译器<strong>编译</strong>的时候，编译器将程序中出现的内联函数的调用表达式用内联函数的<strong>函数体进行替换</strong>，而对于其他的函数，都是在<strong>运行</strong>时候才被替代。这其实就是个<strong>空间代价换时间</strong>的i节省。所以内联函数一般都是1-5行的小函数</p><h2 id="3-关键字"><a href="#3-关键字" class="headerlink" title="3 关键字"></a>3 关键字</h2><p><a href="https://zhuanlan.zhihu.com/p/467001575">https://zhuanlan.zhihu.com/p/467001575</a></p><h3 id="存储类"><a href="#存储类" class="headerlink" title="存储类"></a>存储类</h3><p><a href="https://zhuanlan.zhihu.com/p/61853231">https://zhuanlan.zhihu.com/p/61853231</a></p><h2 id="4-内存分配"><a href="#4-内存分配" class="headerlink" title="4 内存分配"></a>4 内存分配</h2><p><a href="https://developer.aliyun.com/article/343804">https://developer.aliyun.com/article/343804</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++简介</title>
+      <link href="/2023/04/16/cpp_init/"/>
+      <url>/2023/04/16/cpp_init/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-构建工具"><a href="#1-构建工具" class="headerlink" title="1 构建工具"></a>1 构建工具</h2><h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p><img src="/2023/04/16/cpp_init/1.PNG" alt></p><p><a href="https://developer.aliyun.com/article/1154672">https://developer.aliyun.com/article/1154672</a></p><p><strong>静态库 动态库</strong></p><p><a href="https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html">https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html</a></p><p>二者的不同点在于代码被载入的时刻不同。</p><p>- 静态库在程序编译时会被连接到目标代码中，程序运行时将不再需要该静态库，因此体积较大。</p><p>- 动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入，因此在程序运行时还需要动态库存在，因此代码体积较小。</p><p>动态库的好处是，不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例。带来好处的同时，也会有问题！如经典的DLL Hell问题，关于如何规避动态库管理问题</p><h3 id="命令行编译"><a href="#命令行编译" class="headerlink" title="命令行编译"></a>命令行编译</h3><h3 id="为什么要构建工具呢？"><a href="#为什么要构建工具呢？" class="headerlink" title="为什么要构建工具呢？"></a>为什么要构建工具呢？</h3><p>当你的程序只有一个源文件时，直接就可以用gcc命令编译它。但是当你的程序包含很多个源文件时，用gcc命令逐个去编译时，你就很容易混乱而且工作量大，为什么呢？<br>因为各个文件之间还涉及到互相访问与链接，错综复杂的关系一个一个处理很麻烦，很容易出错，素衣需要一个工具来制定一个很好的编译规则，这就是make的作用了</p><h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><p>cmake</p><p>bazel</p><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="1-vs-Visual-Studio-为什么可以直接编译一个工程"><a href="#1-vs-Visual-Studio-为什么可以直接编译一个工程" class="headerlink" title="1 vs(Visual Studio)为什么可以直接编译一个工程"></a>1 vs(Visual Studio)为什么可以直接编译一个工程</h4><p>因为vs创建的是一个工程，所有添加的文件都有链接管理</p><h2 id="2-ide"><a href="#2-ide" class="headerlink" title="2 ide"></a>2 ide</h2><p>clion</p><p>vscode</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++简介 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python多版本兼容</title>
       <link href="/2022/10/05/python-multi-version/"/>
       <url>/2022/10/05/python-multi-version/</url>
