@@ -3,7 +3,7 @@
             <div class="card-content">
                 <h3 class="menu-label">Hot Recommend</h3><span id="index_hot_div">Loading...Wait a Minute!</span>
             </div>
-        </div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-05-03  <a class="commentCountImg" href="/2023/05/03/cpp-lang/#comment-container"><span class="display-none-class">fadfc217c496cb05c0b7d9e93182430b</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="fadfc217c496cb05c0b7d9e93182430b">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>9 m  <i class="fas fa-pencil-alt"> </i>1.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/05/03/cpp-lang/">c++语法</a></h1><div class="content"><h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1 头文件"></a>1 头文件</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-header.html">https://www.runoob.com/w3cnote/cpp-header.html</a></p>
+        </div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-05-03  <a class="commentCountImg" href="/2023/05/03/cpp-lang/#comment-container"><span class="display-none-class">fadfc217c496cb05c0b7d9e93182430b</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="fadfc217c496cb05c0b7d9e93182430b">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 m  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/05/03/cpp-lang/">c++语法</a></h1><div class="content"><h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1 头文件"></a>1 头文件</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/cpp-header.html">https://www.runoob.com/w3cnote/cpp-header.html</a></p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>方便代码复用</p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* math.h */</span><br><span class="line">double f1();</span><br><span class="line">double f2(double);</span><br><span class="line">/* end of math.h */</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* math.cpp */</span><br><span class="line">double f1()</span><br><span class="line">&#123;</span><br><span class="line">    //do something here....</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line">double f2(double a)</span><br><span class="line">&#123;</span><br><span class="line">    //do something here...</span><br><span class="line">    return a * a;</span><br><span class="line">&#125;</span><br><span class="line">/* end of math.cpp */</span><br></pre></td></tr></table></figure>
@@ -47,9 +47,12 @@
 <p>静态成员函数：和类绑定 和对象没有关系</p>
 <p>静态函数：只能在本文件用</p>
 <h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p><a target="_blank" rel="noopener" href="https://www.51cto.com/article/768503.html">https://www.51cto.com/article/768503.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/w2865673691/article/details/13018563">https://blog.csdn.net/w2865673691/article/details/13018563</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xingjiarong/article/details/47656339">https://blog.csdn.net/xingjiarong/article/details/47656339</a></p>
 <p><strong>extern</strong>   </p>
-<p>1 变量  ？？？</p>
-<p>2 函数     ？？？</p>
+<p>原理：就是先声明 告诉编译器定义在别的地方</p>
+<p>默认值：全局变量和函数默认 extern</p>
+<p>作用：在本文件使用别的文件的变量和函数   和include 的区别？？？</p>
 <p><strong>extern “c”</strong>  </p>
 <p>表示按照c语言的方式去编译</p>
 <h2 id="4-内存分配"><a href="#4-内存分配" class="headerlink" title="4 内存分配"></a>4 内存分配</h2><p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/343804">https://developer.aliyun.com/article/343804</a></p>
@@ -73,6 +76,8 @@
 <p>定义：给变量分配内存，可以为变量赋初值</p>
 <p><strong>函数</strong></p>
 <p>函数只要有实现即为定义，否则为声明</p>
+<p><strong>注意</strong></p>
+<p>声明要在使用前面 否则报错</p>
 <h2 id="10-数组"><a href="#10-数组" class="headerlink" title="10 数组"></a>10 数组</h2><p>数组名就是指向第一个元素的地址</p>
 <p>数组作为函数返回值   返回指针</p>
 <p>数组作为函数参数 传指针 </p>
