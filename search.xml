@@ -4,6 +4,116 @@
   
     
     <entry>
+      <title>内存/显存不够</title>
+      <link href="/2024/04/06/train-oom/"/>
+      <url>/2024/04/06/train-oom/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-从磁盘读数据集时"><a href="#1-从磁盘读数据集时" class="headerlink" title="1.从磁盘读数据集时"></a>1.从磁盘读数据集时</h2><p>？？</p><h2 id="2-训练时"><a href="#2-训练时" class="headerlink" title="2.训练时"></a>2.训练时</h2><p>batch size减少</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 训练技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 内存/显存不够 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随机森林</title>
+      <link href="/2024/04/06/random-forest/"/>
+      <url>/2024/04/06/random-forest/</url>
+      
+        <content type="html"><![CDATA[<p>就是多个决策树的结果合一起决策</p><p>最终的决策手段：投票/平均</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 集成学习 </category>
+          
+          <category> bagging </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随机森林 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>特征重要性</title>
+      <link href="/2024/04/06/feature-important/"/>
+      <url>/2024/04/06/feature-important/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-shap"><a href="#1-shap" class="headerlink" title="1.shap"></a>1.shap</h2><h2 id="2-LossFunctionChange"><a href="#2-LossFunctionChange" class="headerlink" title="2.LossFunctionChange"></a>2.LossFunctionChange</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 特征工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 特征重要性 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>shap</title>
+      <link href="/2024/04/06/shap/"/>
+      <url>/2024/04/06/shap/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p><a href="https://github.com/shap/shap">https://github.com/shap/shap</a></p><p><img src="/2024/04/06/shap/1.svg" alt></p><p>output=base rate+shap(AGE)+shap(SEX)+shap(BP)+shap(BMI)</p><p>0.4=0.1+0.4+(-0.3)+(0.1)+(0.1)</p><p>shap值0说明这个特征对最终预测没有起作用，正数说明是正向作用，负数说明是负向作用，值越大说明该特征对预测值影响越大</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p>1.单样本，不同特征的shap值</p><p>2.单特征，特征值和shap的关系</p><p>3.两个特征，特征值和shap的关系</p><h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 特征工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模型推理</title>
       <link href="/2024/04/06/ml-inference/"/>
       <url>/2024/04/06/ml-inference/</url>
@@ -8007,7 +8117,7 @@
       <link href="/2021/11/22/emb/"/>
       <url>/2021/11/22/emb/</url>
       
-        <content type="html"><![CDATA[<p>特征-&gt;one hot-&gt; embedding </p><p>目的：one hot 表示特征太稀疏，不利于训练，而且参数过多，速度慢</p><p>举例子： <a href="https://arxiv.org/pdf/1706.06978.pdf">https://arxiv.org/pdf/1706.06978.pdf</a> DIN论文中的特征表示和embdding层</p>]]></content>
+        <content type="html"><![CDATA[<p>特征-&gt;one hot/multi hot-&gt; embedding </p><p>目的：one hot/multi hot 表示特征太稀疏，不利于训练</p><p>举例子： <a href="https://arxiv.org/pdf/1706.06978.pdf">https://arxiv.org/pdf/1706.06978.pdf</a> DIN论文中的特征表示和embdding层</p>]]></content>
       
       
       <categories>
@@ -8279,7 +8389,7 @@
       <link href="/2021/11/10/torch_buildnet/"/>
       <url>/2021/11/10/torch_buildnet/</url>
       
-        <content type="html"><![CDATA[<h2 id="0-准备数据，处理数据"><a href="#0-准备数据，处理数据" class="headerlink" title="0.准备数据，处理数据"></a>0.准备数据，处理数据</h2><h2 id="1-搭建网络结构"><a href="#1-搭建网络结构" class="headerlink" title="1.搭建网络结构"></a>1.搭建网络结构</h2><p><a href="https://www.cnblogs.com/tian777/p/15341522.html">https://www.cnblogs.com/tian777/p/15341522.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">class pointwise_hybird_contrasive(hybird):</span><br><span class="line">    def __init__(self,config_roberta, path,num):</span><br><span class="line">        super(pointwise_hybird_contrasive, self).__init__(config_roberta, path,num)</span><br><span class="line">        # self.softmax=torch.nn.Softmax()</span><br><span class="line">        # self.CrossEntropyLoss=torch.nn.CrossEntropyLoss()</span><br><span class="line">        # self.FFN2=</span><br><span class="line">        # self.softmax = nn.Softmax(dim=1)</span><br><span class="line">        return</span><br><span class="line">    def forward(self, input_ids, input_mask, segment_ids, all_en_query, all_en_ans):</span><br><span class="line">        ch_match_embedding = self.ch_matching_model(input_ids, input_mask, segment_ids)</span><br><span class="line">        en_match_embedding = self.en_matching_model(all_en_query, all_en_ans)</span><br><span class="line"></span><br><span class="line">        hybird_represent = torch.cat([ch_match_embedding, en_match_embedding], dim=1)</span><br><span class="line">        output = self.FFN2(self.relu(self.FFN1(self.dropout(hybird_represent))))</span><br><span class="line"></span><br><span class="line">        # y_pred_prob, y_pred = torch.max(self.softmax(output.data), 1)</span><br><span class="line"></span><br><span class="line">        return output</span><br><span class="line">    def loss(self,predict,target):</span><br><span class="line">        # predict=predict.reshape(-1,target.shape[1])</span><br><span class="line">        # predict = torch.squeeze(predict, dim=1)</span><br><span class="line">        # predict=torch.unsqueeze(predict, dim=0)</span><br><span class="line">        # target=torch.argmax(target,dim=1)</span><br><span class="line">        # target= torch.unsqueeze(target, dim=0)</span><br><span class="line">        # self.loss(predict,target)</span><br><span class="line">        CrossEntropyLoss=torch.nn.CrossEntropyLoss()</span><br><span class="line">        return CrossEntropyLoss(predict,target)</span><br><span class="line"></span><br><span class="line">    def predict(self, output):</span><br><span class="line">        softmax = nn.Softmax(dim=1)</span><br><span class="line">        y_pred_prob, y_pred = torch.max(softmax(output.data), 1)</span><br><span class="line">        # y_pred = y_pred.cpu().numpy()</span><br><span class="line">        y_pred_prob = y_pred_prob.cpu().numpy()</span><br><span class="line">        for i in range(len(y_pred_prob)):</span><br><span class="line">            if not y_pred[i]:</span><br><span class="line">                y_pred_prob[i] = 1 - y_pred_prob[i]</span><br><span class="line">        return y_pred_prob</span><br></pre></td></tr></table></figure><p><strong>nn.Module</strong></p><p><a href="https://www.cnblogs.com/tian777/p/15341522.html">https://www.cnblogs.com/tian777/p/15341522.html</a></p><h4 id="1-init"><a href="#1-init" class="headerlink" title="1 init"></a>1 init</h4><h4 id="2-forward"><a href="#2-forward" class="headerlink" title="2  forward"></a>2  forward</h4><h4 id="3-loss"><a href="#3-loss" class="headerlink" title="3 loss"></a>3 loss</h4><p><strong>pytorch各种交叉熵函数的汇总具体使用</strong></p><p><a href="https://blog.csdn.net/comway_Li/article/details/121490170">https://blog.csdn.net/comway_Li/article/details/121490170</a></p><p><strong>L2和L1正则化</strong></p><p><a href="https://blog.csdn.net/guyuealian/article/details/88426648">https://blog.csdn.net/guyuealian/article/details/88426648</a></p><p>优化器固定实现L2正则化,源码注释：weight_decay (:obj:<code>float</code>, <code>optional</code>, defaults to 0):<br>Weight decay (L2 penalty)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">param_optimizer = list(model.named_parameters())</span><br><span class="line">no_decay = [&#x27;bias&#x27;, &#x27;LayerNorm.bias&#x27;, &#x27;LayerNorm.weight&#x27;]</span><br><span class="line">optimizer_grouped_parameters = [</span><br><span class="line">    &#123;&#x27;params&#x27;: [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)], &#x27;weight_decay&#x27;: 0.01&#125;,</span><br><span class="line">    &#123;&#x27;params&#x27;: [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], &#x27;weight_decay&#x27;: 0.0&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h4 id="4-predict"><a href="#4-predict" class="headerlink" title="4 predict"></a>4 predict</h4><h2 id="2-构建训练框架"><a href="#2-构建训练框架" class="headerlink" title="2.构建训练框架"></a>2.构建训练框架</h2><h3 id="a-迭代器"><a href="#a-迭代器" class="headerlink" title="a.迭代器"></a>a.迭代器</h3><p>Dataset/TensorDataset  -》 Sampler -》 Dataloader </p><p><a href="https://zhuanlan.zhihu.com/p/337850513#">https://zhuanlan.zhihu.com/p/337850513#</a></p><p><a href="https://blog.csdn.net/ljp1919/article/details/116484330">https://blog.csdn.net/ljp1919/article/details/116484330</a></p><p><a href="https://blog.csdn.net/qq_39507748/article/details/105385709">https://blog.csdn.net/qq_39507748/article/details/105385709</a></p><h3 id="b-优化器"><a href="#b-优化器" class="headerlink" title="b.优化器"></a>b.优化器</h3><p><a href="https://pytorch.org/docs/stable/optim.html">https://pytorch.org/docs/stable/optim.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)</span><br><span class="line">optimizer=optim.SGD([</span><br><span class="line">                &#123;&#x27;params&#x27;: model.base.parameters()&#125;,</span><br><span class="line">                &#123;&#x27;params&#x27;: model.classifier.parameters(), &#x27;lr&#x27;: 1e-3&#125;</span><br><span class="line">            ], lr=1e-2, momentum=0.9)</span><br></pre></td></tr></table></figure><h3 id="c-训练"><a href="#c-训练" class="headerlink" title="c 训练"></a>c 训练</h3><p><strong>optimizer.zero_grad() 梯度归零, loss.backward() 反向传播 , optimizer.step() 参数更新</strong></p><p><a href="https://blog.csdn.net/PanYHHH/article/details/107361827">https://blog.csdn.net/PanYHHH/article/details/107361827</a></p><h3 id="d-验证"><a href="#d-验证" class="headerlink" title="d. 验证"></a>d. 验证</h3><p><strong>with torch.no_grad()</strong></p><p>验证，测试时候用：可显著减少显存占用</p><p><a href="https://wstchhwp.blog.csdn.net/article/details/108405102">https://wstchhwp.blog.csdn.net/article/details/108405102</a></p><p><a href="https://blog.csdn.net/weixin_44134757/article/details/105775027">https://blog.csdn.net/weixin_44134757/article/details/105775027</a></p><h3 id="e-评价指标"><a href="#e-评价指标" class="headerlink" title="e. 评价指标"></a>e. 评价指标</h3><h3 id="f-模型保存"><a href="#f-模型保存" class="headerlink" title="f. 模型保存"></a>f. 模型保存</h3><p><a href="https://blog.csdn.net/m0_37605642/article/details/120325062">https://blog.csdn.net/m0_37605642/article/details/120325062</a></p><p><a href="https://blog.csdn.net/weixin_41278720/article/details/80759933">https://blog.csdn.net/weixin_41278720/article/details/80759933</a></p><h3 id="g-可视化"><a href="#g-可视化" class="headerlink" title="g. 可视化"></a>g. 可视化</h3><p><a href="https://blog.csdn.net/Wenyuanbo/article/details/118937790">https://blog.csdn.net/Wenyuanbo/article/details/118937790</a></p><h2 id="3-预测"><a href="#3-预测" class="headerlink" title="3.预测"></a>3.预测</h2><p>加载模型，输入数据，调用网络结构</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/qq_45847624/article/details/114885655">https://blog.csdn.net/qq_45847624/article/details/114885655</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="0-准备数据，处理数据"><a href="#0-准备数据，处理数据" class="headerlink" title="0.准备数据，处理数据"></a>0.准备数据，处理数据</h2><h2 id="1-搭建网络结构"><a href="#1-搭建网络结构" class="headerlink" title="1.搭建网络结构"></a>1.搭建网络结构</h2><p><a href="https://www.cnblogs.com/tian777/p/15341522.html">https://www.cnblogs.com/tian777/p/15341522.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">class pointwise_hybird_contrasive(hybird):</span><br><span class="line">    def __init__(self,config_roberta, path,num):</span><br><span class="line">        super(pointwise_hybird_contrasive, self).__init__(config_roberta, path,num)</span><br><span class="line">        # self.softmax=torch.nn.Softmax()</span><br><span class="line">        # self.CrossEntropyLoss=torch.nn.CrossEntropyLoss()</span><br><span class="line">        # self.FFN2=</span><br><span class="line">        # self.softmax = nn.Softmax(dim=1)</span><br><span class="line">        return</span><br><span class="line">    def forward(self, input_ids, input_mask, segment_ids, all_en_query, all_en_ans):</span><br><span class="line">        ch_match_embedding = self.ch_matching_model(input_ids, input_mask, segment_ids)</span><br><span class="line">        en_match_embedding = self.en_matching_model(all_en_query, all_en_ans)</span><br><span class="line"></span><br><span class="line">        hybird_represent = torch.cat([ch_match_embedding, en_match_embedding], dim=1)</span><br><span class="line">        output = self.FFN2(self.relu(self.FFN1(self.dropout(hybird_represent))))</span><br><span class="line"></span><br><span class="line">        # y_pred_prob, y_pred = torch.max(self.softmax(output.data), 1)</span><br><span class="line"></span><br><span class="line">        return output</span><br><span class="line">    def loss(self,predict,target):</span><br><span class="line">        # predict=predict.reshape(-1,target.shape[1])</span><br><span class="line">        # predict = torch.squeeze(predict, dim=1)</span><br><span class="line">        # predict=torch.unsqueeze(predict, dim=0)</span><br><span class="line">        # target=torch.argmax(target,dim=1)</span><br><span class="line">        # target= torch.unsqueeze(target, dim=0)</span><br><span class="line">        # self.loss(predict,target)</span><br><span class="line">        CrossEntropyLoss=torch.nn.CrossEntropyLoss()</span><br><span class="line">        return CrossEntropyLoss(predict,target)</span><br><span class="line"></span><br><span class="line">    def predict(self, output):</span><br><span class="line">        softmax = nn.Softmax(dim=1)</span><br><span class="line">        y_pred_prob, y_pred = torch.max(softmax(output.data), 1)</span><br><span class="line">        # y_pred = y_pred.cpu().numpy()</span><br><span class="line">        y_pred_prob = y_pred_prob.cpu().numpy()</span><br><span class="line">        for i in range(len(y_pred_prob)):</span><br><span class="line">            if not y_pred[i]:</span><br><span class="line">                y_pred_prob[i] = 1 - y_pred_prob[i]</span><br><span class="line">        return y_pred_prob</span><br></pre></td></tr></table></figure><p><strong>nn.Module</strong></p><p><a href="https://www.cnblogs.com/tian777/p/15341522.html">https://www.cnblogs.com/tian777/p/15341522.html</a></p><h4 id="1-init"><a href="#1-init" class="headerlink" title="1 init"></a>1 init</h4><h4 id="2-forward"><a href="#2-forward" class="headerlink" title="2  forward"></a>2  forward</h4><h4 id="3-loss"><a href="#3-loss" class="headerlink" title="3 loss"></a>3 loss</h4><p><strong>pytorch各种交叉熵函数的汇总具体使用</strong></p><p><a href="https://blog.csdn.net/comway_Li/article/details/121490170">https://blog.csdn.net/comway_Li/article/details/121490170</a></p><p><strong>L2和L1正则化</strong></p><p><a href="https://blog.csdn.net/guyuealian/article/details/88426648">https://blog.csdn.net/guyuealian/article/details/88426648</a></p><p>优化器固定实现L2正则化,源码注释：weight_decay (:obj:<code>float</code>, <code>optional</code>, defaults to 0):<br>Weight decay (L2 penalty)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">param_optimizer = list(model.named_parameters())</span><br><span class="line">no_decay = [&#x27;bias&#x27;, &#x27;LayerNorm.bias&#x27;, &#x27;LayerNorm.weight&#x27;]</span><br><span class="line">optimizer_grouped_parameters = [</span><br><span class="line">    &#123;&#x27;params&#x27;: [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)], &#x27;weight_decay&#x27;: 0.01&#125;,</span><br><span class="line">    &#123;&#x27;params&#x27;: [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], &#x27;weight_decay&#x27;: 0.0&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h4 id="4-predict"><a href="#4-predict" class="headerlink" title="4 predict"></a>4 predict</h4><h2 id="2-构建训练框架"><a href="#2-构建训练框架" class="headerlink" title="2.构建训练框架"></a>2.构建训练框架</h2><h3 id="a-数据加载器"><a href="#a-数据加载器" class="headerlink" title="a.数据加载器"></a>a.数据加载器</h3><p>Dataset/TensorDataset  -》 Sampler -》 Dataloader </p><p><a href="https://zhuanlan.zhihu.com/p/337850513#">https://zhuanlan.zhihu.com/p/337850513#</a></p><p><a href="https://blog.csdn.net/ljp1919/article/details/116484330">https://blog.csdn.net/ljp1919/article/details/116484330</a></p><p><a href="https://blog.csdn.net/qq_39507748/article/details/105385709">https://blog.csdn.net/qq_39507748/article/details/105385709</a></p><h3 id="b-优化器"><a href="#b-优化器" class="headerlink" title="b.优化器"></a>b.优化器</h3><p><a href="https://pytorch.org/docs/stable/optim.html">https://pytorch.org/docs/stable/optim.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)</span><br><span class="line">optimizer=optim.SGD([</span><br><span class="line">                &#123;&#x27;params&#x27;: model.base.parameters()&#125;,</span><br><span class="line">                &#123;&#x27;params&#x27;: model.classifier.parameters(), &#x27;lr&#x27;: 1e-3&#125;</span><br><span class="line">            ], lr=1e-2, momentum=0.9)</span><br></pre></td></tr></table></figure><h3 id="c-训练"><a href="#c-训练" class="headerlink" title="c 训练"></a>c 训练</h3><p><strong>optimizer.zero_grad() 梯度归零, loss.backward() 反向传播 , optimizer.step() 参数更新</strong></p><p><a href="https://blog.csdn.net/PanYHHH/article/details/107361827">https://blog.csdn.net/PanYHHH/article/details/107361827</a></p><h3 id="d-验证"><a href="#d-验证" class="headerlink" title="d. 验证"></a>d. 验证</h3><p><strong>with torch.no_grad()</strong></p><p>验证，测试时候用：可显著减少显存占用</p><p><a href="https://wstchhwp.blog.csdn.net/article/details/108405102">https://wstchhwp.blog.csdn.net/article/details/108405102</a></p><p><a href="https://blog.csdn.net/weixin_44134757/article/details/105775027">https://blog.csdn.net/weixin_44134757/article/details/105775027</a></p><h3 id="e-评价指标"><a href="#e-评价指标" class="headerlink" title="e. 评价指标"></a>e. 评价指标</h3><h3 id="f-模型保存"><a href="#f-模型保存" class="headerlink" title="f. 模型保存"></a>f. 模型保存</h3><p><a href="https://blog.csdn.net/m0_37605642/article/details/120325062">https://blog.csdn.net/m0_37605642/article/details/120325062</a></p><p><a href="https://blog.csdn.net/weixin_41278720/article/details/80759933">https://blog.csdn.net/weixin_41278720/article/details/80759933</a></p><h3 id="g-可视化"><a href="#g-可视化" class="headerlink" title="g. 可视化"></a>g. 可视化</h3><p><a href="https://blog.csdn.net/Wenyuanbo/article/details/118937790">https://blog.csdn.net/Wenyuanbo/article/details/118937790</a></p><h2 id="3-预测"><a href="#3-预测" class="headerlink" title="3.预测"></a>3.预测</h2><p>加载模型，输入数据，调用网络结构</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/qq_45847624/article/details/114885655">https://blog.csdn.net/qq_45847624/article/details/114885655</a></p>]]></content>
       
       
       <categories>
@@ -8867,7 +8977,7 @@
       <link href="/2021/10/21/feature-en/"/>
       <url>/2021/10/21/feature-en/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/111296130">https://zhuanlan.zhihu.com/p/111296130</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/111296130">https://zhuanlan.zhihu.com/p/111296130</a></p><h2 id="1-特征预处理"><a href="#1-特征预处理" class="headerlink" title="1.特征预处理"></a>1.特征预处理</h2><h3 id="0-是否去重"><a href="#0-是否去重" class="headerlink" title="0.是否去重"></a>0.是否去重</h3><h3 id="1-缺失值"><a href="#1-缺失值" class="headerlink" title="1.缺失值"></a>1.缺失值</h3><p>均值补全</p><h3 id="2-异常值"><a href="#2-异常值" class="headerlink" title="2.异常值"></a>2.异常值</h3><p><strong>检测异常值</strong></p><p>数值范围</p><p>sigma准则</p><p>knn</p><p>箱线图</p><p><strong>处理异常值</strong></p><p>剔除</p><p>均值补全</p><h2 id="2-特征表示"><a href="#2-特征表示" class="headerlink" title="2.特征表示"></a>2.特征表示</h2><p>特征分类：数值特征，文本特征，类别特征</p><h3 id="1-数值特征"><a href="#1-数值特征" class="headerlink" title="1.数值特征"></a>1.数值特征</h3><p>1.直接使用数值</p><p>2.离散化</p><p>分桶</p><h3 id="2-类别特征"><a href="#2-类别特征" class="headerlink" title="2.类别特征"></a>2.类别特征</h3><p>1.one hot</p><p>2.embedding</p><p>3.其他</p><p>catboost</p><h2 id="3-特征选择"><a href="#3-特征选择" class="headerlink" title="3.特征选择"></a>3.特征选择</h2><p><a href="https://blog.csdn.net/Datawhale/article/details/120582526">https://blog.csdn.net/Datawhale/article/details/120582526</a></p><p>大致分为3种，filter，wrapper，embedded</p>]]></content>
       
       
       <categories>
