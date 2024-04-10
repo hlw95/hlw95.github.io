@@ -428,7 +428,11 @@
       
       <categories>
           
-          <category> es </category>
+          <category> 搜索系统 </category>
+          
+          <category> 召回 </category>
+          
+          <category> 倒排 </category>
           
       </categories>
       
@@ -952,7 +956,7 @@
     
     
     <entry>
-      <title>倒排索引</title>
+      <title>倒排</title>
       <link href="/2022/07/15/indexing/"/>
       <url>/2022/07/15/indexing/</url>
       
@@ -965,14 +969,14 @@
           
           <category> 召回 </category>
           
-          <category> 倒排索引 </category>
+          <category> 倒排 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 倒排索引 </tag>
+            <tag> 倒排 </tag>
             
         </tags>
       
