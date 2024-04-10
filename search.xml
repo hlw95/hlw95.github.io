@@ -3336,33 +3336,6 @@
     
     
     <entry>
-      <title>ad hoc和routing</title>
-      <link href="/2022/04/01/ad-doc-routing/"/>
-      <url>/2022/04/01/ad-doc-routing/</url>
-      
-        <content type="html"><![CDATA[<h2 id="0-区别"><a href="#0-区别" class="headerlink" title="0 区别"></a>0 区别</h2><p><a href="https://blog.csdn.net/memray/article/details/41149633">https://blog.csdn.net/memray/article/details/41149633</a></p><p>ad hoc类似于图书馆里的书籍检索，即书籍库(数据库)相对稳定不变，不同用户的查询要求是千变万化的。</p><p>routing的情况与ad hoc相对，用户的查询要求相对稳定。在routing中，查询常常称为pro file，也就是通常所说的兴趣，用户的兴趣在一段时间内是稳定不变的，但是数据库(更确切的说，是数据流)是不断变化的。这种任务很像我们所说的新闻定制什么的，比如用户喜欢体育，这个兴趣在一段时间内是不变的，而体育新闻在不断变化。</p><h2 id="1-ad-hoc"><a href="#1-ad-hoc" class="headerlink" title="1 ad hoc"></a>1 ad hoc</h2><p><a href="https://ils.unc.edu/courses/2017_fall/inls509_002/lectures/03-IntroductionToAdhocRetrieval.pdf">https://ils.unc.edu/courses/2017_fall/inls509_002/lectures/03-IntroductionToAdhocRetrieval.pdf</a></p><p>Ad-hoc Retrieval 是什么</p><p>Given a query and a corpus, find the relevant items </p><p>‣ query: textual description of information need </p><p>‣ corpus: a collection of textual documents </p><p>‣ relevance: satisfaction of the user’s information need </p><h2 id="2-routing"><a href="#2-routing" class="headerlink" title="2 routing"></a>2 routing</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 搜索系统 </category>
-          
-          <category> 搜索系统 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ad hoc和routing </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>collections</title>
       <link href="/2022/04/01/python-counter/"/>
       <url>/2022/04/01/python-counter/</url>
@@ -7574,9 +7547,7 @@
       
       <categories>
           
-          <category> 推荐系统 </category>
-          
-          <category> 排序 </category>
+          <category> LTR </category>
           
           <category> pointwise </category>
           
@@ -10642,11 +10613,9 @@
       
       <categories>
           
-          <category> 推荐系统 </category>
+          <category> LTR </category>
           
-          <category> 排序 </category>
-          
-          <category> 排序 </category>
+          <category> LTR </category>
           
       </categories>
       
