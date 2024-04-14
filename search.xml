@@ -4,6 +4,566 @@
   
     
     <entry>
+      <title>jar</title>
+      <link href="/2024/04/14/jar/"/>
+      <url>/2024/04/14/jar/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1 分类"></a>1 分类</h2><p>可执行jar 有main  java -jar XXX.jar</p><p>不可执行jar 没有main 只能作为依赖</p><p>vim jar</p><h2 id="2-下载jar包"><a href="#2-下载jar包" class="headerlink" title="2.下载jar包"></a>2.下载jar包</h2><p><a href="https://www.cnblogs.com/Marydon20170307/p/9149256.html">https://www.cnblogs.com/Marydon20170307/p/9149256.html</a></p><h2 id="3-环境导入jar包"><a href="#3-环境导入jar包" class="headerlink" title="3.环境导入jar包"></a>3.环境导入jar包</h2><h3 id="1-命令行"><a href="#1-命令行" class="headerlink" title="1 命令行"></a>1 命令行</h3><p><a href="https://blog.csdn.net/weixin_30681615/article/details/99745369">https://blog.csdn.net/weixin_30681615/article/details/99745369</a></p><p><a href="https://blog.csdn.net/chencaw/article/details/78884107">https://blog.csdn.net/chencaw/article/details/78884107</a></p><p><a href="https://blog.csdn.net/j_bean/article/details/75095337">https://blog.csdn.net/j_bean/article/details/75095337</a></p><p>例子:</p><h6 id="目录结构"><a href="#目录结构" class="headerlink" title="####目录结构"></a>####目录结构</h6><p>test</p><p>​    lib</p><p>​        spark-assembly_2.10-1.6.0-cdh5.16.1.jar</p><p>​    src</p><p>​        demo.java</p><p>​    bin</p><h6 id><a href="#" class="headerlink" title="#"></a>#</h6><p>在test路径下</p><p>1.编译</p><p>javac -cp ./lib/spark-assembly_2.10-1.6.0-cdh5.16.1.jar  -d ./bin/  ./src/demo.java</p><p>2.运行</p><p>java -cp ./lib/spark-assembly_2.10-1.6.0-cdh5.16.1.jar:./bin/  com/yzy/spark/demo</p><p>注意：1 -cp 需要列出所有jar包，ide也是全部列出了 2 window上，用;分隔；linux上是:分隔</p><h3 id="2-idea"><a href="#2-idea" class="headerlink" title="2 idea"></a><strong>2 idea</strong></h3><p><a href="https://www.jianshu.com/p/9762b7098b76">https://www.jianshu.com/p/9762b7098b76</a></p><p><a href="https://www.cnblogs.com/mracale/p/10493823.html">https://www.cnblogs.com/mracale/p/10493823.html</a></p><h2 id="4-代码引用jar包"><a href="#4-代码引用jar包" class="headerlink" title="4.代码引用jar包"></a>4.代码引用jar包</h2><p>import</p><h2 id="5-怎么生成jar"><a href="#5-怎么生成jar" class="headerlink" title="5.怎么生成jar"></a>5.怎么生成jar</h2><p><a href="https://www.cnblogs.com/swordfall/p/11359370.html">https://www.cnblogs.com/swordfall/p/11359370.html</a></p><p><a href="https://blog.csdn.net/smgsn01/article/details/108038046">https://blog.csdn.net/smgsn01/article/details/108038046</a></p><h3 id="1-命令行-1"><a href="#1-命令行-1" class="headerlink" title="1 命令行"></a>1 命令行</h3><h3 id="2-maven"><a href="#2-maven" class="headerlink" title="2 maven"></a>2 maven</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java编译</title>
+      <link href="/2024/04/14/java-compile/"/>
+      <url>/2024/04/14/java-compile/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-run-command"><a href="#1-run-command" class="headerlink" title="1 run command"></a>1 run command</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//he_test</span><br><span class="line">//lib</span><br><span class="line">//src</span><br><span class="line">//HelloWorld.java</span><br><span class="line">//bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">package com.hlw.test;</span><br><span class="line">public class HelloWorld &#123;</span><br><span class="line">    /* 第一个Java程序</span><br><span class="line"> *      * 它将输出字符串 Hello World</span><br><span class="line"> *           */</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;Hello World&quot;); // 输出 Hello World</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>1.编译代码</p><p><strong>javac</strong>  -d bin/   ./src/HelloWorld.java</p><p>bin/下生成com/hlw/test/HelloWorld.class</p><p>2.运行程序</p><p><strong>java</strong> -classpath/-cp ./bin/ com/hlw/test/HelloWorld</p><h2 id="2-构建工具"><a href="#2-构建工具" class="headerlink" title="2 构建工具"></a>2 构建工具</h2><p>maven</p><p>gradle</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java编译 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gc</title>
+      <link href="/2024/04/14/gc/"/>
+      <url>/2024/04/14/gc/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/23102625">https://zhuanlan.zhihu.com/p/23102625</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java性能优化</title>
+      <link href="/2024/04/14/java-optimize/"/>
+      <url>/2024/04/14/java-optimize/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-火焰图"><a href="#1-火焰图" class="headerlink" title="1.火焰图"></a>1.火焰图</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java性能优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java内存泄露</title>
+      <link href="/2024/04/14/java-mem/"/>
+      <url>/2024/04/14/java-mem/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1 原理"></a>1 原理</h2><p>堆外内存  堆内内存</p><p><a href="https://juejin.cn/post/7248406023291371557">https://juejin.cn/post/7248406023291371557</a></p><h2 id="2-定位"><a href="#2-定位" class="headerlink" title="2 定位"></a>2 定位</h2><h3 id="堆内内存"><a href="#堆内内存" class="headerlink" title="堆内内存"></a>堆内内存</h3><h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><h4 id="1-原因"><a href="#1-原因" class="headerlink" title="1 原因"></a>1 原因</h4><p>1.一个vector一直add</p><h4 id="2-定位-1"><a href="#2-定位-1" class="headerlink" title="2 定位"></a>2 定位</h4><p>1 jmap</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java内存泄露 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java debug</title>
+      <link href="/2024/04/14/java-debug/"/>
+      <url>/2024/04/14/java-debug/</url>
+      
+        <content type="html"><![CDATA[<p>1.remote jvm debug</p><p><a href="https://blog.csdn.net/qq_41262903/article/details/120922767">https://blog.csdn.net/qq_41262903/article/details/120922767</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java debug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java io</title>
+      <link href="/2024/04/14/java-io/"/>
+      <url>/2024/04/14/java-io/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1666614">https://cloud.tencent.com/developer/article/1666614</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> 语言特性 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java io </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gradle</title>
+      <link href="/2024/04/14/gradle/"/>
+      <url>/2024/04/14/gradle/</url>
+      
+        <content type="html"><![CDATA[<p>作用类似maven</p><h2 id="1-编包"><a href="#1-编包" class="headerlink" title="1.编包"></a>1.编包</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> 框架 </category>
+          
+          <category> gradle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gradle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>logging</title>
+      <link href="/2024/04/13/python-logging/"/>
+      <url>/2024/04/13/python-logging/</url>
+      
+        <content type="html"><![CDATA[<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p>logging.basicConfig( )</p><h2 id="use"><a href="#use" class="headerlink" title="use"></a>use</h2><p>logging.error</p><p>logging.info</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> logging </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python内存管理</title>
+      <link href="/2024/04/13/python-mem/"/>
+      <url>/2024/04/13/python-mem/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/562693816">https://zhuanlan.zhihu.com/p/562693816</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python内存管理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>路径</title>
+      <link href="/2024/04/13/python-path/"/>
+      <url>/2024/04/13/python-path/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-工作路径"><a href="#1-工作路径" class="headerlink" title="1 工作路径"></a>1 工作路径</h2><p>改变工作目录  os.chdir(path)</p><h2 id="2-包的路径"><a href="#2-包的路径" class="headerlink" title="2 包的路径"></a>2 包的路径</h2><p>绝对路径</p><p>相对路径</p><p>添加包的搜索路径</p><h2 id="3-文件路径"><a href="#3-文件路径" class="headerlink" title="3 文件路径"></a>3 文件路径</h2><p>绝对路径</p><p>相对路径</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 路径 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>pandas</title>
+      <link href="/2024/04/13/pandas/"/>
+      <url>/2024/04/13/pandas/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-大文件处理"><a href="#1-大文件处理" class="headerlink" title="1 大文件处理"></a>1 大文件处理</h2><p><strong>1 读入部分数据</strong></p><p>df = pd.read_csv( skiprows =  , nrows =   )</p><p><strong>2 分块</strong></p><p>pd_chunk=pd.read_csv(  chunksize=   )</p><p>for df in pd_chunk:</p><p>​     </p><h2 id="2-数据统计"><a href="#2-数据统计" class="headerlink" title="2 数据统计"></a>2 数据统计</h2><p>describe</p><h2 id="3-字符分割"><a href="#3-字符分割" class="headerlink" title="3 字符分割"></a>3 字符分割</h2><p>sep=”\001”</p><p>sep=”\ |\ |”</p><h2 id="4-单元格合并"><a href="#4-单元格合并" class="headerlink" title="4 单元格合并"></a>4 单元格合并</h2><p>行可以合并</p><p>列可以先转成行</p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pandas </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类</title>
+      <link href="/2024/04/13/python-class/"/>
+      <url>/2024/04/13/python-class/</url>
+      
+        <content type="html"><![CDATA[<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>实例属性</p><p>类属性</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>实例方法  self</p><p>类方法 @classmethod</p><p>静态方法 @staticmethod</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>metaclass</title>
+      <link href="/2024/04/13/metaclass/"/>
+      <url>/2024/04/13/metaclass/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.readinghere.com/blog/how-to-use-python-metaclass-cn/">https://www.readinghere.com/blog/how-to-use-python-metaclass-cn/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> metaclass </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>unittest</title>
+      <link href="/2024/04/13/python-unittest/"/>
+      <url>/2024/04/13/python-unittest/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/sinat_38682860/article/details/102838668">https://blog.csdn.net/sinat_38682860/article/details/102838668</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unittest </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>list</title>
+      <link href="/2024/04/13/python-list/"/>
+      <url>/2024/04/13/python-list/</url>
+      
+        <content type="html"><![CDATA[<p><strong>引用</strong> </p><p>=     完全变</p><p><strong>浅拷贝</strong> </p><p>copy.copy       list 里面的list变 </p><p><strong>深拷贝</strong> </p><p>copy.deepcopy    完全不变</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> list </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>solr</title>
+      <link href="/2024/04/13/solr-1/"/>
+      <url>/2024/04/13/solr-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git</title>
+      <link href="/2024/04/13/git/"/>
+      <url>/2024/04/13/git/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p><strong>head</strong></p><p>当前活跃分支的游标</p><h2 id="2-常用操作"><a href="#2-常用操作" class="headerlink" title="2.常用操作"></a>2.常用操作</h2><p><strong>issue</strong></p><p><a href="https://blog.csdn.net/cool99781/article/details/105821546">https://blog.csdn.net/cool99781/article/details/105821546</a></p><p><strong>分支</strong></p><p>1 创建</p><p>git checkout -b branchname</p><p>2 删除</p><p>git checkout -d branchname</p><p>3 改名</p><p>4 切换</p><p>git checkout branchname</p><p>5 一个分支覆盖另外一个分支</p><p>git reset —hard repository/branch</p><p>6 本地只有一个同名分支 可以往不同远程仓的同名分支推送</p><p><strong>拉代码</strong></p><p>1 fetch</p><p>2 pull=fetch+merge</p><p><strong>rebase</strong><br>git rebase -i repository/branch</p><p><strong>cherry-pick</strong></p><p>多个不连续commit： git cherry-pick commit1  commit2</p><p>多个连续commit，左开右闭： git cherry-pick commitbegin..commitend</p><p>多个连续commitgit， 左闭右闭： cherry-pick  commitbegin^..commitend</p><p><strong>commit</strong></p><p><strong>0 创建commit</strong></p><p>git add changedfile</p><p>git commit</p><p><strong>1 修改commit信息</strong></p><p>git commit —amend</p><p><strong>2 回退commit</strong></p><p>1 reset</p><p>git reset —soft HEAD^</p><p>git reset —soft HEAD~2</p><p>git reset —hard commit</p><p>2 revert</p><p>git revert commit</p><p><strong>MR</strong></p><p>一个分支一次只能提交一个mr</p><p><strong>本地查看历史</strong></p><p>git log</p><p>git reflog</p><p><strong>stash</strong></p><p>git stash list</p><p>git stash clear</p><p>git stash</p><p>git stash pop</p><p><strong>git lfs</strong></p><p>配置文件：.gitattributs</p><p>git lfs install</p><p>git lfs pull</p><p><strong>git submodule</strong></p><p>git submodule init</p><p>git submodule update</p><p><strong>查看代码变化</strong></p><p>0</p><p>git commit完</p><p>git log —stat</p><p>1</p><p>git add 完</p><p>git diff —cached —numstat</p><h2 id="3-fork开发模式"><a href="#3-fork开发模式" class="headerlink" title="3.fork开发模式"></a>3.fork开发模式</h2><p>1.fork 主仓</p><p>2.git clone http 自己的仓</p><p>3.git remote add master http 主仓</p><p>4.基于主仓某个分支开发，创建commit，push 到自己的仓</p><p>5.往主仓提交mr</p><h2 id="4-冲突解决"><a href="#4-冲突解决" class="headerlink" title="4.冲突解决"></a>4.冲突解决</h2><p><strong>冲突原因</strong></p><p>同时操作一个文件的相同位置</p><p><strong>解决手段</strong></p><p>1 利用ide</p><p>灰色是删除的</p><p>蓝色是修改的</p><p>绿色是新增的</p><p>红色是冲突</p><p>2 </p><p>基于代码理解，选择左边或者右边或者左右合并</p><h2 id="5-版本管理"><a href="#5-版本管理" class="headerlink" title="5.版本管理"></a>5.版本管理</h2><p>利用好ide</p><h2 id="6-问题"><a href="#6-问题" class="headerlink" title="6.问题"></a>6.问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>并查集</title>
+      <link href="/2024/04/13/Disjoint-set/"/>
+      <url>/2024/04/13/Disjoint-set/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://oi-wiki.org/ds/dsu/">https://oi-wiki.org/ds/dsu/</a></p><p><a href="https://juejin.cn/post/6991459784167784456">https://juejin.cn/post/6991459784167784456</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础算法 </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 并查集 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>优先队列</title>
+      <link href="/2024/04/13/queue/"/>
+      <url>/2024/04/13/queue/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/xzxl/p/7266404.html">https://www.cnblogs.com/xzxl/p/7266404.html</a></p><p><a href="https://www.jianshu.com/p/b51ab28ca8dd">https://www.jianshu.com/p/b51ab28ca8dd</a></p><p><strong>和堆的关系</strong></p><p><a href="https://blog.csdn.net/weixin_44337445/article/details/110508591">https://blog.csdn.net/weixin_44337445/article/details/110508591</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础算法 </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 优先队列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>广告工具</title>
+      <link href="/2024/04/13/ad-tool/"/>
+      <url>/2024/04/13/ad-tool/</url>
+      
+        <content type="html"><![CDATA[<h2 id="deepctr"><a href="#deepctr" class="headerlink" title="deepctr"></a>deepctr</h2><p><a href="https://github.com/shenweichen/DeepCTR">https://github.com/shenweichen/DeepCTR</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 广告系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deepctr </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>莫比乌斯</title>
+      <link href="/2024/04/13/ad-baidu/"/>
+      <url>/2024/04/13/ad-baidu/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/144765227">https://zhuanlan.zhihu.com/p/144765227</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 广告系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 莫比乌斯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>灰度测试</title>
       <link href="/2024/04/11/gray-test/"/>
       <url>/2024/04/11/gray-test/</url>
@@ -573,11 +1133,11 @@
     
     
     <entry>
-      <title>多线程</title>
+      <title>多进程,多线程</title>
       <link href="/2022/10/04/python-multi-thread/"/>
       <url>/2022/10/04/python-multi-thread/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-多进程"><a href="#1-多进程" class="headerlink" title="1 多进程"></a>1 多进程</h2><p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064">https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064</a></p><p>multiprocessing</p><p><strong>流程</strong></p><ol><li>创建进程池</li><li>创建进程</li><li>关闭进程池</li><li>阻塞主进程</li></ol><p><strong>进程返回值</strong></p><p><strong>进程调用函数的参数</strong></p><p>pandas chunk data 不可以</p><p><strong>打印信息</strong></p><h2 id="2-多线程"><a href="#2-多线程" class="headerlink" title="2 多线程"></a>2 多线程</h2><p><a href="https://www.runoob.com/python/python-multithreading.html">https://www.runoob.com/python/python-multithreading.html</a></p><p>thread</p>]]></content>
       
       
       <categories>
@@ -589,7 +1149,7 @@
       
         <tags>
             
-            <tag> 多线程 </tag>
+            <tag> 多进程,多线程 </tag>
             
         </tags>
       
@@ -752,7 +1312,7 @@
       <link href="/2022/09/12/python-string/"/>
       <url>/2022/09/12/python-string/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-格式化"><a href="#1-格式化" class="headerlink" title="1 格式化"></a>1 格式化</h2><p><a href="https://blog.csdn.net/zjbyough/article/details/96466658">https://blog.csdn.net/zjbyough/article/details/96466658</a></p><h3 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h3><p><a href="https://blog.csdn.net/sunxb10/article/details/81036693">https://blog.csdn.net/sunxb10/article/details/81036693</a></p><h3 id><a href="#" class="headerlink" title="%"></a>%</h3><h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-格式化"><a href="#1-格式化" class="headerlink" title="1 格式化"></a>1 格式化</h2><p><a href="https://blog.csdn.net/zjbyough/article/details/96466658">https://blog.csdn.net/zjbyough/article/details/96466658</a></p><h3 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h3><p><a href="https://blog.csdn.net/sunxb10/article/details/81036693">https://blog.csdn.net/sunxb10/article/details/81036693</a></p><h3 id><a href="#" class="headerlink" title="%"></a>%</h3><h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><h2 id="2-引号"><a href="#2-引号" class="headerlink" title="2.引号"></a>2.引号</h2><p>单引号，双引号，3个单引号，3个双引号</p><h2 id="3-转义"><a href="#3-转义" class="headerlink" title="3 转义"></a>3 转义</h2>]]></content>
       
       
       <categories>
@@ -827,7 +1387,7 @@
       <link href="/2022/09/12/decorator/"/>
       <url>/2022/09/12/decorator/</url>
       
-        <content type="html"><![CDATA[<h2 id="普通装饰器"><a href="#普通装饰器" class="headerlink" title="普通装饰器"></a>普通装饰器</h2><p>修饰符号：@</p><p>本质是闭包</p><p><a href="https://www.runoob.com/w3cnote/python-func-decorators.html">https://www.runoob.com/w3cnote/python-func-decorators.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">def a_new_decorator(a_func):</span><br><span class="line"> </span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        print(&quot;I am doing some boring work before executing a_func()&quot;)</span><br><span class="line"> </span><br><span class="line">        a_func()</span><br><span class="line"> </span><br><span class="line">        print(&quot;I am doing some boring work after executing a_func()&quot;)</span><br><span class="line"> </span><br><span class="line">    return wrapTheFunction</span><br><span class="line"> </span><br><span class="line">def a_function_requiring_decoration():</span><br><span class="line">    print(&quot;I am the function which needs some decoration to remove my foul smell&quot;)</span><br><span class="line"> </span><br><span class="line">a_function_requiring_decoration()</span><br><span class="line">#outputs: &quot;I am the function which needs some decoration to remove my foul smell&quot;</span><br><span class="line"> </span><br><span class="line">a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)</span><br><span class="line">#now a_function_requiring_decoration is wrapped by wrapTheFunction()</span><br><span class="line"> </span><br><span class="line">a_function_requiring_decoration()</span><br><span class="line">#outputs:I am doing some boring work before executing a_func()</span><br><span class="line">#        I am the function which needs some decoration to remove my foul smell</span><br><span class="line">#        I am doing some boring work after executing a_func()</span><br></pre></td></tr></table></figure><h2 id="多层装饰器"><a href="#多层装饰器" class="headerlink" title="多层装饰器"></a>多层装饰器</h2><p>顺序为从下至上</p><h2 id="内置装饰器"><a href="#内置装饰器" class="headerlink" title="内置装饰器"></a>内置装饰器</h2><h3 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h3><p>将<strong>方法</strong>转换为相同名称的<strong>只读属性</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class dataset(object):</span><br><span class="line">    @property</span><br><span class="line">    def fun1(self):</span><br><span class="line">        return 13</span><br><span class="line">    def fun2(self):</span><br><span class="line">        return 13</span><br><span class="line"></span><br><span class="line">a=dataset()</span><br><span class="line">print(a.fun1)</span><br><span class="line">print(a.fun2())</span><br></pre></td></tr></table></figure><h3 id="staticmethod"><a href="#staticmethod" class="headerlink" title="@staticmethod"></a>@staticmethod</h3><h3 id="classmthod"><a href="#classmthod" class="headerlink" title="@classmthod"></a>@classmthod</h3><p><a href="https://zhuanlan.zhihu.com/p/35643573">https://zhuanlan.zhihu.com/p/35643573</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="普通装饰器"><a href="#普通装饰器" class="headerlink" title="普通装饰器"></a>普通装饰器</h2><p>修饰符号：@</p><p>本质是闭包</p><p><a href="https://www.runoob.com/w3cnote/python-func-decorators.html">https://www.runoob.com/w3cnote/python-func-decorators.html</a></p><h2 id="多层装饰器"><a href="#多层装饰器" class="headerlink" title="多层装饰器"></a>多层装饰器</h2><p>顺序为从下至上</p><h2 id="带参装饰器"><a href="#带参装饰器" class="headerlink" title="带参装饰器"></a>带参装饰器</h2><h2 id="内置装饰器"><a href="#内置装饰器" class="headerlink" title="内置装饰器"></a>内置装饰器</h2><h3 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h3><p>将<strong>方法</strong>转换为相同名称的<strong>只读属性</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class dataset(object):</span><br><span class="line">    @property</span><br><span class="line">    def fun1(self):</span><br><span class="line">        return 13</span><br><span class="line">    def fun2(self):</span><br><span class="line">        return 13</span><br><span class="line"></span><br><span class="line">a=dataset()</span><br><span class="line">print(a.fun1)</span><br><span class="line">print(a.fun2())</span><br></pre></td></tr></table></figure><h3 id="staticmethod"><a href="#staticmethod" class="headerlink" title="@staticmethod"></a>@staticmethod</h3><h3 id="classmthod"><a href="#classmthod" class="headerlink" title="@classmthod"></a>@classmthod</h3><p><a href="https://zhuanlan.zhihu.com/p/35643573">https://zhuanlan.zhihu.com/p/35643573</a></p>]]></content>
       
       
       <categories>
@@ -1126,7 +1686,7 @@
       <link href="/2022/06/22/jupyter-notebook/"/>
       <url>/2022/06/22/jupyter-notebook/</url>
       
-        <content type="html"><![CDATA[<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p><h2 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h2><p>和.py唯一区别</p><p>jupyter：args=parser.pars_args(argew=[传入参数])</p><p>py：args=parser.pars_args()</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-部署"><a href="#1-部署" class="headerlink" title="1 部署"></a>1 部署</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p><p>查看密码</p><p>取消密码</p><h2 id="2-传参"><a href="#2-传参" class="headerlink" title="2 传参"></a>2 传参</h2><p>py：args=parser.pars_args()</p><p>jupyter：args=parser.pars_args(argew=[传入参数])</p><h2 id="3-指定python-版本"><a href="#3-指定python-版本" class="headerlink" title="3 指定python 版本"></a>3 指定python 版本</h2><p>env/bin/jupyter notebook</p><h2 id="4-文件调用"><a href="#4-文件调用" class="headerlink" title="4 文件调用"></a>4 文件调用</h2><p>调用.py</p><p>调用.ipyb</p><h2 id="5-运行py"><a href="#5-运行py" class="headerlink" title="5 运行py"></a>5 运行py</h2><p>加载 %load path/xx.py</p><p>运行%run path/xx.py</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/weixin_41149572/article/details/114640624">https://blog.csdn.net/weixin_41149572/article/details/114640624</a></p>]]></content>
       
       
       <categories>
@@ -2342,60 +2902,6 @@
     
     
     <entry>
-      <title>多线程编程</title>
-      <link href="/2022/05/03/java-multi-thread/"/>
-      <url>/2022/05/03/java-multi-thread/</url>
-      
-        <content type="html"><![CDATA[<p>进程 &gt; 线程</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-          <category> 多线程编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 多线程编程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网络编程</title>
-      <link href="/2022/05/03/java-net-program/"/>
-      <url>/2022/05/03/java-net-program/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-          <category> 网络编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网络编程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构汇总</title>
       <link href="/2022/05/01/data-struct/"/>
       <url>/2022/05/01/data-struct/</url>
@@ -2423,25 +2929,25 @@
     
     
     <entry>
-      <title>jvm</title>
+      <title>JDK、JRE、JVM</title>
       <link href="/2022/05/01/jvm/"/>
       <url>/2022/05/01/jvm/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-JDK、JRE、JVM"><a href="#1-JDK、JRE、JVM" class="headerlink" title="1. JDK、JRE、JVM"></a>1. JDK、JRE、JVM</h2><h2 id="0-汇总"><a href="#0-汇总" class="headerlink" title="0 汇总"></a>0 汇总</h2><p><a href="https://github.com/doocs/jvm">https://github.com/doocs/jvm</a></p><h2 id="1-JDK、JRE、JVM-1"><a href="#1-JDK、JRE、JVM-1" class="headerlink" title="1 JDK、JRE、JVM"></a>1 JDK、JRE、JVM</h2><p><a href="https://its401.com/article/weixin_45797022/104963478">https://its401.com/article/weixin_45797022/104963478</a></p><p><img src="/2022/05/01/jvm/1.png" alt></p><p><img src="/2022/05/01/jvm/2.png" alt></p><p><strong>三者的区别与联系</strong></p><ol><li><p>JDK用于开发，是给开发人员用的</p></li><li><p>JRE 用于运行java程序，普通用户用</p></li><li><p>JVM是java实现跨平台的最核心的部分，普通用户用</p></li></ol><h2 id="2-java内存区域，java-memory-model"><a href="#2-java内存区域，java-memory-model" class="headerlink" title="2  java内存区域，java memory model"></a>2  java内存区域，java memory model</h2><p>二者不同</p><p><a href="https://blog.csdn.net/javazejian/article/details/72772461">https://blog.csdn.net/javazejian/article/details/72772461</a></p><p>1 内存区域</p><p><a href="https://cloud.tencent.com/developer/article/1748395">https://cloud.tencent.com/developer/article/1748395</a></p><p>string 的 内存分配</p><p><a href="https://blog.csdn.net/liufangbaishi2014/article/details/52238881">https://blog.csdn.net/liufangbaishi2014/article/details/52238881</a></p><p>2 jmm</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-JDK、JRE、JVM"><a href="#1-JDK、JRE、JVM" class="headerlink" title="1 JDK、JRE、JVM"></a>1 JDK、JRE、JVM</h2><p><img src="/2022/05/01/jvm/1.png" alt></p><p><img src="/2022/05/01/jvm/2.png" alt></p><p><strong>三者的区别与联系</strong></p><p><a href="https://blog.csdn.net/ancientear/article/details/79483592">https://blog.csdn.net/ancientear/article/details/79483592</a></p>]]></content>
       
       
       <categories>
           
           <category> java </category>
           
-          <category> jvm </category>
+          <category> java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> jvm </tag>
+            <tag> JDK、JRE、JVM </tag>
             
         </tags>
       
@@ -2903,7 +3409,7 @@
       <link href="/2022/04/10/python-bif/"/>
       <url>/2022/04/10/python-bif/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-ord（）"><a href="#1-ord（）" class="headerlink" title="1 ord（）"></a>1 ord（）</h2><p>如何获取ascii码，使用内置函数ord（）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ord(&quot;A&quot;)</span><br><span class="line">65</span><br><span class="line">ord(&quot;a&quot;)</span><br><span class="line">97</span><br></pre></td></tr></table></figure><h4 id="804-唯一摩尔斯密码词"><a href="#804-唯一摩尔斯密码词" class="headerlink" title="804. 唯一摩尔斯密码词"></a><a href="https://leetcode-cn.com/problems/unique-morse-code-words/">804. 唯一摩尔斯密码词</a></h4><h2 id="2-sorted"><a href="#2-sorted" class="headerlink" title="2  sorted()"></a>2  sorted()</h2><p><a href="https://www.runoob.com/python3/python3-func-sorted.html">https://www.runoob.com/python3/python3-func-sorted.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sorted([-3,4,2],key=abs)</span><br><span class="line">Out[5]: [2, -3, 4]</span><br><span class="line">sorted([-3,4,2])</span><br><span class="line">Out[6]: [-3, 2, 4]</span><br></pre></td></tr></table></figure><h2 id="3-iter-和-next函数"><a href="#3-iter-和-next函数" class="headerlink" title="3 iter 和 next函数"></a>3 iter 和 next函数</h2><h2 id="4-dir"><a href="#4-dir" class="headerlink" title="4 dir"></a>4 dir</h2><p><a href="https://www.runoob.com/python/python-func-dir.html">https://www.runoob.com/python/python-func-dir.html</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-ord"><a href="#1-ord" class="headerlink" title="1 ord"></a>1 ord</h2><p>如何获取ascii码，使用内置函数ord（）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ord(&quot;A&quot;)</span><br><span class="line">65</span><br><span class="line">ord(&quot;a&quot;)</span><br><span class="line">97</span><br></pre></td></tr></table></figure><h4 id="804-唯一摩尔斯密码词"><a href="#804-唯一摩尔斯密码词" class="headerlink" title="804. 唯一摩尔斯密码词"></a><a href="https://leetcode-cn.com/problems/unique-morse-code-words/">804. 唯一摩尔斯密码词</a></h4><h2 id="2-sorted"><a href="#2-sorted" class="headerlink" title="2  sorted"></a>2  sorted</h2><p><a href="https://www.runoob.com/python3/python3-func-sorted.html">https://www.runoob.com/python3/python3-func-sorted.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sorted([-3,4,2],key=abs)</span><br><span class="line">Out[5]: [2, -3, 4]</span><br><span class="line">sorted([-3,4,2])</span><br><span class="line">Out[6]: [-3, 2, 4]</span><br></pre></td></tr></table></figure><h2 id="3-iter-和-next函数"><a href="#3-iter-和-next函数" class="headerlink" title="3 iter 和 next函数"></a>3 iter 和 next函数</h2><h2 id="4-dir"><a href="#4-dir" class="headerlink" title="4 dir"></a>4 dir</h2><p><a href="https://www.runoob.com/python/python-func-dir.html">https://www.runoob.com/python/python-func-dir.html</a></p><h2 id="5-filter"><a href="#5-filter" class="headerlink" title="5 filter"></a>5 filter</h2><p>只保留true，过滤false</p><p>filter（lambda x:x%2==0,[1,2,3,4,5]）      [2,4]</p>]]></content>
       
       
       <categories>
@@ -2986,7 +3492,7 @@
       <link href="/2022/04/06/dfs/"/>
       <url>/2022/04/06/dfs/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/a753d5c733ec">https://www.jianshu.com/p/a753d5c733ec</a></p><h2 id="dfs"><a href="#dfs" class="headerlink" title="dfs"></a>dfs</h2><p>1 递归实现</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def dfs(当前节点,子节点)</span><br><span class="line">    for node in 子节点集合</span><br><span class="line">        dfs(node,new 子节点)</span><br></pre></td></tr></table></figure><h4 id="310-最小高度树"><a href="#310-最小高度树" class="headerlink" title="310. 最小高度树"></a><a href="https://leetcode-cn.com/problems/minimum-height-trees/">310. 最小高度树</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### root 当前节点 path子节点 depth 深度</span><br><span class="line">dfs(root,path,depth)</span><br></pre></td></tr></table></figure><h4 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695. 岛屿的最大面积"></a><a href="https://leetcode-cn.com/problems/max-area-of-island/">695. 岛屿的最大面积</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###grid全部格点 cur_i，cur_j 当前节点的位置，用+1-1可以确定子节点</span><br><span class="line">dfs(self, grid, cur_i, cur_j) :</span><br></pre></td></tr></table></figure><h2 id="bfs"><a href="#bfs" class="headerlink" title="bfs"></a>bfs</h2><p>1 迭代实现</p><p>root进队，root出队，root的子节点【a,b,c】进队，a出队，a的子节点进队，b出队，b的子节点进队。。。</p><p>访问顺序（出队顺序）：root a b c 。。。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def levelOrder(self, root: &#x27;Node&#x27;) -&gt; List[List[int]]:</span><br><span class="line">        if root==None:</span><br><span class="line">            return []</span><br><span class="line">        ans = []</span><br><span class="line">        q = [root]</span><br><span class="line">        while q:</span><br><span class="line">            # length = len(q)</span><br><span class="line">            # arr = []</span><br><span class="line">            # for _ in range(length):</span><br><span class="line">            node = q.pop(0)</span><br><span class="line">            # arr.append(node.val)</span><br><span class="line">            for chd in node.children:</span><br><span class="line">                q.append(chd)</span><br><span class="line">            # if arr:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">        return ans</span><br></pre></td></tr></table></figure><h4 id="429-N-叉树的层序遍历"><a href="#429-N-叉树的层序遍历" class="headerlink" title="429. N 叉树的层序遍历"></a><a href="https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/">429. N 叉树的层序遍历</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def levelOrder(self, root: &#x27;Node&#x27;) -&gt; List[List[int]]:</span><br><span class="line">        ans = []  ##结果</span><br><span class="line">        q = [root] ##队列</span><br><span class="line">        while q:</span><br><span class="line">            length = len(q)</span><br><span class="line">            arr = [] #出队</span><br><span class="line">            for _ in range(length):</span><br><span class="line">                node = q.pop(0)</span><br><span class="line">                if not node: </span><br><span class="line">                    continue</span><br><span class="line">                arr.append(node.val)</span><br><span class="line">                for chd in node.children:</span><br><span class="line">                    q.append(chd)</span><br><span class="line">            if arr:</span><br><span class="line">                ans.append(arr)</span><br><span class="line">        return ans</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="应用选择"><a href="#应用选择" class="headerlink" title="应用选择"></a>应用选择</h2><p>时间复杂度都为O（n）,n为全部节点</p><ol><li>BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用dfs，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）</li><li>DFS适合搜索全部的解，而正因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树；DFS搜索会搜索全部，但是相比之下 DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。</li></ol><h2 id="和回溯的关系"><a href="#和回溯的关系" class="headerlink" title="和回溯的关系"></a>和回溯的关系</h2><p>回溯是算法思想，dfs和bfs是搜索解空间的手段</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/e81a16a6f771">https://www.jianshu.com/p/e81a16a6f771</a></p><p><a href="https://blog.csdn.net/weixin_41894030/article/details/95317440">https://blog.csdn.net/weixin_41894030/article/details/95317440</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/a753d5c733ec">https://www.jianshu.com/p/a753d5c733ec</a></p><h2 id="dfs"><a href="#dfs" class="headerlink" title="dfs"></a>dfs</h2><h3 id="1-递归实现"><a href="#1-递归实现" class="headerlink" title="1 递归实现"></a>1 递归实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def dfs(当前节点,子节点)</span><br><span class="line">    for node in 子节点集合</span><br><span class="line">        dfs(node,new 子节点)</span><br></pre></td></tr></table></figure><h4 id="310-最小高度树"><a href="#310-最小高度树" class="headerlink" title="310. 最小高度树"></a><a href="https://leetcode-cn.com/problems/minimum-height-trees/">310. 最小高度树</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### root 当前节点 path子节点 depth 深度</span><br><span class="line">dfs(root,path,depth)</span><br></pre></td></tr></table></figure><h4 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695. 岛屿的最大面积"></a><a href="https://leetcode-cn.com/problems/max-area-of-island/">695. 岛屿的最大面积</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###grid全部格点 cur_i，cur_j 当前节点的位置，用+1-1可以确定子节点</span><br><span class="line">dfs(self, grid, cur_i, cur_j) :</span><br></pre></td></tr></table></figure><h3 id="2-迭代实现"><a href="#2-迭代实现" class="headerlink" title="2 迭代实现"></a>2 迭代实现</h3><h2 id="bfs"><a href="#bfs" class="headerlink" title="bfs"></a>bfs</h2><h3 id="1-迭代实现"><a href="#1-迭代实现" class="headerlink" title="1 迭代实现"></a>1 迭代实现</h3><p>root进队，root出队，root的子节点【a,b,c】进队，a出队，a的子节点进队，b出队，b的子节点进队。。。</p><p>访问顺序（出队顺序）：root a b c 。。。 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def levelOrder(self, root: &#x27;Node&#x27;) -&gt; List[List[int]]:</span><br><span class="line">        if root==None:</span><br><span class="line">            return []</span><br><span class="line">        ans = []</span><br><span class="line">        q = [root]</span><br><span class="line">        while q:</span><br><span class="line">            # length = len(q)</span><br><span class="line">            # arr = []</span><br><span class="line">            # for _ in range(length):</span><br><span class="line">            node = q.pop(0)</span><br><span class="line">            # arr.append(node.val)</span><br><span class="line">            for chd in node.children:</span><br><span class="line">                q.append(chd)</span><br><span class="line">            # if arr:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">        return ans</span><br></pre></td></tr></table></figure><h4 id="429-N-叉树的层序遍历"><a href="#429-N-叉树的层序遍历" class="headerlink" title="429. N 叉树的层序遍历"></a><a href="https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/">429. N 叉树的层序遍历</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def levelOrder(self, root: &#x27;Node&#x27;) -&gt; List[List[int]]:</span><br><span class="line">        ans = []  ##结果</span><br><span class="line">        q = [root] ##队列</span><br><span class="line">        while q:</span><br><span class="line">            length = len(q)</span><br><span class="line">            arr = [] #出队</span><br><span class="line">            for _ in range(length):</span><br><span class="line">                node = q.pop(0)</span><br><span class="line">                if not node: </span><br><span class="line">                    continue</span><br><span class="line">                arr.append(node.val)</span><br><span class="line">                for chd in node.children:</span><br><span class="line">                    q.append(chd)</span><br><span class="line">            if arr:</span><br><span class="line">                ans.append(arr)</span><br><span class="line">        return ans</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="2-递归实现"><a href="#2-递归实现" class="headerlink" title="2 递归实现"></a>2 递归实现</h3><h2 id="应用选择"><a href="#应用选择" class="headerlink" title="应用选择"></a>应用选择</h2><p>时间复杂度都为O（n）,n为全部节点</p><ol><li>BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用dfs，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）</li><li>DFS适合搜索全部的解，而正因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树；DFS搜索会搜索全部，但是相比之下 DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。</li></ol><h2 id="和回溯的关系"><a href="#和回溯的关系" class="headerlink" title="和回溯的关系"></a>和回溯的关系</h2><p>回溯是算法思想，dfs和bfs是搜索解空间的手段</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/e81a16a6f771">https://www.jianshu.com/p/e81a16a6f771</a></p><p><a href="https://blog.csdn.net/weixin_41894030/article/details/95317440">https://blog.csdn.net/weixin_41894030/article/details/95317440</a></p>]]></content>
       
       
       <categories>
@@ -3936,11 +4442,11 @@
     
     
     <entry>
-      <title>python在Ubuntu系统下的调试工具pdb</title>
+      <title>debug</title>
       <link href="/2022/03/18/python-pdb/"/>
       <url>/2022/03/18/python-pdb/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/lemonaha/article/details/71305344">https://blog.csdn.net/lemonaha/article/details/71305344</a></p><p>两种方式：</p><p>1.非侵入式</p><p>不加代码</p><p>python -m pdb XX.py</p><p>2.侵入式</p><p>加代码</p><p>import pdb</p><p>pdb.set_trace()</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-ide"><a href="#1-ide" class="headerlink" title="1.ide"></a>1.ide</h2><h2 id="2-pdb"><a href="#2-pdb" class="headerlink" title="2.pdb"></a>2.pdb</h2><p><a href="https://blog.csdn.net/lemonaha/article/details/71305344">https://blog.csdn.net/lemonaha/article/details/71305344</a></p><p>两种方式：</p><p>1.非侵入式</p><p>不加代码</p><p>python -m pdb XX.py</p><p>2.侵入式</p><p>加代码</p><p>import pdb</p><p>pdb.set_trace()</p>]]></content>
       
       
       <categories>
@@ -3952,7 +4458,7 @@
       
         <tags>
             
-            <tag> python在Ubuntu系统下的调试工具pdb </tag>
+            <tag> python debug </tag>
             
         </tags>
       
@@ -4352,14 +4858,14 @@
       <link href="/2022/03/08/idea/"/>
       <url>/2022/03/08/idea/</url>
       
-        <content type="html"><![CDATA[<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p><a href="https://www.heiz123.com/2022/02/242/#di_liu_bu_da_kai_IDEA_tian_ru_zhi_ding_ji_huo_ma_wan_cheng_ji_huo">https://www.heiz123.com/2022/02/242/#di_liu_bu_da_kai_IDEA_tian_ru_zhi_ding_ji_huo_ma_wan_cheng_ji_huo</a></p><h2 id="IDEA修改变量的值"><a href="#IDEA修改变量的值" class="headerlink" title="IDEA修改变量的值"></a>IDEA修改变量的值</h2><p><a href="https://blog.csdn.net/qq_36925114/article/details/102484525">https://blog.csdn.net/qq_36925114/article/details/102484525</a></p><h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2><p><a href="https://www.cnblogs.com/chiangchou/p/idea-debug.html">https://www.cnblogs.com/chiangchou/p/idea-debug.html</a></p><h2 id="language-level"><a href="#language-level" class="headerlink" title="language level"></a>language level</h2><p><a href="https://blog.csdn.net/glpghz/article/details/107509987">https://blog.csdn.net/glpghz/article/details/107509987</a></p><p>当我们项目使用的是 JDK 8，但是代码却没有使用 JDK 8 的新特性，只需使用 JDK 7 的时候我们可以选择 <code>7 - Diamonds，ARM，multi-catch etc</code></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p><a href="https://www.heiz123.com/2022/02/242/#di_liu_bu_da_kai_IDEA_tian_ru_zhi_ding_ji_huo_ma_wan_cheng_ji_huo">https://www.heiz123.com/2022/02/242/#di_liu_bu_da_kai_IDEA_tian_ru_zhi_ding_ji_huo_ma_wan_cheng_ji_huo</a></p><h2 id="IDEA修改变量的值"><a href="#IDEA修改变量的值" class="headerlink" title="IDEA修改变量的值"></a>IDEA修改变量的值</h2><p><a href="https://blog.csdn.net/qq_36925114/article/details/102484525">https://blog.csdn.net/qq_36925114/article/details/102484525</a></p><h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2><p><a href="https://www.cnblogs.com/chiangchou/p/idea-debug.html">https://www.cnblogs.com/chiangchou/p/idea-debug.html</a></p><h2 id="language-level"><a href="#language-level" class="headerlink" title="language level"></a>language level</h2><p><a href="https://blog.csdn.net/glpghz/article/details/107509987">https://blog.csdn.net/glpghz/article/details/107509987</a></p><p>当我们项目使用的是 JDK 8，但是代码却没有使用 JDK 8 的新特性，只需使用 JDK 7 的时候我们可以选择 <code>7 - Diamonds，ARM，multi-catch etc</code></p><h2 id="导入jar"><a href="#导入jar" class="headerlink" title="导入jar"></a>导入jar</h2><p>project settings -&gt; modules</p>]]></content>
       
       
       <categories>
           
           <category> java </category>
           
-          <category> ide </category>
+          <category> java </category>
           
       </categories>
       
@@ -4495,7 +5001,7 @@
       <link href="/2022/03/06/application/"/>
       <url>/2022/03/06/application/</url>
       
-        <content type="html"><![CDATA[<p><strong>前后端</strong></p><p>指的web前后端</p><p><strong>移动端</strong></p><p>ios和安卓</p><p><strong>服务端 ，客户端</strong></p><p>客户端（Client）是指与服务器相对应并为客户提供本地服务的程序。 除了仅在本地运行的某些应用程序外，它们通常安装在普通客户端上，并且需要与服务器一起使用。</p><p>服务端：顾名思义是服务的，客户端发送的请求交给服务器端处理，是以response对象存在，服务端处理完毕后反馈给客户端。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>前后端</strong></p><p>指的web前后端</p><p><strong>移动端</strong></p><p>ios和安卓</p><p><strong>服务端 ，客户端</strong></p><p>服务端：顾名思义是服务的，客户端发送的请求交给服务器端处理，是以response对象存在，服务端处理完毕后反馈给客户端。</p><p>客户端（Client）是指与服务器相对应并为客户提供本地服务的程序。 除了仅在本地运行的某些应用程序外，它们通常安装在普通客户端上，并且需要与服务器一起使用。</p>]]></content>
       
       
       <categories>
@@ -7040,7 +7546,7 @@
       <link href="/2022/01/13/python_magic/"/>
       <url>/2022/01/13/python_magic/</url>
       
-        <content type="html"><![CDATA[<h2 id="getitem"><a href="#getitem" class="headerlink" title="getitem"></a>getitem</h2><p><a href="https://zhuanlan.zhihu.com/p/27661382">https://zhuanlan.zhihu.com/p/27661382</a></p><h2 id="all"><a href="#all" class="headerlink" title="all"></a>all</h2><p><a href="https://orangleliu.blog.csdn.net/article/details/49848413">https://orangleliu.blog.csdn.net/article/details/49848413</a></p><h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><p>类实例化的时候先调用new生成这个对象， 然后调用init初始化这个对象</p><p><a href="https://blog.csdn.net/qq_23183809/article/details/120819491">https://blog.csdn.net/qq_23183809/article/details/120819491</a></p><p><a href="https://blog.csdn.net/Lq_520/article/details/81712905">https://blog.csdn.net/Lq_520/article/details/81712905</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-getitem"><a href="#1-getitem" class="headerlink" title="1 getitem"></a>1 getitem</h2><p><a href="https://zhuanlan.zhihu.com/p/27661382">https://zhuanlan.zhihu.com/p/27661382</a></p><h2 id="2-all"><a href="#2-all" class="headerlink" title="2 all"></a>2 all</h2><p><a href="https://orangleliu.blog.csdn.net/article/details/49848413">https://orangleliu.blog.csdn.net/article/details/49848413</a></p><h2 id="3-new"><a href="#3-new" class="headerlink" title="3 new"></a>3 new</h2><p>类实例化的时候先调用new生成这个对象， 然后调用init初始化这个对象</p><p><a href="https://blog.csdn.net/qq_23183809/article/details/120819491">https://blog.csdn.net/qq_23183809/article/details/120819491</a></p><p><a href="https://blog.csdn.net/Lq_520/article/details/81712905">https://blog.csdn.net/Lq_520/article/details/81712905</a></p><h2 id="4-del"><a href="#4-del" class="headerlink" title="4 del"></a>4 del</h2>]]></content>
       
       
       <categories>
@@ -7270,25 +7776,25 @@
     
     
     <entry>
-      <title>java</title>
+      <title>java语言特性</title>
       <link href="/2022/01/05/java/"/>
       <url>/2022/01/05/java/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-Java平台"><a href="#1-Java平台" class="headerlink" title="1.Java平台"></a>1.Java平台</h2><p><a href="https://www.cnblogs.com/HeavenZhi/p/14075331.html#jrejava-runtime-environment">https://www.cnblogs.com/HeavenZhi/p/14075331.html#jrejava-runtime-environment</a></p><p><a href="https://blog.csdn.net/ZGL_cyy/article/details/104081834">https://blog.csdn.net/ZGL_cyy/article/details/104081834</a></p><p>java是语言，这个是平台。Java 平台由 Java 虚拟机（Java Virtual Machine，JVM）和 Java 应用编程接口（Application Programming Interface，API））构成。</p><p><img src="/2022/01/05/java/1.jpg" alt></p><p><strong>java SE</strong></p><p><a href="https://baike.baidu.com/item/JAVA SE/4662159">Java SE（Java Platform Standard Edition，Java 平台标准版）</a>以前称为 J2SE，它允许开发和部署在桌面、服务器、嵌入式环境和实时环境中使用的 Java 应用程序。Java SE 包含了支持 Java Web 服务开发的类，并为 Java EE 提供基础，如 Java 语言基础、<a href="https://baike.baidu.com/item/Java数据库连接/1173389?fr=aladdin">JDBC</a> 操作、<a href="https://baike.baidu.com/item/IO/5918?fr=aladdin">I/O</a> 操作、<a href="https://baike.baidu.com/item/网络通信/9636548?fr=aladdin">网络通信</a>以及<a href="https://baike.baidu.com/item/多线程">多线程</a>等技术。</p><p><strong>Java EE</strong></p><p><a href="https://baike.baidu.com/item/JavaEE/3066623?fr=aladdin">Java EE（Java Platform Enterprise Edition，Java 平台企业版）</a>以前称为 J2EE。企业版本帮助开发和部署可移植、健壮、可伸缩且安全的服务器端 Java 应用程序。Java EE 是在 Java SE 基础上构建的，它提供 Web 服务、组件模型、管理和通信 API，可以用来实现企业级的面向服务体系结构（Service Oriented Architecture，SOA）和 <a href="https://baike.baidu.com/item/web2.0/97695?fr=aladdin">Web 2.0</a> 应用程序。</p><p><strong>Java ME</strong></p><p><a href="https://baike.baidu.com/item/Java ME?fromtitle=Javame&amp;fromid=2106282">Java ME（Java Platform Micro Edition，Java 平台微型版）</a>以前称为 J2ME，也叫 K-JAVA。 Java ME 为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境。</p><p>Java ME 包括灵活的用户界面、健壮的安全模型、丰富的内置网络协议以及对可以动态下载的联网和离线应用程序。基于 Java ME 规范的应用程序 只需编写一次就可以用于许多设备，而且可以利用每个设备的本机功能。</p><h2 id="2-run-command"><a href="#2-run-command" class="headerlink" title="2 run command"></a>2 run command</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//he_test</span><br><span class="line">//lib</span><br><span class="line">//src</span><br><span class="line">//HelloWorld.java</span><br><span class="line">//bin</span><br><span class="line">package com.hlw.test;</span><br><span class="line">public class HelloWorld &#123;</span><br><span class="line">    /* 第一个Java程序</span><br><span class="line"> *      * 它将输出字符串 Hello World</span><br><span class="line"> *           */</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;Hello World&quot;); // 输出 Hello World</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>he_test下</p><p>1.编译代码</p><p>javac  -d bin/   ./src/HelloWorld.java</p><p>bin/下生成com/hlw/test/HelloWorld.class</p><p>2.运行程序</p><p>java -classpath/-cp ./bin/ com/hlw/test/HelloWorld</p><h2 id="3-Java-源文件的命名规则"><a href="#3-Java-源文件的命名规则" class="headerlink" title="3 Java 源文件的命名规则"></a>3 Java 源文件的命名规则</h2><ul><li>通常情况下，Java 程序源文件的主文件名可以任意。</li><li>但如果其中定义了一个 public 类，则该源文件的文件名必须与该 public 类的类名相同。</li><li>一个Java 源文件可包含多个类定义，但最多只能包含一个public类定义。</li></ul><h2 id="4-jar包"><a href="#4-jar包" class="headerlink" title="4 jar包"></a>4 jar包</h2><h4 id="0-下载jar包"><a href="#0-下载jar包" class="headerlink" title="0.下载jar包"></a>0.下载jar包</h4><p><a href="https://www.cnblogs.com/Marydon20170307/p/9149256.html">https://www.cnblogs.com/Marydon20170307/p/9149256.html</a></p><h4 id="1-环境导入jar包"><a href="#1-环境导入jar包" class="headerlink" title="1.环境导入jar包"></a>1.环境导入jar包</h4><p><strong>ide</strong></p><p><a href="https://www.jianshu.com/p/9762b7098b76">https://www.jianshu.com/p/9762b7098b76</a></p><p><a href="https://www.cnblogs.com/mracale/p/10493823.html">https://www.cnblogs.com/mracale/p/10493823.html</a></p><p><strong>ubuntu</strong></p><p><a href="https://blog.csdn.net/weixin_30681615/article/details/99745369">https://blog.csdn.net/weixin_30681615/article/details/99745369</a></p><p><a href="https://blog.csdn.net/chencaw/article/details/78884107">https://blog.csdn.net/chencaw/article/details/78884107</a></p><p><a href="https://blog.csdn.net/j_bean/article/details/75095337">https://blog.csdn.net/j_bean/article/details/75095337</a></p><p>例子:</p><h6 id="目录结构"><a href="#目录结构" class="headerlink" title="####目录结构"></a>####目录结构</h6><p>test</p><p>​    lib</p><p>​        spark-assembly_2.10-1.6.0-cdh5.16.1.jar</p><p>​    src</p><p>​        demo.java</p><p>​    bin</p><h6 id><a href="#" class="headerlink" title="#"></a>#</h6><p>在test路径下</p><p>1.编译</p><p>javac -cp ./lib/spark-assembly_2.10-1.6.0-cdh5.16.1.jar  -d ./bin/  ./src/demo.java</p><p>2.运行</p><p>java -cp ./lib/spark-assembly_2.10-1.6.0-cdh5.16.1.jar:./bin/  com/yzy/spark/demo</p><p>注意：1 -cp 需要列出所有jar包，ide也是全部列出了 2 window上，用;分隔；linux上是:分隔</p><h4 id="2-代码引用jar包"><a href="#2-代码引用jar包" class="headerlink" title="2.代码引用jar包"></a>2.代码引用jar包</h4><p>import</p><h4 id="3-怎么生成jar"><a href="#3-怎么生成jar" class="headerlink" title="3.怎么生成jar"></a>3.怎么生成jar</h4><p><a href="https://www.cnblogs.com/swordfall/p/11359370.html">https://www.cnblogs.com/swordfall/p/11359370.html</a></p><p><a href="https://blog.csdn.net/smgsn01/article/details/108038046">https://blog.csdn.net/smgsn01/article/details/108038046</a></p><p>maven，ide自带，jar命令</p><h4 id="4-执行"><a href="#4-执行" class="headerlink" title="4.执行"></a>4.执行</h4><p>java -jar XXX.jar</p><h2 id="5-package"><a href="#5-package" class="headerlink" title="5 package"></a>5 package</h2><p><a href="https://blog.csdn.net/qq_41297896/article/details/90056534">https://blog.csdn.net/qq_41297896/article/details/90056534</a></p><p><a href="https://www.runoob.com/java/java-package.html">https://www.runoob.com/java/java-package.html</a></p><p><a href="https://www.runoob.com/w3cnote/java-compile-with-package.html">https://www.runoob.com/w3cnote/java-compile-with-package.html</a></p><p>为了更好地组织类，用于区别类名的命名空间</p><p>包的命名规范</p><p><a href="https://blog.csdn.net/shi779276212/article/details/92795085">https://blog.csdn.net/shi779276212/article/details/92795085</a></p><p>使用：</p><p><img src="/2022/01/05/java/3.JPG" alt></p><p><img src="/2022/01/05/java/2.JPG" alt></p><h2 id="6-重写-Override-与重载-Overload"><a href="#6-重写-Override-与重载-Overload" class="headerlink" title="6 重写(Override)与重载(Overload)"></a>6 重写(Override)与重载(Overload)</h2><p><a href="https://www.runoob.com/java/java-override-overload.html">https://www.runoob.com/java/java-override-overload.html</a></p><p>重写：是子类对父类同名函数的二次实现</p><p>重载：一个类内存在多个重名函数，而参数不同</p><h2 id="7-多态"><a href="#7-多态" class="headerlink" title="7 多态"></a>7 多态</h2><p><a href="http://c.biancheng.net/view/1001.html#">http://c.biancheng.net/view/1001.html#</a></p><p><a href="https://www.runoob.com/java/java-polymorphism.html">https://www.runoob.com/java/java-polymorphism.html</a></p><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p><p><img src="/2022/01/05/java/4.jpg" alt></p><p>多态存在的三个必要条件</p><ul><li>继承</li><li>重写</li><li>父类引用指向子类对象：<strong>Parent p = new Child();</strong></li></ul><p>分类：</p><p><a href="https://blog.csdn.net/zhao_miao/article/details/83750898">https://blog.csdn.net/zhao_miao/article/details/83750898</a></p><p>1 向上转型</p><p><code>父类 父类对象 = 子类实例</code></p><p>只能调用父特有，子覆盖，不能子特有</p><p>2 向下转型</p><p>向下转型之前一定要进行向上转型！！</p><p><code>子类 子类对象 = （子类）父类实例</code></p><p>可以父特有，子覆盖，子特有</p><h2 id="8-函数入口"><a href="#8-函数入口" class="headerlink" title="8 函数入口"></a>8 函数入口</h2><p><a href="https://blog.csdn.net/weixin_29740921/article/details/114249667">https://blog.csdn.net/weixin_29740921/article/details/114249667</a></p><p>函数入口为main，就和c++的main函数一样，main方法的写法是固定的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;&#125;</span><br><span class="line">public static void main(String args[]) &#123;&#125;</span><br></pre></td></tr></table></figure><p>一个java文件可以不只有一个main，不同类都可以有自己的main，然后选哪个main呢，也就是选哪个类呢？</p><p>选公共类（至多包含一个）；若是没有就选用同名类，和文件同名</p><h2 id="9-引用"><a href="#9-引用" class="headerlink" title="9 引用"></a>9 引用</h2><p>java没有指针</p><p>和C++的引用不一样，和C++指针有点像</p><p>java 4种引用</p><p><a href="https://blog.csdn.net/linzhiqiang0316/article/details/88591907">https://blog.csdn.net/linzhiqiang0316/article/details/88591907</a></p><h2 id="10-数据类型和变量类型的区别"><a href="#10-数据类型和变量类型的区别" class="headerlink" title="10 数据类型和变量类型的区别"></a>10 数据类型和变量类型的区别</h2><p><a href="https://blog.csdn.net/qq_61411852/article/details/123130531">https://blog.csdn.net/qq_61411852/article/details/123130531</a></p><p>1.数据类型</p><p>定义一个变量，每一种数据类型需要用到的存储空间都不同，这时需要用不同的数据类型来定义变量；例如：int float double等等</p><p>2.变量类型</p><ul><li>局部变量：类的方法中的变量。</li><li>实例变量：独立于方法之外的变量，不过没有 static 修饰。</li><li>类变量：独立于方法之外的变量，用 static 修饰。</li></ul><h2 id="12-数据类型"><a href="#12-数据类型" class="headerlink" title="12 数据类型"></a>12 数据类型</h2><p>基本类型：boolean， char， int， byte，short，long， float，double（有值域范围）</p><p>为什么存在基本类型还要包装类？</p><p>基本类型不是对象，包装类是一个对象，增加面向对象特性</p><p>包装类：Boolean，Character，Integer，Byte，Short，Long，Float，Double</p><p>自动装箱</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer i = 100;</span><br><span class="line"></span><br><span class="line">等价于</span><br><span class="line">Integer i = Integer.valueOf(100);</span><br><span class="line">ArrayList intList = new ArrayList();</span><br><span class="line">intList.add(1); </span><br></pre></td></tr></table></figure><p>自动拆箱</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int t = i; </span><br><span class="line">等价于</span><br><span class="line"></span><br><span class="line">int t = i.intValue(); </span><br></pre></td></tr></table></figure><h2 id="13-数组"><a href="#13-数组" class="headerlink" title="13 数组"></a>13 数组</h2><p>声明</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dataType[] arrayRefVar;   // 首选的方法</span><br><span class="line"> </span><br><span class="line">或</span><br><span class="line"> </span><br><span class="line">dataType arrayRefVar[];  // 效果相同，但不是首选方法</span><br></pre></td></tr></table></figure><p>创建</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arrayRefVar=new dataType[arraySize];</span><br><span class="line">或者</span><br><span class="line">arrayRefVar = &#123;value0, value1, ..., valuek&#125;;</span><br></pre></td></tr></table></figure><p>多维数组</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type[][] typeName = new type[typeLength1][typeLength2];</span><br></pre></td></tr></table></figure><h2 id="14-foreach"><a href="#14-foreach" class="headerlink" title="14 foreach"></a>14 foreach</h2><p>和普通for循环比较，在遍历数组、集合方面，foreach为开发人员提供了极大的方便</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(元素类型t 元素变量x : 遍历对象obj)&#123; </span><br><span class="line">     引用了x的java语句; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class TestArray &#123;</span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      double[] myList = &#123;1.9, 2.9, 3.4, 3.5&#125;;</span><br><span class="line"> </span><br><span class="line">      // 打印所有数组元素</span><br><span class="line">      for (double element: myList) &#123;</span><br><span class="line">         System.out.println(element);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="15-从控制台读取数据"><a href="#15-从控制台读取数据" class="headerlink" title="15 从控制台读取数据"></a>15 从控制台读取数据</h2><p>1 BufferedReader </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 throws IOException</span><br><span class="line">2 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">3 c = (char) br.read();</span><br><span class="line">或者str = br.readLine();</span><br></pre></td></tr></table></figure><p>2 Scanner </p><h2 id="16-类型转化"><a href="#16-类型转化" class="headerlink" title="16 类型转化"></a>16 类型转化</h2><p><a href="http://c.biancheng.net/view/796.html">http://c.biancheng.net/view/796.html</a></p><p>1自动类型转换</p><ul><li>两种数据类型彼此兼容</li><li>目标类型的取值范围大于源数据类型（低级类型数据转换成高级类型数据）</li></ul><p>2 强制类型转换</p><p>所以当两种数据类型不兼容，或目标类型的取值范围小于源类型时，自动转换将无法进行，这时就需要进行强制类型转换。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 3;</span><br><span class="line">double b = 5.0;</span><br><span class="line">a = (int)b;</span><br></pre></td></tr></table></figure><h2 id="17-异常处理"><a href="#17-异常处理" class="headerlink" title="17 异常处理"></a>17 异常处理</h2><p><a href="http://c.biancheng.net/view/6751.html">http://c.biancheng.net/view/6751.html</a></p><p>Exception 是异常的基类</p><p>1 语句抛出异常</p><p><strong>try</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;catch(异常类型1 异常的变量名1)&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;catch(异常类型2 异常的变量名2)&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;finally&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>throw</strong></p><p>当 throw 语句执行时，它后面的语句将不执行，此时程序转向调用者程序，寻找与之相匹配的 catch 语句，执行相应的异常处理程序。如果没有找到相匹配的 catch 语句，则再转向上一层的调用程序。这样逐层向上，直到最外层的异常处理程序终止程序并打印出调用栈情况。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">throw ExceptionObject;</span><br></pre></td></tr></table></figure><p>2 方法抛出异常</p><p><strong>throws</strong></p><p>函数声明异常，但是本身不处理异常，交给调用者处理</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">returnType method_name(paramList) throws Exception 1,Exception2,…&#123;…&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">public class Test04 &#123;</span><br><span class="line">    public void readFile() throws IOException &#123;</span><br><span class="line">        // 定义方法时声明异常</span><br><span class="line">        FileInputStream file = new FileInputStream(&quot;read.txt&quot;); // 创建 FileInputStream 实例对象</span><br><span class="line">        int f;</span><br><span class="line">        while ((f = file.read()) != -1) &#123;</span><br><span class="line">            System.out.println((char) f);</span><br><span class="line">            f = file.read();</span><br><span class="line">        &#125;</span><br><span class="line">        file.close();</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Throws t = new Test04();</span><br><span class="line">        try &#123;</span><br><span class="line">            t.readFile(); // 调用 readFHe()方法</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            // 捕获异常</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception</span><br><span class="line">异常谁处理，JVM处理</span><br></pre></td></tr></table></figure><h2 id="20-final，static，static和final一起使用"><a href="#20-final，static，static和final一起使用" class="headerlink" title="20 final，static，static和final一起使用"></a>20 final，static，static和final一起使用</h2><p><a href="https://blog.csdn.net/hust_yfang/article/details/79585696">https://blog.csdn.net/hust_yfang/article/details/79585696</a></p><p>1 final</p><p>类</p><p>变量</p><p>方法</p><p>2 static</p><p><strong>变量</strong></p><p><strong>方法</strong></p><p>老看见函数前面有static，可以没有，二者区别： 加了static，可以不用实例化类就能调用方法；没有加static，必须实例化类才可以用</p><p>3 static和final一起使用</p><p>变量</p><p>方法</p><h2 id="22-泛型"><a href="#22-泛型" class="headerlink" title="22 泛型"></a>22 泛型</h2><p>目的：为了兼容多种数据类型</p><p><strong>泛型标记符</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E - Element (在集合中使用，因为集合中存放的是元素)；</span><br><span class="line">T - Type（Java 类）；</span><br><span class="line">K - Key（键）；</span><br><span class="line">V - Value（值）；</span><br><span class="line">N - Number（数值类型）；</span><br><span class="line">R - Result （返回结果，多用于函数式编程）；</span><br><span class="line">? - 表示不确定的java类型。</span><br><span class="line">O </span><br></pre></td></tr></table></figure><p>1 泛型方法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public   void printArray( int [] inputArray ) -》public  &lt; E &gt; void printArray( E[] inputArray )</span><br><span class="line">public  &lt;T extends Comparable&lt;T&gt;&gt; T maximum(T x, T y, T z) //Comparable是一个类</span><br></pre></td></tr></table></figure><p>2 泛型类</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class Box -》 public class Box&lt;T&gt;</span><br></pre></td></tr></table></figure><h2 id="23-对象作为返回值"><a href="#23-对象作为返回值" class="headerlink" title="23 对象作为返回值"></a>23 对象作为返回值</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"> class Phone &#123;</span><br><span class="line"></span><br><span class="line">    String brand;//品牌</span><br><span class="line">    double price;</span><br><span class="line">    String color;</span><br><span class="line"></span><br><span class="line">    public void call(String who)&#123;</span><br><span class="line">        System.out.println(&quot;给&quot;+who+&quot;打电话&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void sendMessage()&#123;</span><br><span class="line">        System.out.println(&quot;群发短信&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Phone two=getPhone();</span><br><span class="line">        System.out.println(two.price);</span><br><span class="line">        System.out.println(two.brand);</span><br><span class="line">        System.out.println(two.color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Phone getPhone()&#123;</span><br><span class="line">        Phone one=new Phone();</span><br><span class="line">        one.brand=&quot;苹果&quot;;</span><br><span class="line">        one.price=8388.0;</span><br><span class="line">        one.color=&quot;玫瑰金&quot;;</span><br><span class="line">        return one;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="24-正则"><a href="#24-正则" class="headerlink" title="24 正则"></a>24 正则</h2><p>java和python正则很像，但不是完全一样</p><p><a href="https://blog.csdn.net/weixin_39574708/article/details/114958384">https://blog.csdn.net/weixin_39574708/article/details/114958384</a></p><p><a href="https://blog.csdn.net/henu_xiaohei/article/details/84765678">https://blog.csdn.net/henu_xiaohei/article/details/84765678</a></p><p>1 | </p><p>或者</p><p>2 固定匹配位数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;7,8&#125; //7为或者8为</span><br><span class="line">[A-Z]&#123;1&#125;[0-9]&#123;8&#125;</span><br></pre></td></tr></table></figure><p>注意matches()，find（）</p><p>match是全部匹配，find是部分匹配</p><p>3 转义字符</p><p>转义字符\ *：不同于原来的字母含义，比如\n表示换行</p><p>java正则为什么要两个斜杆表示转义</p><p><a href="https://blog.csdn.net/qq_37325947/article/details/107819945">https://blog.csdn.net/qq_37325947/article/details/107819945</a></p><h2 id="25-java如何兼容不同类型的输入"><a href="#25-java如何兼容不同类型的输入" class="headerlink" title="25 java如何兼容不同类型的输入"></a>25 java如何兼容不同类型的输入</h2><ol><li>函数重载</li><li>泛型</li></ol><h2 id="26-装饰器"><a href="#26-装饰器" class="headerlink" title="26 装饰器"></a>26 装饰器</h2><p>@Override</p><p>需要你重写</p><h2 id="28-类"><a href="#28-类" class="headerlink" title="28 类"></a>28 类</h2><p>this </p><p>和python self一样，指的是对象</p><h3 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h3><p>类直接调用方法</p><p><a href="https://blog.csdn.net/qq_40136594/article/details/83996659">https://blog.csdn.net/qq_40136594/article/details/83996659</a></p><p>需要是静态方法</p><h4 id="1-创建对象"><a href="#1-创建对象" class="headerlink" title="1 创建对象"></a>1 创建对象</h4><p>new </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Puppy&#123;</span><br><span class="line">   public Puppy(String name)&#123;</span><br><span class="line">      //这个构造器仅有一个参数：name</span><br><span class="line">      System.out.println(&quot;小狗的名字是 : &quot; + name ); </span><br><span class="line">   &#125;</span><br><span class="line">   public static void main(String[] args)&#123;</span><br><span class="line">      // 下面的语句将创建一个Puppy对象</span><br><span class="line">      Puppy myPuppy = new Puppy( &quot;tommy&quot; );</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="2-类继承"><a href="#2-类继承" class="headerlink" title="2 类继承"></a>2 类继承</h4><p>1 extends</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class 子类 extends 父类 &#123;</span><br><span class="line">&#125;</span><br><span class="line">//只可以单继承</span><br></pre></td></tr></table></figure><p><img src="/2022/01/05/java/3.png" alt></p><p>2 implements</p><p>一般用于类继承接口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public interface A &#123;</span><br><span class="line">    public void eat();</span><br><span class="line">    public void sleep();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public interface B &#123;</span><br><span class="line">    public void show();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public class C implements A,B &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>super关键字：当前对象，但是用来调用父类成员</p><p>this关键字：当前对象，用来调用子类成员</p><p>关于构造函数：</p><p>1 进入子类对应的构造函数</p><p>2 若是没有显示调用父类的构造函数，则自动调用；若是显示的调用父类的构造函数（super()，必须写第一句，super.SuperClass（） 错误），则显示调用</p><p>3 先调用父类，然后调用子类</p><h4 id="3-匿名类"><a href="#3-匿名类" class="headerlink" title="3 匿名类"></a>3 匿名类</h4><p><a href="https://www.runoob.com/java/java-anonymous-class.html">https://www.runoob.com/java/java-anonymous-class.html</a></p><p><img src="/2022/01/05/java/4.png" alt></p><h4 id="4-抽象类，抽象方法"><a href="#4-抽象类，抽象方法" class="headerlink" title="4 抽象类，抽象方法"></a>4 抽象类，抽象方法</h4><p>作用：抽象类为所有子类提供了一个通用模板，子类可以在这个模板基础上进行扩展，可以避免子类设计的随意性</p><p>1 抽象类</p><p>特殊的类：抽象类不能实例化对象，会报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Employee</span><br><span class="line">1 在普通类的基础上加abstract</span><br></pre></td></tr></table></figure><p>怎么使用抽象类？</p><p>通过类继承的方式使用</p><p>2 抽象方法</p><p>普通类不能有抽象方法，只有抽象类，或者接口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public abstract double computePay();</span><br><span class="line">1. abstract</span><br><span class="line">2. 只有函数声明，没有函数具体实现</span><br><span class="line">3 子类不是抽象类，需要给出抽象类中的抽象方法的具体实现；子类也是抽象类，那么可以不需要</span><br></pre></td></tr></table></figure><h4 id="5-接口"><a href="#5-接口" class="headerlink" title="5 接口"></a>5 接口</h4><p>接口并不是类，是抽象方法的集合</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[可见度] interface 接口名称 [extends 其他的接口名， 其他的接口名， 其他的接口名] &#123;</span><br><span class="line">        // 声明变量,只能是 public static final 类型的</span><br><span class="line">        // 抽象方法</span><br><span class="line">&#125;</span><br><span class="line">//接口只能继承接口，extends，可以是多继承</span><br></pre></td></tr></table></figure><p>怎么使用接口？通过类来实现</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...implements 接口名称[, 其他接口名称, 其他接口名称..., ...] ...</span><br><span class="line"></span><br><span class="line">public class MammalInt implements Animal // Animal是接口</span><br></pre></td></tr></table></figure><p>关系：</p><p>类和类，继承，只能单继承</p><p>类和接口，实现，可以多实现</p><p>接口和接口，继承，可以多继承</p><p>default</p><p><a href="https://blog.csdn.net/qq_35835624/article/details/80196932">https://blog.csdn.net/qq_35835624/article/details/80196932</a></p><p>配合接口使用</p><p>使得接口内的函数可以写方法体，原来全是抽象方法，不能有方法体</p><h2 id="29-Lambda表达式"><a href="#29-Lambda表达式" class="headerlink" title="29 Lambda表达式"></a>29 Lambda表达式</h2><p>声明的时候需要 -&gt;</p><p><a href="https://www.runoob.com/java/java8-lambda-expressions.html">https://www.runoob.com/java/java8-lambda-expressions.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MathOperation subtraction = (a, b) -&gt; a - b; //声明</span><br><span class="line">System.out.println(&quot;10 - 5 = &quot; + tester.operate(10, 5, subtraction));//调用</span><br><span class="line"></span><br><span class="line">一起</span><br><span class="line"> System.out.println(&quot;10 - 5 = &quot; + tester.operate(10, 5,  (a, b) -&gt; a - b));</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="3-Java-源文件的命名规则"><a href="#3-Java-源文件的命名规则" class="headerlink" title="3 Java 源文件的命名规则"></a>3 Java 源文件的命名规则</h2><ul><li>通常情况下，Java 程序源文件的文件名可以任意。</li><li>但如果其中定义了一个 public 类，则该源文件的文件名必须与该 public 类的类名相同。</li><li>一个Java 源文件可包含多个类定义，但最多只能包含一个public类定义。</li></ul><h2 id="5-package"><a href="#5-package" class="headerlink" title="5 package"></a>5 package</h2><p><a href="https://blog.csdn.net/qq_41297896/article/details/90056534">https://blog.csdn.net/qq_41297896/article/details/90056534</a></p><p><a href="https://www.runoob.com/java/java-package.html">https://www.runoob.com/java/java-package.html</a></p><p><a href="https://www.runoob.com/w3cnote/java-compile-with-package.html">https://www.runoob.com/w3cnote/java-compile-with-package.html</a></p><p>为了更好地组织类，用于区别类名的命名空间</p><p>包的命名规范</p><p><a href="https://blog.csdn.net/shi779276212/article/details/92795085">https://blog.csdn.net/shi779276212/article/details/92795085</a></p><p>使用：</p><p><img src="/2022/01/05/java/3.JPG" alt></p><p><img src="/2022/01/05/java/2.JPG" alt></p><h2 id="6-重写-Override-与重载-Overload"><a href="#6-重写-Override-与重载-Overload" class="headerlink" title="6 重写(Override)与重载(Overload)"></a>6 重写(Override)与重载(Overload)</h2><p><a href="https://www.runoob.com/java/java-override-overload.html">https://www.runoob.com/java/java-override-overload.html</a></p><p>重写：是子类对父类同名函数的二次实现</p><p>重载：一个类内存在多个重名函数，而参数不同</p><h2 id="7-多态"><a href="#7-多态" class="headerlink" title="7 多态"></a>7 多态</h2><p><a href="http://c.biancheng.net/view/1001.html#">http://c.biancheng.net/view/1001.html#</a></p><p><a href="https://www.runoob.com/java/java-polymorphism.html">https://www.runoob.com/java/java-polymorphism.html</a></p><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p><p><img src="/2022/01/05/java/4.jpg" alt></p><p>多态存在的三个必要条件</p><ul><li>继承</li><li>重写</li><li>父类引用指向子类对象：<strong>Parent p = new Child();</strong></li></ul><p>分类：</p><p><a href="https://blog.csdn.net/zhao_miao/article/details/83750898">https://blog.csdn.net/zhao_miao/article/details/83750898</a></p><p>1 向上转型</p><p><code>父类 父类对象 = 子类实例</code></p><p>只能调用父特有，子覆盖，不能子特有</p><p>2 向下转型</p><p>向下转型之前一定要进行向上转型！！</p><p><code>子类 子类对象 = （子类）父类实例</code></p><p>可以父特有，子覆盖，子特有</p><h2 id="8-程序入口"><a href="#8-程序入口" class="headerlink" title="8 程序入口"></a>8 程序入口</h2><p><a href="https://blog.csdn.net/weixin_29740921/article/details/114249667">https://blog.csdn.net/weixin_29740921/article/details/114249667</a></p><p>入口为main，就和c++的main函数一样，main方法的写法是固定的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;&#125;</span><br><span class="line">public static void main(String args[]) &#123;&#125;</span><br></pre></td></tr></table></figure><p>一个java文件可以不只有一个main，不同类都可以有自己的main，然后选哪个main呢，也就是选哪个类呢？</p><p>选公共类（至多包含一个）；若是没有就选用同名类，和文件同名</p><h2 id="9-引用"><a href="#9-引用" class="headerlink" title="9 引用"></a>9 引用</h2><p><a href="https://zhulinyin.github.io/2019/01/28/Java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/">https://zhulinyin.github.io/2019/01/28/Java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/</a></p><h2 id="12-数据类型"><a href="#12-数据类型" class="headerlink" title="12 数据类型"></a>12 数据类型</h2><p><a href="https://blog.csdn.net/Coding_Zhu/article/details/53096178">https://blog.csdn.net/Coding_Zhu/article/details/53096178</a></p><h2 id="13-数组"><a href="#13-数组" class="headerlink" title="13 数组"></a>13 数组</h2><p>声明</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dataType[] arrayRefVar;   // 首选的方法</span><br><span class="line"> </span><br><span class="line">或</span><br><span class="line"> </span><br><span class="line">dataType arrayRefVar[];  // 效果相同，但不是首选方法</span><br></pre></td></tr></table></figure><p>创建</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arrayRefVar=new dataType[arraySize];</span><br><span class="line">或者</span><br><span class="line">arrayRefVar = &#123;value0, value1, ..., valuek&#125;;</span><br></pre></td></tr></table></figure><p>多维数组</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type[][] typeName = new type[typeLength1][typeLength2];</span><br></pre></td></tr></table></figure><h2 id="14-foreach"><a href="#14-foreach" class="headerlink" title="14 foreach"></a>14 foreach</h2><p>和普通for循环比较，在遍历数组、集合方面，foreach为开发人员提供了极大的方便</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(元素类型t 元素变量x : 遍历对象obj)&#123; </span><br><span class="line">     引用了x的java语句; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class TestArray &#123;</span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      double[] myList = &#123;1.9, 2.9, 3.4, 3.5&#125;;</span><br><span class="line"> </span><br><span class="line">      // 打印所有数组元素</span><br><span class="line">      for (double element: myList) &#123;</span><br><span class="line">         System.out.println(element);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="15-从控制台读取数据"><a href="#15-从控制台读取数据" class="headerlink" title="15 从控制台读取数据"></a>15 从控制台读取数据</h2><p>1 BufferedReader </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 throws IOException</span><br><span class="line">2 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">3 c = (char) br.read();</span><br><span class="line">或者str = br.readLine();</span><br></pre></td></tr></table></figure><p>2 Scanner </p><h2 id="16-类型转化"><a href="#16-类型转化" class="headerlink" title="16 类型转化"></a>16 类型转化</h2><p><a href="http://c.biancheng.net/view/796.html">http://c.biancheng.net/view/796.html</a></p><p>1自动类型转换</p><ul><li>两种数据类型彼此兼容</li><li>目标类型的取值范围大于源数据类型（低级类型数据转换成高级类型数据）</li></ul><p>2 强制类型转换</p><p>所以当两种数据类型不兼容，或目标类型的取值范围小于源类型时，自动转换将无法进行，这时就需要进行强制类型转换。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 3;</span><br><span class="line">double b = 5.0;</span><br><span class="line">a = (int)b;</span><br></pre></td></tr></table></figure><h2 id="17-异常处理"><a href="#17-异常处理" class="headerlink" title="17 异常处理"></a>17 异常处理</h2><p><a href="http://c.biancheng.net/view/6751.html">http://c.biancheng.net/view/6751.html</a></p><p>Exception 是异常的基类</p><p>1 语句抛出异常</p><p><strong>try</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;catch(异常类型1 异常的变量名1)&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;catch(异常类型2 异常的变量名2)&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;finally&#123;</span><br><span class="line">  // 程序代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>throw</strong></p><p>当 throw 语句执行时，它后面的语句将不执行，此时程序转向调用者程序，寻找与之相匹配的 catch 语句，执行相应的异常处理程序。如果没有找到相匹配的 catch 语句，则再转向上一层的调用程序。这样逐层向上，直到最外层的异常处理程序终止程序并打印出调用栈情况。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">throw ExceptionObject;</span><br></pre></td></tr></table></figure><p>2 方法抛出异常</p><p><strong>throws</strong></p><p>函数声明异常，但是本身不处理异常，交给调用者处理</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">returnType method_name(paramList) throws Exception 1,Exception2,…&#123;…&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">public class Test04 &#123;</span><br><span class="line">    public void readFile() throws IOException &#123;</span><br><span class="line">        // 定义方法时声明异常</span><br><span class="line">        FileInputStream file = new FileInputStream(&quot;read.txt&quot;); // 创建 FileInputStream 实例对象</span><br><span class="line">        int f;</span><br><span class="line">        while ((f = file.read()) != -1) &#123;</span><br><span class="line">            System.out.println((char) f);</span><br><span class="line">            f = file.read();</span><br><span class="line">        &#125;</span><br><span class="line">        file.close();</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Throws t = new Test04();</span><br><span class="line">        try &#123;</span><br><span class="line">            t.readFile(); // 调用 readFHe()方法</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            // 捕获异常</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception</span><br><span class="line">异常谁处理，JVM处理</span><br></pre></td></tr></table></figure><h2 id="20-final"><a href="#20-final" class="headerlink" title="20 final"></a>20 final</h2><p><a href="https://blog.csdn.net/hust_yfang/article/details/79585696">https://blog.csdn.net/hust_yfang/article/details/79585696</a></p><h2 id="21-static"><a href="#21-static" class="headerlink" title="21 static"></a>21 static</h2><p>老看见函数前面有static，可以没有，二者区别： 加了static，可以不用实例化类就能调用方法；没有加static，必须实例化类才可以用</p><h2 id="22-泛型"><a href="#22-泛型" class="headerlink" title="22 泛型"></a>22 泛型</h2><p>目的：为了兼容多种数据类型，和c++模板很像</p><h3 id="泛型标记符"><a href="#泛型标记符" class="headerlink" title="泛型标记符"></a><strong>泛型标记符</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E - Element (在集合中使用，因为集合中存放的是元素)；</span><br><span class="line">T - Type（Java 类）；</span><br><span class="line">K - Key（键）；</span><br><span class="line">V - Value（值）；</span><br><span class="line">N - Number（数值类型）；</span><br><span class="line">R - Result （返回结果，多用于函数式编程）；</span><br><span class="line">? - 表示不确定的java类型。</span><br><span class="line">O </span><br></pre></td></tr></table></figure><h3 id="1-泛型函数"><a href="#1-泛型函数" class="headerlink" title="1 泛型函数"></a>1 泛型函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public   void printArray( int [] inputArray ) -》public  &lt; E &gt; void printArray( E[] inputArray )</span><br><span class="line">public  &lt;T extends Comparable&lt;T&gt;&gt; T maximum(T x, T y, T z) //Comparable是一个类</span><br></pre></td></tr></table></figure><h3 id="2-泛型类"><a href="#2-泛型类" class="headerlink" title="2 泛型类"></a>2 泛型类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class Box -》 public class Box&lt;T&gt;</span><br></pre></td></tr></table></figure><h2 id="23-对象作为返回值"><a href="#23-对象作为返回值" class="headerlink" title="23 对象作为返回值"></a>23 对象作为返回值</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"> class Phone &#123;</span><br><span class="line"></span><br><span class="line">    String brand;//品牌</span><br><span class="line">    double price;</span><br><span class="line">    String color;</span><br><span class="line"></span><br><span class="line">    public void call(String who)&#123;</span><br><span class="line">        System.out.println(&quot;给&quot;+who+&quot;打电话&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void sendMessage()&#123;</span><br><span class="line">        System.out.println(&quot;群发短信&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Phone two=getPhone();</span><br><span class="line">        System.out.println(two.price);</span><br><span class="line">        System.out.println(two.brand);</span><br><span class="line">        System.out.println(two.color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Phone getPhone()&#123;</span><br><span class="line">        Phone one=new Phone();</span><br><span class="line">        one.brand=&quot;苹果&quot;;</span><br><span class="line">        one.price=8388.0;</span><br><span class="line">        one.color=&quot;玫瑰金&quot;;</span><br><span class="line">        return one;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="24-正则"><a href="#24-正则" class="headerlink" title="24 正则"></a>24 正则</h2><p>java和python正则很像，但不是完全一样</p><p><a href="https://blog.csdn.net/weixin_39574708/article/details/114958384">https://blog.csdn.net/weixin_39574708/article/details/114958384</a></p><p><a href="https://blog.csdn.net/henu_xiaohei/article/details/84765678">https://blog.csdn.net/henu_xiaohei/article/details/84765678</a></p><p>1 | </p><p>或者</p><p>2 固定匹配位数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;7,8&#125; //7为或者8为</span><br><span class="line">[A-Z]&#123;1&#125;[0-9]&#123;8&#125;</span><br></pre></td></tr></table></figure><p>注意matches()，find（）</p><p>match是全部匹配，find是部分匹配</p><p>3 转义字符</p><p>转义字符\ *：不同于原来的字母含义，比如\n表示换行</p><p>java正则为什么要两个斜杆表示转义</p><p><a href="https://blog.csdn.net/qq_37325947/article/details/107819945">https://blog.csdn.net/qq_37325947/article/details/107819945</a></p><h2 id="25-java如何兼容不同类型的输入"><a href="#25-java如何兼容不同类型的输入" class="headerlink" title="25 java如何兼容不同类型的输入"></a>25 java如何兼容不同类型的输入</h2><ol><li>函数重载</li><li>泛型</li></ol><h2 id="26-装饰器"><a href="#26-装饰器" class="headerlink" title="26 装饰器"></a>26 装饰器</h2><p>@Override</p><p>需要你重写</p><h2 id="28-类"><a href="#28-类" class="headerlink" title="28 类"></a>28 类</h2><p>this </p><p>和python self一样，指的是对象</p><h3 id><a href="#" class="headerlink" title="#"></a>#</h3><p>类直接调用方法</p><p><a href="https://blog.csdn.net/qq_40136594/article/details/83996659">https://blog.csdn.net/qq_40136594/article/details/83996659</a></p><p>需要是静态方法</p><h3 id="1-创建对象"><a href="#1-创建对象" class="headerlink" title="1 创建对象"></a>1 创建对象</h3><p>new </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Puppy&#123;</span><br><span class="line">   public Puppy(String name)&#123;</span><br><span class="line">      //这个构造器仅有一个参数：name</span><br><span class="line">      System.out.println(&quot;小狗的名字是 : &quot; + name ); </span><br><span class="line">   &#125;</span><br><span class="line">   public static void main(String[] args)&#123;</span><br><span class="line">      // 下面的语句将创建一个Puppy对象</span><br><span class="line">      Puppy myPuppy = new Puppy( &quot;tommy&quot; );</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>myPuppy不是指针，是强引用</p><h3 id="2-继承"><a href="#2-继承" class="headerlink" title="2 继承"></a>2 继承</h3><p>1 extends</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class 子类 extends 父类 &#123;</span><br><span class="line">&#125;</span><br><span class="line">//只可以单继承</span><br></pre></td></tr></table></figure><p><img src="/2022/01/05/java/3.png" alt></p><p>2 implements</p><p>一般用于类继承接口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public interface A &#123;</span><br><span class="line">    public void eat();</span><br><span class="line">    public void sleep();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public interface B &#123;</span><br><span class="line">    public void show();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public class C implements A,B &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>super关键字：当前对象，但是用来调用父类成员</p><p>this关键字：当前对象，用来调用子类成员</p><p>关于构造函数：</p><p>1 进入子类对应的构造函数</p><p>2 若是没有显示调用父类的构造函数，则自动调用；若是显示的调用父类的构造函数（super()，必须写第一句，super.SuperClass（） 错误），则显示调用</p><p>3 先调用父类，然后调用子类</p><h3 id="3-匿名类"><a href="#3-匿名类" class="headerlink" title="3 匿名类"></a>3 匿名类</h3><p><a href="https://www.runoob.com/java/java-anonymous-class.html">https://www.runoob.com/java/java-anonymous-class.html</a></p><p><img src="/2022/01/05/java/4.png" alt></p><h3 id="4-抽象类"><a href="#4-抽象类" class="headerlink" title="4 抽象类"></a>4 抽象类</h3><p>作用：抽象类为所有子类提供了一个通用模板，子类可以在这个模板基础上进行扩展，可以避免子类设计的随意性</p><p>1 抽象类</p><p>特殊的类：抽象类不能实例化对象，会报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Employee</span><br><span class="line">1 在普通类的基础上加abstract</span><br></pre></td></tr></table></figure><p>怎么使用抽象类？</p><p>通过类继承的方式使用</p><p>2 抽象方法</p><p>普通类不能有抽象方法，只有抽象类，或者接口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public abstract double computePay();</span><br><span class="line">1. abstract</span><br><span class="line">2. 只有函数声明，没有函数具体实现</span><br><span class="line">3 子类不是抽象类，需要给出抽象类中的抽象方法的具体实现；子类也是抽象类，那么可以不需要</span><br></pre></td></tr></table></figure><h3 id="5-接口"><a href="#5-接口" class="headerlink" title="5 接口"></a>5 接口</h3><p>接口并不是类，是抽象方法的集合</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[可见度] interface 接口名称 [extends 其他的接口名， 其他的接口名， 其他的接口名] &#123;</span><br><span class="line">        // 声明变量,只能是 public static final 类型的</span><br><span class="line">        // 抽象方法</span><br><span class="line">&#125;</span><br><span class="line">//接口只能继承接口，extends，可以是多继承</span><br></pre></td></tr></table></figure><p>怎么使用接口？通过类来实现</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...implements 接口名称[, 其他接口名称, 其他接口名称..., ...] ...</span><br><span class="line"></span><br><span class="line">public class MammalInt implements Animal // Animal是接口</span><br></pre></td></tr></table></figure><p>关系：</p><p>类和类，继承，只能单继承</p><p>类和接口，实现，可以多实现</p><p>接口和接口，继承，可以多继承</p><p>default</p><p><a href="https://blog.csdn.net/qq_35835624/article/details/80196932">https://blog.csdn.net/qq_35835624/article/details/80196932</a></p><p>配合接口使用</p><p>使得接口内的函数可以写方法体，原来全是抽象方法，不能有方法体</p><h2 id="29-Lambda表达式"><a href="#29-Lambda表达式" class="headerlink" title="29 Lambda表达式"></a>29 Lambda表达式</h2><p>声明的时候需要 -&gt;</p><p><a href="https://www.runoob.com/java/java8-lambda-expressions.html">https://www.runoob.com/java/java8-lambda-expressions.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MathOperation subtraction = (a, b) -&gt; a - b; //声明</span><br><span class="line">System.out.println(&quot;10 - 5 = &quot; + tester.operate(10, 5, subtraction));//调用</span><br><span class="line"></span><br><span class="line">一起</span><br><span class="line"> System.out.println(&quot;10 - 5 = &quot; + tester.operate(10, 5,  (a, b) -&gt; a - b));</span><br></pre></td></tr></table></figure><h2 id="30-systerm-gc"><a href="#30-systerm-gc" class="headerlink" title="30  systerm.gc()"></a>30  systerm.gc()</h2><p>一般情况不需要写这个，jvm自动gc</p><p>写这个，显示的gc</p><h2 id="31-static"><a href="#31-static" class="headerlink" title="31 {}, static{}"></a>31 {}, static{}</h2><p><a href="https://blog.csdn.net/weixin_44279798/article/details/104331263">https://blog.csdn.net/weixin_44279798/article/details/104331263</a></p><h2 id="32-jni"><a href="#32-jni" class="headerlink" title="32 jni"></a>32 jni</h2><h3 id="1-java-调用-c"><a href="#1-java-调用-c" class="headerlink" title="1.java 调用 c++"></a>1.java 调用 c++</h3><p>c++代码打成so -&gt; java加载so</p><p>test.java 里面的函数实现用c++写</p><p>test_jni.h   test_jni.cpp</p><p>传数据给c++</p><p><a href="https://blog.csdn.net/cgwang_1580/article/details/109498438">https://blog.csdn.net/cgwang_1580/article/details/109498438</a>    </p><h2 id="33-函数传参"><a href="#33-函数传参" class="headerlink" title="33 函数传参"></a>33 函数传参</h2><p>按值传递</p><p>1.非引用类型</p><p>不会改变传参</p><p>2.引用类型</p><p>会改变传参</p><h2 id="34-so-load-so-unload"><a href="#34-so-load-so-unload" class="headerlink" title="34 so load, so unload"></a>34 so load, so unload</h2><h3 id="1-load"><a href="#1-load" class="headerlink" title="1 load"></a>1 load</h3><p>system.load()</p><h3 id="2-unload"><a href="#2-unload" class="headerlink" title="2 unload"></a>2 unload</h3>]]></content>
       
       
       <categories>
           
           <category> java </category>
           
-          <category> 基础语法 </category>
+          <category> java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> java语言特性 </tag>
             
         </tags>
       
@@ -7627,7 +8133,7 @@
       <link href="/2021/12/15/python-paramerter/"/>
       <url>/2021/12/15/python-paramerter/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-值传递-引用传递-地址传递"><a href="#1-值传递-引用传递-地址传递" class="headerlink" title="1 值传递 引用传递 地址传递"></a>1 值传递 引用传递 地址传递</h2><p><img src="/2021/12/15/python-paramerter/1.JPG" alt="img"></p><h2 id="2-默认参数"><a href="#2-默认参数" class="headerlink" title="2 默认参数"></a>2 默认参数</h2><p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun(va1,va2=[]):</span><br><span class="line">    print(va2)</span><br><span class="line">    va2.append(va1)</span><br><span class="line">    return va2</span><br><span class="line">te1=fun(10)</span><br><span class="line">te1=fun(20)</span><br></pre></td></tr></table></figure><p>va2如果没有传参，采用默认的，默认的会变化，不是一直是[]</p><p>va2如果是外部的传参，以传参为主，会覆盖</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-引用传递"><a href="#1-引用传递" class="headerlink" title="1 引用传递"></a>1 引用传递</h2><p><img src="/2021/12/15/python-paramerter/1.JPG" alt="img"></p><h2 id="2-默认参数"><a href="#2-默认参数" class="headerlink" title="2 默认参数"></a>2 默认参数</h2><p><a href="https://blog.csdn.net/weixin_41972881/article/details/81562731">https://blog.csdn.net/weixin_41972881/article/details/81562731</a></p><p><a href="https://blog.csdn.net/weixin_45775963/article/details/103696945">https://blog.csdn.net/weixin_45775963/article/details/103696945</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def fun(va1,va2=[]):</span><br><span class="line">    print(va2)</span><br><span class="line">    va2.append(va1)</span><br><span class="line">    return va2</span><br><span class="line">te1=fun(10)</span><br><span class="line">te1=fun(20)</span><br></pre></td></tr></table></figure><p>va2如果没有传参，采用默认的，默认的会变化，不是一直是[]</p><p>va2如果是外部的传参，以传参为主，会覆盖</p><h2 id="3-可变参数"><a href="#3-可变参数" class="headerlink" title="3 可变参数"></a>3 可变参数</h2><p><strong>1 *args</strong></p><p>def test(*args)</p><p>​    print(args)</p><p>test(1,2,3,4)  </p><p>test(*(1,2,3,4))  </p><p>(1,2,3,4)</p><p>(1,2,3,4)</p><p><strong>2 **kwargs</strong></p><p>def test(**kwargs)</p><p>​    print(args)</p><p>test(x=1,y=2,z=3)  </p><p>test(**{‘x’:1,’y’:2,’z’:3})</p><p>{‘x’:1,’y’:2,’z’:3}</p><p>{‘x’:1,’y’:2,’z’:3}</p>]]></content>
       
       
       <categories>
@@ -7999,11 +8505,11 @@
     
     
     <entry>
-      <title>堆，优先队列</title>
+      <title>堆</title>
       <link href="/2021/11/30/heap/"/>
       <url>/2021/11/30/heap/</url>
       
-        <content type="html"><![CDATA[<p><strong>堆</strong></p><p><a href="https://blog.csdn.net/weixin_45697774/article/details/104481087">https://blog.csdn.net/weixin_45697774/article/details/104481087</a></p><p><strong>优先队列</strong></p><p><a href="https://www.cnblogs.com/xzxl/p/7266404.html">https://www.cnblogs.com/xzxl/p/7266404.html</a></p><p><a href="https://www.jianshu.com/p/b51ab28ca8dd">https://www.jianshu.com/p/b51ab28ca8dd</a></p><p><strong>堆和优先队列的关系</strong></p><p><a href="https://blog.csdn.net/weixin_44337445/article/details/110508591">https://blog.csdn.net/weixin_44337445/article/details/110508591</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_45697774/article/details/104481087">https://blog.csdn.net/weixin_45697774/article/details/104481087</a></p>]]></content>
       
       
       <categories>
@@ -8017,7 +8523,7 @@
       
         <tags>
             
-            <tag> 堆，优先队列 </tag>
+            <tag> 堆 </tag>
             
         </tags>
       
@@ -10068,7 +10574,7 @@
       <link href="/2021/09/10/python-env/"/>
       <url>/2021/09/10/python-env/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-环境管理工具"><a href="#1-环境管理工具" class="headerlink" title="1.环境管理工具"></a>1.环境管理工具</h2><p>python版本主要为2,3两个大版本</p><p>anaconda管理python和包的版本</p><h2 id="2-包"><a href="#2-包" class="headerlink" title="2.包"></a>2.包</h2><h4 id="2-1-下载包"><a href="#2-1-下载包" class="headerlink" title="2.1 下载包"></a>2.1 下载包</h4><p>下载源有官方源，阿里源，豆瓣源，清华源等</p><h5 id="1-离线下载"><a href="#1-离线下载" class="headerlink" title="1 离线下载"></a>1 离线下载</h5><h5 id="2-在线下载"><a href="#2-在线下载" class="headerlink" title="2 在线下载"></a>2 在线下载</h5><p>下载工具有pip，conda</p><p><strong>更换pip源</strong></p><p>修改文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.pip/pip.conf  # 没有就创建一个，在 ~/.pip/下</span><br></pre></td></tr></table></figure><p>增加内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url=https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># index-url=http://pypi.douban.com/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure><p><strong>查看路径</strong></p><p>which python, which pip ,which conda （~用户主目录， /根目录）</p><h4 id="2-2-使用包"><a href="#2-2-使用包" class="headerlink" title="2.2 使用包"></a>2.2 使用包</h4><p>import </p><p>绝对路径：从工程的最外层开始</p><p>相对路径：利用.（同级）和..（上级）</p><p>怎么添加包的搜路径</p><p><a href="https://blog.csdn.net/weixin_40449300/article/details/79327201">https://blog.csdn.net/weixin_40449300/article/details/79327201</a></p><h2 id="3-ubuntu修改python环境变量"><a href="#3-ubuntu修改python环境变量" class="headerlink" title="3 ubuntu修改python环境变量"></a>3 ubuntu修改python环境变量</h2><p>1.vim ~/.bashrc</p><p>2.添加如下内容</p><p>export PYTHON_HOME=/usr/local/anaconda3/bin</p><p>export PATH=$PYTHON_HOME/bin:$PATH</p><p>export PATH=/home/user_name/anaconda3/bin:$PATH # 指定python路径</p><h2 id="4-ubuntu修改python默认版本"><a href="#4-ubuntu修改python默认版本" class="headerlink" title="4.ubuntu修改python默认版本"></a>4.ubuntu修改python默认版本</h2><p><a href="https://blog.csdn.net/White_Idiot/article/details/78240298">https://blog.csdn.net/White_Idiot/article/details/78240298</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-包"><a href="#1-包" class="headerlink" title="1.包"></a>1.包</h2><h3 id="1-1-下载包"><a href="#1-1-下载包" class="headerlink" title="1.1 下载包"></a>1.1 下载包</h3><p>下载源有官方源，阿里源，豆瓣源，清华源等</p><h4 id="1-离线下载"><a href="#1-离线下载" class="headerlink" title="1 离线下载"></a>1 离线下载</h4><p>去有网的环境下载包，然后去没有的环境安装</p><p>1.网页下</p><p>不能下载依赖包</p><p>2.命令行下载</p><p>可以下载依赖包</p><p>pip download -d 文件夹 packagename</p><p>pip download -d 文件夹 -r requirements.txt</p><h4 id="2-在线下载"><a href="#2-在线下载" class="headerlink" title="2 在线下载"></a>2 在线下载</h4><h5 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h5><p>1.更换pip源</p><p>修改文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.pip/pip.conf  # 没有就创建一个，在 ~/.pip/下</span><br></pre></td></tr></table></figure><p>增加内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url=https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># index-url=http://pypi.douban.com/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure><p>2.查看路径</p><p>which python, which pip</p><p>3.安装指定python版本的包</p><p>pythonversion -m pip</p><p>4.指定下载源</p><p>pip install -i XXX</p><h3 id="1-2-使用包"><a href="#1-2-使用包" class="headerlink" title="1.2 使用包"></a>1.2 使用包</h3><p>import </p><p>绝对路径：从工程的最外层开始</p><p>相对路径：利用.（同级）和..（上级）</p><p>怎么添加包的搜路径</p><p><a href="https://blog.csdn.net/weixin_40449300/article/details/79327201">https://blog.csdn.net/weixin_40449300/article/details/79327201</a></p><h2 id="2-虚拟环境"><a href="#2-虚拟环境" class="headerlink" title="2.虚拟环境"></a>2.虚拟环境</h2><h3 id="1-anaconda"><a href="#1-anaconda" class="headerlink" title="1.anaconda"></a>1.anaconda</h3><p><strong>1.修改环境变量</strong></p><p>1.vim ~/.bashrc</p><p>2.添加如下内容</p><p>export PYTHON_HOME=/usr/local/anaconda3/bin</p><p>export PATH=$PYTHON_HOME:$PATH</p><p>3.source ~/.bashrc</p><p><strong>2.修改conda源</strong></p><p>vim ~/.condarc</p><p><strong>3.文件结构</strong></p><p>envXXX/(bin lib )</p><p>包在lib/pythonXX/site-packages</p><h3 id="2-virtualenv"><a href="#2-virtualenv" class="headerlink" title="2.virtualenv"></a>2.virtualenv</h3><p><a href="https://blog.csdn.net/weixin_44015669/article/details/115666912#Ej3Q4">https://blog.csdn.net/weixin_44015669/article/details/115666912#Ej3Q4</a></p><p>/usr/bin/python3.7  -m venv mypython</p><p>source mypython/bin/acticate</p><p>deactivate</p><h3 id="3-环境迁移"><a href="#3-环境迁移" class="headerlink" title="3.环境迁移"></a>3.环境迁移</h3><p><strong>1.pip</strong></p><p>1 切到有网环境</p><p>环境1</p><p>pip freeze &gt; requirements.txt</p><p>环境2</p><p>pip install -r requirements.txt</p><p>2 切到没有网环境</p><p>环境1</p><p>pip freeze &gt; requirements.txt</p><p>pip download -d 文件夹 -r requirements.txt</p><p>环境2</p><p>pip install  -r requirements.txt —no-index —find-links 文件夹</p><p><strong>2.conda</strong></p><p>conda pack</p><p>3.直接拷贝anaconda某个env</p>]]></content>
       
       
       <categories>
@@ -10988,11 +11494,11 @@
     
     
     <entry>
-      <title>ide</title>
+      <title>pycharm</title>
       <link href="/2021/07/25/python_ide/"/>
       <url>/2021/07/25/python_ide/</url>
       
-        <content type="html"><![CDATA[<h2 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h2><h3 id="1-pycharm连接远程，本地无法查看源码，但是可以正常运行"><a href="#1-pycharm连接远程，本地无法查看源码，但是可以正常运行" class="headerlink" title="1 pycharm连接远程，本地无法查看源码，但是可以正常运行"></a>1 pycharm连接远程，本地无法查看源码，但是可以正常运行</h3><p>1 原因</p><p>由于远程的包没有同步到本地，导致无法在本地查看，但是代码运行在远程，服务器上有包，所以可以运行</p><p>2.解决</p><p>将包从远程同步到本地，一般情况重启pycharm会自动同步，或者重新安装</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-pycharm连接远程，本地无法查看源码，但是可以正常运行"><a href="#1-pycharm连接远程，本地无法查看源码，但是可以正常运行" class="headerlink" title="1 pycharm连接远程，本地无法查看源码，但是可以正常运行"></a>1 pycharm连接远程，本地无法查看源码，但是可以正常运行</h2><p>1 原因</p><p>由于远程的包没有同步到本地，导致无法在本地查看，但是代码运行在远程，服务器上有包，所以可以运行</p><p>2.解决</p><p>将包从远程同步到本地，一般情况重启pycharm会自动同步，或者重新安装</p><h2 id="2-git-看不到代码变化"><a href="#2-git-看不到代码变化" class="headerlink" title="2 git 看不到代码变化"></a>2 git 看不到代码变化</h2><p>删除工程的idea，重新打开</p><h2 id="3-连接远程，可以run，不可以debug"><a href="#3-连接远程，可以run，不可以debug" class="headerlink" title="3.连接远程，可以run，不可以debug"></a>3.连接远程，可以run，不可以debug</h2><p>1.sudo vim /etc/ssh/sshd_config</p><p>AllowTcpForwarding 改为yes</p><p>2.systemctl restart sshd</p><p>3.重启pycharm</p>]]></content>
       
       
       <categories>
@@ -11004,7 +11510,7 @@
       
         <tags>
             
-            <tag> python ide </tag>
+            <tag> pycharm </tag>
             
         </tags>
       
