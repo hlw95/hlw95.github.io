@@ -4,6 +4,116 @@
   
     
     <entry>
+      <title>catboost</title>
+      <link href="/2024/04/14/catboot/"/>
+      <url>/2024/04/14/catboot/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p><a href="https://zhuanlan.zhihu.com/p/540956200">https://zhuanlan.zhihu.com/p/540956200</a></p><p><a href="https://arxiv.org/pdf/1706.09516.pdf">https://arxiv.org/pdf/1706.09516.pdf</a></p><p><a href="https://zhuanlan.zhihu.com/p/108110195">https://zhuanlan.zhihu.com/p/108110195</a></p><p><strong>1.Categorical feature</strong></p><p><strong>2.Ordered boosting</strong></p><p><strong>xgboost,lightgbm,catboost对比</strong></p><p><strong>预测</strong></p><p>多棵树组合</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p><strong>查看节点分裂</strong></p><p>model.get_borders()</p><p><strong>特征重要性</strong></p><p>get_feature_importance</p><p><strong>特征选择</strong></p><p>select_features</p><p><strong>树可视化</strong></p><p>plot_tree</p><p><strong>调参</strong></p><p><strong>分布式训练</strong></p><p>catboost-spark</p><h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 集成学习 </category>
+          
+          <category> boosting </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> catboost </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>http</title>
+      <link href="/2024/04/14/http/"/>
+      <url>/2024/04/14/http/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p>状态码</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lucene</title>
+      <link href="/2024/04/14/lucene/"/>
+      <url>/2024/04/14/lucene/</url>
+      
+        <content type="html"><![CDATA[<p>Lucene是开源全文检索工具包（提供倒排索引能力），说白了就是jar包</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索系统 </category>
+          
+          <category> 召回 </category>
+          
+          <category> 倒排 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lucene </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>倒排引擎</title>
+      <link href="/2024/04/14/reverse-index/"/>
+      <url>/2024/04/14/reverse-index/</url>
+      
+        <content type="html"><![CDATA[<p>常见的有es，solr</p><h2 id="1-离线"><a href="#1-离线" class="headerlink" title="1.离线"></a>1.离线</h2><h3 id="索引压缩"><a href="#索引压缩" class="headerlink" title="索引压缩"></a>索引压缩</h3><h3 id="索引存储"><a href="#索引存储" class="headerlink" title="索引存储"></a>索引存储</h3><h3 id="索引构建"><a href="#索引构建" class="headerlink" title="索引构建"></a>索引构建</h3><h2 id="2-在线"><a href="#2-在线" class="headerlink" title="2.在线"></a>2.在线</h2><h3 id="索引更新"><a href="#索引更新" class="headerlink" title="索引更新"></a>索引更新</h3><h3 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h3><h3 id="打分"><a href="#打分" class="headerlink" title="打分"></a>打分</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索系统 </category>
+          
+          <category> 召回 </category>
+          
+          <category> 倒排 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 倒排引擎 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jar</title>
       <link href="/2024/04/14/jar/"/>
       <url>/2024/04/14/jar/</url>
@@ -981,7 +1091,7 @@
       <link href="/2024/03/17/es/"/>
       <url>/2024/03/17/es/</url>
       
-        <content type="html"><![CDATA[<h1 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h1><h2 id="离线"><a href="#离线" class="headerlink" title="离线"></a>离线</h2><h3 id="索引构建"><a href="#索引构建" class="headerlink" title="索引构建"></a>索引构建</h3><h2 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h2><h3 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h3><h3 id="打分"><a href="#打分" class="headerlink" title="打分"></a>打分</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><h3 id="1-离线"><a href="#1-离线" class="headerlink" title="1 离线"></a>1 离线</h3><p>索引构建</p><h3 id="2-在线"><a href="#2-在线" class="headerlink" title="2 在线"></a>2 在线</h3><h4 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h4><h4 id="打分"><a href="#打分" class="headerlink" title="打分"></a>打分</h4><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2>]]></content>
       
       
       <categories>
@@ -1925,7 +2035,7 @@
       <link href="/2022/06/09/boost-relation/"/>
       <url>/2022/06/09/boost-relation/</url>
       
-        <content type="html"><![CDATA[<p>GB：boosting算法，是一种算法思想</p><p>GBDT ：说白了就是gradient boosting基学习器为cart回归树</p><p>XGBoost：GBDT的高效实现</p><p>LightGBM：GBDT的高效实现，对XGBoost改进</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/765efe2b951a">https://www.jianshu.com/p/765efe2b951a</a></p>]]></content>
+        <content type="html"><![CDATA[<p>GB：boosting算法，是一种算法思想</p><p>GBDT ：说白了就是gradient boosting的基学习器为cart回归树</p><p>XGBoost：GBDT的高效实现</p><p>LightGBM：GBDT的高效实现，对XGBoost改进</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/765efe2b951a">https://www.jianshu.com/p/765efe2b951a</a></p>]]></content>
       
       
       <categories>
@@ -6095,11 +6205,11 @@
       
       <categories>
           
-          <category> 大数据 </category>
+          <category> 搜索系统 </category>
           
-          <category> 基础组件 </category>
+          <category> 召回 </category>
           
-          <category> Solr </category>
+          <category> 倒排 </category>
           
       </categories>
       
@@ -6206,7 +6316,7 @@
       <link href="/2022/02/07/linun-common-command/"/>
       <url>/2022/02/07/linun-common-command/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-软连接"><a href="#1-软连接" class="headerlink" title="1 软连接"></a>1 软连接</h2><p><a href="https://www.cnblogs.com/sueyyyy/p/10985443.html#">https://www.cnblogs.com/sueyyyy/p/10985443.html#</a></p><p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在其它的 目录下用ln命令链接（link）就可以，不必重复的占用磁盘空间。</p><p>ln -s source_path  target_path</p><p>例子：ln  -s  /home/atguigu/bin/    ~/bin</p><h2 id="2-SSH无密登录配置"><a href="#2-SSH无密登录配置" class="headerlink" title="2 SSH无密登录配置"></a>2 SSH无密登录配置</h2><p><a href="http://www.yaowenming.com/A/gAJG0mvg5Z/">http://www.yaowenming.com/A/gAJG0mvg5Z/</a></p><p>（1）hadoop102上生成公钥和私钥：</p><p>[atguigu@hadoop102 .ssh]$ ssh-keygen -t rsa</p><p>然后敲（三个回车），就会生成两个文件id_rsa（私钥）、id_rsa.pub（公钥）</p><p>（2）将hadoop102公钥拷贝到要免密登录的目标机器上</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop102</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop103</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop104</p><p>（3）hadoop103上生成公钥和私钥：</p><p>[atguigu@hadoop103 .ssh]$ ssh-keygen -t rsa</p><p>然后敲（三个回车），就会生成两个文件id_rsa（私钥）、id_rsa.pub（公钥）</p><p>（4）将hadoop103公钥拷贝到要免密登录的目标机器上</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop102</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop103</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop104</p><h2 id="3-将text内容加入到file文件的第1行之后"><a href="#3-将text内容加入到file文件的第1行之后" class="headerlink" title="3 将text内容加入到file文件的第1行之后"></a>3 将text内容加入到file文件的第1行之后</h2><p>sed -i ‘1 a text’  file</p><p>例子：sed -i ‘1 a kinit -kt /etc/security/keytab/hive.keytab hive’   hdfs_to_ods_log.sh</p><h2 id="4-修改脚本执行权限"><a href="#4-修改脚本执行权限" class="headerlink" title="4 修改脚本执行权限"></a>4 修改脚本执行权限</h2><p>chmod </p><p>chmod u+x lg .sh</p><p><a href="https://blog.csdn.net/u013197629/article/details/73608613">https://blog.csdn.net/u013197629/article/details/73608613</a></p><h2 id="5-集群分发脚本"><a href="#5-集群分发脚本" class="headerlink" title="5 集群分发脚本"></a>5 集群分发脚本</h2><p>基于rsync命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync  -av     /opt/module   root@hadoop103:/opt/</span><br></pre></td></tr></table></figure><p>1.编写脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#1. 判断参数个数</span><br><span class="line">if [ $# -lt 1 ]</span><br><span class="line">then</span><br><span class="line">  echo Not Enough Arguement!</span><br><span class="line">  exit;</span><br><span class="line">fi</span><br><span class="line">#2. 遍历集群所有机器</span><br><span class="line">for host in hadoop102 hadoop103 hadoop104</span><br><span class="line">do</span><br><span class="line">  echo ====================  $host  ====================</span><br><span class="line">  #3. 遍历所有目录，挨个发送</span><br><span class="line">  for file in $@</span><br><span class="line">  do</span><br><span class="line">    #4 判断文件是否存在</span><br><span class="line">    if [ -e $file ]</span><br><span class="line">    then</span><br><span class="line">      #5. 获取父目录</span><br><span class="line">      pdir=$(cd -P $(dirname $file); pwd)</span><br><span class="line">      #6. 获取当前文件的名称</span><br><span class="line">      fname=$(basename $file)</span><br><span class="line">      ssh $host &quot;mkdir -p $pdir&quot;</span><br><span class="line">      rsync -av $pdir/$fname $host:$pdir</span><br><span class="line">    else</span><br><span class="line">      echo $file does not exists!</span><br><span class="line">    fi</span><br><span class="line">  done</span><br><span class="line">done</span><br></pre></td></tr></table></figure><p>2.修改脚本xsync具有执行权限</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x xsync</span><br></pre></td></tr></table></figure><h2 id="6-环境变量"><a href="#6-环境变量" class="headerlink" title="6 环境变量"></a>6 环境变量</h2><p><a href="https://blog.csdn.net/white_idiot/article/details/78253004">https://blog.csdn.net/white_idiot/article/details/78253004</a></p><h2 id="7-linux根目录下各个文件夹的作用"><a href="#7-linux根目录下各个文件夹的作用" class="headerlink" title="7 linux根目录下各个文件夹的作用"></a>7 linux根目录下各个文件夹的作用</h2><p><a href="https://blog.51cto.com/u_14233078/2443062">https://blog.51cto.com/u_14233078/2443062</a></p><h2 id="8-如何让你的脚本可以在任意地方都可执行？"><a href="#8-如何让你的脚本可以在任意地方都可执行？" class="headerlink" title="8 如何让你的脚本可以在任意地方都可执行？"></a>8 如何让你的脚本可以在任意地方都可执行？</h2><p><a href="https://www.cnblogs.com/yychuyu/p/12918957.html">https://www.cnblogs.com/yychuyu/p/12918957.html</a></p><h2 id="9-Linux服务器jps报process-information-unavailable"><a href="#9-Linux服务器jps报process-information-unavailable" class="headerlink" title="9 Linux服务器jps报process information unavailable"></a>9 Linux服务器jps报process information unavailable</h2><p><a href="https://blog.csdn.net/weixin_44803002/article/details/103332889">https://blog.csdn.net/weixin_44803002/article/details/103332889</a></p><p>cd /tmp</p><p>rm -rf /tmp/hsperfdata_* </p><h2 id="10-sudo命令"><a href="#10-sudo命令" class="headerlink" title="10 sudo命令"></a>10 sudo命令</h2><p><img src="/2022/02/07/linun-common-command/1.JPG" alt></p><p>使用hive用户启动hiveserver2</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop102 ~]# sudo -i -u hive hiveserver2</span><br></pre></td></tr></table></figure><h2 id="11-jps"><a href="#11-jps" class="headerlink" title="11 jps"></a>11 jps</h2><p><a href="https://blog.csdn.net/wangzhongshun/article/details/112546027">https://blog.csdn.net/wangzhongshun/article/details/112546027</a></p><p>不过jps有个缺点是只能显示当前用户的进程id，要显示其他用户的还只能用linux的ps命令</p><h2 id="12-scp"><a href="#12-scp" class="headerlink" title="12 scp"></a>12 scp</h2><p> scp -r root@hosts :  addr  ./</p><h2 id="13-tar"><a href="#13-tar" class="headerlink" title="13 tar"></a>13 tar</h2><p><a href="https://www.cnblogs.com/w54255787/p/10175202.html">https://www.cnblogs.com/w54255787/p/10175202.html</a></p><p>tar -cvf models.tar models</p><h2 id="14-kill-9-sparksubmit-无效"><a href="#14-kill-9-sparksubmit-无效" class="headerlink" title="14 kill -9 sparksubmit 无效"></a>14 kill -9 sparksubmit 无效</h2><p><a href="https://www.codetd.com/article/4229439">https://www.codetd.com/article/4229439</a></p><p>重启</p><h2 id="15-创建用户和用户组"><a href="#15-创建用户和用户组" class="headerlink" title="15 创建用户和用户组"></a>15 创建用户和用户组</h2><p><a href="https://www.jianshu.com/p/1e3fcfc8e3ef">https://www.jianshu.com/p/1e3fcfc8e3ef</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-软连接"><a href="#1-软连接" class="headerlink" title="1 软连接"></a>1 软连接</h2><p><a href="https://www.cnblogs.com/sueyyyy/p/10985443.html#">https://www.cnblogs.com/sueyyyy/p/10985443.html#</a></p><p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在其它的 目录下用ln命令链接（link）就可以，不必重复的占用磁盘空间。</p><p>ln -s source_path  target_path</p><p>例子：ln  -s  /home/atguigu/bin/    ~/bin</p><h2 id="2-SSH无密登录配置"><a href="#2-SSH无密登录配置" class="headerlink" title="2 SSH无密登录配置"></a>2 SSH无密登录配置</h2><p><a href="http://www.yaowenming.com/A/gAJG0mvg5Z/">http://www.yaowenming.com/A/gAJG0mvg5Z/</a></p><p>（1）hadoop102上生成公钥和私钥：</p><p>[atguigu@hadoop102 .ssh]$ ssh-keygen -t rsa</p><p>然后敲（三个回车），就会生成两个文件id_rsa（私钥）、id_rsa.pub（公钥）</p><p>（2）将hadoop102公钥拷贝到要免密登录的目标机器上</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop102</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop103</p><p>[atguigu@hadoop102 .ssh]$ ssh-copy-id hadoop104</p><p>（3）hadoop103上生成公钥和私钥：</p><p>[atguigu@hadoop103 .ssh]$ ssh-keygen -t rsa</p><p>然后敲（三个回车），就会生成两个文件id_rsa（私钥）、id_rsa.pub（公钥）</p><p>（4）将hadoop103公钥拷贝到要免密登录的目标机器上</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop102</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop103</p><p>[atguigu@hadoop103 .ssh]$ ssh-copy-id hadoop104</p><h2 id="3-将text内容加入到file文件的第1行之后"><a href="#3-将text内容加入到file文件的第1行之后" class="headerlink" title="3 将text内容加入到file文件的第1行之后"></a>3 将text内容加入到file文件的第1行之后</h2><p>sed -i ‘1 a text’  file</p><p>例子：sed -i ‘1 a kinit -kt /etc/security/keytab/hive.keytab hive’   hdfs_to_ods_log.sh</p><h2 id="4-修改脚本执行权限"><a href="#4-修改脚本执行权限" class="headerlink" title="4 修改脚本执行权限"></a>4 修改脚本执行权限</h2><p>chmod </p><p>chmod u+x lg .sh</p><p><a href="https://blog.csdn.net/u013197629/article/details/73608613">https://blog.csdn.net/u013197629/article/details/73608613</a></p><h2 id="5-集群分发脚本"><a href="#5-集群分发脚本" class="headerlink" title="5 集群分发脚本"></a>5 集群分发脚本</h2><p>基于rsync命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync  -av     /opt/module   root@hadoop103:/opt/</span><br></pre></td></tr></table></figure><p>1.编写脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#1. 判断参数个数</span><br><span class="line">if [ $# -lt 1 ]</span><br><span class="line">then</span><br><span class="line">  echo Not Enough Arguement!</span><br><span class="line">  exit;</span><br><span class="line">fi</span><br><span class="line">#2. 遍历集群所有机器</span><br><span class="line">for host in hadoop102 hadoop103 hadoop104</span><br><span class="line">do</span><br><span class="line">  echo ====================  $host  ====================</span><br><span class="line">  #3. 遍历所有目录，挨个发送</span><br><span class="line">  for file in $@</span><br><span class="line">  do</span><br><span class="line">    #4 判断文件是否存在</span><br><span class="line">    if [ -e $file ]</span><br><span class="line">    then</span><br><span class="line">      #5. 获取父目录</span><br><span class="line">      pdir=$(cd -P $(dirname $file); pwd)</span><br><span class="line">      #6. 获取当前文件的名称</span><br><span class="line">      fname=$(basename $file)</span><br><span class="line">      ssh $host &quot;mkdir -p $pdir&quot;</span><br><span class="line">      rsync -av $pdir/$fname $host:$pdir</span><br><span class="line">    else</span><br><span class="line">      echo $file does not exists!</span><br><span class="line">    fi</span><br><span class="line">  done</span><br><span class="line">done</span><br></pre></td></tr></table></figure><p>2.修改脚本xsync具有执行权限</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x xsync</span><br></pre></td></tr></table></figure><h2 id="6-环境变量"><a href="#6-环境变量" class="headerlink" title="6 环境变量"></a>6 环境变量</h2><p><a href="https://blog.csdn.net/white_idiot/article/details/78253004">https://blog.csdn.net/white_idiot/article/details/78253004</a></p><h2 id="7-linux根目录下各个文件夹的作用"><a href="#7-linux根目录下各个文件夹的作用" class="headerlink" title="7 linux根目录下各个文件夹的作用"></a>7 linux根目录下各个文件夹的作用</h2><p><a href="https://blog.51cto.com/u_14233078/2443062">https://blog.51cto.com/u_14233078/2443062</a></p><h2 id="8-如何让你的脚本可以在任意地方都可执行？"><a href="#8-如何让你的脚本可以在任意地方都可执行？" class="headerlink" title="8 如何让你的脚本可以在任意地方都可执行？"></a>8 如何让你的脚本可以在任意地方都可执行？</h2><p><a href="https://www.cnblogs.com/yychuyu/p/12918957.html">https://www.cnblogs.com/yychuyu/p/12918957.html</a></p><h2 id="9-Linux服务器jps报process-information-unavailable"><a href="#9-Linux服务器jps报process-information-unavailable" class="headerlink" title="9 Linux服务器jps报process information unavailable"></a>9 Linux服务器jps报process information unavailable</h2><p><a href="https://blog.csdn.net/weixin_44803002/article/details/103332889">https://blog.csdn.net/weixin_44803002/article/details/103332889</a></p><p>cd /tmp</p><p>rm -rf /tmp/hsperfdata_* </p><h2 id="10-sudo命令"><a href="#10-sudo命令" class="headerlink" title="10 sudo命令"></a>10 sudo命令</h2><p><img src="/2022/02/07/linun-common-command/1.JPG" alt></p><p>使用hive用户启动hiveserver2</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop102 ~]# sudo -i -u hive hiveserver2</span><br></pre></td></tr></table></figure><h2 id="11-jps"><a href="#11-jps" class="headerlink" title="11 jps"></a>11 jps</h2><p><a href="https://blog.csdn.net/wangzhongshun/article/details/112546027">https://blog.csdn.net/wangzhongshun/article/details/112546027</a></p><p>不过jps有个缺点是只能显示当前用户的进程id，要显示其他用户的还只能用linux的ps命令</p><h2 id="12-scp"><a href="#12-scp" class="headerlink" title="12 scp"></a>12 scp</h2><p> scp -r root@hosts :  addr  ./</p><h2 id="13-tar"><a href="#13-tar" class="headerlink" title="13 tar"></a>13 tar</h2><p><a href="https://www.cnblogs.com/w54255787/p/10175202.html">https://www.cnblogs.com/w54255787/p/10175202.html</a></p><p>tar -cvf models.tar models</p><h2 id="14-kill-9-sparksubmit-无效"><a href="#14-kill-9-sparksubmit-无效" class="headerlink" title="14 kill -9 sparksubmit 无效"></a>14 kill -9 sparksubmit 无效</h2><p><a href="https://www.codetd.com/article/4229439">https://www.codetd.com/article/4229439</a></p><p>重启</p><h2 id="15-创建用户和用户组"><a href="#15-创建用户和用户组" class="headerlink" title="15 创建用户和用户组"></a>15 创建用户和用户组</h2><p><a href="https://www.jianshu.com/p/1e3fcfc8e3ef">https://www.jianshu.com/p/1e3fcfc8e3ef</a></p><h2 id="16-cd"><a href="#16-cd" class="headerlink" title="16 cd"></a>16 cd</h2><p>root用户也是用户，就是权限高于普通用户</p><p>cd -: 上一次的目录</p><p>cd ~ ：回到当前用户目录</p><p>cd /：回到根目录</p>]]></content>
       
       
       <categories>
@@ -8630,7 +8740,7 @@
     
     
     <entry>
-      <title>bm25（best matching）</title>
+      <title>bm25</title>
       <link href="/2021/11/26/bm25/"/>
       <url>/2021/11/26/bm25/</url>
       
