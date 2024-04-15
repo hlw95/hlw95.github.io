@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>向量检索</title>
+      <link href="/2024/04/15/vector-retrieval/"/>
+      <url>/2024/04/15/vector-retrieval/</url>
+      
+        <content type="html"><![CDATA[<p>检索 <a href="https://zhuanlan.zhihu.com/p/581411376">https://zhuanlan.zhihu.com/p/581411376</a></p><p>引擎 <a href="https://zhuanlan.zhihu.com/p/364923722">https://zhuanlan.zhihu.com/p/364923722</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索系统 </category>
+          
+          <category> 召回 </category>
+          
+          <category> 向量 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 向量检索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网页搜索</title>
+      <link href="/2024/04/15/big-search/"/>
+      <url>/2024/04/15/big-search/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-pagerank"><a href="#1-pagerank" class="headerlink" title="1 pagerank"></a>1 pagerank</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索系统 </category>
+          
+          <category> 搜索系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网页搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cold</title>
+      <link href="/2024/04/15/cold/"/>
+      <url>/2024/04/15/cold/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://arxiv.org/pdf/2007.16122.pdf">https://arxiv.org/pdf/2007.16122.pdf</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 广告系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cold </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>catboost</title>
       <link href="/2024/04/14/catboot/"/>
       <url>/2024/04/14/catboot/</url>
@@ -755,25 +836,25 @@
     
     
     <entry>
-      <title>搜索系统评价指标</title>
+      <title>排序评价指标</title>
       <link href="/2024/04/11/seach-evluation/"/>
       <url>/2024/04/11/seach-evluation/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-ndcg"><a href="#1-ndcg" class="headerlink" title="1.ndcg"></a>1.ndcg</h2><p>一个query一个ndcg</p><p>所有query的ndcg平均就是系统的ndcg</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-效果"><a href="#1-效果" class="headerlink" title="1 效果"></a>1 效果</h2><h3 id="1-ndcg"><a href="#1-ndcg" class="headerlink" title="1.ndcg"></a>1.ndcg</h3><p>一个query一个ndcg</p><p>所有query的ndcg平均就是系统的ndcg</p><h3 id="2-正逆序比"><a href="#2-正逆序比" class="headerlink" title="2 正逆序比"></a>2 正逆序比</h3><p>1 predict , label</p><p><a href="https://zhuanlan.zhihu.com/p/440042900">https://zhuanlan.zhihu.com/p/440042900</a></p><p>2 feature , label</p><h2 id="2-性能"><a href="#2-性能" class="headerlink" title="2 性能"></a>2 性能</h2><p>1 p95</p><p>2 qps</p>]]></content>
       
       
       <categories>
           
           <category> 搜索系统 </category>
           
-          <category> 搜索系统 </category>
+          <category> 精排 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 搜索系统评价指标 </tag>
+            <tag> 排序评价指标 </tag>
             
         </tags>
       
@@ -838,7 +919,7 @@
       <link href="/2024/04/06/train-oom/"/>
       <url>/2024/04/06/train-oom/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-从磁盘读数据集时"><a href="#1-从磁盘读数据集时" class="headerlink" title="1.从磁盘读数据集时"></a>1.从磁盘读数据集时</h2><p>？？</p><h2 id="2-训练时"><a href="#2-训练时" class="headerlink" title="2.训练时"></a>2.训练时</h2><p>batch size减少</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-从磁盘读数据集时"><a href="#1-从磁盘读数据集时" class="headerlink" title="1.从磁盘读数据集时"></a>1.从磁盘读数据集时</h2><p>？？</p><h2 id="2-训练时"><a href="#2-训练时" class="headerlink" title="2.训练时"></a>2.训练时</h2><p>1 batch size减少</p><p>2 分布式</p>]]></content>
       
       
       <categories>
@@ -1624,35 +1705,6 @@
     
     
     <entry>
-      <title>倒排</title>
-      <link href="/2022/07/15/indexing/"/>
-      <url>/2022/07/15/indexing/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 搜索系统 </category>
-          
-          <category> 召回 </category>
-          
-          <category> 倒排 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 倒排 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>粗排</title>
       <link href="/2022/07/15/pre-ranking/"/>
       <url>/2022/07/15/pre-ranking/</url>
@@ -2089,7 +2141,7 @@
       <link href="/2022/06/09/lightgbm/"/>
       <url>/2022/06/09/lightgbm/</url>
       
-        <content type="html"><![CDATA[<p>Light  gradient boosting machine</p><h2 id="用于排序"><a href="#用于排序" class="headerlink" title="用于排序"></a>用于排序</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import lightgbm as lgb</span><br><span class="line">lgb.LGBMRanker</span><br></pre></td></tr></table></figure><p>原理</p><p>LGBMRanker模型和这个LambdaMART的原理很像</p><p><a href="https://blog.csdn.net/wuzhongqiang/article/details/110521519">https://blog.csdn.net/wuzhongqiang/article/details/110521519</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/99069186">https://zhuanlan.zhihu.com/p/99069186</a></p><p><a href="https://mp.weixin.qq.com/s/XxFHmxV4_iDq8ksFuZM02w">https://mp.weixin.qq.com/s/XxFHmxV4_iDq8ksFuZM02w</a></p><p><a href="https://www.jianshu.com/p/765efe2b951a">https://www.jianshu.com/p/765efe2b951a</a></p><p><a href="https://blog.csdn.net/wuzhongqiang/article/details/110521519">https://blog.csdn.net/wuzhongqiang/article/details/110521519</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1 原理"></a>1 原理</h2><p><strong>类别特征编码</strong></p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2 使用"></a>2 使用</h2><p><strong>排序</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import lightgbm as lgb</span><br><span class="line">lgb.LGBMRanker</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/99069186">https://zhuanlan.zhihu.com/p/99069186</a></p><p><a href="https://mp.weixin.qq.com/s/XxFHmxV4_iDq8ksFuZM02w">https://mp.weixin.qq.com/s/XxFHmxV4_iDq8ksFuZM02w</a></p><p><a href="https://www.jianshu.com/p/765efe2b951a">https://www.jianshu.com/p/765efe2b951a</a></p><p><a href="https://blog.csdn.net/wuzhongqiang/article/details/110521519">https://blog.csdn.net/wuzhongqiang/article/details/110521519</a></p>]]></content>
       
       
       <categories>
@@ -8744,7 +8796,7 @@
       <link href="/2021/11/26/bm25/"/>
       <url>/2021/11/26/bm25/</url>
       
-        <content type="html"><![CDATA[<p>是TD-IDF的优化版本</p><p><a href="https://zhuanlan.zhihu.com/p/79202151">https://zhuanlan.zhihu.com/p/79202151</a></p><p><a href="https://blog.csdn.net/weixin_42486623/article/details/121498706">https://blog.csdn.net/weixin_42486623/article/details/121498706</a></p>]]></content>
+        <content type="html"><![CDATA[<p>参考</p><p><a href="https://blog.csdn.net/huanxingchen1/article/details/130241071">https://blog.csdn.net/huanxingchen1/article/details/130241071</a></p>]]></content>
       
       
       <categories>
@@ -10159,7 +10211,7 @@
       <link href="/2021/10/11/xgboost/"/>
       <url>/2021/10/11/xgboost/</url>
       
-        <content type="html"><![CDATA[<p>a scalable tree boosting system</p><p>是对gbdt的高效实现</p><p>基学习器：XGBoost的可以使用<strong>cart回归树</strong>作为基学习器，也可以使用<strong>线性分类器</strong>作为基学习器；gbdt的基学习器只能是<strong>cart回归树</strong></p><p>XGBoost算法原理小结 <a href="https://www.cnblogs.com/pinard/p/10979808.html">https://www.cnblogs.com/pinard/p/10979808.html</a></p><p>XGBoost类库使用小结 <a href="https://www.cnblogs.com/pinard/p/11114748.html">https://www.cnblogs.com/pinard/p/11114748.html</a></p><p>paper原文 <a href="https://arxiv.org/pdf/1603.02754.pdf">https://arxiv.org/pdf/1603.02754.pdf</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p>paper原文 <a href="https://arxiv.org/pdf/1603.02754.pdf">https://arxiv.org/pdf/1603.02754.pdf</a></p><p>XGBoost算法原理小结 <a href="https://www.cnblogs.com/pinard/p/10979808.html">https://www.cnblogs.com/pinard/p/10979808.html</a></p><p>是对gbdt的高效实现</p><p>基学习器：XGBoost的可以使用<strong>cart回归树</strong>作为基学习器，也可以使用<strong>线性分类器</strong>作为基学习器</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p>XGBoost类库使用小结 <a href="https://www.cnblogs.com/pinard/p/11114748.html">https://www.cnblogs.com/pinard/p/11114748.html</a></p><p><strong>训练慢</strong></p><p>gpu</p><p>histogram</p><p>single-precision</p><p><strong>类别特征</strong></p><p>xgboost无法处理类别特征，需要自己处理</p><p>1.one hot encode</p><p>2.label encode</p>]]></content>
       
       
       <categories>
@@ -10436,7 +10488,7 @@
           
           <category> 召回 </category>
           
-          <category> 向量召回 </category>
+          <category> 向量 </category>
           
       </categories>
       
@@ -11347,7 +11399,7 @@
       <link href="/2021/08/06/search-rank-init/"/>
       <url>/2021/08/06/search-rank-init/</url>
       
-        <content type="html"><![CDATA[<p>综述</p><p><a href="https://zhuanlan.zhihu.com/p/112719984">https://zhuanlan.zhihu.com/p/112719984</a></p><p><a href="https://zhuanlan.zhihu.com/p/382001982">https://zhuanlan.zhihu.com/p/382001982</a></p><p><a href="https://www.cnblogs.com/davidwang456/articles/10251599.html">https://www.cnblogs.com/davidwang456/articles/10251599.html</a></p><p>DeepRank: A New Deep Architecture for Relevance Ranking in Information Retrieval</p><p><a href="https://arxiv.org/pdf/1710.05649.pdf">https://arxiv.org/pdf/1710.05649.pdf</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/112719984">https://zhuanlan.zhihu.com/p/112719984</a></p><p><a href="https://zhuanlan.zhihu.com/p/382001982">https://zhuanlan.zhihu.com/p/382001982</a></p><h2 id="1-离线"><a href="#1-离线" class="headerlink" title="1.离线"></a>1.离线</h2><p>物料获取-&gt; 处理物料 -&gt; 1.构建索引 2.属性库</p><h2 id="2-在线"><a href="#2-在线" class="headerlink" title="2.在线"></a>2.在线</h2><p>query -&gt; query理解 -&gt; 召回 -&gt; 排序 -&gt; 结果</p>]]></content>
       
       
       <categories>
