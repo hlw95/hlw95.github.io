@@ -4,6 +4,112 @@
   
     
     <entry>
+      <title>知乎搜索</title>
+      <link href="/2024/04/16/zhihu/"/>
+      <url>/2024/04/16/zhihu/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.6aiq.com/article/1577969687897">https://www.6aiq.com/article/1577969687897</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索系统 </category>
+          
+          <category> 搜索系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 知乎搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>deepmatch</title>
+      <link href="/2024/04/16/deepmatch/"/>
+      <url>/2024/04/16/deepmatch/</url>
+      
+        <content type="html"><![CDATA[<p>好用的工具</p><p><a href="https://hub.fastgit.org/shenweichen/DeepMatch">https://hub.fastgit.org/shenweichen/DeepMatch</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 推荐系统 </category>
+          
+          <category> 召回 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deepmatch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>排序</title>
+      <link href="/2024/04/16/recommend-rank/"/>
+      <url>/2024/04/16/recommend-rank/</url>
+      
+        <content type="html"><![CDATA[<h2 id="爱奇艺"><a href="#爱奇艺" class="headerlink" title="爱奇艺"></a>爱奇艺</h2><p><a href="https://www.6aiq.com/article/1614422394959">https://www.6aiq.com/article/1614422394959</a></p><h2 id="腾讯音乐"><a href="#腾讯音乐" class="headerlink" title="腾讯音乐"></a>腾讯音乐</h2><p><a href="https://cloud.tencent.com/developer/article/2226972">https://cloud.tencent.com/developer/article/2226972</a></p><h2 id="快手"><a href="#快手" class="headerlink" title="快手"></a>快手</h2><p><a href="https://zhuanlan.zhihu.com/p/520181137">https://zhuanlan.zhihu.com/p/520181137</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 推荐系统 </category>
+          
+          <category> 排序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>重构</title>
+      <link href="/2024/04/16/code-reconstruct/"/>
+      <url>/2024/04/16/code-reconstruct/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/371635036">https://zhuanlan.zhihu.com/p/371635036</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 重构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>向量检索</title>
       <link href="/2024/04/15/vector-retrieval/"/>
       <url>/2024/04/15/vector-retrieval/</url>
@@ -847,7 +953,7 @@
           
           <category> 搜索系统 </category>
           
-          <category> 精排 </category>
+          <category> 排序 </category>
           
       </categories>
       
@@ -1709,7 +1815,7 @@
       <link href="/2022/07/15/pre-ranking/"/>
       <url>/2022/07/15/pre-ranking/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-rule-based"><a href="#1-rule-based" class="headerlink" title="1 rule based"></a>1 rule based</h2><h2 id="2-tree-based"><a href="#2-tree-based" class="headerlink" title="2 tree based"></a>2 tree based</h2><p>xgboost/lightgbm/catboost + lambdamart ？？</p><p>xgboost/lightgbm/catboost + lr ？？</p><p>xgboost/lightgbm/catboost + yetirankpairwise </p><h2 id="3-双塔nn"><a href="#3-双塔nn" class="headerlink" title="3 双塔nn"></a>3 双塔nn</h2><h2 id="4-交互式nn"><a href="#4-交互式nn" class="headerlink" title="4 交互式nn"></a>4 交互式nn</h2><h2 id="5-精排模型蒸馏"><a href="#5-精排模型蒸馏" class="headerlink" title="5 精排模型蒸馏"></a>5 精排模型蒸馏</h2><h2 id="6-pretrain-model"><a href="#6-pretrain-model" class="headerlink" title="6 pretrain model"></a>6 pretrain model</h2>]]></content>
       
       
       <categories>
@@ -1718,14 +1824,12 @@
           
           <category> 排序 </category>
           
-          <category> 粗排 </category>
-          
       </categories>
       
       
         <tags>
             
-            <tag> 粗排 </tag>
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -9706,7 +9810,7 @@
       <link href="/2021/10/25/recall-survey/"/>
       <url>/2021/10/25/recall-survey/</url>
       
-        <content type="html"><![CDATA[<p>总结</p><p><a href="https://blog.csdn.net/luanfenlian0992/article/details/107416438">https://blog.csdn.net/luanfenlian0992/article/details/107416438</a></p><p><a href="https://zhuanlan.zhihu.com/p/364053939">https://zhuanlan.zhihu.com/p/364053939</a></p><p>好用的工具</p><p><a href="https://hub.fastgit.org/shenweichen/DeepMatch">https://hub.fastgit.org/shenweichen/DeepMatch</a></p>]]></content>
+        <content type="html"><![CDATA[<p>总结</p><p><a href="https://blog.csdn.net/luanfenlian0992/article/details/107416438">https://blog.csdn.net/luanfenlian0992/article/details/107416438</a></p><p><a href="https://zhuanlan.zhihu.com/p/364053939">https://zhuanlan.zhihu.com/p/364053939</a></p>]]></content>
       
       
       <categories>
@@ -10184,14 +10288,14 @@
       <link href="/2021/10/11/facebook-recommend-sys/"/>
       <url>/2021/10/11/facebook-recommend-sys/</url>
       
-        <content type="html"><![CDATA[<p>Facebook19年出品的推荐系统的paper，原文地址 <a href="https://arxiv.org/pdf/1906.00091.pdf">https://arxiv.org/pdf/1906.00091.pdf</a></p><h3 id="DLRM-结构-deep-learning-recommendation-model"><a href="#DLRM-结构-deep-learning-recommendation-model" class="headerlink" title="DLRM 结构(deep learning recommendation model)"></a>DLRM 结构(deep learning recommendation model)</h3><p><img src="/2021/10/11/facebook-recommend-sys/11.JPG" alt></p><p><img src="/2021/10/11/facebook-recommend-sys/22.JPG" alt></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/82839874">https://zhuanlan.zhihu.com/p/82839874</a></p>]]></content>
+        <content type="html"><![CDATA[<p> <a href="https://arxiv.org/pdf/1906.00091.pdf">https://arxiv.org/pdf/1906.00091.pdf</a></p><h3 id="DLRM-结构-deep-learning-recommendation-model"><a href="#DLRM-结构-deep-learning-recommendation-model" class="headerlink" title="DLRM 结构(deep learning recommendation model)"></a>DLRM 结构(deep learning recommendation model)</h3><p><img src="/2021/10/11/facebook-recommend-sys/11.JPG" alt></p><p><img src="/2021/10/11/facebook-recommend-sys/22.JPG" alt></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://zhuanlan.zhihu.com/p/82839874">https://zhuanlan.zhihu.com/p/82839874</a></p>]]></content>
       
       
       <categories>
           
           <category> 推荐系统 </category>
           
-          <category> 推荐系统 </category>
+          <category> 排序 </category>
           
       </categories>
       
@@ -11150,11 +11254,11 @@
     
     
     <entry>
-      <title>BERT在美团搜索核心排序的探索和实践</title>
+      <title>美团排序</title>
       <link href="/2021/08/21/meituan/"/>
       <url>/2021/08/21/meituan/</url>
       
-        <content type="html"><![CDATA[<p>很有启发，抱着学习态度，mark一下</p><h2 id="模型层面"><a href="#模型层面" class="headerlink" title="模型层面"></a>模型层面</h2><p>整体结构如下</p><p><img src="/2021/08/21/meituan/1.png" alt></p><p>1 BERT预训练</p><p>2 多任务学习</p><p>​    场景层：根据业务场景进行划分，每个业务场景单独设计网络结构</p><p>3 联合训练</p><p>两个任务分别为：</p><p>​    1 相关性任务：相关性+NER（多任务增强相关性）</p><p>​    2 排序任务</p><p>怎么联合没看出来</p><p>之前是两阶段finetune： 1. 先相关性任务 2 然后排序任务</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://tech.meituan.com/2020/07/09/bert-in-meituan-search.html">https://tech.meituan.com/2020/07/09/bert-in-meituan-search.html</a> </p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://tech.meituan.com/2022/08/11/coarse-ranking-exploration-practice.html">https://tech.meituan.com/2022/08/11/coarse-ranking-exploration-practice.html</a></p><p><a href="https://tech.meituan.com/2021/07/08/multi-business-modeling.html">https://tech.meituan.com/2021/07/08/multi-business-modeling.html</a></p><p><a href="https://tech.meituan.com/2021/11/19/exploration-and-practice-of-multi-business-commodities-ranking-in-meituan-search.html">https://tech.meituan.com/2021/11/19/exploration-and-practice-of-multi-business-commodities-ranking-in-meituan-search.html</a></p><p><a href="https://tech.meituan.com/2020/07/09/bert-in-meituan-search.html">https://tech.meituan.com/2020/07/09/bert-in-meituan-search.html</a> </p><h2 id="BERT在美团搜索核心排序的探索和实践"><a href="#BERT在美团搜索核心排序的探索和实践" class="headerlink" title="BERT在美团搜索核心排序的探索和实践"></a>BERT在美团搜索核心排序的探索和实践</h2><h3 id="模型层面"><a href="#模型层面" class="headerlink" title="模型层面"></a>模型层面</h3><p>整体结构如下</p><p><img src="/2021/08/21/meituan/1.png" alt></p><p>1 BERT预训练</p><p>2 多任务学习</p><p>​    场景层：根据业务场景进行划分，每个业务场景单独设计网络结构</p><p>3 联合训练</p><p>两个任务分别为：</p><p>​    1 相关性任务：相关性+NER（多任务增强相关性）</p><p>​    2 排序任务</p><p>怎么联合没看出来</p><p>之前是两阶段finetune： 1. 先相关性任务 2 然后排序任务</p>]]></content>
       
       
       <categories>
@@ -11163,14 +11267,12 @@
           
           <category> 排序 </category>
           
-          <category> 精排 </category>
-          
       </categories>
       
       
         <tags>
             
-            <tag> 排序学习 </tag>
+            <tag> 美团排序 </tag>
             
         </tags>
       
@@ -11218,8 +11320,6 @@
           <category> 搜索系统 </category>
           
           <category> 排序 </category>
-          
-          <category> 粗排 </category>
           
       </categories>
       
