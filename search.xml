@@ -2769,9 +2769,13 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 关系型 </category>
+          
+          <category> mysql </category>
           
       </categories>
       
@@ -3144,7 +3148,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -3439,6 +3447,8 @@
       <categories>
           
           <category> 大数据 </category>
+          
+          <category> 基础组件 </category>
           
           <category> 数据库 </category>
           
@@ -4057,7 +4067,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -4200,9 +4214,13 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
       </categories>
       
@@ -4684,7 +4702,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -5439,35 +5461,6 @@
     
     
     <entry>
-      <title>key/value</title>
-      <link href="/2022/03/02/key-value/"/>
-      <url>/2022/03/02/key-value/</url>
-      
-        <content type="html"><![CDATA[<p>某个字段为key，某个字段为value</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 大数据 </category>
-          
-          <category> 数据库 </category>
-          
-          <category> 数据库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> key/value </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hive与传统数据库对比</title>
       <link href="/2022/03/01/hive-vs-database/"/>
       <url>/2022/03/01/hive-vs-database/</url>
@@ -5684,7 +5677,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -5713,7 +5710,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -5742,7 +5743,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -6004,12 +6009,14 @@
       <link href="/2022/02/15/database-con/"/>
       <url>/2022/02/15/database-con/</url>
       
-        <content type="html"><![CDATA[<p><strong>常见关系型数据库</strong>：</p><ol><li>Oracle </li><li>MySql </li><li>Microsoft SQL Server</li><li>SQLite </li><li>PostgreSQL</li><li>IBM DB2</li></ol><p><strong>常见的非关系型数据库</strong>：</p><ol><li>键值数据库：Redis、Memcached、Riak </li><li>列族数据库：Bigtable、HBase、Cassandra </li><li>文档数据库：MongoDB、CouchDB、MarkLogic </li><li>图形数据库：Neo4j、InfoGrid</li></ol>]]></content>
+        <content type="html"><![CDATA[<p><strong>常见关系型数据库</strong>：</p><ol><li>Oracle </li><li>MySql </li><li>Microsoft SQL Server</li><li>SQLite </li><li>PostgreSQL</li><li>IBM DB2</li></ol><p><strong>常见的非关系型数据库</strong>：</p><ol><li>键值数据库：Redis、Memcached、Riak </li><li>列族数据库：Bigtable、HBase、Cassandra </li><li>文档数据库：MongoDB、CouchDB、MarkLogic </li><li>图形数据库：Neo4j、InfoGrid</li></ol><p><strong>二者区别</strong></p><p>非关系型没有表结构，不支持sql</p>]]></content>
       
       
       <categories>
           
           <category> 大数据 </category>
+          
+          <category> 基础组件 </category>
           
           <category> 数据库 </category>
           
@@ -6033,16 +6040,20 @@
       <link href="/2022/02/15/key-id/"/>
       <url>/2022/02/15/key-id/</url>
       
-        <content type="html"><![CDATA[<p><strong>主键、外键</strong></p><p><a href="https://blog.csdn.net/weixin_31642161/article/details/113113942">https://blog.csdn.net/weixin_31642161/article/details/113113942</a></p><p>有可能没有主键</p><p><strong>联合主键，复合主键</strong></p><p>联合主键：数据库表的主键由两个及以上的字段组成。 </p><p>复合主键：有争议</p><h2 id><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
+        <content type="html"><![CDATA[<p><strong>主键、外键</strong></p><p><a href="https://blog.csdn.net/weixin_31642161/article/details/113113942">https://blog.csdn.net/weixin_31642161/article/details/113113942</a></p><p>有可能没有主键</p><p><strong>联合主键，复合主键</strong></p><p>联合主键：数据库表的主键由两个及以上的字段组成。 </p><p>复合主键：有争议</p>]]></content>
       
       
       <categories>
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
       </categories>
       
@@ -6098,9 +6109,13 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
       </categories>
       
@@ -6108,35 +6123,6 @@
         <tags>
             
             <tag> 数据字典 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数据库建模</title>
-      <link href="/2022/02/10/database-design/"/>
-      <url>/2022/02/10/database-design/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/L_zhai/article/details/118650439">https://blog.csdn.net/L_zhai/article/details/118650439</a></p><p><a href="https://cloud.tencent.com/developer/article/1644918">https://cloud.tencent.com/developer/article/1644918</a></p><p><img src="/2022/02/10/database-design/1.JPG" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 大数据 </category>
-          
-          <category> 数据库 </category>
-          
-          <category> 数据库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据库建模 </tag>
             
         </tags>
       
@@ -6334,7 +6320,11 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
           <category> sql </category>
           
@@ -6707,6 +6697,8 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 非关系型 </category>
@@ -6907,7 +6899,7 @@
       <link href="/2022/02/01/datawarehouse-develop-tool/"/>
       <url>/2022/02/01/datawarehouse-develop-tool/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-数据库管理工具"><a href="#1-数据库管理工具" class="headerlink" title="1 数据库管理工具"></a>1 数据库管理工具</h2><p><strong>Navicat</strong></p><p>破解</p><p><a href="https://cdmana.com/2022/114/202204240555321952.html">https://cdmana.com/2022/114/202204240555321952.html</a></p><p><strong>DataGrip</strong></p><p>需要用到JDBC协议连接到Hive，故需要启动HiveServer2。</p><p><em>DataGrip</em> 版是由JetBrains 公司（就是那个出品Intellij IDEA 的公司）推出的数据库管理软件。</p><h2 id="2-数据库设计工具"><a href="#2-数据库设计工具" class="headerlink" title="2 数据库设计工具"></a>2 数据库设计工具</h2><p>EZDML:来辅助我们梳理复杂的业务表关系，效果如下</p><p><img src="/2022/02/01/datawarehouse-develop-tool/11.jpg" alt></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-数据库管理工具"><a href="#1-数据库管理工具" class="headerlink" title="1 数据库管理工具"></a>1 数据库管理工具</h2><p><strong>Navicat</strong></p><p>破解</p><p><a href="https://cdmana.com/2022/114/202204240555321952.html">https://cdmana.com/2022/114/202204240555321952.html</a></p><p><strong>DataGrip</strong></p><p>需要用到JDBC协议连接到Hive，故需要启动HiveServer2。</p><p><em>DataGrip</em> 版是由JetBrains 公司（就是那个出品Intellij IDEA 的公司）推出的数据库管理软件。</p><h2 id="2-数据库设计工具"><a href="#2-数据库设计工具" class="headerlink" title="2 数据库设计工具"></a>2 数据库设计工具</h2><p><strong>EZDML</strong></p><p>来辅助我们梳理复杂的业务表关系，效果如下</p><p><img src="/2022/02/01/datawarehouse-develop-tool/11.jpg" alt></p>]]></content>
       
       
       <categories>
@@ -7032,9 +7024,13 @@
           
           <category> 大数据 </category>
           
+          <category> 基础组件 </category>
+          
           <category> 数据库 </category>
           
           <category> 数据库 </category>
+          
+          <category> 关系型 </category>
           
       </categories>
       
