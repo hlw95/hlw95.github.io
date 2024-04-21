@@ -4,13 +4,725 @@
   
     
     <entry>
+      <title>proxy,vpn</title>
+      <link href="/2024/04/21/proxy-service/"/>
+      <url>/2024/04/21/proxy-service/</url>
+      
+        <content type="html"><![CDATA[<h2 id="proxy"><a href="#proxy" class="headerlink" title="proxy"></a>proxy</h2><h2 id="vpn"><a href="#vpn" class="headerlink" title="vpn"></a>vpn</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> proxy,vpn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mmap</title>
+      <link href="/2024/04/21/mmap/"/>
+      <url>/2024/04/21/mmap/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/357820303">https://zhuanlan.zhihu.com/p/357820303</a></p><p>优化io的技术</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mmap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>fuzz</title>
+      <link href="/2024/04/21/fuzz/"/>
+      <url>/2024/04/21/fuzz/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1 原理"></a>1 原理</h2><p>Fuzzing技术本质是依赖随机函数生成随机测试用例，随机性意味着不重复、不可预测，通过自动化生成并执行大量的随机测试用例来发现产品或协议的未知漏洞</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2 使用"></a>2 使用</h2><p><strong>谷歌的FuzzTest</strong></p><p><a href="https://github.com/google/fuzztest">https://github.com/google/fuzztest</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> fuzz </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>uml</title>
+      <link href="/2024/04/21/uml/"/>
+      <url>/2024/04/21/uml/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.edrawsoft.cn/uml-diagram-introduction/">https://www.edrawsoft.cn/uml-diagram-introduction/</a></p><h2 id="1-类图"><a href="#1-类图" class="headerlink" title="1 类图"></a>1 类图</h2><p><a href="https://zhuanlan.zhihu.com/p/109655171">https://zhuanlan.zhihu.com/p/109655171</a></p><h2 id="2-时序图"><a href="#2-时序图" class="headerlink" title="2 时序图"></a>2 时序图</h2><p><a href="https://blog.csdn.net/fly_zxy/article/details/80911942">https://blog.csdn.net/fly_zxy/article/details/80911942</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> uml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>函数调用图</title>
+      <link href="/2024/04/21/cpp-call-func/"/>
+      <url>/2024/04/21/cpp-call-func/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/jinking01/article/details/108881862">https://blog.csdn.net/jinking01/article/details/108881862</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 函数调用图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>code check</title>
+      <link href="/2024/04/21/code-check/"/>
+      <url>/2024/04/21/code-check/</url>
+      
+        <content type="html"><![CDATA[<h2 id="重复代码"><a href="#重复代码" class="headerlink" title="重复代码"></a>重复代码</h2><p>提取公共函数</p><p>修改变量名</p><h2 id="指针判空"><a href="#指针判空" class="headerlink" title="指针判空"></a>指针判空</h2><h2 id="除0保护"><a href="#除0保护" class="headerlink" title="除0保护"></a>除0保护</h2><h2 id="降低圈复杂度"><a href="#降低圈复杂度" class="headerlink" title="降低圈复杂度"></a>降低圈复杂度</h2><p><a href="https://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">https://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> code check </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>抓包</title>
+      <link href="/2024/04/21/catch-package/"/>
+      <url>/2024/04/21/catch-package/</url>
+      
+        <content type="html"><![CDATA[<h2 id="wireshark"><a href="#wireshark" class="headerlink" title="wireshark"></a>wireshark</h2><h2 id="tcpdump"><a href="#tcpdump" class="headerlink" title="tcpdump"></a>tcpdump</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抓包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>同步，异步</title>
+      <link href="/2024/04/21/async/"/>
+      <url>/2024/04/21/async/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1 概念"></a>1 概念</h2><p>同步：串行的，一个一个</p><p>异步：并行的</p><p>接口内：同一个接口，同时来了多个请求</p><p>接口间：同时调用接口a，接口b</p><h2 id="2-实现"><a href="#2-实现" class="headerlink" title="2 实现"></a>2 实现</h2><p>多线程</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 同步，异步 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gdb</title>
+      <link href="/2024/04/21/gdb/"/>
+      <url>/2024/04/21/gdb/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/chen1415886044/article/details/105094688">https://blog.csdn.net/chen1415886044/article/details/105094688</a></p><p><a href="https://bbs.huaweicloud.com/blogs/230948">https://bbs.huaweicloud.com/blogs/230948</a></p><h2 id="1-GDB调试未执行程序"><a href="#1-GDB调试未执行程序" class="headerlink" title="1 GDB调试未执行程序"></a>1 GDB调试未执行程序</h2><h2 id="2-GDB调试运行中程序"><a href="#2-GDB调试运行中程序" class="headerlink" title="2 GDB调试运行中程序"></a>2 GDB调试运行中程序</h2><h2 id="3-GDB调试core文件"><a href="#3-GDB调试core文件" class="headerlink" title="3 GDB调试core文件"></a>3 GDB调试core文件</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gdb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对象池</title>
+      <link href="/2024/04/21/objectpool/"/>
+      <url>/2024/04/21/objectpool/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/sinat_31608641/article/details/129093705">https://blog.csdn.net/sinat_31608641/article/details/129093705</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象池 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工具</title>
+      <link href="/2024/04/21/cpp-tool/"/>
+      <url>/2024/04/21/cpp-tool/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-atop"><a href="#1-atop" class="headerlink" title="1 atop"></a>1 atop</h2><p>可以查看历史记录的mem, cpu</p><p>atop -r /var/log/atop/atop_XX</p><p>b 选择时间</p><p>t T 时间前移后移</p><h2 id="2-top"><a href="#2-top" class="headerlink" title="2 top"></a>2 top</h2><p><strong>内存</strong></p><p>top -c | grep processid</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据落盘</title>
+      <link href="/2024/04/21/flush/"/>
+      <url>/2024/04/21/flush/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/xieyihua1994/article/details/108545746">https://blog.csdn.net/xieyihua1994/article/details/108545746</a></p><p>fopen -&gt; fflush -&gt; fsync -&gt; fclose</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据落盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>rpc</title>
+      <link href="/2024/04/21/rpc/"/>
+      <url>/2024/04/21/rpc/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p>grpc: google</p><p>brpc: baidu</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>1.postman</p><p>2.bloomrpc</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p><a href="https://blog.csdn.net/u012023606/article/details/54583526">https://blog.csdn.net/u012023606/article/details/54583526</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> rpc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mock, stub</title>
+      <link href="/2024/04/21/mock/"/>
+      <url>/2024/04/21/mock/</url>
+      
+        <content type="html"><![CDATA[<h2 id="相同"><a href="#相同" class="headerlink" title="相同"></a>相同</h2><p>都是写个假的替换原来的</p><h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><p>？？</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mock, stub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>port</title>
+      <link href="/2024/04/21/port/"/>
+      <url>/2024/04/21/port/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-端口分类"><a href="#1-端口分类" class="headerlink" title="1 端口分类"></a>1 端口分类</h2><h3 id="1-内外"><a href="#1-内外" class="headerlink" title="1.内外"></a>1.内外</h3><p>内部端口：服务端用的</p><p>外部端口：客户端用的</p><h3 id="2-不同协议"><a href="#2-不同协议" class="headerlink" title="2.不同协议"></a>2.不同协议</h3><p>http</p><p>rpc</p><h2 id="2-端口设置"><a href="#2-端口设置" class="headerlink" title="2 端口设置"></a>2 端口设置</h2><p>起始端口</p><p>端口区间</p><h2 id="3-端口转发"><a href="#3-端口转发" class="headerlink" title="3.端口转发"></a>3.端口转发</h2><p><strong>iptables</strong></p><p><a href="https://www.cnblogs.com/dongzhiquan/p/11427461.html">https://www.cnblogs.com/dongzhiquan/p/11427461.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> port </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>io操作</title>
+      <link href="/2024/04/21/cpp-io/"/>
+      <url>/2024/04/21/cpp-io/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1656755">https://cloud.tencent.com/developer/article/1656755</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> io操作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>plugin</title>
+      <link href="/2024/04/20/plugin/"/>
+      <url>/2024/04/20/plugin/</url>
+      
+        <content type="html"><![CDATA[<p>java：jar</p><p>python：包</p><p>c++：so</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plugin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cpp debug</title>
+      <link href="/2024/04/20/cpp-debug/"/>
+      <url>/2024/04/20/cpp-debug/</url>
+      
+        <content type="html"><![CDATA[<h2 id="ide"><a href="#ide" class="headerlink" title="ide"></a>ide</h2><h2 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cpp debug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>dfx</title>
+      <link href="/2024/04/20/dfx/"/>
+      <url>/2024/04/20/dfx/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://bbs.huaweicloud.com/blogs/111852">https://bbs.huaweicloud.com/blogs/111852</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dfx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>protobuf</title>
+      <link href="/2024/04/20/protobuf/"/>
+      <url>/2024/04/20/protobuf/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p><a href="https://www.wdbyte.com/tool/protobuf/">https://www.wdbyte.com/tool/protobuf/</a></p><p>是由 Google 开发的一种轻量级、高效的<strong>数据交换格式</strong>，它被用于结构化数据的序列化、反序列化，对标json，xml</p><p>相比于 XML 和 JSON，Protobuf 有以下几个优势：</p><ul><li><strong>更小的数据量</strong>：Protobuf 的二进制编码通常只有 XML 和 JSON 的 1/3 到 1/10 左右，因此在网络传输和存储数据时可以节省带宽和存储空间。</li><li><strong>更快的序列化和反序列化速度</strong>：由于 Protobuf 使用二进制格式，所以序列化和反序列化速度比 XML 和 JSON 快得多。</li><li><strong>跨语言</strong>：Protobuf 支持多种编程语言，可以使用不同的编程语言来编写客户端和服务端。这种跨语言的特性使得 Protobuf 受到很多开发者的欢迎（JSON 也是如此）。</li><li><strong>易于维护可扩展</strong>：Protobuf 使用 .proto 文件定义数据模型和数据格式，这种文件比 XML 和 JSON 更容易阅读和维护，且可以在不破坏原有协议的基础上，轻松添加或删除字段，实现版本升级和兼容性。</li></ul><p><img src="/2024/04/20/protobuf/12.webp" alt></p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><h3 id="编写-proto"><a href="#编写-proto" class="headerlink" title="编写.proto"></a>编写.proto</h3><h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p><img src="/2024/04/20/protobuf/1.webp" alt></p><p><strong>python</strong></p><p>编译生成.py</p><p>1.bazel 编译</p><p>2.python编译</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><strong>python</strong></p><p>import XX.py</p><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>1 结构化数据传输</p><p>2 实现rpc框架</p><h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> protobuf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gflags</title>
+      <link href="/2024/04/20/gflgs/"/>
+      <url>/2024/04/20/gflgs/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/wcy23580/article/details/89222962">https://blog.csdn.net/wcy23580/article/details/89222962</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gflags </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>clion</title>
+      <link href="/2024/04/20/clion/"/>
+      <url>/2024/04/20/clion/</url>
+      
+        <content type="html"><![CDATA[<h2 id="创建bazel-工程"><a href="#创建bazel-工程" class="headerlink" title="创建bazel 工程"></a>创建bazel 工程</h2><h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><p>选中代码块</p><p>ctrl+alt+L</p><h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2><p><strong>可以查看调用栈</strong></p><p><strong>查看函数被谁调用</strong></p><p>1.点被调函数</p><p>2.没有的话 可能是多态  点父类的函数看看</p><p><strong>返回上一步操作</strong></p><p>ctrl+alt+键盘左右键</p><p><strong>变量</strong></p><p>可以查看值</p><p>修改值</p><p>不能创建新的</p><p><strong>查看类的子类</strong></p><p>1.选中类名</p><p>2.ctrl+H</p><p><strong>条件断点</strong></p><h2 id="一些设置"><a href="#一些设置" class="headerlink" title="一些设置"></a>一些设置</h2><p>1.卡</p><p>关闭插件</p><p>堆内存调大</p><p>2.git 不同步</p><p>reload all from disk</p><p>3.代码提示</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> clion </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>可执行文件</title>
+      <link href="/2024/04/20/cpp-exe/"/>
+      <url>/2024/04/20/cpp-exe/</url>
+      
+        <content type="html"><![CDATA[<h2 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h2><p>./exe_name -option1 -option2</p><h2 id="缺少依赖库"><a href="#缺少依赖库" class="headerlink" title="缺少依赖库"></a>缺少依赖库</h2><p>1.ldd exe_name</p><p>缺少依赖库 或者是 依赖库有问题</p><p>2.搞个没问题的依赖库 </p><p>3.</p><p><strong>缺少依赖库</strong></p><p>放在当前路径</p><p>建个lib文件夹， export  LD_LIBRARY_PATH=</p><p><strong>依赖库有问题</strong></p><p>重新建立软链接   </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可执行文件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cache</title>
+      <link href="/2024/04/20/cache/"/>
+      <url>/2024/04/20/cache/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h3><p>用map来实现</p><p><a href="https://blog.csdn.net/qq_21431111/article/details/53444256">https://blog.csdn.net/qq_21431111/article/details/53444256</a></p><h3 id="LRU算法"><a href="#LRU算法" class="headerlink" title="LRU算法"></a>LRU算法</h3><p><a href="https://zhuanlan.zhihu.com/p/34989978">https://zhuanlan.zhihu.com/p/34989978</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gmock</title>
+      <link href="/2024/04/20/gmock/"/>
+      <url>/2024/04/20/gmock/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/aoyihuashao/p/9362003.html">https://www.cnblogs.com/aoyihuashao/p/9362003.html</a></p><p><a href="https://cloud.tencent.com/developer/article/2222985">https://cloud.tencent.com/developer/article/2222985</a></p><p>google mock是用来配合google test对C++项目做单元测试的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gmock </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Google Test</title>
+      <link href="/2024/04/20/cpp-ut/"/>
+      <url>/2024/04/20/cpp-ut/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-编写"><a href="#1-编写" class="headerlink" title="1 编写"></a>1 编写</h2><h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p><a href="https://blog.csdn.net/sinat_31608641/article/details/127254194">https://blog.csdn.net/sinat_31608641/article/details/127254194</a></p><p>TEST</p><p>TEST_F</p><h3 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h3><p><a href="https://blog.csdn.net/sevenjoin/article/details/89962344">https://blog.csdn.net/sevenjoin/article/details/89962344</a></p><p>EXPECT_</p><p>ASSERT_</p><h3 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a><strong>main函数</strong></h3><p><a href="https://blog.csdn.net/u012516571/article/details/116467334">https://blog.csdn.net/u012516571/article/details/116467334</a></p><p><a href="https://www.cnblogs.com/pam-sh/p/17366898.html">https://www.cnblogs.com/pam-sh/p/17366898.html</a></p><h2 id="2-运行"><a href="#2-运行" class="headerlink" title="2 运行"></a>2 运行</h2><p><strong>1 ide</strong></p><p><strong>2 命令行</strong></p><p><a href="https://juejin.cn/s/bazel%20test%E7%94%A8%E6%B3%95">https://juejin.cn/s/bazel%20test%E7%94%A8%E6%B3%95</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Google Test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cpu架构</title>
+      <link href="/2024/04/20/cpu-framework/"/>
+      <url>/2024/04/20/cpu-framework/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.51cto.com/article/747063.html">https://www.51cto.com/article/747063.html</a></p><h2 id="x86"><a href="#x86" class="headerlink" title="x86"></a>x86</h2><p>X86采用CISC复杂指令集计算机</p><p>X86则是主要应用于Intel，AMD等PC机</p><h2 id="arm"><a href="#arm" class="headerlink" title="arm"></a>arm</h2><p>ARM采用的是RISC精简指令集计算机</p><p>ARM主要应用于移动终端之中，类如手机，平板</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cpu架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++内存</title>
+      <link href="/2024/04/20/c-mem-management/"/>
+      <url>/2024/04/20/c-mem-management/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-内存分区"><a href="#1-内存分区" class="headerlink" title="1.内存分区"></a>1.内存分区</h2><p><a href="https://developer.aliyun.com/article/343804">https://developer.aliyun.com/article/343804</a></p><h2 id="2-内存泄露"><a href="#2-内存泄露" class="headerlink" title="2.内存泄露"></a>2.内存泄露</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1 概念"></a>1 概念</h3><p>内存泄露：就是内存持续上涨的现象</p><p>内存溢出：内存不够用了</p><h3 id="2-定位"><a href="#2-定位" class="headerlink" title="2 定位"></a>2 定位</h3><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>1.内存碎片</p><p>2.手动申请的内存没有释放</p><h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><p>1 tcmalloc</p><p>2 jemalloc</p><p>把jemalloc 编到包里</p><p>生成map  转成svg</p><p>对比变化</p><p>3 asan</p><p>4 valgrind </p><h2 id="3-内存优化"><a href="#3-内存优化" class="headerlink" title="3.内存优化"></a>3.内存优化</h2><p>valgrind 分析内存</p><p>pahole 分析内存</p><p>内存管理 <a href="https://blog.csdn.net/zju_fish1996/article/details/108858577">https://blog.csdn.net/zju_fish1996/article/details/108858577</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++内存 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>core</title>
       <link href="/2024/04/17/core/"/>
       <url>/2024/04/17/core/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1 概念"></a>1 概念</h2><h3 id="core"><a href="#core" class="headerlink" title="core"></a><strong>core</strong></h3><p><a href="https://blog.csdn.net/u013554213/article/details/95959598">https://blog.csdn.net/u013554213/article/details/95959598</a></p><p><a href="https://www.cnblogs.com/fanblogs/p/12658860.html">https://www.cnblogs.com/fanblogs/p/12658860.html</a></p><p>当程序发生崩溃时 系统会core dump</p><p>1.系统开启core dump</p><p>2.查询core dump文件路径</p><p>3.修改core文件的路径</p><h3 id="SIG类型"><a href="#SIG类型" class="headerlink" title="SIG类型"></a>SIG类型</h3><p><a href="https://c-cpp.com/c/program/SIG_types">https://c-cpp.com/c/program/SIG_types</a></p><h2 id="2-定位"><a href="#2-定位" class="headerlink" title="2 定位"></a>2 定位</h2><h3 id="可能原因"><a href="#可能原因" class="headerlink" title="可能原因"></a>可能原因</h3><p>1.指针二次释放</p><p>2.并发问题</p><p>3.内存访问越界</p><p>4.除0</p><p>5.野指针</p><h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><h4 id="1-core在代码什么地方"><a href="#1-core在代码什么地方" class="headerlink" title="1.core在代码什么地方"></a><strong>1.core在代码什么地方</strong></h4><p><strong>1 有core文件</strong></p><p>​    gdb 带符号表的包  core文件</p><p>​    bt</p><p><strong>2 日志打印调用栈</strong></p><p>minidump</p><p><strong>3 没有core文件，日志也没有打印调用栈</strong></p><p>1.计算地址偏移</p><p>需要日志dump出来core的函数地址和首地址</p><p>地址偏移=core的函数地址-首地址</p><p>2.根据地址偏移确定core函数</p><p><strong>gdb</strong></p><p><strong>addr2line</strong></p><p>addr2line -e  带符号表的包 地址偏移 -f -C</p><h4 id="2-复现"><a href="#2-复现" class="headerlink" title="2.复现"></a><strong>2.复现</strong></h4><h4 id="3-分析解决"><a href="#3-分析解决" class="headerlink" title="3.分析解决"></a><strong>3.分析解决</strong></h4><h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3 问题"></a>3 问题</h2>]]></content>
       
       
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> core </tag>
+            
+        </tags>
       
     </entry>
     
@@ -285,7 +997,7 @@
       <link href="/2024/04/14/http/"/>
       <url>/2024/04/14/http/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p>状态码</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h2><p><a href="https://blog.csdn.net/m0_45861545/article/details/120835738">https://blog.csdn.net/m0_45861545/article/details/120835738</a></p><p><a href="https://juejin.cn/post/6920784699493187591">https://juejin.cn/post/6920784699493187591</a></p><h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><p><img src="http/2.JPG" alt></p><h3 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h3><p><img src="http/1.JPG" alt></p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><h3 id="前端页面查看报文"><a href="#前端页面查看报文" class="headerlink" title="前端页面查看报文"></a>前端页面查看报文</h3><p>F12 -&gt; network</p>]]></content>
       
       
       <categories>
@@ -503,7 +1215,7 @@
       <link href="/2024/04/14/java-debug/"/>
       <url>/2024/04/14/java-debug/</url>
       
-        <content type="html"><![CDATA[<p>1.remote jvm debug</p><p><a href="https://blog.csdn.net/qq_41262903/article/details/120922767">https://blog.csdn.net/qq_41262903/article/details/120922767</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-本地调试"><a href="#1-本地调试" class="headerlink" title="1.本地调试"></a>1.本地调试</h2><h2 id="2-远程调试"><a href="#2-远程调试" class="headerlink" title="2.远程调试"></a>2.远程调试</h2><p>remote jvm debug</p><p><a href="https://blog.csdn.net/qq_41262903/article/details/120922767">https://blog.csdn.net/qq_41262903/article/details/120922767</a></p>]]></content>
       
       
       <categories>
@@ -1370,7 +2082,7 @@
       <link href="/2024/03/17/design-pattern/"/>
       <url>/2024/03/17/design-pattern/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://refactoringguru.cn/design-patterns">https://refactoringguru.cn/design-patterns</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://refactoringguru.cn/design-patterns">https://refactoringguru.cn/design-patterns</a></p><h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><p><a href="https://zhuanlan.zhihu.com/p/37469260">https://zhuanlan.zhihu.com/p/37469260</a></p><p><a href="https://blog.csdn.net/justloveyou_/article/details/64127789">https://blog.csdn.net/justloveyou_/article/details/64127789</a></p><p>一个类仅有一个实例</p><p><strong>饿汉模式</strong></p><p>实例在程序运行时被立即执行初始化</p><p><strong>懒汉模式</strong></p><p>实例在第一次被使用时才进行初始化</p><p><strong>注意</strong></p><p>new的单例的指针 不能用非单例的对象管理 会core</p><p>new的非单例的指针 不要在单例对象管理  会内存泄露</p>]]></content>
       
       
       <categories>
@@ -1395,7 +2107,7 @@
       <link href="/2024/03/17/cpp-high-performance/"/>
       <url>/2024/03/17/cpp-high-performance/</url>
       
-        <content type="html"><![CDATA[<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><h2 id="性能瓶颈"><a href="#性能瓶颈" class="headerlink" title="性能瓶颈"></a>性能瓶颈</h2><p><a href="https://blog.csdn.net/xiaonuo911teamo/article/details/133521457">https://blog.csdn.net/xiaonuo911teamo/article/details/133521457</a></p><p><a href="https://zhuanlan.zhihu.com/p/486301255">https://zhuanlan.zhihu.com/p/486301255</a></p><p><a href="https://zhuanlan.zhihu.com/p/335091866">https://zhuanlan.zhihu.com/p/335091866</a></p><p>硬件资源哪一块不够  io 网络 cpu</p><p>单机 多机 要注意分析</p><h2 id="火焰图"><a href="#火焰图" class="headerlink" title="火焰图"></a>火焰图</h2><p><a href="https://zhuanlan.zhihu.com/p/402188023">https://zhuanlan.zhihu.com/p/402188023</a></p><h2 id="常见优化技术"><a href="#常见优化技术" class="headerlink" title="常见优化技术"></a>常见优化技术</h2><p><a href="https://www.cnblogs.com/xuanyuan/p/13524351.html">https://www.cnblogs.com/xuanyuan/p/13524351.html</a></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-性能指标"><a href="#1-性能指标" class="headerlink" title="1 性能指标"></a>1 性能指标</h2><h2 id="2-性能瓶颈"><a href="#2-性能瓶颈" class="headerlink" title="2 性能瓶颈"></a>2 性能瓶颈</h2><p><a href="https://blog.csdn.net/xiaonuo911teamo/article/details/133521457">https://blog.csdn.net/xiaonuo911teamo/article/details/133521457</a></p><p><a href="https://zhuanlan.zhihu.com/p/486301255">https://zhuanlan.zhihu.com/p/486301255</a></p><p><a href="https://zhuanlan.zhihu.com/p/335091866">https://zhuanlan.zhihu.com/p/335091866</a></p><h3 id="io"><a href="#io" class="headerlink" title="io"></a>io</h3><h3 id="cpu"><a href="#cpu" class="headerlink" title="cpu"></a>cpu</h3><h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h2 id="3-性能分析"><a href="#3-性能分析" class="headerlink" title="3 性能分析"></a>3 性能分析</h2><h3 id="1-火焰图"><a href="#1-火焰图" class="headerlink" title="1 火焰图"></a>1 火焰图</h3><p><a href="https://zhuanlan.zhihu.com/p/402188023">https://zhuanlan.zhihu.com/p/402188023</a></p><p><strong>怎么跑</strong></p><p>用perf工具</p><p>1.采样</p><p>perf.data</p><p>2.可视化</p><p>.data-&gt; .unfold -&gt; .folded -&gt; .svg</p><h2 id="4-常见优化技术"><a href="#4-常见优化技术" class="headerlink" title="4 常见优化技术"></a>4 常见优化技术</h2><p><a href="https://www.cnblogs.com/xuanyuan/p/13524351.html">https://www.cnblogs.com/xuanyuan/p/13524351.html</a></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>]]></content>
       
       
       <categories>
@@ -1420,7 +2132,7 @@
       <link href="/2023/05/03/cpp-lang/"/>
       <url>/2023/05/03/cpp-lang/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1 头文件"></a>1 头文件</h2><p><a href="https://www.runoob.com/w3cnote/cpp-header.html">https://www.runoob.com/w3cnote/cpp-header.html</a></p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>方便代码复用</p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* math.h */</span><br><span class="line">double f1();</span><br><span class="line">double f2(double);</span><br><span class="line">/* end of math.h */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* math.cpp */</span><br><span class="line">double f1()</span><br><span class="line">&#123;</span><br><span class="line">    //do something here....</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line">double f2(double a)</span><br><span class="line">&#123;</span><br><span class="line">    //do something here...</span><br><span class="line">    return a * a;</span><br><span class="line">&#125;</span><br><span class="line">/* end of math.cpp */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* main.cpp */</span><br><span class="line">#include &quot;math.h&quot;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    int number1 = f1();</span><br><span class="line">    int number2 = f2(number1);</span><br><span class="line">&#125;</span><br><span class="line">/* end of main.cpp */</span><br></pre></td></tr></table></figure><p>include 的作用就是把每一个它出现的地方，替换成它后面所写的那个文件的内容。简单的文本替换，别无其他。（预编译）</p><p>1 预编译</p><p>main.cpp首先include “math.h”，就是把math.h的东西全部替换过来</p><p>2 编译 </p><p>main.cpp f1，f2的声明 变 符号表</p><p>3 链接</p><p>根据符号表就可以在math.cpp找到f1，f2的实现</p><h3 id="头文件中应该写什么"><a href="#头文件中应该写什么" class="headerlink" title="头文件中应该写什么"></a>头文件中应该写什么</h3><p>.h文件中能包含：</p><ul><li>类成员数据的声明，但不能赋值</li><li>类静态数据成员的定义和赋值，但不建议，只是个声明就好。</li><li>类的成员函数的声明</li><li>非类成员函数的声明</li><li>常数的定义：如：constint a=5;</li><li>静态函数的定义</li><li>类的内联函数的定义</li></ul><p>不能包含：</p><ul><li>1.所有非静态变量（不是类的数据成员）的声明</li><li>2.默认命名空间声明不要放在头文件，using namespace std;等应放在.cpp中，在 .h 文件中使用 std::string</li></ul><h2 id="2-内联函数"><a href="#2-内联函数" class="headerlink" title="2 内联函数"></a>2 内联函数</h2><p><a href="https://zhuanlan.zhihu.com/p/375828786">https://zhuanlan.zhihu.com/p/375828786</a></p><p><img src="/2023/05/03/cpp-lang/image-20240310170013989.png" alt="image-20240310170013989"></p><p>好处:效率</p><p>坏处:代码膨胀</p><h2 id="3-存储类"><a href="#3-存储类" class="headerlink" title="3 存储类"></a>3 存储类</h2><p><a href="https://zhuanlan.zhihu.com/p/61853231">https://zhuanlan.zhihu.com/p/61853231</a>    </p><h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p><strong>1 变量</strong></p><p>只能在定义时初始化，以后不行   如果没有显式初始化，会被程序自动初始化为0    静态成员变量必须类外初始化</p><p>生命周期和全局变量一样  程序结束才释放</p><p>就一个 公用</p><p>作用域：</p><p>​    静态成员变量：类内</p><p>​    静态全局变量：本文件</p><p>​    静态局部变量：函数内</p><p><strong>2 函数</strong></p><p>静态成员函数：和类绑定 和对象没有关系</p><p>静态函数：只能在本文件用</p><h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p><a href="https://www.51cto.com/article/768503.html">https://www.51cto.com/article/768503.html</a></p><p><a href="https://blog.csdn.net/w2865673691/article/details/13018563">https://blog.csdn.net/w2865673691/article/details/13018563</a></p><p><a href="https://blog.csdn.net/xingjiarong/article/details/47656339">https://blog.csdn.net/xingjiarong/article/details/47656339</a></p><p><strong>extern</strong>   </p><p>原理：就是先声明 告诉编译器定义在别的地方</p><p>默认值：全局变量和函数默认 extern</p><p>作用：在本文件使用别的文件的变量和函数   和include 的区别？？？</p><p><strong>extern “c”</strong>  </p><p>表示按照c语言的方式去编译</p><h2 id="4-内存分配"><a href="#4-内存分配" class="headerlink" title="4 内存分配"></a>4 内存分配</h2><p><a href="https://developer.aliyun.com/article/343804">https://developer.aliyun.com/article/343804</a></p><h2 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return_type function_name( parameter list );</span><br></pre></td></tr></table></figure><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>传值 传指针 传引用</p><p>参数的默认值</p><p>double&amp; setValues(int&amp; i) </p><p>int &amp; i = 传入的变量</p><h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>原理</p><p><a href="https://blog.csdn.net/jmh1996/article/details/78384083">https://blog.csdn.net/jmh1996/article/details/78384083</a></p><h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p><a href="https://www.runoob.com/cplusplus/cpp-functions.html">https://www.runoob.com/cplusplus/cpp-functions.html</a></p><h2 id="7-STL"><a href="#7-STL" class="headerlink" title="7 STL"></a>7 STL</h2><h2 id="9-声明-定义"><a href="#9-声明-定义" class="headerlink" title="9 声明 定义"></a>9 声明 定义</h2><p><a href="https://bbs.huaweicloud.com/blogs/292599">https://bbs.huaweicloud.com/blogs/292599</a></p><p><strong>变量</strong></p><p>声明：告诉编译器变量的名称和类型，而不分配内存</p><p>定义：给变量分配内存，可以为变量赋初值</p><p><strong>函数</strong></p><p>函数只要有实现即为定义，否则为声明</p><p><strong>注意</strong></p><p>声明要在使用前面 否则报错</p><h2 id="10-数组"><a href="#10-数组" class="headerlink" title="10 数组"></a>10 数组</h2><p>数组名就是指向第一个元素的地址</p><p>数组作为函数返回值   返回指针</p><p>数组作为函数参数 传指针 </p><h2 id="11-指针"><a href="#11-指针" class="headerlink" title="11 指针"></a>11 指针</h2><h3 id="1-裸指针"><a href="#1-裸指针" class="headerlink" title="1 裸指针"></a>1 裸指针</h3><h4 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h4><p><a href="https://zhuanlan.zhihu.com/p/337060273">https://zhuanlan.zhihu.com/p/337060273</a></p><h4 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h4><p>指针是一个用数值表示的地址  所以可以数值运算</p><p>可以+ -  （地址偏移取决于指针类型）比较</p><h4 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h4><p>int *ptr[MAX];</p><p>在这里，把 ptr 声明为一个数组，由 MAX 个整数指针组成</p><h4 id="指向指针的指针"><a href="#指向指针的指针" class="headerlink" title="指向指针的指针"></a>指向指针的指针</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int **var;</span><br></pre></td></tr></table></figure><h2 id="12-引用"><a href="#12-引用" class="headerlink" title="12 引用"></a>12 引用</h2><h3 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h3><p>原理？？？</p><h2 id="13-左值右值"><a href="#13-左值右值" class="headerlink" title="13 左值右值"></a>13 左值右值</h2><p><a href="https://nettee.github.io/posts/2018/Understanding-lvalues-and-rvalues-in-C-and-C/">https://nettee.github.io/posts/2018/Understanding-lvalues-and-rvalues-in-C-and-C/</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a; <span class="comment">// a 为左值</span></span><br><span class="line">a = <span class="number">3</span>; <span class="comment">// 3 为右值</span></span><br></pre></td></tr></table></figure><h2 id="14-类中定义自身类的对象"><a href="#14-类中定义自身类的对象" class="headerlink" title="14 类中定义自身类的对象"></a>14 类中定义自身类的对象</h2><p><a href="https://blog.csdn.net/digitalkee/article/details/104526994">https://blog.csdn.net/digitalkee/article/details/104526994</a></p><p><a href="https://blog.csdn.net/shltsh/article/details/45949347">https://blog.csdn.net/shltsh/article/details/45949347</a></p><p>指针和引用可以</p><p>static对象可以 </p><p>non-static对象 只有普通函数可以  成员变量不行  构造函数不行</p><h2 id="15-变量作用域"><a href="#15-变量作用域" class="headerlink" title="15 变量作用域"></a>15 变量作用域</h2><ul><li><strong>局部作用域</strong>：在函数内部声明的变量具有局部作用域，它们只能在函数内部访问。<strong>局部变量在函数每次被调用时被创建，在函数执行完后被销毁。</strong></li><li><strong>全局作用域</strong>：在所有函数和代码块之外声明的变量具有全局作用域，它们可以被程序中的任何函数访问。<strong>全局变量在程序开始时被创建，在程序结束时被销毁。</strong></li><li><strong>类作用域</strong>：在类内部声明的变量具有类作用域，它们可以被类的所有成员函数访问。<strong>类作用域变量的生命周期与类的生命周期相同**</strong>。</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="0-c-版本"><a href="#0-c-版本" class="headerlink" title="0 c++ 版本"></a>0 c++ 版本</h2><p><a href="https://blog.csdn.net/m0_37251750/article/details/125159533">https://blog.csdn.net/m0_37251750/article/details/125159533</a></p><h2 id="1-头文件"><a href="#1-头文件" class="headerlink" title="1 头文件"></a>1 头文件</h2><p><a href="https://www.runoob.com/w3cnote/cpp-header.html">https://www.runoob.com/w3cnote/cpp-header.html</a></p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>方便代码复用</p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* math.h */</span><br><span class="line">double f1();</span><br><span class="line">double f2(double);</span><br><span class="line">/* end of math.h */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* math.cpp */</span><br><span class="line">double f1()</span><br><span class="line">&#123;</span><br><span class="line">    //do something here....</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line">double f2(double a)</span><br><span class="line">&#123;</span><br><span class="line">    //do something here...</span><br><span class="line">    return a * a;</span><br><span class="line">&#125;</span><br><span class="line">/* end of math.cpp */</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* main.cpp */</span><br><span class="line">#include &quot;math.h&quot;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    int number1 = f1();</span><br><span class="line">    int number2 = f2(number1);</span><br><span class="line">&#125;</span><br><span class="line">/* end of main.cpp */</span><br></pre></td></tr></table></figure><p>1 预编译</p><p>include 的作用就是把每一个它出现的地方，替换成它后面所写的那个文件的内容。简单的文本替换，别无其他</p><p>main.cpp首先include “math.h”，就是把math.h的东西全部替换过来</p><p>2 编译 </p><p>main.cpp f1，f2的声明 变 符号表</p><p>3 链接</p><p>根据符号表就可以在math.cpp找到f1，f2的实现</p><h3 id="头文件中应该写什么"><a href="#头文件中应该写什么" class="headerlink" title="头文件中应该写什么"></a>头文件中应该写什么</h3><p>.h文件中能包含：</p><ul><li>类成员数据的声明，但不能赋值</li><li>类静态数据成员的定义和赋值，但不建议，只是个声明就好。</li><li>类的成员函数的声明</li><li>非类成员函数的声明</li><li>常数的定义：如：constint a=5;</li><li>静态函数的定义</li><li>类的内联函数的定义</li></ul><p>不能包含：</p><ul><li>1.所有非静态变量（不是类的数据成员）的声明</li><li>2.默认命名空间声明不要放在头文件，using namespace std;等应放在.cpp中，在 .h 文件中使用 std::string</li></ul><h2 id="2-声明-定义"><a href="#2-声明-定义" class="headerlink" title="2 声明 定义"></a>2 声明 定义</h2><p><a href="https://bbs.huaweicloud.com/blogs/292599">https://bbs.huaweicloud.com/blogs/292599</a></p><p><strong>变量</strong></p><p>声明：告诉编译器变量的名称和类型，而不分配内存</p><p>定义：给变量分配内存，可以为变量赋初值</p><p><strong>函数</strong></p><p>函数只要有实现即为定义，否则为声明</p><p><strong>注意</strong></p><p>声明要在使用前面 否则报错</p><h2 id="3-关键字"><a href="#3-关键字" class="headerlink" title="3 关键字"></a>3 关键字</h2><h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p><strong>1 变量</strong></p><p>只能在定义时初始化，以后不行   如果没有显式初始化，会被程序自动初始化为0    静态成员变量必须类外初始化</p><p>生命周期和全局变量一样  程序结束才释放</p><p>就一个 公用</p><p>作用域：</p><p>​    静态成员变量：类内</p><p>​    静态全局变量：本文件</p><p>​    静态局部变量：函数内</p><p><strong>2 函数</strong></p><p>静态成员函数：和类绑定 和对象没有关系</p><p>静态函数：只能在本文件用</p><h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p><a href="https://www.51cto.com/article/768503.html">https://www.51cto.com/article/768503.html</a></p><p><a href="https://blog.csdn.net/w2865673691/article/details/13018563">https://blog.csdn.net/w2865673691/article/details/13018563</a></p><p><a href="https://blog.csdn.net/xingjiarong/article/details/47656339">https://blog.csdn.net/xingjiarong/article/details/47656339</a></p><p><strong>extern</strong>   </p><p>原理：就是先声明 告诉编译器定义在别的地方</p><p>默认值：全局变量和函数默认 extern</p><p>作用：在本文件使用别的文件的变量和函数   和include 的区别？？？</p><p><strong>extern “c”</strong>  </p><p>表示按照c语言的方式去编译</p><h2 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return_type function_name( parameter list );</span><br></pre></td></tr></table></figure><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>传值 传指针 传引用</p><p>参数的默认值</p><p>double&amp; setValues(int&amp; i) </p><p>int &amp; i = 传入的变量</p><h3 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h3><p>原理</p><p><a href="https://blog.csdn.net/jmh1996/article/details/78384083">https://blog.csdn.net/jmh1996/article/details/78384083</a></p><h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p><a href="https://www.runoob.com/cplusplus/cpp-functions.html">https://www.runoob.com/cplusplus/cpp-functions.html</a></p><h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p><a href="https://zhuanlan.zhihu.com/p/375828786">https://zhuanlan.zhihu.com/p/375828786</a></p><p><img src="/2023/05/03/cpp-lang/image-20240310170013989.png" alt="image-20240310170013989"></p><p>好处:效率</p><p>坏处:代码膨胀</p><h2 id="10-数组"><a href="#10-数组" class="headerlink" title="10 数组"></a>10 数组</h2><p>数组名就是指向第一个元素的地址</p><p>数组作为函数返回值   返回指针</p><p>数组作为函数参数 传指针 </p><h2 id="11-指针"><a href="#11-指针" class="headerlink" title="11 指针"></a>11 指针</h2><h3 id="1-裸指针"><a href="#1-裸指针" class="headerlink" title="1 裸指针"></a>1 裸指针</h3><h4 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h4><p><a href="https://zhuanlan.zhihu.com/p/337060273">https://zhuanlan.zhihu.com/p/337060273</a></p><h4 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h4><p>指针是一个用数值表示的地址  所以可以数值运算</p><p>可以+ -  （地址偏移取决于指针类型）比较</p><h4 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h4><p>int *ptr[MAX];</p><p>在这里，把 ptr 声明为一个数组，由 MAX 个整数指针组成</p><h4 id="指向指针的指针"><a href="#指向指针的指针" class="headerlink" title="指向指针的指针"></a>指向指针的指针</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int **var;</span><br></pre></td></tr></table></figure><h2 id="12-引用"><a href="#12-引用" class="headerlink" title="12 引用"></a>12 引用</h2><h3 id="函数返回值-1"><a href="#函数返回值-1" class="headerlink" title="函数返回值"></a>函数返回值</h3><p>原理？？？</p><h2 id="13-左值右值"><a href="#13-左值右值" class="headerlink" title="13 左值右值"></a>13 左值右值</h2><p><a href="https://nettee.github.io/posts/2018/Understanding-lvalues-and-rvalues-in-C-and-C/">https://nettee.github.io/posts/2018/Understanding-lvalues-and-rvalues-in-C-and-C/</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a; <span class="comment">// a 为左值</span></span><br><span class="line">a = <span class="number">3</span>; <span class="comment">// 3 为右值</span></span><br></pre></td></tr></table></figure><h2 id="14-类中定义自身类的对象"><a href="#14-类中定义自身类的对象" class="headerlink" title="14 类中定义自身类的对象"></a>14 类中定义自身类的对象</h2><p><a href="https://blog.csdn.net/digitalkee/article/details/104526994">https://blog.csdn.net/digitalkee/article/details/104526994</a></p><p><a href="https://blog.csdn.net/shltsh/article/details/45949347">https://blog.csdn.net/shltsh/article/details/45949347</a></p><p><strong>作用</strong></p><p>？？</p><p><strong>怎么写</strong></p><p>1 指针可以  </p><p>2 对象</p><p>​    引用不知道</p><p>​    static可以 </p><p>​    non-static  成员变量不行 构造函数不行  普通函数可以    </p><h2 id="15-变量作用域"><a href="#15-变量作用域" class="headerlink" title="15 变量作用域"></a>15 变量作用域</h2><ul><li><p><strong>局部作用域</strong>：在函数内部声明的变量具有局部作用域，它们只能在函数内部访问。局部变量在函数每次被调用时被创建，在函数执行完后被销毁。</p></li><li><p><strong>对象作用域</strong></p></li><li><p><strong>类作用域</strong>：static</p></li><li><p><strong>全局作用域</strong>：在所有函数和代码块之外声明的变量具有全局作用域，它们可以被程序中的任何函数访问。全局变量在程序开始时被创建，在程序结束时被销毁。</p></li></ul>]]></content>
       
       
       <categories>
@@ -1445,7 +2157,7 @@
       <link href="/2023/04/16/cpp_init/"/>
       <url>/2023/04/16/cpp_init/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1 原理"></a>1 原理</h2><p><img src="/2023/04/16/cpp_init/1.PNG" alt></p><p><a href="https://developer.aliyun.com/article/1154672">https://developer.aliyun.com/article/1154672</a></p><p><strong>静态库 动态库  静态链接 动态链接</strong></p><p><a href="https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html">https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html</a></p><p>1 静态库 动态库</p><p>库是写好的现有的，成熟的，可以复用的代码  和python的 包一样</p><p>可以编译生成静态库和动态库</p><p>2 静态链接 动态链接</p><p>静态链接：静态库在程序编译时会被连接到目标代码中，程序运行时将不再需要该静态库，因此体积较大。</p><p> 动态链接：动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入，因此在程序运行时还需要动态库存在，因此代码体积较小.不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例。带来好处的同时，也会有问题！如经典的DLL Hell问题，关于如何规避动态库管理问题</p><h2 id="2-命令行编译"><a href="#2-命令行编译" class="headerlink" title="2 命令行编译"></a>2 命令行编译</h2><h2 id="3-构建工具"><a href="#3-构建工具" class="headerlink" title="3 构建工具"></a>3 构建工具</h2><p>cmake</p><p>bazel</p><p><strong>为什么要构建工具呢？</strong></p><p>当你的程序只有一个源文件时，直接就可以用gcc命令编译它。但是当你的程序包含很多个源文件时，用gcc命令逐个去编译时，你就很容易混乱而且工作量大，为什么呢？<br>因为各个文件之间还涉及到互相访问与链接，错综复杂的关系一个一个处理很麻烦，很容易出错，素衣需要一个工具来制定一个很好的编译规则，这就是make的作用了</p><p><strong>vs(Visual Studio)为什么可以直接编译一个工程？</strong></p><p>因为vs创建的是一个工程，所有添加的文件都有链接管理</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-原理"><a href="#1-原理" class="headerlink" title="1 原理"></a>1 原理</h2><h3 id="编译器分类"><a href="#编译器分类" class="headerlink" title="编译器分类"></a>编译器分类</h3><p>gcc：c</p><p>g++：c++</p><h3 id="静态库-动态库-静态链接-动态链接"><a href="#静态库-动态库-静态链接-动态链接" class="headerlink" title="静态库 动态库  静态链接 动态链接"></a><strong>静态库 动态库  静态链接 动态链接</strong></h3><p><a href="https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html">https://www.runoob.com/w3cnote/cpp-static-library-and-dynamic-library.html</a></p><p><strong>1 静态库 动态库</strong></p><p>库是写好的现有的，成熟的，可以复用的代码  和python的 包一样</p><p>可以编译生成静态库和动态库</p><p>静态库.a(linux) , .lib(win) 动态库.so(linux)  ,   .dll(win)</p><p><strong>2 静态链接 动态链接</strong></p><p>静态链接：静态库在程序编译时会被连接到目标代码中，程序运行时将不再需要该静态库，因此体积较大。</p><p>动态链接：动态库在程序编译时并不会被连接到目标代码中，而是在程序运行是才被载入，因此在程序运行时还需要动态库存在，因此代码体积较小.不同的应用程序如果调用相同的库，那么在内存里只需要有一份该共享库的实例。带来好处的同时，也会有问题！如经典的DLL Hell问题，关于如何规避动态库管理问题</p><h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p><a href="https://developer.aliyun.com/article/1154672">https://developer.aliyun.com/article/1154672</a></p><p><img src="/2023/04/16/cpp_init/1.PNG" alt></p><p>可执行文件有main</p><p>so没有main</p><h2 id="2-命令行编译"><a href="#2-命令行编译" class="headerlink" title="2 命令行编译"></a>2 命令行编译</h2><h2 id="3-构建工具"><a href="#3-构建工具" class="headerlink" title="3 构建工具"></a>3 构建工具</h2><p><strong>1 为什么要构建工具呢？</strong></p><p>当你的程序只有一个源文件时，直接就可以用gcc命令编译它。但是当你的程序包含很多个源文件时，用gcc命令逐个去编译时，你就很容易混乱而且工作量大，为什么呢？<br>因为各个文件之间还涉及到互相访问与链接，错综复杂的关系一个一个处理很麻烦，很容易出错，素衣需要一个工具来制定一个很好的编译规则，这就是make的作用了</p><p><strong>2 vs(Visual Studio)为什么可以直接编译一个工程？</strong></p><p>因为vs创建的工程，所有添加的文件都有链接管理</p><h3 id="1-cmake"><a href="#1-cmake" class="headerlink" title="1 cmake"></a>1 cmake</h3><h3 id="2-bazel"><a href="#2-bazel" class="headerlink" title="2 bazel"></a>2 bazel</h3><h4 id="1-build文件"><a href="#1-build文件" class="headerlink" title="1 build文件"></a>1 build文件</h4><p><strong>1 哪些文件要写</strong></p><p>所有用到的文件都需要</p><p><strong>2 怎么写</strong></p><p>比如某个cpp</p><p>deps： 当前cpp 需要用到某个头文件，那这个头文件就要写到这</p><h4 id="2-bazel-clean"><a href="#2-bazel-clean" class="headerlink" title="2 bazel clean"></a>2 bazel clean</h4><h4 id="3-编译可执行文件"><a href="#3-编译可执行文件" class="headerlink" title="3 编译可执行文件"></a>3 编译可执行文件</h4><p>bazel build -c opt //opt/data:test</p><p>生成路径：bazel-bin/opt/data/test</p><h4 id="4-编译-so"><a href="#4-编译-so" class="headerlink" title="4 编译.so"></a>4 编译.so</h4><p><a href="https://blog.csdn.net/zyq880625/article/details/131393651">https://blog.csdn.net/zyq880625/article/details/131393651</a></p><h4 id="5-编译选项"><a href="#5-编译选项" class="headerlink" title="5 编译选项"></a>5 编译选项</h4><p>—strip=always</p><p>—copt=”-g”</p><h4 id="6-交叉编译"><a href="#6-交叉编译" class="headerlink" title="6 交叉编译"></a>6 交叉编译</h4><p><a href="https://zhuanlan.zhihu.com/p/422055988">https://zhuanlan.zhihu.com/p/422055988</a></p><p><a href="https://blog.csdn.net/pengfei240/article/details/52912833">https://blog.csdn.net/pengfei240/article/details/52912833</a></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>]]></content>
       
       
       <categories>
@@ -5574,31 +6286,6 @@
         <tags>
             
             <tag> IaaS、PaaS和SaaS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ip和端口</title>
-      <link href="/2022/03/01/netport/"/>
-      <url>/2022/03/01/netport/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_33950757/article/details/90441617">https://blog.csdn.net/weixin_33950757/article/details/90441617</a></p><p>IP地址（家庭地址）：</p><p>例如：218.18.170.149；理解为：广东省.深圳市.龙岗区.电信（桥头东路二道巷149号）；</p><p>端口后（门牌号）：</p><p>例如：218.18.170.149:1011，端口为（1011）号；意思就是我家有很多房间，其中的一个房间为1011号；</p><p>禁止端口：禁止任何人来打开我的1011号房间；</p><p>端口登陆：1011号房间的门是加密的防盗门，你必须输入用户名和密码你才能进入1011号房间</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 计算机网络 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ip和端口 </tag>
             
         </tags>
       
