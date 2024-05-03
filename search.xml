@@ -360,7 +360,7 @@
           
           <category> c++ </category>
           
-          <category> 优化 </category>
+          <category> 开发 </category>
           
       </categories>
       
@@ -441,6 +441,8 @@
           
           <category> c++ </category>
           
+          <category> 语言特性 </category>
+          
       </categories>
       
       
@@ -492,6 +494,8 @@
       <categories>
           
           <category> c++ </category>
+          
+          <category> 语言特性 </category>
           
       </categories>
       
@@ -786,7 +790,7 @@
           
           <category> c++ </category>
           
-          <category> 开发 </category>
+          <category> 语言特性 </category>
           
       </categories>
       
@@ -975,7 +979,7 @@
           
           <category> c++ </category>
           
-          <category> 开发 </category>
+          <category> 语言特性 </category>
           
       </categories>
       
