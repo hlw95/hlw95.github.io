@@ -279,31 +279,6 @@
     
     
     <entry>
-      <title>mmap</title>
-      <link href="/2024/04/21/mmap/"/>
-      <url>/2024/04/21/mmap/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/357820303">https://zhuanlan.zhihu.com/p/357820303</a></p><p>优化io的技术</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mmap </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>fuzz</title>
       <link href="/2024/04/21/fuzz/"/>
       <url>/2024/04/21/fuzz/</url>
@@ -529,31 +504,6 @@
     
     
     <entry>
-      <title>数据落盘</title>
-      <link href="/2024/04/21/flush/"/>
-      <url>/2024/04/21/flush/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/xieyihua1994/article/details/108545746">https://blog.csdn.net/xieyihua1994/article/details/108545746</a></p><p>fopen -&gt; fflush -&gt; fsync -&gt; fclose</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据落盘 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>rpc</title>
       <link href="/2024/04/21/rpc/"/>
       <url>/2024/04/21/rpc/</url>
@@ -633,7 +583,7 @@
       <link href="/2024/04/21/cpp-io/"/>
       <url>/2024/04/21/cpp-io/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-缓冲"><a href="#1-缓冲" class="headerlink" title="1 缓冲"></a>1 缓冲</h2><p><a href="https://juejin.cn/post/7130062768413081637">https://juejin.cn/post/7130062768413081637</a></p><p><a href="https://juejin.cn/post/7085935695432269861">https://juejin.cn/post/7085935695432269861</a></p><p>多级缓存</p><h3 id="1-用户空间缓冲区"><a href="#1-用户空间缓冲区" class="headerlink" title="1.用户空间缓冲区"></a>1.用户空间缓冲区</h3><p><strong>咋用</strong></p><p>只有buffer满了才会读写</p><p><strong>作用</strong></p><p>1.减少io次数</p><p>不到buffer的大小，不会io</p><p>2.减少内存峰值</p><p>一次buffer的大小</p><h3 id="2-内核缓冲区"><a href="#2-内核缓冲区" class="headerlink" title="2.内核缓冲区"></a>2.内核缓冲区</h3><h3 id="3-磁盘缓冲区"><a href="#3-磁盘缓冲区" class="headerlink" title="3.磁盘缓冲区"></a>3.磁盘缓冲区</h3><h2 id="2-落盘"><a href="#2-落盘" class="headerlink" title="2 落盘"></a>2 落盘</h2><p>1 写入缓冲</p><p>2 同步</p><h2 id="3-三方库"><a href="#3-三方库" class="headerlink" title="3 三方库"></a>3 三方库</h2><p><a href="https://cloud.tencent.com/developer/article/1656755">https://cloud.tencent.com/developer/article/1656755</a></p><h2 id="4-优化技术"><a href="#4-优化技术" class="headerlink" title="4 优化技术"></a>4 优化技术</h2><p>零拷贝</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-缓冲"><a href="#1-缓冲" class="headerlink" title="1 缓冲"></a>1 缓冲</h2><p><a href="https://juejin.cn/post/7130062768413081637">https://juejin.cn/post/7130062768413081637</a></p><p><a href="https://juejin.cn/post/7085935695432269861">https://juejin.cn/post/7085935695432269861</a></p><p>多级缓存</p><h3 id="1-用户空间缓冲区"><a href="#1-用户空间缓冲区" class="headerlink" title="1.用户空间缓冲区"></a>1.用户空间缓冲区</h3><p><strong>咋用</strong></p><p>只有buffer满了才会读写</p><p><strong>作用</strong></p><p>1.减少io次数</p><p>不到buffer的大小，不会io</p><p>2.减少内存峰值</p><p>一次buffer的大小</p><h3 id="2-内核缓冲区"><a href="#2-内核缓冲区" class="headerlink" title="2.内核缓冲区"></a>2.内核缓冲区</h3><h3 id="3-磁盘缓冲区"><a href="#3-磁盘缓冲区" class="headerlink" title="3.磁盘缓冲区"></a>3.磁盘缓冲区</h3><h2 id="2-落盘"><a href="#2-落盘" class="headerlink" title="2 落盘"></a>2 落盘</h2><p>1 写入缓冲</p><p>2 同步</p><h2 id="3-三方库"><a href="#3-三方库" class="headerlink" title="3 三方库"></a>3 三方库</h2><p><a href="https://cloud.tencent.com/developer/article/1656755">https://cloud.tencent.com/developer/article/1656755</a></p><h2 id="4-优化技术"><a href="#4-优化技术" class="headerlink" title="4 优化技术"></a>4 优化技术</h2><p>零拷贝</p><p><a href="https://zhuanlan.zhihu.com/p/357820303">https://zhuanlan.zhihu.com/p/357820303</a></p>]]></content>
       
       
       <categories>
