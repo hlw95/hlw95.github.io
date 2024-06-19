@@ -37,7 +37,7 @@
 <p>队列</p>
 <p>堆</p>
 <p>字典树</p>
-<h2 id="三-技巧"><a href="#三-技巧" class="headerlink" title="三.技巧"></a>三.技巧</h2><p>双指针/滑窗，二分查找，排序，快慢指针，取余，位运算，倍增（<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/divide-two-integers/">29. 两数相除</a>），递归，时空转化（hashtable），dfs/bfs</p>
+<h2 id="三-技巧"><a href="#三-技巧" class="headerlink" title="三.技巧"></a>三.技巧</h2><p>双指针，滑窗，二分查找，排序，快慢指针，取余，位运算，递归，时空转化（hashtable），dfs/bfs</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/341176507">https://zhuanlan.zhihu.com/p/341176507</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/358653377">https://zhuanlan.zhihu.com/p/358653377</a></p>
@@ -53,7 +53,6 @@
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28891541">https://zhuanlan.zhihu.com/p/28891541</a></p>
 </div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">基础算法</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-07-24  <a class="commentCountImg" href="/2021/07/24/normal-algrithm/#comment-container"><span class="display-none-class">b252747dca4de404ee2b0a8063b40954</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b252747dca4de404ee2b0a8063b40954">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>8 m  <i class="fas fa-pencil-alt"> </i>1.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/07/24/normal-algrithm/">常见算法总结</a></h1><div class="content"><p>类别归类：蛮力，分治，动态规划，贪心，回溯，分支限界。</p>
 <p>实现方式有两种，一般为基于迭代和基于递归。</p>
-<p>优化原则：无非时间换空间或者空间换时间 </p>
 <h2 id="一-蛮力Brute-force"><a href="#一-蛮力Brute-force" class="headerlink" title="一.蛮力Brute-force"></a>一.蛮力Brute-force</h2><p>没有什么好说，就是遍历或者枚举。</p>
 <h2 id="二-分治"><a href="#二-分治" class="headerlink" title="二.分治"></a>二.分治</h2><p>分而治之，将大问题拆解成<strong>相互独立且相似</strong>的子问题。</p>
 <p><strong>步骤</strong>：1、先分 2 求解 3 .合并</p>
@@ -77,11 +76,11 @@
 <p>（i，j）</p>
 <p>(0,1)  (1,2) (2,3) (3,4) (0,2) (1,3) (2,4) (0,3)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def longestPalindrome(self, s: str) -&gt; str:</span><br><span class="line">        n = len(s)</span><br><span class="line">        if n &lt; 2:</span><br><span class="line">            return s</span><br><span class="line">        </span><br><span class="line">        max_len = 1</span><br><span class="line">        begin = 0</span><br><span class="line">        # dp[i][j] 表示 s[i..j] 是否是回文串</span><br><span class="line">        dp = [[False] * n for _ in range(n)]</span><br><span class="line">        for i in range(n):</span><br><span class="line">            dp[i][i] = True</span><br><span class="line">        </span><br><span class="line">        # 递推开始</span><br><span class="line">        # 先枚举子串长度</span><br><span class="line">        for L in range(2, n + 1):</span><br><span class="line">            # 枚举左边界，左边界的上限设置可以宽松一些</span><br><span class="line">            for i in range(n):</span><br><span class="line">                # 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得</span><br><span class="line">                j = L + i - 1</span><br><span class="line">                # 如果右边界越界，就可以退出当前循环</span><br><span class="line">                if j &gt;= n:</span><br><span class="line">                    break</span><br><span class="line">                    </span><br><span class="line">                if s[i] != s[j]:</span><br><span class="line">                    dp[i][j] = False </span><br><span class="line">                else:</span><br><span class="line">                    if j - i &lt; 3:</span><br><span class="line">                        dp[i][j] = True</span><br><span class="line">                    else:</span><br><span class="line">                        dp[i][j] = dp[i + 1][j - 1]</span><br><span class="line">                </span><br><span class="line">                # 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span><br><span class="line">                if dp[i][j] and j - i + 1 &gt; max_len:</span><br><span class="line">                    max_len = j - i + 1</span><br><span class="line">                    begin = i</span><br><span class="line">        return s[begin:begin + max_len]</span><br></pre></td></tr></table></figure>
+<p><strong>解的追踪</strong>：有时候需要借助备忘录搜索解，时间复杂度不超过计算备忘录</p>
 <p><strong>实现方式</strong></p>
 <p>递归实现：效率不高的原因在于子问题重复计算了，比起暴力哪个快？应该还是这个</p>
 <p>迭代+备忘录：不一定全部都要存储，需要的存着了就可以了，每次子问题计算一次（空间换时间）</p>
 <p>一般采用迭代+备忘录</p>
-<p><strong>解的追踪</strong>：有时候需要借助备忘录搜索解，时间复杂度不超过计算备忘录</p>
 <p><strong>状态压缩动态规划</strong></p>
 <p><a target="_blank" rel="noopener" href="https://jimmy-shen.medium.com/bitmask-state-compression-dp-39e7ba56978b">https://jimmy-shen.medium.com/bitmask-state-compression-dp-39e7ba56978b</a></p>
 <p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038223084">https://segmentfault.com/a/1190000038223084</a></p>
@@ -90,22 +89,22 @@
 <p>However, sometimes, the states of a DP problem may contain <strong>multiple statuses</strong>. In this case, we can think about using the <strong>state compression</strong> approaches to represent the DP state. </p>
 <p>说白了就是在状态很多的时候对状态降维</p>
 <p>目的：可以优化空间复杂度，不知道可以不可以优化时间复杂度</p>
-<h2 id="四-贪心"><a href="#四-贪心" class="headerlink" title="四.贪心"></a>四.贪心</h2><p>短视（少考虑很多，计算量就下去了），局部最优，需要证明</p>
-<h2 id="五-回溯"><a href="#五-回溯" class="headerlink" title="五.回溯"></a>五.回溯</h2><p>回溯算法是暴力求解的一种，它能系统地搜索一个问题的所有解，区别在于回溯会回头（减枝），以此减少计算量</p>
-<p>三步一回头，一般用于可以用树型结构建模的问题。</p>
+<h2 id="四-贪心"><a href="#四-贪心" class="headerlink" title="四.贪心"></a>四.贪心</h2><p>短视，局部最优（少考虑很多，计算量就下去了）</p>
+<p>需要证明</p>
+<h2 id="五-回溯"><a href="#五-回溯" class="headerlink" title="五.回溯"></a>五.回溯</h2><p>一般用于可以用树型结构建模的问题</p>
+<p>回溯法能系统地搜索一个问题的所有解，和暴力的区别在于回溯可以剪枝，以此减少计算量</p>
 <p><strong>实现方式</strong>：利用DFS搜索解空间，一般递归实现</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/93530380">https://zhuanlan.zhihu.com/p/93530380</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/112926891">https://zhuanlan.zhihu.com/p/112926891</a></p>
-<p><strong>优化策略：</strong></p>
-<p>剪枝  <a target="_blank" rel="noopener" href="https://blog.csdn.net/arabic1666/article/details/80147606">https://blog.csdn.net/arabic1666/article/details/80147606</a></p>
-<h2 id="六-分支限界"><a href="#六-分支限界" class="headerlink" title="六.分支限界"></a>六.分支限界</h2><p>类似回溯，区别如下</p>
+<h2 id="六-分支限界"><a href="#六-分支限界" class="headerlink" title="六.分支限界"></a>六.分支限界</h2><p><strong>类似回溯，区别如下</strong></p>
 <p><img src="/2021/07/24/normal-algrithm/算法.JPG" alt></p>
-<p><strong>代价函数</strong></p>
-<p>以极大值问题为例，以当前结点为根的子树得到的可行解的值的最大值，每个结点都有自己的</p>
-<p><strong>界</strong></p>
-<p>极大值问题，当前得到的可行解的值的最大值，就1个</p>
 <p><img src="/2021/07/24/normal-algrithm/1.JPG" alt></p>
-<p>代价函数和界可以用于减枝，对于极大值问题，界大于某结点代价函数，该结点就不需要继续搜索了</p>
+<p><strong>代价函数</strong></p>
+<p>以极大值问题为例，以当前结点为根的子树能够得到的可行解的最大值</p>
+<p><strong>界</strong></p>
+<p>以极大值问题为例，当前已经得到的可行解的最大值</p>
+<p><strong>减枝</strong></p>
+<p>代价函数和界可以用于减枝，以极大值问题为例，界大于等于某结点代价函数，该结点就不需要继续搜索了</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zm1_1zm/article/details/69224626">https://blog.csdn.net/zm1_1zm/article/details/69224626</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wxgaws/article/details/114693162">https://blog.csdn.net/wxgaws/article/details/114693162</a></p>
 <p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038223084">https://segmentfault.com/a/1190000038223084</a></p>
